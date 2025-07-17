@@ -62,7 +62,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 text-black bg-white rounded-full flex items-center justify-center">
                 <span className=" font-bold text-sm">VIIT</span>
               </div>
               <div>
