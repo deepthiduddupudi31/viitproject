@@ -4,7 +4,9 @@ import { Button } from "../components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-<<<<<<< HEAD
+import SchoolsSection from "./research/schools"
+
+
 import { useEffect, useRef, useState } from "react";
 import gsap from 'gsap';
 
@@ -36,9 +38,6 @@ const slides = [
     link: '#',
   },
 ];
-=======
-import SchoolsSection from "./research/schools"
->>>>>>> d91d7c985a2e48ef18f02c54112ce73c9f8937a4
 
 export default function HomePage() {
   const container = useRef<HTMLDivElement>(null);
@@ -126,49 +125,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* About + Video + Announcements */}
-      <section className="py-16 px-8 bg-white">
-        <div className="max-w-6xl mx-auto md:grid md:grid-cols-2 gap-12">
-          <div>
-            <div className="relative pb-[56.25%] mb-6">
-              <iframe
-                className="absolute inset-0 w-full h-full rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/DqCDVElxaL8"
-                title="Campus Tour"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-            <p className="text-lg text-gray-800 leading-relaxed">
-              <span className="float-left mr-2 text-4xl font-serif font-bold text-red-800">V</span>
-              IT has been a forerunner...
-            </p>
-          </div>
-          <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
-            <h3 className="mb-4 text-xl font-semibold text-red-800">ANNOUNCEMENTS</h3>
-            <div className="space-y-4 text-gray-800 text-sm">
-              {[
-                '2025-06-04|Integrated M.Tech.- 2025 Results & Choice filling',
-                '2025-05-23|VITREE-2025 (July Session)-Results',
-                '2025-05-08|VITMEE (M.Tech. 2025) Admission Results',
-              ].map((item, i) => {
-                const [date, msg] = item.split('|');
-                return (
-                  <div key={i} className="border-b pb-3">
-                    <p className="text-gray-500">{date}</p>
-                    <p>{msg}</p>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="mt-6 text-right">
-              <Link href="#">
-                View More
-              </Link>
-            </div>
-          </div>
-=======
       {/* About Section */}
       {/* About + Announcement Section */}
 <section className="py-16 px-8 bg-white">
@@ -211,9 +167,36 @@ export default function HomePage() {
         <div className="border-b pb-3">
           <p className="text-gray-500">2025-06-04</p>
           <p>Integrated M.Tech.- 2025 Results & Choice filling</p>
->>>>>>> d91d7c985a2e48ef18f02c54112ce73c9f8937a4
         </div>
-      </section>
+        <div className="border-b pb-3">
+          <p className="text-gray-500">2025-05-23</p>
+          <p>VITREE-2025 (July Session)-Results</p>
+        </div>
+        <div className="border-b pb-3">
+          <p className="text-gray-500">2025-05-08</p>
+          <p>VITMEE (M.Tech. 2025) Admission Results - Counselling & Choice filling</p>
+        </div>
+        <div className="border-b pb-3">
+          <p className="text-gray-500">2025-05-03</p>
+          <p>VITEEE – 2025 Results</p>
+        </div>
+        <div className="border-b pb-3">
+          <p className="text-gray-500">2025-05-13</p>
+          <p>Fresher's Fee Payment 2025</p>
+        </div>
+        <div className="border-b pb-3">
+          <p className="text-gray-500">2025-02-17</p>
+          <p>VIT-AP UG & PG (Non-Engg.) Online Applications - 2025</p>
+        </div>
+      </div>
+      <div className="mt-6 text-right">
+        <Link href="#" className="text-red-800 font-semibold hover:underline">
+          View More
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
 
 
       {/* Schools Section */}
