@@ -2,6 +2,7 @@ import { Button } from "../components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import SchoolsSection from "./research/schools"
 
 export default function HomePage() {
   return (
@@ -38,19 +39,23 @@ export default function HomePage() {
     {/* Embedded YouTube Video */}
     <div className="w-full">
       <div className="aspect-w-16 aspect-h-9">
-       <section className="px-4 py-10 sm:px-6 lg:px-16 bg-gray-100">
+      <section className="px-4 py-10 sm:px-6 lg:px-16 bg-gray-100">
   <h2 className="text-3xl font-semibold text-center mb-8">Watch Campus Video</h2>
-  <div className="relative" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
-    <iframe
-      className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-      src="https://www.youtube.com/embed/DqCDVElxaL8"
-      title="VIT-AP Campus Video"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
+
+  <div className="max-w-6xl mx-auto rounded-xl overflow-hidden shadow-xl">
+    <div className="relative aspect-[30/16] w-full">
+      <iframe
+        className="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/DqCDVElxaL8"
+        title="VIT-AP Campus Video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    </div>
   </div>
 </section>
+
       </div>
       <p className="mt-6 text-gray-800 leading-relaxed text-justify text-lg">
         <span className="text-4xl text-red-800 font-serif font-bold float-left mr-2">V</span>
@@ -102,90 +107,7 @@ export default function HomePage() {
 
 
       {/* Schools Section */}
-      <section className="py-16 bg-red-800 text-white">
-        <div className="max-w-6xl mx-auto px-8">
-          <h2 className="text-4xl font-bold mb-6">Schools</h2>
-          <p className="text-xl mb-12 max-w-4xl">
-            At VIT-AP the entire teaching-learning process is concentrated around seven schools for preparing students
-            to make meaningful contributions to society as engaged citizens and leaders in a complex world.
-          </p>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="relative group cursor-pointer">
-              <Image
-                src="/placeholder.svg?height=300&width=300"
-                alt="School of Computer Science"
-                width={300}
-                height={300}
-                className="rounded-lg object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-end p-4">
-                <div>
-                  <h3 className="text-lg font-semibold">School of Computer Science and Engineering</h3>
-                  <Link href="#" className="text-sm text-yellow-400 hover:underline">
-                    Explore Now →
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group cursor-pointer">
-              <Image
-                src="/placeholder.svg?height=300&width=300"
-                alt="School of Electronics"
-                width={300}
-                height={300}
-                className="rounded-lg object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-end p-4">
-                <div>
-                  <h3 className="text-lg font-semibold">School of Electronics Engineering</h3>
-                  <Link href="#" className="text-sm text-yellow-400 hover:underline">
-                    Explore Now →
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group cursor-pointer">
-              <Image
-                src="/placeholder.svg?height=300&width=300"
-                alt="School of Mechanical"
-                width={300}
-                height={300}
-                className="rounded-lg object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-end p-4">
-                <div>
-                  <h3 className="text-lg font-semibold">School of Mechanical Engineering</h3>
-                  <Link href="#" className="text-sm text-yellow-400 hover:underline">
-                    Explore Now →
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group cursor-pointer">
-              <Image
-                src="/placeholder.svg?height=300&width=300"
-                alt="School of Advanced Sciences"
-                width={300}
-                height={300}
-                className="rounded-lg object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-end p-4">
-                <div>
-                  <h3 className="text-lg font-semibold">School of Advanced Sciences</h3>
-                  <Link href="#" className="text-sm text-yellow-400 hover:underline">
-                    Explore Now →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <SchoolsSection />
       {/* Programs Section */}
       <section className="py-16 px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
