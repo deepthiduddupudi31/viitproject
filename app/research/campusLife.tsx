@@ -16,12 +16,12 @@ const heroCards = [
   {
     href: "/sports",
     title: "Sports",
-    image: "/image1.jpg"
+    image: "/sport.avif"
   },
   {
     href: "/cafeteria",
     title: "Cafeteria",
-    image: "/image2.jpg"
+    image: "/image1.jpg"
   }
 ]
 
