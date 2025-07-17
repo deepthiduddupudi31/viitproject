@@ -7,13 +7,14 @@ import Image from "next/image"
 import Link from "next/link"
 
 
+
 import { useEffect, useRef, useState } from "react";
 import gsap from 'gsap';
 
 const slides = [
   {
     type: 'image',
-    src: '/image2.jpg',
+    src: 'https://th.bing.com/th/id/OIP.g9ZpEoc3uK5W7VIVSWManQHaE8?w=239&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
     title: 'CBN x VIT-AP University',
     subtitle: 'V‑LaunchPad 2025 @ VIT‑AP University®',
     link: '#',
@@ -32,7 +33,7 @@ const slides = [
   },
   {
     type: 'video',
-    src: '/image3.jpg',
+    src: '/videoR.mp4',
     title: 'Welcome to VIT‑AP University',
     subtitle: 'APPLY KNOWLEDGE, IMPROVE LIFE®',
     link: '#',
@@ -53,7 +54,7 @@ const section1 = () => {
     });
   }, [index]);
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative max-h-screen min-h-[100dvh] overflow-hidden">
             <div
               ref={container}
               className="flex h-full"
@@ -69,7 +70,7 @@ const section1 = () => {
                           src={s.src}
                           alt={s.title || `Slide ${i}`}
                           fill
-                          className="object-cover"
+                          className="object-contain object-left"
                           sizes="100vw"
                           priority={i === 0}
                         />
