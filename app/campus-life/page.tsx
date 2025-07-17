@@ -6,12 +6,12 @@ export default function CampusLifePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-96 overflow-hidden">
-        <Image src="/placeholder.svg?height=400&width=1200" alt="VIT-AP Campus" fill className="object-cover" />
+        <Image src="/placeholder.svg?height=400&width=1200" alt="VIIT Campus" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4">Life @ VIT-AP</h1>
-            <p className="text-xl">Experience the vibrant heart of our campus life at VIT AP University.</p>
+            <h1 className="text-5xl font-bold mb-4">Life @ VIIT</h1>
+            <p className="text-xl">Experience the vibrant heart of our campus life at VIT AP .</p>
             <Button className="mt-6 bg-white text-gray-900 hover:bg-gray-100">EXPLORE</Button>
           </div>
         </div>
@@ -23,7 +23,7 @@ export default function CampusLifePage() {
           <div>
             <Image
               src="/placeholder.svg?height=400&width=500"
-              alt="Sports at VIT-AP"
+              alt="Sports at VIIT"
               width={500}
               height={400}
               className="rounded-lg"
@@ -51,7 +51,7 @@ export default function CampusLifePage() {
                 <br />
                 The Vibrant
                 <br />
-                Life At VIT-AP
+                Life At VIIT
               </h2>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function CampusLifePage() {
       {/* Explore Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-8 text-center">
-          <h2 className="text-4xl font-bold text-red-800 mb-6">Explore The Vibrant Life At VIT-AP</h2>
+          <h2 className="text-4xl font-bold text-red-800 mb-6">Explore The Vibrant Life At VIIT</h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
             From cultural events to academic competitions, from sports tournaments to innovation challenges - discover
             the endless opportunities that await you.

@@ -15,8 +15,8 @@ const newsArticles = [
   },
   {
     id: 2,
-    title: "VIT-AP, Cyient Foundation sign MoU to foster entrepreneurship",
-    excerpt: "VIT-AP University has signed a Memorandum of Understanding (MoU) with Cyient Foundation to enhance entrepreneurship...",
+    title: "VIIT, Cyient Foundation sign MoU to foster entrepreneurship",
+    excerpt: "VIIT  has signed a Memorandum of Understanding (MoU) with Cyient Foundation to enhance entrepreneurship...",
     date: "2025-03-20",
     image: "https://images.unsplash.com/photo-1566378246598-5b11a0d486cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmV3c3BhcGVyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
     category: "Partnership",
@@ -24,8 +24,8 @@ const newsArticles = [
   },
   {
     id: 3,
-    title: "VITOPIA-2025 at VIT-AP concludes",
-    excerpt: "VIT-AP University successfully concluded VITOPIA 2025, a grand celebration of innovation, technology, and academic excellence...",
+    title: "VITOPIA-2025 at VIIT concludes",
+    excerpt: "VIIT  successfully concluded VITOPIA 2025, a grand celebration of innovation, technology, and academic excellence...",
     date: "2025-03-10",
     image: "https://static.vecteezy.com/system/resources/previews/011/643/706/non_2x/business-newspaper-isolated-on-white-background-daily-newspaper-mock-up-concept-photo.jpg",
     category: "Events",
@@ -34,7 +34,7 @@ const newsArticles = [
   {
     id: 4,
     title: "Research Excellence Awards 2025",
-    excerpt: "VIT-AP recognizes outstanding research contributions across various disciplines in the annual awards ceremony...",
+    excerpt: "VIIT recognizes outstanding research contributions across various disciplines in the annual awards ceremony...",
     date: "2025-02-15",
     image: "https://images.unsplash.com/photo-1566378246598-5b11a0d486cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
     category: "Research"
@@ -42,7 +42,7 @@ const newsArticles = [
   {
     id: 5,
     title: "International Conference on AI and Machine Learning",
-    excerpt: "Leading experts from around the world gather at VIT-AP to discuss the future of artificial intelligence...",
+    excerpt: "Leading experts from around the world gather at VIIT to discuss the future of artificial intelligence...",
     date: "2025-02-08",
     image: "https://cdn.britannica.com/25/93825-050-D1300547/collection-newspapers.jpg",
     category: "Technology"

@@ -17,7 +17,7 @@ export default function ResearchPage() {
                 <p className="text-sm mb-4">
                   September 12-13, 2025
                   <br />
-                  VIT-AP University, Amaravati
+                  VIIT , Amaravati
                 </p>
                 <p className="text-xs">Addressing Semiconductor Frontiers through India-Centric Innovation</p>
                 <div className="flex space-x-4 mt-4">

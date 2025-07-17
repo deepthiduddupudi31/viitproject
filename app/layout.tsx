@@ -8,8 +8,8 @@ import Footer from "../components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "VIT-AP University - Apply Knowledge. Improve Life!",
-  description: "VIT-AP University - A premier educational institution focused on academic excellence and innovation.",
+  title: "VIIT  - Apply Knowledge. Improve Life!",
+  description: "VIIT  - A premier educational institution focused on academic excellence and innovation.",
     generator: 'v0.dev'
 }
 
@@ -28,3 +28,4 @@ export default function RootLayout({
     </html>
   )
 }
+

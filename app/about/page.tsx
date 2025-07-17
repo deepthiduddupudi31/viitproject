@@ -4,7 +4,7 @@ export default function AboutPage() {
       <div className="max-w-6xl mx-auto px-8 py-16">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h1 className="text-4xl font-bold text-red-800 mb-8">About VIT-AP</h1>
+            <h1 className="text-4xl font-bold text-red-800 mb-8">About VIIT</h1>
 
             {/* Video Embed Placeholder */}
             <div className="bg-gray-200 rounded-lg aspect-video mb-8 flex items-center justify-center">
@@ -12,7 +12,7 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">▶</span>
                 </div>
-                <p className="text-gray-600">VIT-AP University - Empowering Academic Excellence</p>
+                <p className="text-gray-600">VIIT  - Empowering Academic Excellence</p>
               </div>
             </div>
 
@@ -21,7 +21,7 @@ export default function AboutPage() {
               <p>
                 IT has been a forerunner in delivering quality education. Consistently ranked among the top educational
                 institutes in the country, the VIT group of institutions have had a proud tradition of pursuing
-                knowledge and excellence. In keeping with this tradition, the leadership at VIT-AP resonates a dynamic
+                knowledge and excellence. In keeping with this tradition, the leadership at VIIT resonates a dynamic
                 blend of academic initiative and industry partnership with a vision of creating one of the finest
                 academic destinations in the world.
               </p>

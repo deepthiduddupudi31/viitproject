@@ -8,16 +8,16 @@ const campusLife = () => {
           <div>
             <Image
               src="/placeholder.svg?height=400&width=600"
-              alt="VIT-AP Campus"
+              alt="VIIT Campus"
               width={600}
               height={400}
               className="rounded-lg object-cover"
             />
           </div>
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Life @ VIT-AP</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Life @ VIIT</h2>
             <p className="text-gray-700 leading-relaxed mb-8">
-              Experience the vibrant heart of our campus life at VIT AP University.
+              Experience the vibrant heart of our campus life at VIT AP .
             </p>
             <Button className="bg-white border border-gray-300 text-gray-900 hover:bg-gray-50">EXPLORE</Button>
           </div>

@@ -1,10 +1,8 @@
 import React from 'react'
 
 
-import { Button } from "../../components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 
 
 import { useEffect, useRef, useState } from "react";
@@ -14,8 +12,8 @@ const slides = [
   {
     type: 'image',
     src: '/image2.jpg',
-    title: 'CBN x VIT-AP University',
-    subtitle: 'V‑LaunchPad 2025 @ VIT‑AP University®',
+    title: 'CBN x VIIT ',
+    subtitle: 'V‑LaunchPad 2025 @ VIT‑AP ®',
     link: '#',
   },
   {
@@ -32,8 +30,8 @@ const slides = [
   },
   {
     type: 'video',
-    src: '/image3.jpg',
-    title: 'Welcome to VIT‑AP University',
+    src: '/VideoR.mp4',
+    title: 'Welcome to VIIT ',
     subtitle: 'APPLY KNOWLEDGE, IMPROVE LIFE®',
     link: '#',
   },
