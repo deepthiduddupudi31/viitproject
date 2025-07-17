@@ -43,7 +43,10 @@ export default function Programs() {
 
   return (
     <section className="py-16 px-4 bg-white">
-        <h1 className="text-4xl font-bold text-red-800 mb-6">Programmes Offered</h1>
+        <div className="text-center">
+  <h1 className="text-4xl font-bold text-red-800 mb-6">Programmes Offered</h1>
+</div>
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Left side - Navigation buttons */}
         <div className="space-y-4">
