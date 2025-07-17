@@ -24,13 +24,13 @@ export default function VITAPHomePage() {
               <div className="relative group">
                 <div className="absolute left-0 top-0 bottom-0 w-2 bg-red-800"></div>
                 <div className="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-90">
-                  <span className="text-red-800 font-bold text-2xl tracking-widest">VIT-AP</span>
+                  <span className="text-red-800 font-bold text-2xl tracking-widest">VIIT</span>
                 </div>
                 
                 <div className="ml-6 mr-12 relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <Image
                     src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop"
-                    alt="VIT-AP Main Event"
+                    alt="VIIT Main Event"
                     width={500}
                     height={400}
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -39,9 +39,9 @@ export default function VITAPHomePage() {
                   <div className="absolute bottom-4 left-4 text-white">
                     <div className="flex items-center space-x-2 mb-2">
                       <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-red-800 font-bold text-xs">VIT-AP</span>
+                        <span className="text-red-800 font-bold text-xs">VIIT</span>
                       </div>
-                      <span className="text-sm font-medium">VIT-AP UNIVERSITY</span>
+                      <span className="text-sm font-medium">VIIT </span>
                     </div>
                   </div>
                   <div className="absolute bottom-4 right-4">
@@ -96,7 +96,7 @@ export default function VITAPHomePage() {
                     
                     <div className="absolute top-3 left-3">
                       <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-red-800 font-bold text-xs">VIT-AP</span>
+                        <span className="text-red-800 font-bold text-xs">VIIT</span>
                       </div>
                     </div>
 
@@ -131,7 +131,7 @@ export default function VITAPHomePage() {
                 Placement Highlight
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                VIT-AP University proudly showcases its exceptional placements 
+                VIIT  proudly showcases its exceptional placements 
                 achievements, reflecting a commitment to nurturing industry-ready 
                 professionals. Boasting a stellar track record, our students have 
                 secured coveted positions in leading companies. The testament to our 

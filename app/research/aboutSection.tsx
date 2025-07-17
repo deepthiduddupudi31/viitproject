@@ -16,7 +16,7 @@ const aboutSection = () => {
       <iframe
         className="absolute inset-0 w-full h-full"
         src="https://www.youtube.com/embed/DqCDVElxaL8"
-        title="VIT-AP Campus Video"
+        title="VIIT Campus Video"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
@@ -30,7 +30,7 @@ const aboutSection = () => {
         <span className="text-4xl text-red-800 font-serif font-bold float-left mr-2">V</span>
         IT has been a forerunner in delivering quality education. Consistently ranked among the top educational
         institutes in the country, the VIT group of institutions have had a proud tradition of pursuing knowledge
-        and excellence. In keeping with this tradition, the leadership at VIT-AP resonates a dynamic blend of
+        and excellence. In keeping with this tradition, the leadership at VIIT resonates a dynamic blend of
         academic initiative and industry partnership with a vision of creating one of the finest academic
         destinations in the world.
       </p>
@@ -62,7 +62,7 @@ const aboutSection = () => {
         </div>
         <div className="border-b pb-3">
           <p className="text-gray-500">2025-02-17</p>
-          <p>VIT-AP UG & PG (Non-Engg.) Online Applications - 2025</p>
+          <p>VIIT UG & PG (Non-Engg.) Online Applications - 2025</p>
         </div>
       </div>
       <div className="mt-6 text-right">

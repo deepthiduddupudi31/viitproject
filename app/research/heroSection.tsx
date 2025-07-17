@@ -12,8 +12,8 @@ const slides = [
   {
     type: 'image',
     src: '/image2.jpg',
-    title: 'CBN x VIT-AP University',
-    subtitle: 'V‑LaunchPad 2025 @ VIT‑AP University®',
+    title: 'CBN x VIIT ',
+    subtitle: 'V‑LaunchPad 2025 @ VIT‑AP ®',
     link: '#',
   },
   {
@@ -31,7 +31,7 @@ const slides = [
   {
     type: 'video',
     src: '/VideoR.mp4',
-    title: 'Welcome to VIT‑AP University',
+    title: 'Welcome to VIIT ',
     subtitle: 'APPLY KNOWLEDGE, IMPROVE LIFE®',
     link: '#',
   },

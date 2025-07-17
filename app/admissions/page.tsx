@@ -8,7 +8,7 @@ export default function AdmissionsPage() {
           <div>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Admission Process</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              VIT-AP University offers various undergraduate and postgraduate programs across multiple disciplines. Our
+              VIIT  offers various undergraduate and postgraduate programs across multiple disciplines. Our
               admission process is designed to identify and nurture talented students who can contribute to our academic
               community.
             </p>

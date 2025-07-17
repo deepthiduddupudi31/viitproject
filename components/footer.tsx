@@ -181,8 +181,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/info/university-act" className="hover:text-red-800">
-                  Public Notice: University Act
+                <Link href="/info/-act" className="hover:text-red-800">
+                  Public Notice:  Act
                 </Link>
               </li>
               <li>
@@ -220,20 +220,20 @@ export default function Footer() {
 
           {/* Location & Map */}
           <div>
-            <h3 className="text-lg font-semibold text-red-800 mb-4">VIT-AP University, Amaravathi</h3>
+            <h3 className="text-lg font-semibold text-red-800 mb-4">VIIT , Amaravathi</h3>
             <div className="text-sm text-gray-600 mb-4">
               <p>Beside AP Secretariat - 522241,</p>
               <p>Andhra Pradesh.</p>
             </div>
             <Link href="/directions" className="text-sm text-red-800 hover:underline flex items-center">
-              HOW TO REACH VIT-AP <span className="ml-1">↗</span>
+              HOW TO REACH VIIT <span className="ml-1">↗</span>
             </Link>
 
             {/* Map placeholder */}
             <div className="mt-4 bg-green-100 rounded-lg h-32 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-8 h-8 bg-red-600 rounded-full mx-auto mb-2"></div>
-                <p className="text-xs text-gray-600">VIT-AP University</p>
+                <p className="text-xs text-gray-600">VIIT </p>
                 <p className="text-xs text-blue-600">View larger map</p>
               </div>
             </div>
@@ -248,21 +248,21 @@ export default function Footer() {
                 <span className="text-red-800 font-bold text-sm">VIT</span>
               </div>
               <div>
-                <h4 className="font-bold">VIT-AP</h4>
-                <p className="text-xs">UNIVERSITY</p>
+                <h4 className="font-bold">VIIT</h4>
+                <p className="text-xs"></p>
                 <p className="text-xs">Apply Knowledge. Improve Life!™</p>
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm">
               <Link href="/" className="hover:text-red-200">
-                VIT-AP Home
+                VIIT Home
               </Link>
               <Link href="/maps" className="hover:text-red-200">
                 Maps & Directions
               </Link>
               <Link href="/search" className="hover:text-red-200">
-                Search VIT-AP
+                Search VIIT
               </Link>
               <Link href="/emergency" className="hover:text-red-200">
                 Emergency Info
@@ -314,8 +314,8 @@ export default function Footer() {
 
           <div className="text-center mt-6 pt-6 border-t border-red-700">
             <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-              <p>Copyright © VIT-AP 2024. All rights reserved</p>
-              <p className="italic mt-2 md:mt-0">Crafted with Passion at VIT-AP University by Website Team</p>
+              <p>Copyright © VIIT 2024. All rights reserved</p>
+              <p className="italic mt-2 md:mt-0">Crafted with Passion at VIIT  by Website Team</p>
             </div>
           </div>
         </div>

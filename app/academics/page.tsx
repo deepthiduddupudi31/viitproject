@@ -44,7 +44,7 @@ export default function AcademicsPage() {
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold text-red-800 mb-6">Academic Excellence</h2>
           <p className="text-gray-700 leading-relaxed">
-            VIT-AP University is committed to providing world-class education through innovative teaching methodologies,
+            VIIT  is committed to providing world-class education through innovative teaching methodologies,
             state-of-the-art infrastructure, and industry-relevant curriculum. Our academic programs are designed to
             foster critical thinking, creativity, and practical skills that prepare students for successful careers in
             their chosen fields.

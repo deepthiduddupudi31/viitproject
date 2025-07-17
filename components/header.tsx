@@ -40,7 +40,7 @@ export default function Header() {
                 href={`/${page}`}
                 className="hover:underline underline-offset-4 decoration-white/70 transition duration-200 hover:text-red-200"
               >
-                {page === "advantages" ? "VIT-AP Advantages" : page[0].toUpperCase() + page.slice(1)}
+                {page === "advantages" ? "VIIT Advantages" : page[0].toUpperCase() + page.slice(1)}
               </Link>
             ))}
             <Button variant="ghost" size="sm" className="text-white hover:text-red-200">
@@ -63,11 +63,11 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-red-800 font-bold text-sm">VIT</span>
+                <span className="text-red-800 font-bold text-sm">VIIT</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold">VIT-AP</h1>
-                <p className="text-xs text-red-200">UNIVERSITY</p>
+                <h1 className="text-xl font-bold">VIIT</h1>
+                <p className="text-xs text-red-200"></p>
                 <p className="text-xs text-red-200">Apply Knowledge. Improve Life!™</p>
               </div>
             </Link>

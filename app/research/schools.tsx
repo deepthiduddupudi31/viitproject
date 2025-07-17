@@ -54,7 +54,7 @@ export default function SchoolsSection() {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6">Schools</h2>
             <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              At VIT-AP the entire teaching-learning process is concentrated around seven schools for preparing
+              At VIIT the entire teaching-learning process is concentrated around seven schools for preparing
               students to make meaningful contributions to society as engaged citizens and leaders in a complex world.
             </p>
           </div>
