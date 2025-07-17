@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="w-full text-black">
       {/* Light Red Section (Main Footer) */}
-      <div className="bg-white w-full">
+      <div className="bg-white-100 w-full">
         <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
           {/* Quick Links */}
           <div>
@@ -121,52 +121,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-
-            </ul>
-            <h4 className="text-lg font-semibold text-red-800 mt-6 mb-4">Information</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/info/public-disclosure" className="hover:text-red-800">
-                  Public Self Disclosure
-                </Link>
-              </li>
-              <li>
-                <Link href="/info/-act" className="hover:text-red-800">
-                  Public Notice:  Act
-                </Link>
-              </li>
-              <li>
-                <Link href="/info/forms" className="hover:text-red-800">
-                  Forms
-                </Link>
-              </li>
-              <li>
-                <Link href="/info/directory" className="hover:text-red-800">
-                  Directory
-                </Link>
-              </li>
-              <li>
-                <Link href="/info/feedback" className="hover:text-red-800">
-                  Feedback
-                </Link>
-              </li>
-              <li>
-                <Link href="/info/abc" className="hover:text-red-800">
-                  Academic Bank of Credit (ABC)
-                </Link>
-              </li>
-              <li>
-                <Link href="/info/website-credits" className="hover:text-red-800">
-                  Website Credits
-                </Link>
-              </li>
-              <li>
-                <Link href="/info/e-samadhan" className="hover:text-red-800">
-                  e-Samadhan
-                </Link>
-              </li>
-
-
             </ul>
           </div>
 
@@ -189,35 +143,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-</div>
-        {/* Bottom Section */}
-        <div className="w-full">
-  {/* Light Red Section */}
-  <div className="bg-red-800 border-t border-white/20 pt-8 text-sm w-full">
-    <div className="flex flex-col md:flex-row justify-between items-center gap-6 px-6">
-      <div className="flex items-center space-x-4">
-        <div className="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">
-          VIT
-        </div>
-        <div>
-          <p className="font-bold text-white">VIT-AP University</p>
-          <p className="text-xs italic text-white">Apply Knowledge. Improve Life!™</p>
-        </div>
-      </div>
-
-      <div className="flex flex-wrap gap-4 justify-center text-white/80">
-        {[
-          ["VIT-AP Home", "/"],
-          ["Maps & Directions", "/maps"],
-          ["Search", "/search"],
-          ["Emergency Info", "/emergency"],
-        ].map(([label, href]) => (
-          <Link key={href} href={href} className="hover:text-white transition">
-            {label}
-          </Link>
-        ))}
-
       </div>
 
       {/* Dark Red Section (Bottom Footer) */}
