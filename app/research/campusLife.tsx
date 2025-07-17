@@ -7,9 +7,9 @@ import clsx from "clsx"
 const heroCards = [
   {
     href: "/campuslife",
-    title: "Life @ VIT-AP",
+    title: "Life @ VIIT",
     text: "Experience the vibrant heart of our campus life at VIT AP University.",
-    image: "/image2.jpg",
+    image: "",
     buttonText: "EXPLORE",
     large: true
   },
@@ -27,7 +27,7 @@ const heroCards = [
 
 const infoCards = [
   {
-    titleLines: ["Explore", "The Vibrant", "Life At VIT-AP"],
+    titleLines: ["Explore", "The Vibrant", "Life At VIIT"],
     background: "#650010",
     imageCard: {
       href: "/library",
@@ -67,7 +67,7 @@ export default function CampusLifeSection() {
             key={idx}
             href={card.href}
             className={clsx(
-              "flex-1 w-full h-[300px] sm:h-[400px] xl:h-[600px] bg-center bg-no-repeat bg-cover flex flex-col items-start justify-end transition-all ease-in-out duration-300 hover:scale-105 overflow-hidden",
+              "bg-black flex-1 w-full h-[300px] sm:h-[400px] xl:h-[600px] bg-center bg-no-repeat bg-cover flex flex-col items-start justify-end transition-all ease-in-out duration-300 hover:scale-105 overflow-hidden",
               card.large ? "p-[40px]" : "p-[10px] relative group"
             )}
             style={{
