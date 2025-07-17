@@ -13,14 +13,14 @@ const slides = [
   },
   {
     type: "image",
-    src: "https://tse2.mm.bing.net/th/id/OIP.ypKpYB4jXs6UfsciGsBz2QHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+    src: "/image5.jpg",
     title: "Explore Innovation",
     subtitle: "Empowering the Future at VIT‑AP",
     link: "#",
   },
   {
     type: "image",
-    src: "https://www.vidyavision.com/CollegeUploads/Photos/2022-31-3-16-46-53_VIIR%20997%20P.jpg",
+    src: "image.png",
     link: "https://vitap.ac.in/ug-pg-admissions",
   },
   {
