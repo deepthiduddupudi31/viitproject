@@ -9,7 +9,7 @@ const newsArticles = [
     title: "CM outlines vision for youth, capital development & innovation",
     excerpt: "Chief Minister Nara Chandrababu Naidu emphasized the pivotal role of youth in shaping the nation's future during the V-Launchpad event...",
     date: "2025-04-29",
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+    image: "https://tse3.mm.bing.net/th/id/OIP.-yTwsdVYa-1bMkcZ1KfvfAHaH_?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     category: "Government",
     featured: true
   },
@@ -18,7 +18,7 @@ const newsArticles = [
     title: "VIT-AP, Cyient Foundation sign MoU to foster entrepreneurship",
     excerpt: "VIT-AP University has signed a Memorandum of Understanding (MoU) with Cyient Foundation to enhance entrepreneurship...",
     date: "2025-03-20",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+    image: "https://images.unsplash.com/photo-1566378246598-5b11a0d486cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmV3c3BhcGVyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
     category: "Partnership",
     featured: true
   },
@@ -27,7 +27,7 @@ const newsArticles = [
     title: "VITOPIA-2025 at VIT-AP concludes",
     excerpt: "VIT-AP University successfully concluded VITOPIA 2025, a grand celebration of innovation, technology, and academic excellence...",
     date: "2025-03-10",
-    image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+    image: "https://static.vecteezy.com/system/resources/previews/011/643/706/non_2x/business-newspaper-isolated-on-white-background-daily-newspaper-mock-up-concept-photo.jpg",
     category: "Events",
     featured: true
   },
@@ -36,7 +36,7 @@ const newsArticles = [
     title: "Research Excellence Awards 2025",
     excerpt: "VIT-AP recognizes outstanding research contributions across various disciplines in the annual awards ceremony...",
     date: "2025-02-15",
-    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1566378246598-5b11a0d486cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
     category: "Research"
   },
   {
@@ -44,7 +44,7 @@ const newsArticles = [
     title: "International Conference on AI and Machine Learning",
     excerpt: "Leading experts from around the world gather at VIT-AP to discuss the future of artificial intelligence...",
     date: "2025-02-08",
-    image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+    image: "https://cdn.britannica.com/25/93825-050-D1300547/collection-newspapers.jpg",
     category: "Technology"
   },
   {
@@ -52,7 +52,7 @@ const newsArticles = [
     title: "Student Innovation Challenge Winners Announced",
     excerpt: "Creative solutions to real-world problems showcased by talented students in the annual innovation challenge...",
     date: "2025-01-25",
-    image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+    image: "https://tse3.mm.bing.net/th/id/OIP.jlnqlKvx_vcnMXSPHpQRcAHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     category: "Students"
   }
 ];
@@ -184,16 +184,7 @@ export default function NewsSection() {
       </div>
 
       {/* Bottom Section */}
-      <div className="bg-white border-t border-gray-200 mt-16">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <h2 className="text-3xl font-bold text-red-800 mb-6">Placement Highlight</h2>
-          <div className="bg-red-50 p-6 rounded-lg">
-            <p className="text-gray-700 text-lg">
-              VIT-AP continues to achieve exceptional placement records with top companies recruiting our talented graduates across various disciplines.
-            </p>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 }
