@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="w-full text-black">
       {/* Light Red Section (Main Footer) */}
-      <div className="bg-white w-full">
+      <div className="bg-white-100 w-full">
         <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
           {/* Quick Links */}
           <div>
