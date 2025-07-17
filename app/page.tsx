@@ -13,6 +13,7 @@ import SocialMediaWall from "./research/socialMediaWall";
 import TopRecruiters from "./research/topRecruiters"
 import CampustLife from "./research/campusLife"
 import { useEffect, useRef, useState } from "react";
+import  PlacementHighlights from "./research/placementHighlights";
 import gsap from 'gsap';
 
 const slides = [
@@ -75,21 +76,21 @@ export default function HomePage() {
 
       {/* Programs Section */}
       <Programs />
-
+      
       {/* Campus Life Section */}
       <CampustLife/>
 
       {/* News Section */}
       <News/>
-
-      {/* Placement Highlights Section */}
       
+      {/* Placement Highlights Section */}
+      {/* <SocialMediaWall/> */}
 
       {/* Top Recruiters Section */}
-      
+      <PlacementHighlights/>
       <TopRecruiters/>
       {/* Social Media Wall Section */}
-      <SocialMediaWall/>
+    
       
     </div>
   )
