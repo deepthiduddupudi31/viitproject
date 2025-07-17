@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* VIT Connect & Academics */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">VIT Connect</h3>
+            <h3 className="text-lg font-semibold mb-4">VIIT Connect</h3>
             <ul className="space-y-2 text-sm text-black/90">
               {[
                 ["V-TOP Login", "/vtop-login"],
@@ -126,7 +126,7 @@ export default function Footer() {
 
           {/* Location */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">VIT-AP University</h3>
+            <h3 className="text-lg font-semibold mb-4">VIIT University</h3>
             <p className="text-sm text-black/80 mb-2">
               Beside AP Secretariat<br />
               Amaravathi – 522241, Andhra Pradesh
@@ -150,17 +150,17 @@ export default function Footer() {
         <div className="border-t border-white/20 px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center space-x-4">
             <div className="bg-white text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold">
-              VIT
+              VIIT
             </div>
             <div>
-              <p className="font-bold">VIT-AP University</p>
+              <p className="font-bold">VIIT University</p>
               <p className="text-xs italic">Apply Knowledge. Improve Life!™</p>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center text-white/80">
             {[
-              ["VIT-AP Home", "/"],
+              ["VIIT Home", "/"],
               ["Maps & Directions", "/maps"],
               ["Search", "/search"],
               ["Emergency Info", "/emergency"],
@@ -204,8 +204,8 @@ export default function Footer() {
         </div>
 
         <div className="text-center border-t border-white/20 py-4 text-white/60 text-xs">
-          <p>© {new Date().getFullYear()} VIT-AP University. All rights reserved.</p>
-          <p className="italic mt-1">Crafted with ❤️ by VIT-AP University</p>
+          <p>© {new Date().getFullYear()} VIIT University. All rights reserved.</p>
+          <p className="italic mt-1">Crafted with ❤️ by VIIT University</p>
         </div>
       </div>
     </footer>
