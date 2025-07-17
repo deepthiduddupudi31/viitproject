@@ -61,7 +61,7 @@ export default function CampusLifeSection() {
     <div className="w-full h-full">
 
       {/* Hero Section Cards */}
-      <div className="w-full h-full hidden md:flex cursor-pointer overflow-hidden">
+      <div className="w-full h-full hidden md:flex cursor-pointer overflow-hidden bg-red-500">
         {heroCards.map((card, idx) => (
           <a
             key={idx}
