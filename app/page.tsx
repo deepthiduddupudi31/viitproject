@@ -1,68 +1,135 @@
+'use client';
+
+import { useRef, useEffect, useState } from 'react';
+import { gsap } from 'gsap';
 import { Button } from "../components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import next from 'next';
+
+// Slides data
+const slides = [
+  {
+    type: 'image',
+    src: '/image1.jpg',
+    title: 'CBN x VIT-AP University',
+    subtitle: 'V-LaunchPad 2025 @ VIT-AP University®',
+    link: '#',
+  },
+  {
+    type: 'image',
+    src: '/image4.jpg',
+    title: 'CBN x VIT-AP University',
+    subtitle: 'V-LaunchPad 2025 @ VIT-AP University®',
+    link: '#',
+  },
+  {
+    type: 'image',
+    src: '/image2.jpg',
+    link: 'https://vitap.ac.in/ug-pg-admissions',
+  },
+  {
+    type: 'video',
+    src: '/image4.jpg', // Replace with actual video URL if needed
+    title: 'Welcome to VIT-AP University',
+    subtitle: 'APPLY KNOWLEDGE, IMPROVE LIFE®',
+    link: '#',
+  },
+];
 
 export default function HomePage() {
+  const container = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState(0);
+
+  const prev = () => setIndex(i => (i - 1 + slides.length) % slides.length);
+  const next = () => setIndex(i => (i + 1) % slides.length);
+
+  useEffect(() => {
+    gsap.to(container.current, {
+      x: `-${index * 100}%`,
+      duration: 0.8,
+      ease: "power2.inOut",
+    });
+  }, [index]);
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
-        <Image src="/images/hero-bg.png" alt="VIT-AP University Ceremony" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-black/30" />
+         {/* Slides Container */}
+      <div
+        ref={container}
+        className="flex h-full w-[400%]"
+        style={{ width: `${slides.length * 100}%` }}
+      >
+        {slides.map((s, i) => (
+          <div key={i} className="relative flex-none w-full h-full">
+            <div className="absolute inset-0 bg-black opacity-40 bg-gradient-to-t from-black z-10" />
 
-        {/* Navigation Arrows */}
-        <button className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors">
-          <ChevronLeft className="w-6 h-6 text-white" />
-        </button>
-        <button className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors">
-          <ChevronRight className="w-6 h-6 text-white" />
-        </button>
+            <a href={s.link} target="_blank" rel="noopener noreferrer">
+              <div className="relative w-full h-full">
+                {s.type === 'image' ? (
+                  <Image
+                    src={s.src}
+                    alt={s.title || 'slide'}
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                    priority={i === 0}
+                  />
+                ) : (
+                  <video autoPlay muted loop className="w-full h-full object-cover">
+                    <source src={s.src} />
+                  </video>
+                )}
+              </div>
+            </a>
 
-        {/* Hero Content */}
-        <div className="absolute inset-0 flex items-center justify-start pl-16">
-          <div className="text-white max-w-2xl">
-            <h1 className="text-6xl font-bold mb-4 leading-tight">
-              CBN x<br />
-              VIT-AP University
-            </h1>
-            <p className="text-xl mb-8">V-LaunchPad 2025 @ VIT-AP University®</p>
-          </div>
-        </div>
-      </section>
+            {/* Desktop Content */}
+            {s.title && (
+              <div className="absolute z-20 text-white w-[50vw] text-left flex-col top-[35vh] left-[10vw] hidden lg:flex">
+                <h1 className="text-[5vw] font-semibold font-Emilio leading-tight">{s.title}</h1>
+                <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-Montserrat">{s.subtitle}</h2>
+              </div>
+            )}
 
-      {/* About Section */}
-      <section className="py-16 px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">About VIT-AP</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              VIT has been a forerunner in delivering quality education. Consistently ranked among the top educational
-              institutes in the country, the VIT group of institutions have had a proud tradition of pursuing knowledge
-              and excellence. In keeping with this tradition, the leadership at VIT-AP resonates a dynamic blend of
-              academic initiative and industry partnership with a vision of creating one of the finest academic
-              destinations in the world.
-            </p>
-            <Button className="bg-red-800 hover:bg-red-900">View More</Button>
+            {/* Mobile Content */}
+            {s.title && (
+              <div className="absolute z-20 text-white text-center lg:hidden top-[50%] w-full px-4 transform -translate-y-1/2">
+                <h1 className="text-[6.5vw] font-semibold font-Emilio leading-tight">{s.title}</h1>
+                <h2 className="text-[10px] font-Montserrat">{s.subtitle}</h2>
+              </div>
+            )}
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold text-red-800 mb-4">ANNOUNCEMENTS</h3>
-            <div className="space-y-4">
-              <div className="border-b pb-3">
-                <p className="text-sm text-gray-600">2025-06-04</p>
-                <p className="font-medium">VIT-AP UG & PG (Non-Engg.) Online Applications - 2025</p>
-              </div>
-              <div className="border-b pb-3">
-                <p className="text-sm text-gray-600">2025-05-23</p>
-                <p className="font-medium">VITREE-2025 (July Session)-Results</p>
-              </div>
-              <div className="border-b pb-3">
-                <p className="text-sm text-gray-600">2025-05-08</p>
-                <p className="font-medium">VITMEE (M.Tech. 2025) Admission Results - Counselling & Choice filling</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={prev}
+        className="absolute left-4 top-1/2 p-2 rounded-full bg-white/20 text-white hover:bg-white/40 transform -translate-y-1/2 z-20"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button
+        onClick={next}
+        className="absolute right-4 top-1/2 p-2 rounded-full bg-white/20 text-white hover:bg-white/40 transform -translate-y-1/2 z-20"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
+
+      {/* Dots */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`h-1 rounded-full transition-all ${
+              i === index ? 'w-8 bg-white' : 'w-4 bg-white/50'
+            }`}
+          />
+        ))}
+      </div>
       </section>
 
       {/* Schools Section */}
