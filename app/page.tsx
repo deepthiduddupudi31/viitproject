@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import SchoolsSection from "./research/schools"
+import Programs from "./research/programs"
 
 export default function HomePage() {
   return (
@@ -109,67 +110,7 @@ export default function HomePage() {
       {/* Schools Section */}
       <SchoolsSection />
       {/* Programs Section */}
-      <section className="py-16 px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-red-800 mb-6">Programmes Offered</h2>
-          <p className="text-gray-700 mb-12">Programme covers the entire spectrum of new-age specializations.</p>
-
-          <div className="grid md:grid-cols-5 gap-6">
-            <div className="space-y-4">
-              <Button className="w-full bg-red-800 hover:bg-red-900 text-white py-3">Undergraduate</Button>
-              <Button
-                variant="outline"
-                className="w-full border-red-800 text-red-800 hover:bg-red-50 py-3 bg-transparent"
-              >
-                Dual Degree
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full border-red-800 text-red-800 hover:bg-red-50 py-3 bg-transparent"
-              >
-                Integrated
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full border-red-800 text-red-800 hover:bg-red-50 py-3 bg-transparent"
-              >
-                Postgraduate
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full border-red-800 text-red-800 hover:bg-red-50 py-3 bg-transparent"
-              >
-                Doctoral
-              </Button>
-            </div>
-
-            <div className="md:col-span-4 bg-white p-6 rounded-lg shadow-sm">
-              <div className="space-y-4">
-                <div className="border-b pb-3">
-                  <h3 className="text-red-800 font-medium">
-                    B.Tech. Electronics and Communication Engineering (Embedded Systems)
-                  </h3>
-                </div>
-                <div className="border-b pb-3">
-                  <h3 className="text-red-800 font-medium">B.Tech. Electronics and Communication Engineering (VLSI)</h3>
-                </div>
-                <div className="border-b pb-3">
-                  <h3 className="text-red-800 font-medium">B.Tech. Mechanical Engineering</h3>
-                </div>
-                <div className="border-b pb-3">
-                  <h3 className="text-red-800 font-medium">B.Tech. Mechanical Engineering (Automotive Design)</h3>
-                </div>
-                <div className="border-b pb-3">
-                  <h3 className="text-red-800 font-medium">B.Tech. Mechanical Engineering (Robotics)</h3>
-                </div>
-                <div>
-                  <h3 className="text-red-800 font-medium">B.Tech. Computer Science and Business Systems</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Programs />
 
       {/* Campus Life Section */}
       <section className="py-16 px-8">
