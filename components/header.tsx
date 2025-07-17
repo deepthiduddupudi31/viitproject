@@ -56,7 +56,7 @@ export default function Header() {
       {/* Main Navigation - scroll effect with blur */}
       <div className={clsx(
         "w-full z-20 transition-all duration-300",
-        scrolled ? "bg-white text-black" : "text-white   backdrop-blur-lg shadow-md"
+        scrolled ? "bg-white text-black" : "text-white backdrop-blur-md shadow-md"
       )}>
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
