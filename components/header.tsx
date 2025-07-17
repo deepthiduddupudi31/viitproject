@@ -56,19 +56,19 @@ export default function Header() {
       {/* Main Navigation - scroll effect with blur */}
       <div className={clsx(
         "w-full z-20 transition-all duration-300",
-        scrolled ? "bg-red-800" : "  backdrop-blur-md shadow-md"
+        scrolled ? "bg-white" : "  backdrop-blur-md shadow-md"
       )}>
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-red-800 font-bold text-sm">VIIT</span>
+                <span className="text-black font-bold text-sm">VIIT</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold">VIIT</h1>
-                <p className="text-xs text-red-200"></p>
-                <p className="text-xs text-red-200">Apply Knowledge. Improve Life!™</p>
+                <h1 className="text-xl font-bold text-black">VIIT</h1>
+                <p className="text-xs text-black"></p>
+                <p className="text-xs text-black">Apply Knowledge. Improve Life!™</p>
               </div>
             </Link>
 
@@ -85,7 +85,7 @@ export default function Header() {
                 <Link
                   key={label}
                   href={path}
-                  className="relative text-white hover:text-red-200 transition duration-200 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-white after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300"
+                  className="relative text-black hover:text-red-200 transition duration-200 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-white after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300"
                 >
                   {label}
                 </Link>
@@ -93,7 +93,7 @@ export default function Header() {
             </nav>
 
             {/* Mobile Menu Button */}
-            <Button variant="ghost" size="sm" className="lg:hidden text-white">
+            <Button variant="ghost" size="sm" className="lg:hidden text-black">
               <Menu className="w-6 h-6" />
             </Button>
           </div>

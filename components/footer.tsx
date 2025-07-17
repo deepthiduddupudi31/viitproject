@@ -3,9 +3,10 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-br from-white via-white to-white text-black">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-10 mb-16">
+    <footer className="w-full text-black">
+      {/* Light Red Section (Main Footer) */}
+      <div className="bg-white w-full">
+        <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
@@ -20,7 +21,7 @@ export default function Footer() {
                 ["Facilities for differently-abled", "/facilities"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-white transition">
+                  <Link href={href} className="hover:underline hover:text-red-800 transition">
                     {label}
                   </Link>
                 </li>
@@ -38,7 +39,7 @@ export default function Footer() {
                 ["Publications", "/research/publications"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-white transition">
+                  <Link href={href} className="hover:underline hover:text-red-800 transition">
                     {label}
                   </Link>
                 </li>
@@ -58,7 +59,7 @@ export default function Footer() {
                 ["Vitie-Bot", "/vitie-bot"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-white transition">
+                  <Link href={href} className="hover:underline hover:text-red-800 transition">
                     {label}
                   </Link>
                 </li>
@@ -78,7 +79,7 @@ export default function Footer() {
                 ["IQAC", "/academics/iqac"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-white transition">
+                  <Link href={href} className="hover:underline hover:text-red-800 transition">
                     {label}
                   </Link>
                 </li>
@@ -95,7 +96,7 @@ export default function Footer() {
                 ["NAAC", "/ranking/naac"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-white transition">
+                  <Link href={href} className="hover:underline hover:text-red-800 transition">
                     {label}
                   </Link>
                 </li>
@@ -115,11 +116,12 @@ export default function Footer() {
                 ["e-Samadhan", "/info/e-samadhan"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-white transition">
+                  <Link href={href} className="hover:underline hover:text-red-800 transition">
                     {label}
                   </Link>
                 </li>
               ))}
+
             </ul>
             <h4 className="text-lg font-semibold text-red-800 mt-6 mb-4">Information</h4>
             <ul className="space-y-2 text-sm">
@@ -164,46 +166,30 @@ export default function Footer() {
                 </Link>
               </li>
 
+
             </ul>
           </div>
 
           {/* Location */}
           <div>
-
             <h3 className="text-lg font-semibold mb-4">VIT-AP University</h3>
-            <p className="text-sm text-white/80 mb-2">
+            <p className="text-sm text-black/80 mb-2">
               Beside AP Secretariat<br />
               Amaravathi – 522241, Andhra Pradesh
             </p>
-            <Link href="/directions" className="text-sm text-white hover:underline flex items-center mt-2">
+            <Link href="/directions" className="text-sm text-red-800 hover:underline flex items-center mt-2">
               How to Reach ↗
             </Link>
 
-            {/* Placeholder map */}
-            <div className="mt-6 bg-black/10 rounded-lg p-4 flex flex-col items-center justify-center h-32 border border-black/20">
-              <div className="w-8 h-8 bg-red-600 rounded-full mb-1"></div>
-              <p className="text-xs">View Map</p>
-
-            <h3 className="text-lg font-semibold text-red-800 mb-4">VIIT , Amaravathi</h3>
-            <div className="text-sm text-gray-600 mb-4">
-              <p>Beside AP Secretariat - 522241,</p>
-              <p>Andhra Pradesh.</p>
-            </div>
-            <Link href="/directions" className="text-sm text-red-800 hover:underline flex items-center">
-              HOW TO REACH VIIT <span className="ml-1">↗</span>
-            </Link>
-
-            {/* Map placeholder */}
-            <div className="mt-4 bg-green-100 rounded-lg h-32 flex items-center justify-center">
+            <div className="mt-6 bg-green-100 rounded-lg h-32 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-8 h-8 bg-red-600 rounded-full mx-auto mb-2"></div>
-                <p className="text-xs text-gray-600">VIIT </p>
-                <p className="text-xs text-blue-600">View larger map</p>
+                <p className="text-xs text-gray-600">View larger map</p>
               </div>
-
             </div>
           </div>
         </div>
+
 </div>
         {/* Bottom Section */}
         <div className="w-full">
@@ -231,90 +217,71 @@ export default function Footer() {
             {label}
           </Link>
         ))}
+
       </div>
-    </div>
-  </div>
 
-        {/* Bottom Footer */}
-        <div className="bg-red-800 text-white py-6 px-8 rounded-lg">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-red-800 font-bold text-sm">VIT</span>
-              </div>
-              <div>
-                <h4 className="font-bold">VIIT</h4>
-                <p className="text-xs"></p>
-                <p className="text-xs">Apply Knowledge. Improve Life!™</p>
-              </div>
+      {/* Dark Red Section (Bottom Footer) */}
+      <div className="bg-red-800 w-full text-white text-sm">
+        <div className="border-t border-white/20 px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center space-x-4">
+            <div className="bg-white text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold">
+              VIT
             </div>
-
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm">
-              <Link href="/" className="hover:text-red-200">
-                VIIT Home
-              </Link>
-              <Link href="/maps" className="hover:text-red-200">
-                Maps & Directions
-              </Link>
-              <Link href="/search" className="hover:text-red-200">
-                Search VIIT
-              </Link>
-              <Link href="/emergency" className="hover:text-red-200">
-                Emergency Info
-              </Link>
+            <div>
+              <p className="font-bold">VIT-AP University</p>
+              <p className="text-xs italic">Apply Knowledge. Improve Life!™</p>
             </div>
           </div>
 
-
-  {/* Dark Red Section */}
-  <div className="bg-red-800 w-full text-white text-xs">
-    <div className="border-t border-white/20 mt-0 pt-6 flex flex-col md:flex-row justify-between items-center px-6">
-      <div className="flex flex-wrap gap-4 text-white/70 mb-4 md:mb-0">
-        {[
-          ["Privacy Policy", "/privacy"],
-          ["Terms of Use", "/terms"],
-          ["Copyright", "/copyright"],
-          ["Trademarks", "/trademarks"],
-          ["Non-Discrimination", "/non-discrimination"],
-          ["Accessibility", "/accessibility"],
-        ].map(([label, href]) => (
-          <Link key={href} href={href} className="hover:text-white transition">
-            {label}
-          </Link>
-        ))}
-      </div>
-
-      <div className="flex space-x-3">
-        {["Instagram", "LinkedIn", "Facebook", "YouTube", "X"].map((name, i) => (
-          <Button
-            key={name}
-            variant="ghost"
-            size="icon"
-            className="text-white hover:text-yellow-300 transition"
-          >
-            <span className="sr-only">{name}</span>
-            {["📷", "💼", "📘", "📺", "✖️"][i]}
-          </Button>
-        ))}
-      </div>
-    </div>
-
-    <div className="text-center mt-6 pt-4 border-t border-white/20 text-white/60">
-      <p>© {new Date().getFullYear()} VIT-AP University. All rights reserved.</p>
-      <p className="italic mt-1">Crafted with ❤️ by VIT-AP University</p>
-    </div>
-  </div>
-</div>
-
-
-          <div className="text-center mt-6 pt-6 border-t border-red-700">
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-              <p>Copyright © VIIT 2024. All rights reserved</p>
-              <p className="italic mt-2 md:mt-0">Crafted with Passion at VIIT  by Website Team</p>
-            </div>
+          <div className="flex flex-wrap gap-4 justify-center text-white/80">
+            {[
+              ["VIT-AP Home", "/"],
+              ["Maps & Directions", "/maps"],
+              ["Search", "/search"],
+              ["Emergency Info", "/emergency"],
+            ].map(([label, href]) => (
+              <Link key={href} href={href} className="hover:text-white transition">
+                {label}
+              </Link>
+            ))}
           </div>
         </div>
 
+        <div className="border-t border-white/20 px-6 py-4 flex flex-col md:flex-row justify-between items-center text-xs">
+          <div className="flex flex-wrap gap-4 text-white/70 mb-4 md:mb-0">
+            {[
+              ["Privacy Policy", "/privacy"],
+              ["Terms of Use", "/terms"],
+              ["Copyright", "/copyright"],
+              ["Trademarks", "/trademarks"],
+              ["Non-Discrimination", "/non-discrimination"],
+              ["Accessibility", "/accessibility"],
+            ].map(([label, href]) => (
+              <Link key={href} href={href} className="hover:text-white transition">
+                {label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex space-x-3">
+            {["Instagram", "LinkedIn", "Facebook", "YouTube", "X"].map((name, i) => (
+              <Button
+                key={name}
+                variant="ghost"
+                size="icon"
+                className="text-white hover:text-yellow-300 transition"
+              >
+                <span className="sr-only">{name}</span>
+                {["📷", "💼", "📘", "📺", "✖️"][i]}
+              </Button>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center border-t border-white/20 py-4 text-white/60 text-xs">
+          <p>© {new Date().getFullYear()} VIT-AP University. All rights reserved.</p>
+          <p className="italic mt-1">Crafted with ❤️ by VIT-AP University</p>
+        </div>
       </div>
     </footer>
   )
