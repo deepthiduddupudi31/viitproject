@@ -247,7 +247,7 @@ export default function VITAPHomePage() {
           </div>
 
           {/* Top Recruiters Section */}
-          <div className="mt-20">
+          {/* <div className="mt-20">
             <h3 className="text-4xl font-bold text-red-800 mb-12 text-left">
               Top Recruiters
             </h3>
@@ -272,7 +272,7 @@ export default function VITAPHomePage() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
