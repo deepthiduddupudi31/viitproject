@@ -120,7 +120,7 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-
+            </ul>
             <h4 className="text-lg font-semibold text-red-800 mt-6 mb-4">Information</h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -204,7 +204,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
+</div>
         {/* Bottom Section */}
         <div className="w-full">
   {/* Light Red Section */}
