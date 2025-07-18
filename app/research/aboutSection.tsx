@@ -24,10 +24,9 @@ const aboutSection = () => {
     </div>
   </div>
 </section>
-
       </div>
       <p className="mt-6 text-gray-800 leading-relaxed text-justify text-lg">
-        <span className="text-4xl text-red-800 font-serif font-bold float-left mr-2">V</span>
+        <span className="text-4xl text-blue-800 font-serif font-bold float-left mr-2">V</span>
         IT has been a forerunner in delivering quality education. Consistently ranked among the top educational
         institutes in the country, the VIT group of institutions have had a proud tradition of pursuing knowledge
         and excellence. In keeping with this tradition, the leadership at VIIT resonates a dynamic blend of
@@ -38,7 +37,7 @@ const aboutSection = () => {
 
     {/* Announcements */}
     <div className="bg-gray-100 p-6 rounded-lg shadow-lg w-full">
-      <h3 className="text-xl font-semibold text-red-800 mb-4">ANNOUNCEMENTS</h3>
+      <h3 className="text-xl font-semibold text-blue-800 mb-4">ANNOUNCEMENTS</h3>
       <div className="space-y-4 text-gray-800 text-sm">
         <div className="border-b pb-3">
           <p className="text-gray-500">2025-06-04</p>
@@ -66,7 +65,7 @@ const aboutSection = () => {
         </div>
       </div>
       <div className="mt-6 text-right">
-        <Link href="#" className="text-red-800 font-semibold hover:underline">
+        <Link href="#" className="text-blue-800 font-semibold hover:underline">
           View More
         </Link>
       </div>

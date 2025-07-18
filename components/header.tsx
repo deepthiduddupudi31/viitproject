@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className="text-white w-full z-50 fixed top-0 transition-all duration-300 bg-none">
       {/* Top Bar - remains fixed and without blur */}
-      <div className="border-b bg-red-800 border-red-700 z-30 relative">
+      <div className="border-b bg-blue-800 border-white-700 z-30 relative">
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">

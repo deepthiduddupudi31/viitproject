@@ -19,7 +19,6 @@ export default function VITAPHomePage() {
                   of Socials from
                 </h3>
               </div>
-
               {/* Main Featured Post */}
               <div className="relative group">
                 <div className="absolute left-0 top-0 bottom-0 w-2 bg-red-800"></div>
