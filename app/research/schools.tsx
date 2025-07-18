@@ -41,7 +41,7 @@ export default function SchoolsSection() {
     <section className="relative">
       {/* Background with pattern overlay */}
       <div 
-        className="relative bg-linkedin-to-br from-linkedin via-linkedin to-linkedin min-h-screen"
+        className="relative bg-red-900-to-br from-red-900 via-red-800 to-red-900 min-h-screen"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
@@ -49,7 +49,7 @@ export default function SchoolsSection() {
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         
         {/* Content container */}
-        <div className="relative bg-linkedin z-10 px-6 py-16">
+        <div className="relative bg-red-900 z-10 px-6 py-16">
           {/* Header section */}
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6">Schools</h2>

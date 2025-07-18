@@ -12,7 +12,7 @@ export default function VITAPHomePage() {
             {/* Left Side - Title and Main Image */}
             <div className="space-y-8">
               <div className="text-center lg:text-left">
-                <h2 className="text-5xl lg:text-6xl font-bold text-linkedin mb-4">
+                <h2 className="text-5xl lg:text-6xl font-bold text-red-800 mb-4">
                   The Wall
                 </h2>
                 <h3 className="text-3xl lg:text-4xl font-light text-gray-800 mb-8">
@@ -22,9 +22,9 @@ export default function VITAPHomePage() {
 
               {/* Main Featured Post */}
               <div className="relative group">
-                <div className="absolute left-0 top-0 bottom-0 w-2 bg-linkedin"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-2 bg-red-800"></div>
                 <div className="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-90">
-                  <span className="text-linkedin font-bold text-2xl tracking-widest">VIIT</span>
+                  <span className="text-red-800 font-bold text-2xl tracking-widest">VIIT</span>
                 </div>
                 
                 <div className="ml-6 mr-12 relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300">
@@ -39,7 +39,7 @@ export default function VITAPHomePage() {
                   <div className="absolute bottom-4 left-4 text-white">
                     <div className="flex items-center space-x-2 mb-2">
                       <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-linkedin font-bold text-xs">VIIT</span>
+                        <span className="text-red-800 font-bold text-xs">VIIT</span>
                       </div>
                       <span className="text-sm font-medium">VIIT </span>
                     </div>
@@ -54,19 +54,19 @@ export default function VITAPHomePage() {
               <div className="text-center lg:text-left">
                 <p className="text-gray-700 font-medium mb-4">Follow us on our Socials</p>
                 <div className="flex justify-center lg:justify-start space-x-3">
-                  <Link href="#" className="w-12 h-12 bg-linkedin text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-blue-600">
+                  <Link href="#" className="w-12 h-12 bg-red-800 text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-red-600">
                     <Youtube className="w-6 h-6" />
                   </Link>
-                  <Link href="#" className="w-12 h-12 bg-linkedin text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-blue-600">
+                  <Link href="#" className="w-12 h-12 bg-red-800 text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-blue-600">
                     <Facebook className="w-6 h-6" />
                   </Link>
-                  <Link href="#" className="w-12 h-12 bg-linkedin text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-linkedin">
+                  <Link href="#" className="w-12 h-12 bg-red-800 text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-blue-700">
                     <Linkedin className="w-6 h-6" />
                   </Link>
-                  <Link href="#" className="w-12 h-12 bg-linkedin text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-black">
+                  <Link href="#" className="w-12 h-12 bg-red-800 text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-black">
                     <Twitter className="w-6 h-6" />
                   </Link>
-                  <Link href="#" className="w-12 h-12 bg-linkedin text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-pink-600">
+                  <Link href="#" className="w-12 h-12 bg-red-800 text-white rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-pink-600">
                     <Instagram className="w-6 h-6" />
                   </Link>
                 </div>
@@ -96,7 +96,7 @@ export default function VITAPHomePage() {
                     
                     <div className="absolute top-3 left-3">
                       <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-linkedin font-bold text-xs">VIIT</span>
+                        <span className="text-red-800 font-bold text-xs">VIIT</span>
                       </div>
                     </div>
 
@@ -112,7 +112,7 @@ export default function VITAPHomePage() {
                       <p className="text-xs opacity-90 line-clamp-2">{post.desc}</p>
                     </div>
 
-                    <div className="absolute inset-0 bg-linkedin bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-red-800 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                   </div>
                 </div>
               ))}
@@ -127,7 +127,7 @@ export default function VITAPHomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             {/* Left Side - Title and Description */}
             <div className="lg:col-span-1">
-              <h2 className="text-5xl lg:text-6xl font-bold text-linkedin mb-8 leading-tight">
+              <h2 className="text-5xl lg:text-6xl font-bold text-red-800 mb-8 leading-tight">
                 Placement Highlight
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -230,14 +230,14 @@ export default function VITAPHomePage() {
                       />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-bold text-gray-800 text-sm mb-1 group-hover:text-linkedin transition-colors duration-300">
+                      <h4 className="font-bold text-gray-800 text-sm mb-1 group-hover:text-red-800 transition-colors duration-300">
                         {card.title}
                       </h4>
                       <p className="text-gray-600 text-xs">
                         {card.subtitle}
                       </p>
                     </div>
-                    <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-linkedin transition-colors duration-300">
+                    <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-red-800 transition-colors duration-300">
                       <span className="text-white text-xs font-bold">VIT</span>
                     </div>
                   </div>
@@ -248,7 +248,7 @@ export default function VITAPHomePage() {
 
           {/* Top Recruiters Section */}
           {/* <div className="mt-20">
-            <h3 className="text-4xl font-bold text-linkedin mb-12 text-left">
+            <h3 className="text-4xl font-bold text-red-800 mb-12 text-left">
               Top Recruiters
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
@@ -266,7 +266,7 @@ export default function VITAPHomePage() {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <h4 className="text-center font-semibold text-gray-800 text-sm group-hover:text-linkedin transition-colors duration-300">
+                  <h4 className="text-center font-semibold text-gray-800 text-sm group-hover:text-red-800 transition-colors duration-300">
                     {company}
                   </h4>
                 </div>

@@ -42,11 +42,11 @@ const TopRecruiters = () => {
           </div>
         </div>
 
-        <div className="bg-linkedin text-white py-12 px-8 mt-16 rounded-lg text-center">
+        <div className="bg-red-800 text-white py-12 px-8 mt-16 rounded-lg text-center">
           <blockquote className="text-2xl font-light italic mb-4">
-            "VIIT is a global leader in education and research, and we are proud to be part of this great institution."
+            "INDIA should lead the world. VIT should lead India"
           </blockquote>
-          <cite className="text-lg">- Dr.LAVU RATHAIAH, chairman, VIIT</cite>
+          <cite className="text-lg">- Dr. G. Viswanathan, Founder & Chancellor, VIT</cite>
         </div>
       </div>
     </section>

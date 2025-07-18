@@ -8,7 +8,7 @@ const slides = [
     type: "image",
     src: "/image5.jpeg",
     title: "CBN x VIIT ",
-    subtitle: "V‑LaunchPad 2025 @ VIIT‑VIZAG ®",
+    subtitle: "V‑LaunchPad 2025 @ VIT‑AP ®",
     link: "#",
   },
   {

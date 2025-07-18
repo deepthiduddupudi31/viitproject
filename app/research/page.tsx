@@ -8,7 +8,7 @@ export default function ResearchPage() {
       {/* Hero Section */}
       <section className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-8">
-          <h1 className="text-5xl font-bold text-linkedin mb-12">Research and Innovation</h1>
+          <h1 className="text-5xl font-bold text-red-800 mb-12">Research and Innovation</h1>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -83,7 +83,7 @@ export default function ResearchPage() {
             <div className="flex space-x-6">
               <Button
                 variant="outline"
-                className="flex items-center space-x-2 border-linkedin text-linkedin bg-transparent"
+                className="flex items-center space-x-2 border-red-800 text-red-800 bg-transparent"
               >
                 <FileText className="w-4 h-4" />
                 <span>Publications</span>
@@ -91,7 +91,7 @@ export default function ResearchPage() {
 
               <Button
                 variant="outline"
-                className="flex items-center space-x-2 border-linkedin text-linkedin bg-transparent"
+                className="flex items-center space-x-2 border-red-800 text-red-800 bg-transparent"
               >
                 <Award className="w-4 h-4" />
                 <span>Patents</span>
@@ -99,7 +99,7 @@ export default function ResearchPage() {
 
               <Button
                 variant="outline"
-                className="flex items-center space-x-2 border-linkedin text-linkedin bg-transparent"
+                className="flex items-center space-x-2 border-red-800 text-red-800 bg-transparent"
               >
                 <Building className="w-4 h-4" />
                 <span>Sponsored Projects</span>
