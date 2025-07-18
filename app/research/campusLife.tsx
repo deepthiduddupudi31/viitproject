@@ -28,7 +28,7 @@ const heroCards = [
 const infoCards = [
   {
     titleLines: ["Explore", "The Vibrant", "Life At VIIT"],
-    background: "#650010",
+    background: "#0077B5",
     imageCard: {
       href: "/library",
       title: "Library",
@@ -42,7 +42,7 @@ const infoCards = [
       image: "/image5.jpg"
     },
     titleLines: ["The", "Lively", "Unforgettable", "Experience"],
-    background: "#650010",
+    background: "#0077B5",
     extraCard: {
       href: "/celebrations",
       title: "Celebrations",
@@ -61,7 +61,7 @@ export default function CampusLifeSection() {
     <div className="w-full h-full">
 
       {/* Hero Section Cards */}
-      <div className="w-full h-full hidden md:flex cursor-pointer overflow-hidden bg-red-500">
+      <div className="w-full h-full hidden md:flex cursor-pointer overflow-hidden bg-linkedin">
         {heroCards.map((card, idx) => (
           <a
             key={idx}
@@ -84,7 +84,7 @@ export default function CampusLifeSection() {
                   <p className="text-[14px] lg:text-[17px] xl:text-[20px] font-Montserrat text-[#FDFEFF] font-normal leading-6 pb-[20px]">
                     {card.text}
                   </p>
-                  <span className="w-[100px] lg:w-[120px] xl:w-[180px] h-[40px] xl:h-[54px] flex items-center justify-center bg-white text-[#650010] hover:bg-[#650010] hover:text-white text-[14px] font-Montserrat font-medium transition duration-200 ease-in">
+                  <span className="w-[100px] lg:w-[120px] xl:w-[180px] h-[40px] xl:h-[54px] flex items-center justify-center bg-white text-linkedin hover:bg-linkedin hover:text-white text-[14px] font-Montserrat font-medium transition duration-200 ease-in">
                     {card.buttonText}
                   </span>
                 </div>

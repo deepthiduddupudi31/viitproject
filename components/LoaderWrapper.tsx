@@ -1,22 +1,32 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Loader from "./loader";
-import { usePathname } from "next/navigation";
+import React, { useState, useRef } from "react";
 
 export default function LoaderWrapper({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
-  const pathname = usePathname();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 2000); // 2 seconds
-    return () => clearTimeout(timer);
-  }, [pathname]); // <-- runs on every route change
+  const handleVideoEnd = () => {
+    setLoading(false);
+  };
 
-  return (
-    <>
-      {loading && <Loader />}
-      {children}
-    </>
-  );
+  if (loading) {
+    return (
+      <div
+        className="fixed inset-0 z-50 w-screen h-screen"
+        role="status"
+        aria-label="Loading"
+      >
+        <video
+          ref={videoRef}
+          src="/0718.mp4"
+          autoPlay
+          muted
+          onEnded={handleVideoEnd}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    );
+  }
+
+  return <>{children}</>;
 }

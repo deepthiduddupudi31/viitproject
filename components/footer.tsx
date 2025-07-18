@@ -21,7 +21,7 @@ export default function Footer() {
                 ["Facilities for differently-abled", "/facilities"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-red-800 transition">
+                  <Link href={href} className="hover:underline hover:text-linkedin transition">
                     {label}
                   </Link>
                 </li>
@@ -39,7 +39,7 @@ export default function Footer() {
                 ["Publications", "/research/publications"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-red-800 transition">
+                  <Link href={href} className="hover:underline hover:text-linkedin transition">
                     {label}
                   </Link>
                 </li>
@@ -59,7 +59,7 @@ export default function Footer() {
                 ["Vitie-Bot", "/vitie-bot"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-red-800 transition">
+                  <Link href={href} className="hover:underline hover:text-linkedin transition">
                     {label}
                   </Link>
                 </li>
@@ -79,7 +79,7 @@ export default function Footer() {
                 ["IQAC", "/academics/iqac"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-red-800 transition">
+                  <Link href={href} className="hover:underline hover:text-linkedin transition">
                     {label}
                   </Link>
                 </li>
@@ -96,7 +96,7 @@ export default function Footer() {
                 ["NAAC", "/ranking/naac"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-red-800 transition">
+                  <Link href={href} className="hover:underline hover:text-linkedin transition">
                     {label}
                   </Link>
                 </li>
@@ -116,7 +116,7 @@ export default function Footer() {
                 ["e-Samadhan", "/info/e-samadhan"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-red-800 transition">
+                  <Link href={href} className="hover:underline hover:text-linkedin transition">
                     {label}
                   </Link>
                 </li>
@@ -131,13 +131,13 @@ export default function Footer() {
               Beside AP Secretariat<br />
               Amaravathi – 522241, Andhra Pradesh
             </p>
-            <Link href="/directions" className="text-sm text-red-800 hover:underline flex items-center mt-2">
+            <Link href="/directions" className="text-sm text-linkedin hover:underline flex items-center mt-2">
               How to Reach ↗
             </Link>
 
             <div className="mt-6 bg-green-100 rounded-lg h-32 flex items-center justify-center">
               <div className="text-center">
-                <div className="w-8 h-8 bg-red-600 rounded-full mx-auto mb-2"></div>
+                <div className="w-8 h-8 bg-linkedin rounded-full mx-auto mb-2"></div>
                 <p className="text-xs text-gray-600">View larger map</p>
               </div>
             </div>
@@ -146,10 +146,10 @@ export default function Footer() {
       </div>
 
       {/* Dark Red Section (Bottom Footer) */}
-      <div className="bg-red-800 w-full text-white text-sm">
+      <div className="bg-linkedin w-full text-white text-sm">
         <div className="border-t border-white/20 px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center space-x-4">
-            <div className="bg-white text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold">
+            <div className="bg-white text-linkedin w-10 h-10 rounded-full flex items-center justify-center font-bold">
               VIIT
             </div>
             <div>
