@@ -4,7 +4,7 @@ const TopRecruiters = () => {
   return (
     <section className="py-16 px-4 sm:px-8 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-red-800 mb-12 text-center">
+        <h2 className="text-4xl font-bold text-blue-800 mb-12 text-center">
           Top Recruiters
         </h2>
 
@@ -18,7 +18,7 @@ const TopRecruiters = () => {
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
-                  <span className="text-2xl font-bold text-red-600 transition duration-300 group-hover:scale-110 group-hover:text-red-800 cursor-pointer">
+                  <span className="text-2xl font-bold text-blue-600 transition duration-300 group-hover:scale-110 group-hover:text-red-800 cursor-pointer">
                     ALSTOM
                   </span>
                 </div>
@@ -28,7 +28,7 @@ const TopRecruiters = () => {
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
-                  <span className="text-2xl font-bold text-red-500 transition duration-300 group-hover:scale-110 group-hover:text-red-700 cursor-pointer">
+                  <span className="text-2xl font-bold text-blue-500 transition duration-300 group-hover:scale-110 group-hover:text-red-700 cursor-pointer">
                     amdocs
                   </span>
                 </div>
@@ -42,7 +42,7 @@ const TopRecruiters = () => {
           </div>
         </div>
 
-        <div className="bg-red-800 text-white py-12 px-8 mt-16 rounded-lg text-center">
+        <div className="bg-blue-800 text-white py-12 px-8 mt-16 rounded-lg text-center">
           <blockquote className="text-2xl font-light italic mb-4">
             "INDIA should lead the world. VIT should lead India"
           </blockquote>

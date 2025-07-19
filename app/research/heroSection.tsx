@@ -6,28 +6,23 @@ import Image from "next/image"
 const slides = [
   {
     type: "image",
-    src: "/image5.jpeg",
-    title: "CBN x VIIT ",
-    subtitle: "V‑LaunchPad 2025 @ VIT‑AP ®",
+    src: "/naac.jpg",
     link: "#",
   },
   {
     type: "image",
     src: "/image5.jpg",
-    title: "Explore Innovation",
-    subtitle: "Empowering the Future at VIT‑AP",
+
     link: "#",
   },
   {
     type: "image",
-    src: "image.png",
-    link: "https://vitap.ac.in/ug-pg-admissions",
+    src: "image4.jpg",
+    link: "#",
   },
   {
-    type: 'video',
-    src: '/VideoR.mp4',
-    title: 'Welcome to VIIT ',
-    subtitle: 'APPLY KNOWLEDGE, IMPROVE LIFE®',
+    type: 'image',
+    src: 'image1.jpg',
     link: '#',
   },
 ]
@@ -74,18 +69,17 @@ export default function Section1() {
           {slides.map((s, i) => (
             <div
               key={i}
-              className="relative w-full h-full flex-shrink-0 flex-grow-0"
+              className="relative w-full h-full "
               style={{ width: `${100 / slides.length}%` }}
             >
-              <div className="absolute inset-0 bg-black/30 z-10" />
               <a href={s.link} target="_blank" rel="noopener noreferrer">
                 <div className="relative w-full h-full">
                   {s.type === 'image' ? (
                     <Image
                       src={s.src}
-                      alt={s.title || `Slide ${i}`}
+                      alt={`Slide ${i}`}
                       fill
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain lg:object-cover"
                       priority={i === 0}
                     />
                   ) : (
@@ -95,20 +89,7 @@ export default function Section1() {
                   )}
                 </div>
               </a>
-              {s.title && (
-                <>
-                  <div className="hidden lg:flex absolute z-20 top-[35vh] left-[10vw] w-[50vw] flex-col text-white">
-                    <h1 className="text-[4vw] font-semibold leading-tight">
-                      {s.title}
-                    </h1>
-                    <h2 className="text-xl font-medium">{s.subtitle}</h2>
-                  </div>
-                  <div className="lg:hidden absolute z-20 top-1/2 left-1/2 w-full px-4 text-center text-white transform -translate-x-1/2 -translate-y-1/2">
-                    <h1 className="text-[6.5vw] font-bold">{s.title}</h1>
-                    <h2 className="text-[3.5vw]">{s.subtitle}</h2>
-                  </div>
-                </>
-              )}
+
             </div>
           ))}
         </div>

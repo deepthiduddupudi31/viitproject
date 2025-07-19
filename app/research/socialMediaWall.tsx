@@ -48,7 +48,7 @@ const socialPosts = [
 ];
 
 const socialLinks = [
-  { icon: Youtube, href: "#", color: "hover:bg-red-600" },
+  { icon: Youtube, href: "#", color: "hover:bg-blue-600" },
   { icon: Facebook, href: "#", color: "hover:bg-blue-600" },
   { icon: Linkedin, href: "#", color: "hover:bg-blue-700" },
   { icon: Twitter, href: "#", color: "hover:bg-black" },
@@ -63,7 +63,7 @@ export default function SocialWallSection() {
           {/* Left Side - Title and Main Image */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
-              <h2 className="text-5xl lg:text-6xl font-bold text-red-800 mb-4">
+              <h2 className="text-5xl lg:text-6xl font-bold text-blue-800 mb-4">
                 The Wall
               </h2>
               <h3 className="text-3xl lg:text-4xl font-light text-gray-800 mb-8">
@@ -73,9 +73,9 @@ export default function SocialWallSection() {
 
             {/* Main Featured Post */}
             <div className="relative group">
-              <div className="absolute left-0 top-0 bottom-0 w-2 bg-red-800"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-2 bg-blue-800"></div>
               <div className="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-90">
-                <span className="text-red-800 font-bold text-2xl tracking-widest">VIIT</span>
+                <span className="text-blue-800 font-bold text-2xl tracking-widest">VIIT</span>
               </div>
               
               <div className="ml-6 mr-12 relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300">
@@ -90,7 +90,7 @@ export default function SocialWallSection() {
                 <div className="absolute bottom-4 left-4 text-white">
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-red-800 font-bold text-xs">VIIT</span>
+                      <span className="text-blue-800 font-bold text-xs">VIIT</span>
                     </div>
                     <span className="text-sm font-medium">VIIT </span>
                   </div>
@@ -109,7 +109,7 @@ export default function SocialWallSection() {
                   <Link
                     key={index}
                     href={social.href}
-                    className={`w-12 h-12 bg-red-800 text-white rounded-lg flex items-center justify-center transition-colors duration-300 ${social.color}`}
+                    className={`w-12 h-12 bg-blue-800 text-white rounded-lg flex items-center justify-center transition-colors duration-300 ${social.color}`}
                   >
                     <social.icon className="w-6 h-6" />
                   </Link>
@@ -140,7 +140,7 @@ export default function SocialWallSection() {
                   {/* VIIT Logo */}
                   <div className="absolute top-3 left-3">
                     <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-red-800 font-bold text-xs">VIIT</span>
+                      <span className="text-blue-800 font-bold text-xs">VIIT</span>
                     </div>
                   </div>
 
@@ -159,7 +159,7 @@ export default function SocialWallSection() {
                   </div>
 
                   {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-red-800 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-blue-800 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                 </div>
               </div>
             ))}

@@ -1,196 +1,149 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import clsx from "clsx"
 
 const heroCards = [
   {
-    href: "/campuslife",
+    href: "/campus-life",
     title: "Life @ VIIT",
     text: "Experience the vibrant heart of our campus life at VIT AP University.",
-    image: "",
+    image: "/image1.jpg",
     buttonText: "EXPLORE",
-    large: true
   },
   {
     href: "/sports",
     title: "Sports",
-    image: "/sport.avif"
+    image: "/sports.jpg"
   },
   {
     href: "/cafeteria",
     title: "Cafeteria",
-    image: "/image1.jpg"
+    image: "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
-]
+];
 
 const infoCards = [
   {
-    titleLines: ["Explore", "The Vibrant", "Life At VIIT"],
-    background: "#650010",
+    titleLines: ["Explore The", "Vibrant Life"],
+    background: "#001965",
     imageCard: {
       href: "/library",
       title: "Library",
-      image: "/image.png"
+      image: "/library.jpg"
     }
   },
   {
-    imageCard: {
+    firstCard: {
       href: "/clubs-and-chapters",
       title: "Clubs & Chapters",
-      image: "/image5.jpg"
+      image: "/club.jpg"
     },
-    titleLines: ["The", "Lively", "Unforgettable", "Experience"],
-    background: "#650010",
-    extraCard: {
+    secondCard: {
       href: "/celebrations",
       title: "Celebrations",
-      image: "/image5.jpg"
+      image: "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
-    lastCard: {
-      href: "/hostels",
-      title: "Hostels",
-      image: "/image5.jpg"
-    }
+    thirdCard: {
+        href: "/hostels",
+        title: "Hostels",
+        image: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    titleLines: ["The Lively,", "Unforgettable", "Experience"],
+    background: "#001e65",
   }
-]
+];
+
+const ImageCard = ({ href, image, title, className = "" }) => (
+  <a
+    href={href}
+    className={clsx(
+      "relative w-full h-full flex-1 group overflow-hidden bg-cover bg-center transition-transform duration-300 ease-in-out hover:scale-105",
+      className
+    )}
+    style={{
+      backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url('${image}')`
+    }}
+  >
+    <div className="absolute -bottom-full group-hover:bottom-6 left-6 transition-all duration-300 ease-in-out">
+      <h1 className="text-xl md:text-2xl font-bold text-white font-Emilio">
+        {title}
+      </h1>
+    </div>
+  </a>
+);
+
+const TextBlock = ({ titleLines, background, className = "" }) => (
+  <div
+    className={clsx(
+      "w-full h-full flex-1 flex flex-col items-start justify-center p-6",
+      className
+    )}
+    style={{ backgroundColor: background }}
+  >
+    {titleLines.map((line, i) => (
+      <h1
+        key={i}
+        className="text-2xl md:text-3xl font-bold text-white font-Emilio leading-tight"
+      >
+        {line}
+      </h1>
+    ))}
+  </div>
+);
+
 
 export default function CampusLifeSection() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full min-h-screen bg-white">
 
-      {/* Hero Section Cards */}
-      <div className="w-full h-full hidden md:flex cursor-pointer overflow-hidden bg-red-500">
-        {heroCards.map((card, idx) => (
-          <a
-            key={idx}
-            href={card.href}
-            className={clsx(
-              "bg-black flex-1 w-full h-[300px] sm:h-[400px] xl:h-[600px] bg-center bg-no-repeat bg-cover flex flex-col items-start justify-end transition-all ease-in-out duration-300 hover:scale-105 overflow-hidden",
-              card.large ? "p-[40px]" : "p-[10px] relative group"
-            )}
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('${card.image}')`
-            }}
-          >
-            {card.large ? (
-              <>
-                <div className="basis-1/2 flex w-full" />
-                <div className="basis-1/2 flex flex-col items-start justify-end">
-                  <p className="text-[36px] pb-[20px] lg:text-[48px] xl:text-[64px] font-Emilio font-bold text-white">
-                    {card.title}
-                  </p>
-                  <p className="text-[14px] lg:text-[17px] xl:text-[20px] font-Montserrat text-[#FDFEFF] font-normal leading-6 pb-[20px]">
-                    {card.text}
-                  </p>
-                  <span className="w-[100px] lg:w-[120px] xl:w-[180px] h-[40px] xl:h-[54px] flex items-center justify-center bg-white text-[#650010] hover:bg-[#650010] hover:text-white text-[14px] font-Montserrat font-medium transition duration-200 ease-in">
-                    {card.buttonText}
-                  </span>
-                </div>
-              </>
-            ) : (
-              <div className="absolute -bottom-96 group-hover:bottom-10 left-8 transition-all duration-300 ease-in-out">
-                <h1 className="text-[20px] lg:text-[24px] xl:text-[32px] font-bold text-white font-Emilio">
-                  {card.title}
-                </h1>
-              </div>
-            )}
-          </a>
-        ))}
+      {/* Hero Section */}
+      <div className="w-full flex flex-col md:flex-row md:h-[600px] cursor-pointer">
+        {/* Large Card - Full width on mobile, 2/3 on desktop */}
+        <a
+          href={heroCards[0].href}
+          className="relative w-full md:w-2/3 h-[400px] md:h-full bg-cover bg-center group overflow-hidden p-8 flex flex-col justify-end"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('${heroCards[0].image}')`
+          }}
+        >
+          <div className="transition-transform duration-300 group-hover:scale-105">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white font-Emilio mb-4">
+              {heroCards[0].title}
+            </h1>
+            <p className="text-base lg:text-lg text-white/90 font-light max-w-md mb-6">
+              {heroCards[0].text}
+            </p>
+            <span className="w-40 h-12 flex items-center justify-center bg-white text-[#650010] hover:bg-[#650010] hover:text-white text-sm font-semibold tracking-wider uppercase transition-colors duration-200">
+              {heroCards[0].buttonText}
+            </span>
+          </div>
+        </a>
+        
+        {/* Small Cards - Side-by-side on mobile, stacked on desktop */}
+        <div className="w-full md:w-1/3 flex flex-row md:flex-col">
+          <ImageCard href={heroCards[1].href} image={heroCards[1].image} title={heroCards[1].title} className="h-64 md:h-1/2"/>
+          <ImageCard href={heroCards[2].href} image={heroCards[2].image} title={heroCards[2].title} className="h-64 md:h-1/2"/>
+        </div>
       </div>
 
-      {/* Info Section Cards */}
-      <div className="w-full h-full flex cursor-pointer flex-wrap">
-        {infoCards.map((section, idx) => (
-          <div key={idx} className="flex-1 h-[300px] sm:h-[400px] xl:h-[600px] w-full flex">
-            <div className="w-full h-full flex-1 flex overflow-hidden flex-col">
-
-              {/* Text block */}
-              <div
-                className="w-full h-full flex-1 flex flex-col items-start justify-center p-[25px]"
-                style={{ backgroundColor: section.background }}
-              >
-                {section.titleLines.map((line, i) => (
-                  <h1
-                    key={i}
-                    className="text-[20px] lg:text-[24px] xl:text-[38px] font-bold text-white font-Emilio"
-                  >
-                    {line}
-                  </h1>
-                ))}
-              </div>
-
-              {/* Image card */}
-              {section.imageCard && (
-                <a
-                  href={section.imageCard.href}
-                  className="w-full h-full flex-1 relative flex flex-col items-start justify-end p-[10px] bg-no-repeat bg-center bg-cover group transition-all ease-in-out duration-300 hover:scale-105 overflow-hidden"
-                  style={{
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('${section.imageCard.image}')`
-                  }}
-                >
-                  <div className="absolute -bottom-96 group-hover:bottom-6 left-8 transition-all duration-300 ease-in-out">
-                    <h1 className="text-[20px] lg:text-[24px] xl:text-[32px] font-bold text-white font-Emilio">
-                      {section.imageCard.title}
-                    </h1>
-                  </div>
-                </a>
-              )}
-            </div>
-
-            {/* Additional cards (optional) */}
-            {section.extraCard && section.lastCard && (
-              <div className="flex-1 w-full h-full flex flex-col overflow-hidden relative">
-                {/* Celebrations */}
-                <a
-                  href={section.extraCard.href}
-                  className="flex-1 relative w-full h-full bg-black flex flex-col items-start justify-end p-[10px] bg-no-repeat bg-center bg-cover group transition-all ease-in-out duration-300 hover:scale-105 overflow-hidden"
-                  style={{
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('${section.extraCard.image}')`
-                  }}
-                >
-                  <div className="absolute -bottom-96 group-hover:bottom-6 left-8 transition-all duration-300 ease-in-out">
-                    <h1 className="text-[20px] lg:text-[24px] xl:text-[32px] font-bold text-white font-Emilio">
-                      {section.extraCard.title}
-                    </h1>
-                  </div>
-                </a>
-
-                {/* Hostels */}
-                <div className="flex-1 w-full h-full flex overflow-hidden">
-                  <div
-                    className="w-full h-full flex-1 flex flex-col items-start justify-center p-[25px]"
-                    style={{ backgroundColor: section.background }}
-                  >
-                    {section.titleLines.map((line, i) => (
-                      <h1
-                        key={i}
-                        className="text-[20px] lg:text-[24px] xl:text-[38px] font-bold text-white font-Emilio"
-                      >
-                        {line}
-                      </h1>
-                    ))}
-                  </div>
-
-                  <a
-                    href={section.lastCard.href}
-                    className="flex-1 w-full h-full flex flex-col items-start justify-end p-[10px] bg-no-repeat bg-center bg-cover hover:scale-105 group overflow-hidden transition-all ease-in-out duration-300"
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('${section.lastCard.image}')`
-                    }}
-                  >
-                    <div className="absolute -bottom-96 group-hover:bottom-6 left-4 transition-all duration-300 ease-in-out">
-                      <h1 className="text-[20px] lg:text-[24px] xl:text-[32px] font-bold text-white font-Emilio">
-                        {section.lastCard.title}
-                      </h1>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
+      {/* Info Section */}
+      <div className="w-full flex flex-col lg:flex-row cursor-pointer">
+        
+        {/* First Column - Stacks on mobile, forms a column on desktop */}
+        <div className="w-full lg:w-1/2 flex flex-col">
+          {/* Mobile: Text block above image. Desktop: Text block above image */}
+          <TextBlock titleLines={infoCards[0].titleLines} background={infoCards[0].background} className="h-48 md:h-64 lg:h-[400px]"/>
+          <ImageCard href={infoCards[0].imageCard.href} image={infoCards[0].imageCard.image} title={infoCards[0].imageCard.title} className="h-64 md:h-80 lg:h-[400px]"/>
+        </div>
+        
+        {/* Second Column - Forms a 2x2 grid on mobile and desktop */}
+        <div className="w-full lg:w-1/2 grid grid-cols-2 grid-rows-2">
+            <ImageCard href={infoCards[1].firstCard.href} image={infoCards[1].firstCard.image} title={infoCards[1].firstCard.title} className="h-64 md:h-80 lg:h-[400px]"/>
+            <ImageCard href={infoCards[1].secondCard.href} image={infoCards[1].secondCard.image} title={infoCards[1].secondCard.title} className="h-64 md:h-80 lg:h-[400px]"/>
+            <TextBlock titleLines={infoCards[1].titleLines} background={infoCards[1].background} className="h-64 md:h-80 lg:h-[400px]"/>
+            <ImageCard href={infoCards[1].thirdCard.href} image={infoCards[1].thirdCard.image} title={infoCards[1].thirdCard.title} className="h-64 md:h-80 lg:h-[400px]"/>
+        </div>
       </div>
     </div>
   )
