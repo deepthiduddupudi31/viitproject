@@ -10,6 +10,8 @@ const heroCards = [
     text: "Experience the vibrant heart of our campus life at VIT AP University.",
     image: "/image1.jpg",
     buttonText: "EXPLORE",
+    large: true,
+    video: "/Glimpse of Events  SAC  Vignan Vizag - Vignan Vizag Studio (1080p, h264).mp4"
   },
   {
     href: "/sports",
@@ -25,8 +27,8 @@ const heroCards = [
 
 const infoCards = [
   {
-    titleLines: ["Explore The", "Vibrant Life"],
-    background: "#001965",
+    titleLines: ["Explore", "The Vibrant", "Life At VIIT"],
+    background: "#0077B5",
     imageCard: {
       href: "/library",
       title: "Library",

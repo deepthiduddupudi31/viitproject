@@ -62,7 +62,8 @@ const config: Config = {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))"
-        }
+        },
+        linkedin: '#0077B5',
       },
       borderRadius: {
         lg: "var(--radius)",

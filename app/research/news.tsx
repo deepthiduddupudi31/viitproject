@@ -67,8 +67,8 @@ export default function NewsSection() {
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex justify-between items-center">
-            <h1 className="text-4xl font-bold text-blue-800">News</h1>
-            <Link href="/news" className="text-blue-700 hover:text-blue-800 font-medium border border-blue-700 px-4 py-2 rounded hover:bg-blue-50 transition-colors">
+            <h1 className="text-4xl font-bold text-linkedin">News</h1>
+            <Link href="/news" className="text-linkedin hover:text-blue-600 font-medium border border-linkedin px-4 py-2 rounded hover:bg-blue-50 transition-colors">
               View More
             </Link>
           </div>

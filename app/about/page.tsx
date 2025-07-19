@@ -4,12 +4,12 @@ export default function AboutPage() {
       <div className="max-w-6xl mx-auto px-8 py-16">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h1 className="text-4xl font-bold text-blue-800 mb-8">About VIIT</h1>
+            <h1 className="text-4xl font-bold text-linkedin mb-8">About VIIT</h1>
 
             {/* Video Embed Placeholder */}
             <div className="bg-gray-200 rounded-lg aspect-video mb-8 flex items-center justify-center">
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-linkedin rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">▶</span>
                 </div>
                 <p className="text-gray-600">VIIT  - Empowering Academic Excellence</p>
@@ -17,7 +17,7 @@ export default function AboutPage() {
             </div>
 
             <div className="text-gray-700 leading-relaxed space-y-4">
-              <p className="text-lg font-semibold text-blue-800">V</p>
+              <p className="text-lg font-semibold text-linkedin">V</p>
               <p>
                 IT has been a forerunner in delivering quality education. Consistently ranked among the top educational
                 institutes in the country, the VIT group of institutions have had a proud tradition of pursuing
@@ -29,7 +29,7 @@ export default function AboutPage() {
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-semibold text-blue-800 mb-6">ANNOUNCEMENTS</h2>
+            <h2 className="text-xl font-semibold text-linkedin mb-6">ANNOUNCEMENTS</h2>
             <div className="space-y-6">
               <div className="border-b pb-4">
                 <p className="text-sm text-gray-600 mb-1">2025-06-04</p>

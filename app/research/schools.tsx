@@ -91,7 +91,7 @@ export default function SchoolsSection() {
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         
         {/* Content container */}
-        <div className="relative bg-blue-900 z-10 px-6 py-16">
+        <div className="relative bg-linkedin z-10 px-6 py-16">
           {/* Header section */}
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6">Schools</h2>

@@ -11,7 +11,7 @@ import AboutSection from "./research/aboutSection"
 import News from "./research/news"
 import SocialMediaWall from "./research/socialMediaWall";
 import TopRecruiters from "./research/topRecruiters"
-import CampustLife from "./research/campusLife"
+import CampusLifeSection from "./research/campusLife"
 import { useEffect, useRef, useState } from "react";
 import  PlacementHighlights from "./research/placementHighlights";
 import gsap from 'gsap';
@@ -37,7 +37,7 @@ export default function HomePage() {
       <Programs />
       
       {/* Campus Life Section */}
-      <CampustLife/>
+      <CampusLifeSection/>
 
       {/* News Section */}
       <News/>

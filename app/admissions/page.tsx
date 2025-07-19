@@ -2,7 +2,7 @@ export default function AdmissionsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-6xl mx-auto px-8 py-16">
-        <h1 className="text-4xl font-bold text-blue-800 mb-8">Admissions</h1>
+        <h1 className="text-4xl font-bold text-linkedin mb-8">Admissions</h1>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -15,24 +15,24 @@ export default function AdmissionsPage() {
 
             <div className="space-y-4">
               <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-blue-800">VITEEE</h3>
+                <h3 className="font-semibold text-linkedin">VITEEE</h3>
                 <p className="text-sm text-gray-600">VIT Engineering Entrance Examination</p>
               </div>
 
               <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-blue-800">VITREE</h3>
+                <h3 className="font-semibold text-linkedin">VITREE</h3>
                 <p className="text-sm text-gray-600">VIT Research Entrance Examination</p>
               </div>
 
               <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-blue-800">VITMEE</h3>
+                <h3 className="font-semibold text-linkedin">VITMEE</h3>
                 <p className="text-sm text-gray-600">VIT Master's Entrance Examination</p>
               </div>
             </div>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold text-blue-800 mb-4">Important Dates</h3>
+            <h3 className="text-xl font-semibold text-linkedin mb-4">Important Dates</h3>
             <div className="space-y-4">
               <div className="border-b pb-3">
                 <p className="font-medium">Application Opens</p>

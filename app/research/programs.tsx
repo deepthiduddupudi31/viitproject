@@ -44,7 +44,7 @@ export default function Programs() {
   return (
     <section className="py-16 px-4 bg-white">
         <div className="text-center">
-  <h1 className="text-4xl font-bold text-blue-800 mb-6">Programmes Offered</h1>
+  <h1 className="text-4xl font-bold text-linkedin mb-6">Programmes Offered</h1>
 </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -55,8 +55,8 @@ export default function Programs() {
               key={key}
               className={`w-full text-left px-4 py-3 border-2 font-medium ${
                 selected === key
-                  ? "bg-blue-800 text-white border-blue-800"
-                  : "border-blue-800 text-blue-800 hover:bg-blue-100"
+                  ? "bg-linkedin text-white border-linkedin"
+                  : "border-linkedin text-linkedin hover:bg-blue-50"
               }`}
               onClick={() => setSelected(key as keyof typeof programData)}
             >
@@ -69,7 +69,7 @@ export default function Programs() {
         <div className="md:col-span-3 bg-white border border-gray-200 p-6 rounded-lg h-[400px] overflow-y-auto shadow-sm">
           <ul className="space-y-4">
             {programData[selected].map((item, idx) => (
-              <li key={idx} className="border-b pb-2 text-gray-800 hover:text-blue-700 cursor-pointer">
+              <li key={idx} className="border-b pb-2 text-gray-800 hover:text-blue-600 cursor-pointer">
                 {item}
               </li>
             ))}

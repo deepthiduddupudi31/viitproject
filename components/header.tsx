@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { Button } from "../components/ui/button"
 import { Search, Menu } from "lucide-react"
 import Link from "next/link"
-import clsx from "clsx";
+import clsx from "clsx"
 import Image from "next/image";
 
 export default function Header() {
@@ -21,7 +21,8 @@ export default function Header() {
 
   return (
     <header className="text-white w-full z-50 fixed top-0 transition-all duration-300 bg-none">
-      <div className="border-b bg-blue-800 border-blue-700 z-30 relative">
+      {/* Top Bar - remains fixed and without blur */}
+      <div className="border-b bg-linkedin border-linkedin z-30 relative">
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
@@ -47,15 +48,15 @@ export default function Header() {
               <Link
                 key={idx}
                 href={`/${page}`}
-                className="hover:underline underline-offset-4 decoration-white/70 transition duration-200 hover:text-red-200"
+                className="hover:underline underline-offset-4 decoration-white/70 transition duration-200 hover:text-blue-600"
               >
                 {page === "advantages" ? "VIIT Advantages" : page[0].toUpperCase() + page.slice(1)}
               </Link>
             ))}
-            <Button variant="ghost" size="sm" className="text-white hover:text-blue-200">
+            <Button variant="ghost" size="sm" className="text-white hover:text-blue-600">
               <Search className="w-4 h-4" />
             </Button>
-            <Button variant="ghost" size="sm" className="text-white hover:text-blue-200">
+            <Button variant="ghost" size="sm" className="text-white hover:text-blue-600">
               360
             </Button>
           </div>
@@ -69,19 +70,18 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 text-black bg-white rounded-full flex items-center justify-center">
-                <span className=" font-bold text-sm"> <Image 
-  src="/viit-logo.jpeg" 
-  // src="https://vignaniit.edu.in/images/09%20copy-1.jpg"
-
-  alt="Description of image"
-  width={200} 
-  height={300}
-/></span>
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-white shadow-md">
+                <Image
+                  src="/Vignan_logo.png" // Use your actual logo file name here
+                  alt="VIIT Logo"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                  priority
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold ">VIIT</h1>
-                <p className="text-xs "></p>
                 <p className="text-xs ">Apply Knowledge. Improve Life!™</p>
               </div>
             </Link>
@@ -98,7 +98,7 @@ export default function Header() {
                 <Link
                   key={label}
                   href={path}
-                  className="relative  hover:text-blue-800 transition duration-200 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-white after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300"
+                  className="relative  hover:text-blue-600 transition duration-200 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-white after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300"
                 >
                   {label}
                 </Link>

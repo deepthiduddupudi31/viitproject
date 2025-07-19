@@ -42,7 +42,7 @@ const TopRecruiters = () => {
           </div>
         </div>
 
-        <div className="bg-blue-800 text-white py-12 px-8 mt-16 rounded-lg text-center">
+        <div className="bg-linkedin text-white py-12 px-8 mt-16 rounded-lg text-center">
           <blockquote className="text-2xl font-light italic mb-4">
             "INDIA should lead the world. VIT should lead India"
           </blockquote>
