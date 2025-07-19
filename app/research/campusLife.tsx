@@ -11,7 +11,8 @@ const heroCards = [
     text: "Experience the vibrant heart of our campus life at VIT AP University.",
     image: "",
     buttonText: "EXPLORE",
-    large: true
+    large: true,
+    video: "/Glimpse of Events  SAC  Vignan Vizag - Vignan Vizag Studio (1080p, h264).mp4"
   },
   {
     href: "/sports",
@@ -67,35 +68,47 @@ export default function CampusLifeSection() {
             key={idx}
             href={card.href}
             className={clsx(
-              "bg-black flex-1 w-full h-[300px] sm:h-[400px] xl:h-[600px] bg-center bg-no-repeat bg-cover flex flex-col items-start justify-end transition-all ease-in-out duration-300 hover:scale-105 overflow-hidden",
-              card.large ? "p-[40px]" : "p-[10px] relative group"
+              "flex-1 w-full h-[300px] sm:h-[400px] xl:h-[600px] bg-center bg-no-repeat bg-cover flex flex-col items-start justify-end transition-all ease-in-out duration-300 hover:scale-105 overflow-hidden",
+              card.large ? "p-[40px] relative" : "p-[10px] relative group"
             )}
-            style={{
+            style={card.video ? undefined : {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('${card.image}')`
             }}
           >
-            {card.large ? (
-              <>
-                <div className="basis-1/2 flex w-full" />
-                <div className="basis-1/2 flex flex-col items-start justify-end">
-                  <p className="text-[36px] pb-[20px] lg:text-[48px] xl:text-[64px] font-Emilio font-bold text-white">
-                    {card.title}
-                  </p>
-                  <p className="text-[14px] lg:text-[17px] xl:text-[20px] font-Montserrat text-[#FDFEFF] font-normal leading-6 pb-[20px]">
-                    {card.text}
-                  </p>
-                  <span className="w-[100px] lg:w-[120px] xl:w-[180px] h-[40px] xl:h-[54px] flex items-center justify-center bg-white text-linkedin hover:bg-linkedin hover:text-white text-[14px] font-Montserrat font-medium transition duration-200 ease-in">
-                    {card.buttonText}
-                  </span>
-                </div>
-              </>
-            ) : (
-              <div className="absolute -bottom-96 group-hover:bottom-10 left-8 transition-all duration-300 ease-in-out">
-                <h1 className="text-[20px] lg:text-[24px] xl:text-[32px] font-bold text-white font-Emilio">
-                  {card.title}
-                </h1>
-              </div>
+            {card.video && (
+              <video
+                src={card.video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover z-0"
+              />
             )}
+            <div className={card.video ? "relative z-10 w-full h-full flex flex-col justify-end" : undefined}>
+              {card.large ? (
+                <>
+                  <div className="basis-1/2 flex w-full" />
+                  <div className="basis-1/2 flex flex-col items-start justify-end">
+                    <p className="text-[36px] pb-[20px] lg:text-[48px] xl:text-[64px] font-Emilio font-bold text-white">
+                      {card.title}
+                    </p>
+                    <p className="text-[14px] lg:text-[17px] xl:text-[20px] font-Montserrat text-[#FDFEFF] font-normal leading-6 pb-[20px]">
+                      {card.text}
+                    </p>
+                    <span className="w-[100px] lg:w-[120px] xl:w-[180px] h-[40px] xl:h-[54px] flex items-center justify-center bg-white text-linkedin hover:bg-linkedin hover:text-white text-[14px] font-Montserrat font-medium transition duration-200 ease-in">
+                      {card.buttonText}
+                    </span>
+                  </div>
+                </>
+              ) : (
+                <div className="absolute -bottom-96 group-hover:bottom-10 left-8 transition-all duration-300 ease-in-out">
+                  <h1 className="text-[20px] lg:text-[24px] xl:text-[32px] font-bold text-white font-Emilio">
+                    {card.title}
+                  </h1>
+                </div>
+              )}
+            </div>
           </a>
         ))}
       </div>
