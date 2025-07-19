@@ -52,7 +52,7 @@ const infoCards = [
         image: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     titleLines: ["The Lively,", "Unforgettable", "Experience"],
-    background: "#001e65",
+    background: "#0077B5",
   }
 ];
 
