@@ -4,16 +4,16 @@ import { Button } from "../components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import SchoolsSection from "./research/schools"
-import Programs from "./research/programs"
-import HeroSlider from "./research/heroSection"
-import AboutSection from "./research/aboutSection"
-import News from "./research/news"
-import SocialMediaWall from "./research/socialMediaWall";
-import TopRecruiters from "./research/topRecruiters"
-import CampusLifeSection from "./research/campusLife"
+import SchoolsSection from "./pageComponents/schools"
+import Programs from "./pageComponents/programs"
+import HeroSlider from "./pageComponents/heroSection"
+import AboutSection from "./pageComponents/aboutSection"
+import News from "./pageComponents/news"
+import SocialMediaWall from "./pageComponents/socialMediaWall";
+import TopRecruiters from "./pageComponents/topRecruiters"
+import CampusLifeSection from "./pageComponents/campusLife"
 import { useEffect, useRef, useState } from "react";
-import  PlacementHighlights from "./research/placementHighlights";
+import  PlacementHighlights from "./pageComponents/placementHighlights";
 import gsap from 'gsap';
 
 
