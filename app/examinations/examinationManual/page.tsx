@@ -54,7 +54,7 @@ import React from "react";
 
 export default function ExaminationManual() {
   return (
-    <div className="p-8 bg-gray-100 min-h-screen pt-32 px-4">
+    <div className="p-8 bg-gray-100 min-h-screen pt-12  px-4">
       <h1 className="text-3xl font-bold mb-8 text-center">PDF Links</h1>
       <div className="space-y-6 max-w-3xl mx-auto">
           <div className={"p-6 rounded-lg shadow-md transition hover:shadow-lg"}>

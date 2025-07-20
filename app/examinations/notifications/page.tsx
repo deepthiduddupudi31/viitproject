@@ -33,7 +33,7 @@ const notifications = [
 
 const Notifications = () => {
   return (
-    <div className="pt-32 px-4 min-h-screen bg-white">
+    <div className="pt-12 px-4 min-h-screen bg-white">
       <div className="max-w-6xl mx-auto shadow-md border border-gray-200 rounded-md overflow-x-auto">
         <h2 className="text-2xl font-bold text-blue-700 p-4 border-b border-gray-200 bg-blue-50">
           Examcell Notifications

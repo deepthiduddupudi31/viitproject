@@ -29,7 +29,7 @@ const aboutSection = () => {
       <p className="mt-6 text-gray-800 leading-relaxed text-justify text-lg">
         <span className="text-4xl text-linkedin font-serif font-bold float-left mr-2">V</span>
         IT has been a forerunner in delivering quality education. Consistently ranked among the top educational
-        institutes in the country, the VIT group of institutions have had a proud tradition of pursuing knowledge
+        institutes in the country, the VIIT group of institutions have had a proud tradition of pursuing knowledge
         and excellence. In keeping with this tradition, the leadership at VIIT resonates a dynamic blend of
         academic initiative and industry partnership with a vision of creating one of the finest academic
         destinations in the world.
@@ -46,15 +46,15 @@ const aboutSection = () => {
         </div>
         <div className="border-b pb-3">
           <p className="text-gray-500">2025-05-23</p>
-          <p>VITREE-2025 (July Session)-Results</p>
+          <p>VIITREE-2025 (July Session)-Results</p>
         </div>
         <div className="border-b pb-3">
           <p className="text-gray-500">2025-05-08</p>
-          <p>VITMEE (M.Tech. 2025) Admission Results - Counselling & Choice filling</p>
+          <p>VIITMEE (M.Tech. 2025) Admission Results - Counselling & Choice filling</p>
         </div>
         <div className="border-b pb-3">
           <p className="text-gray-500">2025-05-03</p>
-          <p>VITEEE – 2025 Results</p>
+          <p>VIITEEE – 2025 Results</p>
         </div>
         <div className="border-b pb-3">
           <p className="text-gray-500">2025-05-13</p>

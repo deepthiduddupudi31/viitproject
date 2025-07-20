@@ -12,7 +12,6 @@ const slides = [
   {
     type: "image",
     src: "/image5.jpg",
-
     link: "#",
   },
   {
@@ -21,9 +20,9 @@ const slides = [
     link: "#",
   },
   {
-    type: 'image',
-    src: 'image1.jpg',
-    link: '#',
+    type: "image",
+    src: "image1.jpg",
+    link: "#",
   },
 ]
 
@@ -60,21 +59,24 @@ export default function Section1() {
   }, [])
 
   return (
-    <section className="relative h-screen overflow-hidden ">
-      <div className="w-full h-full overflow-hidden relative mt-36">
+    <section className="relative h-screen overflow-hidden">
+      <div className="w-full h-full overflow-hidden relative">
         <div
           className="bg-black flex h-full transition-transform duration-1000 ease-in-out"
-          style={{ width: `${slides.length * 100}%`, transform: `translateX(-${index * (100 / slides.length)}%)` }}
+          style={{
+            width: `${slides.length * 100}%`,
+            transform: `translateX(-${index * (100 / slides.length)}%)`,
+          }}
         >
           {slides.map((s, i) => (
             <div
               key={i}
-              className="relative w-full h-full "
-              style={{width:`${100 / slides.length}%`}}
+              className="relative w-full h-full"
+              style={{ width: `${100 / slides.length}%` }}
             >
               <a href={s.link} target="_blank" rel="noopener noreferrer">
                 <div className="relative w-full h-full">
-                  {s.type === 'image' ? (
+                  {s.type === "image" ? (
                     <Image
                       src={s.src}
                       alt={`Slide ${i}`}
@@ -89,7 +91,6 @@ export default function Section1() {
                   )}
                 </div>
               </a>
-
             </div>
           ))}
         </div>

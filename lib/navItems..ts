@@ -8,7 +8,7 @@ export const navItems: NavItem[] = [
   { label: "Home", path: "/" },
   {
     label: "About Us",
-    path: "/about-us",
+    path: "#",
     children: [
       { label: "Vision & Mission", path: "/about-us/vision-mission" },
       { label: "Chairman", path: "/about-us/chairman" },
@@ -26,7 +26,7 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Governance",
-    path: "/governance",
+    path: "#",
     children: [
       { label: "Organizational Structure", path: "/governance/organizational-structure" },
       { label: "Governing Body", path: "/governance/governing-body" },
@@ -61,85 +61,84 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Academics",
-    path: "/academics",
+    path: "#",
     children: [
       {
         label: "Admissions",
-        path: "/academics/admissions",
+        path: "/academics/Admissions",
         children: [
-          { label: "Courses Offered", path: "/academics/admissions/courses-offered" },
-          { label: "Admission Procedure", path: "/academics/admissions/procedure" },
-          { label: "Admission Lists", path: "/academics/admissions/lists" },
-          { label: "Course Outcomes", path: "/academics/admissions/outcomes" },
+          { label: "Courses Offered", path: "/academics/Admissions/coursesoffered" },
+          { label: "Admission Procedure", path: "/academics/Admissions/admissionproduce" },
+          { label: "Admission Lists", path: "/academics/Admissions/admissionlist" },
+          { label: "Course Outcomes", path: "/academics/Admissions/courseoutcome" },
         ],
       },
-      { label: "Academic Calendars", path: "/academics/calendars" },
+      { label: "Academic Calendars", path: "/academics/Admissions/academiccalender" },
       {
         label: "Teaching Learning Process",
-        path: "/academics/teaching-learning-process",
+        path: "/academics/teachinglearning",
         children: [
-          { label: "Teaching Methodologies", path: "/academics/tlp/methodologies" },
-          { label: "OBE Practices", path: "/academics/tlp/obe-practices" },
-          { label: "Special Programs - Student Diversity", path: "/academics/tlp/special-programs" },
-          { label: "Mentor-Mentee System", path: "/academics/tlp/mentor-mentee" },
+          { label: "Teaching Methodologies", path: "/academics/teachinglearning/teachingmethod" },
+          { label: "OBE Practices", path: "/academics/teachinglearning/obepractice" },
+          { label: "Special Programs - Student Diversity", path: "/academics/teachinglearning/specialprogram" },
+          { label: "Mentor-Mentee System", path: "/academics/teachinglearning/mentor-mentee" },
         ],
       },
-      { label: "Internship Manual", path: "/academics/internship-manual" },
-      { label: "Exit Students Feedback", path: "/academics/student-feedback" },
-      { label: "MoUs - Academics", path: "/academics/mous" },
-      {
-        label: "Extra Curricular Activities",
-        path: "/academics/extra-curricular",
-        children: [
-          { label: "Glimpse of Sports and Culturals", path: "/academics/extra-curricular/sports-culturals" },
-        ]
-      },
-      { label: "POs, PEOs and PSOs", path: "/academics/pos-peos-psos" },
-      { label: "Curriculum Design Process", path: "/academics/curriculum-design" },
-      { label: "Internships Projects and Research Projects", path: "/academics/internships-research" },
+      { label: "Internship Manual", path: "https://vignaniit.edu.in/Internship%20manual%20and%20student%20diary.pdf" },
+      { label: "Exit Students Feedback", path: "https://vignaniit.edu.in/Exit%20Feed%20Back.pdf" },
+      { label: "MoUs - Academics", path: "https://vignaniit.edu.in/naac/criteria1/1.1.3%20Attachments/MoUs/1.1.3_VIIT_MoUs_Academics.pdf" },
+      { label: "Extra Curricular Activities", path: "https://vignaniit.edu.in/ssr/criteria5/5.3.1/5.3.1_Website%20Copy-1.pdf"},
+      { label: "POs, PEOs and PSOs", path: "https://vignaniit.edu.in/ssr/criteria1/1.1.1/1.1.1%20b.pdf" },
+      { label: "Curriculum Design Process", path: "https://vignaniit.edu.in/ssr/criteria1/1.1.1/1.%201%20.1%20a%20.pdf" },
+      { label: "Internships Projects and Research Projects", path: "/academics/internshipprojects" },
     ],
   },
   {
     label: "Departments",
-    path: "/departments",
+    path: "#",
     children: [
-      { label: "Civil Engineering", path: "/departments/civil" },
-      { label: "Electrical & Electronics Engg.", path: "/departments/eee" },
-      { label: "Mechanical Engineering", path: "/departments/mech" },
-      { label: "Electronics and Communication Engineering", path: "/departments/ece" },
-      { label: "Computer Science & Engineering", path: "/departments/cse" },
-      { label: "Advanced Computer Science & Engineering", path: "/departments/cse-advanced" },
-      { label: "Information Technology", path: "/departments/it" },
-      { label: "Electronics & Computer Engineering", path: "/departments/ecm" },
-      { label: "Artificial Intelligence & DataScience", path: "/departments/ai-ds" },
-      { label: "Basic Science & Humanities", path: "/departments/bsh" },
-      { label: "Management Studies", path: "/departments/mba" },
-      { label: "Master of Computer Applications", path: "/departments/mca" },
+      { label: "Civil Engineering", path: "/Departments/Civil" },
+      { label: "Electrical & Electronics Engg.", path: "/Departments/EEE" },
+      { label: "Mechanical Engineering", path: "/Departments/ME" },
+      { label: "Electronics and Communication Engineering", path: "/Departments/ECE" },
+      { label: "Computer Science & Engineering", path: "/Departments/CSE" },
+      { label: "Advanced Computer Science & Engineering", path: "/Departments/ACSE" },
+      { label: "Information Technology", path: "/Departments/IT" },
+      { label: "Electronics & Computer Engineering", path: "/Departments/ECM" },
+      { label: "Artificial Intelligence & DataScience", path: "/Departments/AIDS" },
+      { label: "Basic Science & Humanities", path: "/Departments/BSH" },
+      { label: "Management Studies", path: "/Departments/MBA" },
+      { label: "Master of Computer Applications", path: "/Departments/MCA" },
+
     ],
   },
   {
     label: "Placements",
-    path: "/placements",
+    path: "#",
     children: [
-      { label: "About T&P", path: "/placements/about" },
-      { label: "Placement Details", path: "/placements/details" },
-      { label: "Training Process", path: "/placements/training" },
+      { label: "About T&P", path: "/placements/abouttp" },
+      { label: "Placement Details", path: "/placements/placementdetails" },
+      { label: "Training Process", path: "/placements/trainingprocess" },
       { label: "Contact", path: "/placements/contact" },
     ],
   },
   {
     label: "Examinations",
-    path: "/examinations",
+    path: "#",
     children: [
+      { label: "Time Tables", path: "/examinations/Timetable" },
       { label: "Notifications", path: "/examinations/notifications" },
+      { label: "Examination Manual", path: "https://vignaniit.edu.in/examcell/regulations/Examination%20Manual.pdf" },
+      { label: "It Reforms", path: "https://vignaniit.edu.in/examcell/IT%20Integrations.pdf" },
+      { label: "About Exam Cell", path: "/examinations/aboutexamcell" },
       { label: "Results", path: "/examinations/results" },
-      { label: "Time Tables", path: "/examinations/time-tables" },
-      { label: "Contact", path: "/examinations/contact" },
+      
+      
     ],
   },
   {
     label: "Facilities",
-    path: "/facilities",
+    path: "#",
     children: [
       {
         label: "Infrastructure Facilities",
@@ -166,7 +165,7 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Cells",
-    path: "/cells",
+    path: "#",
     children: [
       { label: "Discipline Cell", path: "/cells/discipline" },
       { label: "ED Cell", path: "/cells/ed" },
@@ -184,5 +183,5 @@ export const navItems: NavItem[] = [
       { label: "WEP Cell", path: "/cells/wep" },
     ],
   },
-  { label: "Contact Us", path: "/contact-us" },
+  { label: "Contact Us", path: "/contactus" },
 ];
