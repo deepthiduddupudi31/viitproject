@@ -13,8 +13,15 @@ export default function AboutMenuBar() {
     { label: 'Rector', href: '/about/Rector' },
     { label: 'Principal', href: '/about/Principal' },
     { label: 'Administration Team', href: '/about/Administration' },
+    { label: 'Statutory Approvals', href: '/about/StatutoryApprovals' },
+    { label: 'Accreditation', href: '/about/Accreditation' },
+    { label: 'Center of Excellence', href: '/about/CenterOfExcellence' },
+    { label: 'Rankings and Certifications', href: '/about/RankingsAndCertifications' },
     { label: 'Awards and Accolades', href: '/about/Awards' },
     { label: 'Strategic Plan', href: '/about/StrategicPlan' },
+    { label: 'Policies and Perspectives', href: '/about/Policies' },
+    { label: 'Best Practices', href: '/about/BestPractices' },
+    { label: 'Faculty Empowerment Strategies', href: '/about/FacultyEmpowermentStrategies' },
     { label: 'Institutional Distinctiveness', href: '/about/Distinctiveness' },
   ];
 
@@ -51,9 +58,7 @@ export default function AboutMenuBar() {
           backgroundColor: '#175873',
           fontFamily: 'sans-serif',
           color: 'white',
-          padding: '20px',
-          minHeight: '100vh',
-          paddingTop: '20px',
+          height: '100vh',
           boxShadow: '2px 0 10px rgba(0,0,0,0.2)',
           position: 'fixed',
           top: 0,
@@ -61,12 +66,12 @@ export default function AboutMenuBar() {
           zIndex: 999,
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-between',
           transform: open ? 'translateX(0)' : 'translateX(-100%)',
           transition: 'transform 0.3s ease-in-out',
         }}
       >
-        <div>
+        {/* Scrollable content */}
+        <div style={{ position: 'relative', flex: 1, overflowY: 'auto', padding: '20px' }}>
           {/* Close Button */}
           <button
             onClick={() => setOpen(false)}
@@ -92,11 +97,11 @@ export default function AboutMenuBar() {
           {/* Title */}
           <h2
             style={{
-              margin: '30px 0',
+              margin: '40px 0 20px 0',
               fontSize: '1.5rem',
               textTransform: 'uppercase',
               letterSpacing: '1px',
-              fontWeight: '600',
+              fontWeight: 600,
               textAlign: 'center',
             }}
           >
@@ -152,7 +157,8 @@ export default function AboutMenuBar() {
             textAlign: 'center',
             fontSize: '0.9rem',
             opacity: 0.7,
-            marginTop: '20px',
+            padding: '10px 0',
+            borderTop: '1px solid rgba(255,255,255,0.2)',
           }}
         >
           &copy; 2025 VIIT Project
