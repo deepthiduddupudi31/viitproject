@@ -70,7 +70,7 @@ export default function Section1() {
             <div
               key={i}
               className="relative w-full h-full "
-              style={{ width: `${100 / slides.length}%` }}
+              style={{width:`${100 / slides.length}%`}}
             >
               <a href={s.link} target="_blank" rel="noopener noreferrer">
                 <div className="relative w-full h-full">
