@@ -3,7 +3,7 @@ import Sidebar from './Sidebar';
 
 export default function CivilPage() {
   return (
-    <div className='mt-[10%]'>
+    <div >
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
       <img

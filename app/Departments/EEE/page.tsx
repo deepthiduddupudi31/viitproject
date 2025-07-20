@@ -3,7 +3,7 @@ import Sidebar from './Sidebar';
 
 export default function CivilPage() {
   return (
-    <div className='mt-[10%]'>
+    <div >
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
       <img
@@ -33,7 +33,7 @@ HoD Message –It is our earnest desire to develop this department into a cogniz
     alt="Banner"
     className="w-full h-auto md:h-[300px] object-cover rounded-lg shadow-lg"
   />
-  <p className="text-center mt-2 font-semibold">HOD - CIVIL</p>
+  <p className="text-center mt-2 font-semibold">HOD - EEE</p>
 </div>
 
       
