@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import LoaderWrapper from "../components/LoaderWrapper";
+import ClientLoaderWrapper from "../components/ClientLoaderWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +17,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="video" href="/0718.mp4" type="video/mp4" />
+      </head>
       <body className={inter.className}>
-        <LoaderWrapper>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        </LoaderWrapper>
+        <ClientLoaderWrapper>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ClientLoaderWrapper>
       </body>
     </html>
   );
