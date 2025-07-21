@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "../../components/ui/accordion";
 import LocomotiveScrollWrapper from "../../components/LocomotiveScrollWrapper";
+import { FocusCards } from '../../components/ui/focus-cards';
 
 const sectionLinks = [
   { id: "programs", label: "Academic Programs" },
@@ -47,14 +48,14 @@ export default function CampusLifePage() {
           </div>
           <div className="w-full mt-12 rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-[#e0f2fe] via-[#f0f9ff] to-white">
               <Image
-              src="/image1.jpg"
+              src="/Gemini_Generated_Image_zcysuzzcysuzzcys.png"
               alt="Life at VIIT"
               width={1200}
-                height={400}
-              className="w-full h-72 md:h-96 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                height={700}
+              className="w-full h-82 md:h-96 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
               priority
               />
-            </div>
+          </div>
         </div>
 
         {/* Anchor link menu */}
@@ -78,8 +79,20 @@ export default function CampusLifePage() {
         </p>
 
         {/* Academic Programs Section with side image */}
-        <div id="programs" className="flex flex-col md:flex-row items-center gap-8 mt-10 mb-8">
-          <div className="flex-1">
+        <div id="programs" className="flex flex-col md:flex-row items-center gap-8 mt-10 mb-8 relative overflow-hidden">
+          {/* Light transparent background image */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-0 pointer-events-none"
+            style={{
+              backgroundImage: 'url("/image2.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              opacity: 0.10,
+              filter: 'blur(1px)'
+            }}
+          />
+          <div className="flex-1 relative z-10">
             <h2 id="programs" className="text-2xl font-bold text-[#0077B5] mt-10 mb-2 scroll-mt-32">1. Academic Programs</h2>
             <p className="mb-2">At VIIT, education is all about hands-on learning and real-world impact. Here are some of the standout programs:</p>
             <ul className="list-disc list-inside mb-6">
@@ -90,18 +103,23 @@ export default function CampusLifePage() {
               <li><b>MBA and MCA:</b> Blend tech with management or dive deeper into IT with practical curricula.</li>
             </ul>
           </div>
-          <div className="flex-1 flex justify-center">
-            <Image src="/image2.jpg" alt="Academic Programs" width={400} height={300} className="rounded-xl shadow-md object-cover h-56 w-full max-w-xs transition-transform duration-300 hover:scale-105" />
+          <div className="flex-1 flex justify-center relative z-10">
+            <Image src="/Gemini_Generated_Image_l3y9vpl3y9vpl3y9 (1).png" alt="Academic Programs" width={400} height={300} className="rounded-xl shadow-md object-cover h-56 w-full max-w-xs transition-transform duration-300 hover:scale-105" />
           </div>
-            </div>
+        </div>
 
         {/* Facilities Section with rounded images */}
         <div id="facilities" className="mt-10 mb-8">
           <h2 id="facilities" className="text-2xl font-bold text-[#0077B5] mt-10 mb-2 scroll-mt-32">2. Campus Facilities</h2>
-          <div className="flex flex-wrap gap-6 mb-6">
-            <Image src="/image3.jpg" alt="Sports and Recreation" width={180} height={120} className="rounded-full object-cover h-28 w-28 shadow transition-transform duration-300 hover:scale-105" />
-            <Image src="/image4.jpg" alt="Housing" width={180} height={120} className="rounded-full object-cover h-28 w-28 shadow transition-transform duration-300 hover:scale-105" />
-            <Image src="/image5.jpg" alt="Safety" width={180} height={120} className="rounded-full object-cover h-28 w-28 shadow transition-transform duration-300 hover:scale-105" />
+          <div className="mb-8">
+            <FocusCards cards={[
+              { title: 'Library', src: '/Gemini_Generated_Image_be1jembe1jembe1j.png' },
+              { title: 'Class Rooms', src: '/Gemini_Generated_Image_a0akpga0akpga0ak.png' },
+              { title: 'Hostels', src: '/Gemini_Generated_Image_kvly4fkvly4fkvly.png' },
+              { title: 'Seminar Hall', src: '/Gemini_Generated_Image_be1jembe1jembe1j (1).png' },
+              { title: 'Modern Labs', src: '/Gemini_Generated_Image_l3y9vpl3y9vpl3y9 (1).png' },
+              { title: 'Transport', src: '/Gemini_Generated_Image_yt08awyt08awyt08.png' },
+            ]} />
           </div>
           <ul className="list-disc list-inside mb-6">
             <li><b>Sports and Recreation:</b> Play on basketball courts, football fields, or hit the indoor sports complex. There’s also a gym and yoga studio for fitness enthusiasts.</li>
@@ -146,7 +164,7 @@ export default function CampusLifePage() {
             <li><b>Industry Ties:</b> Work with giants like Microsoft, Infosys, and TCS through internships and workshops.</li>
             <li><b>Global Reach:</b> Explore exchange programs and international collaborations that broaden your horizons.</li>
           </ul>
-            </div>
+        </div>
 
         {/* Location Section with full-width image */}
         <div id="location" className="mt-10 mb-8">
@@ -184,7 +202,7 @@ export default function CampusLifePage() {
             <li><b>Awards:</b> Ranked in the 201-300 band by NIRF (2024) and accredited with an A+ by NAAC.</li>
             <li><b>Balanced Growth:</b> A mix of academics, extracurriculars, and community work shapes you into a leader.</li>
           </ul>
-              </div>
+            </div>
 
         {/* Why VIIT Section with a highlight image */}
         <div id="whyviit" className="mt-10 mb-8">
@@ -193,7 +211,7 @@ export default function CampusLifePage() {
             <Image src="/image5.jpg" alt="Why VIIT" width={1200} height={300} className="w-full h-48 object-cover" />
           </div>
           <p className="mb-2">VIIT isn’t just a college—it’s where your journey takes off. With top-notch facilities, a buzzing student community, and a focus on innovation, you’re set to conquer your goals. Welcome to VIIT—your future starts here!</p>
-              </div>
+            </div>
 
         {/* Animated Statistics Section */}
         <div className="mt-16 mb-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
@@ -229,7 +247,7 @@ export default function CampusLifePage() {
             ))}
           </Accordion>
         </div>
-      </div>
+    </div>
     </LocomotiveScrollWrapper>
   );
 }

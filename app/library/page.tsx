@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import LocomotiveScrollWrapper from "../components/LocomotiveScrollWrapper";
+import LocomotiveScrollWrapper from "../../components/LocomotiveScrollWrapper";
 
 export default function LibraryPage() {
   return (

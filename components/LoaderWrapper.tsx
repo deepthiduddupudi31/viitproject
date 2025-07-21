@@ -1,19 +1,73 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Loader from "./loader";
 
+function isFullReload() {
+  if (typeof window === "undefined") return false;
+  // For modern browsers
+  if (window.performance && window.performance.getEntriesByType) {
+    const navEntries = window.performance.getEntriesByType("navigation");
+    if (navEntries.length > 0) {
+      const nav = navEntries[0] as PerformanceNavigationTiming;
+      if (nav.type === "reload") {
+        return true;
+      }
+    }
+  }
+  // Fallback for older browsers
+  if (window.performance && window.performance.navigation) {
+    return window.performance.navigation.type === 1;
+  }
+  return false;
+}
+
 export default function LoaderWrapper({ children }: { children: React.ReactNode }) {
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(() => isFullReload());
+  const router = useRouter();
 
   useEffect(() => {
-    const timeout = setTimeout(() => setShowLoader(false), 2000);
-    return () => clearTimeout(timeout);
-  }, []);
+    const handleStart = () => setShowLoader(true);
+    // Hide loader after video ends (handled by onFinish)
+    // Fallback: hide loader after 12s if something goes wrong
+    let timeout: NodeJS.Timeout | null = null;
+    if (showLoader) {
+      timeout = setTimeout(() => setShowLoader(false), 12000);
+    }
+    // Next.js router events (for client-side navigation)
+    // router.events is not available in app directory, so use router.on directly if available
+    // For next/navigation, listen to popstate
+    window.addEventListener("popstate", handleStart);
+    return () => {
+      window.removeEventListener("popstate", handleStart);
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [showLoader]);
+
+  // Listen for push/replace navigation (client-side)
+  useEffect(() => {
+    const origPush = router.push;
+    const origReplace = router.replace;
+    router.push = (...args: any[]) => {
+      setShowLoader(true);
+      // @ts-ignore
+      return origPush.apply(router, args);
+    };
+    router.replace = (...args: any[]) => {
+      setShowLoader(true);
+      // @ts-ignore
+      return origReplace.apply(router, args);
+    };
+    return () => {
+      router.push = origPush;
+      router.replace = origReplace;
+    };
+  }, [router]);
 
   return (
     <>
-      {showLoader && <Loader visible={true} />}
-      {children}
+      <Loader visible={showLoader} onFinish={() => setShowLoader(false)} />
+      <div style={{ display: showLoader ? "none" : undefined }}>{children}</div>
     </>
   );
 }
