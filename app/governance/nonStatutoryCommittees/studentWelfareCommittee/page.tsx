@@ -1,0 +1,121 @@
+"use client";
+
+import React from "react";
+
+export default function SWC() {
+  const minutes: string[] = [
+    "SWC 22-23",
+    "SWC 21-22",
+    "SWC 20-21",
+    "SWC 19-20",
+    "SWC 18-19",
+  ];
+
+  const members: string[][] = [
+    ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
+    ["2", "Dr. R. Uma Maheswari", "Faculty Member", "Member"],
+    ["3", "Mr. M. Padmakar", "Faculty Member", "Member"],
+    ["4", "Mr. M. Sai Sampath (IV EEE 20L31A02B4)", "Student Representative", "Member"],
+    ["5", "Mr. P. Hemanth Naidu (IV IT 20L31A1246)", "Student Representative", "Member"],
+    ["6", "Ms. P. Pallavi (II MBA 22L31E0094)", "Student Representative", "Member"],
+    ["7", "Ms. B. Lakshmi Sai Aasritha (III CSE 21L31A05C7)", "Student Representative", "Member"],
+    ["8", "Mr. Rathan Bhavish Erothi (III ECM 21L31A1949)", "Student Representative", "Member"],
+    ["9", "Ms. G. V. Laasya (IV AI&DS 20L31A5426)", "Student Representative", "Member"],
+    ["10", "Mr. K. Harsha Vardhan (II ME 22L35A0361)", "Student Representative", "Member"],
+    ["11", "Mr. K. Jayanth (III ECE 21L31A0481)", "Student Representative", "Member"],
+    ["12", "Ms. K. Sreeja (III IT 21L31A1228)", "Student Representative", "Member"],
+    ["13", "Ms. S. Pujitha (III EEE 21L31A0292)", "Student Representative", "Member"],
+    ["14", "Mr. Shaik Sameer (II ME 22L35A0321)", "Student Representative", "Member"],
+    ["15", "Mr. J. Surya Raj (II ECE 22L31A0468)", "Student Representative", "Member"],
+    ["16", "Mr. Thandra Jayadeep (II CSE 22L31A05L9)", "Student Representative", "Member"],
+    ["17", "Mr. K. Charan Sai (II CSE-AI 22L31A4322)", "Student Representative", "Member"],
+    ["18", "Ms. Subhakankshi Sahu (II IT 22L31A1253)", "Student Representative", "Member"],
+    ["19", "Mr. K. Aravind Sai Teja (II ECM 22L31A1923)", "Student Representative", "Member"],
+    ["20", "Dr. B. Sateesh", "Dean Student Affairs", "Member"],
+  ];
+
+  return (
+    <div className="mt-40 min-h-screen bg-gray-100 p-8">
+      {/* Main Heading */}
+      <h1 className="text-5xl font-bold text-center text-blue-700 mb-8">
+        Student Welfare Committee (SWC)
+      </h1>
+
+      {/* About Section */}
+      <section className="bg-white shadow-md rounded-xl p-6 mb-6">
+        <p className="text-gray-700 text-lg leading-relaxed">
+          A committee consisting of the following members is hereby reconstituted as
+          “Student Welfare Committee (SWC)” for the Academic Year 2024-25.
+        </p>
+
+        <p className="text-gray-700 text-lg leading-relaxed mt-4">
+          <strong>The Student Welfare Committee is responsible:</strong>
+        </p>
+
+        <ul className="list-disc list-inside text-gray-700 text-lg mt-3 space-y-1">
+          <li>Encourage students to participate in Personality Development Classes.</li>
+          <li>
+            It acts as an interface between the Institute’s administration and the
+            students to sort out matters concerning student welfare.
+          </li>
+          <li>
+            Plans and conduct activities to enhance the quality of campus life of
+            students. It strives to make the learning experience an enjoyable one.
+          </li>
+        </ul>
+      </section>
+
+      {/* Members Table */}
+      <section className="bg-white shadow-md rounded-xl p-6 mb-6">
+        <div className="overflow-x-auto">
+          <table className="min-w-full border border-gray-300 rounded-lg overflow-hidden text-base">
+            <thead className="bg-blue-100">
+              <tr>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">S.No</th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">
+                  Name of Faculty / Student
+                </th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">
+                  Designation
+                </th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">Position</th>
+              </tr>
+            </thead>
+            <tbody>
+              {members.map((m, i) => (
+                <tr key={i} className="hover:bg-gray-50">
+                  {m.map((val, idx) => (
+                    <td
+                      key={idx}
+                      className="border border-gray-300 px-4 py-3 text-gray-700"
+                    >
+                      {val}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Minutes of Meeting */}
+      <h1 className="text-4xl font-bold text-blue-700 mb-4">Minutes of Meetings</h1>
+      <section className="bg-white shadow-md rounded-xl p-6">
+        <ul className="list-disc list-inside text-lg space-y-2">
+          {minutes.map((mom, index) => (
+            <li key={index}>
+              <a
+                href={`/documents/${mom}.pdf`}
+                target="_blank"
+                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+              >
+                {mom}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  );
+}
