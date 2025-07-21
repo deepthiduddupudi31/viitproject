@@ -6,10 +6,9 @@ import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
 import { ChevronDown, ChevronRight, Menu, X, Search } from "lucide-react";
-import { navItems, type NavItem } from "../lib/navItems."; // Ensure this path is correct
+import { navItems, type NavItem } from "../lib/navItems."; 
 import { motion, AnimatePresence } from "framer-motion";
 
-// --- Reusable Dropdown Components for Desktop ---
 
 const NestedDropdown = ({ items }: { items: NavItem[] }) => (
   <motion.div
@@ -74,7 +73,6 @@ const DropdownMenu = ({ items }: { items: NavItem[] }) => {
   );
 };
 
-// --- Desktop Navigation Component ---
 
 const DesktopNav = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
