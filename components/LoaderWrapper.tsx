@@ -1,32 +1,19 @@
 "use client";
-import React, { useState, useRef } from "react";
+import { useState, useEffect } from "react";
+import Loader from "./loader";
 
 export default function LoaderWrapper({ children }: { children: React.ReactNode }) {
-  const [loading, setLoading] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [showLoader, setShowLoader] = useState(true);
 
-  const handleVideoEnd = () => {
-    setLoading(false);
-  };
+  useEffect(() => {
+    const timeout = setTimeout(() => setShowLoader(false), 2000);
+    return () => clearTimeout(timeout);
+  }, []);
 
-  if (loading) {
-    return (
-      <div
-        className="fixed inset-0 z-50 w-screen h-screen"
-        role="status"
-        aria-label="Loading"
-      >
-        <video
-          ref={videoRef}
-          src="/0718.mp4"
-          autoPlay
-          muted
-          onEnded={handleVideoEnd}
-          className="w-full h-full object-cover"
-        />
-      </div>
-    );
-  }
-
-  return <>{children}</>;
+  return (
+    <>
+      {showLoader && <Loader visible={true} />}
+      {children}
+    </>
+  );
 }

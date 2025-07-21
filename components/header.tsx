@@ -378,11 +378,13 @@ export default function Header() {
   const [megaMenuOpen, setMegaMenuOpen] = useState(false)
   const [cellsMenuOpen, setCellsMenuOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false); // Add mounted state
   let menuTimeout: NodeJS.Timeout | null = null
   const campusLifeRef = useRef<HTMLDivElement>(null);
   const cellsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setMounted(true); // Set mounted true after client mount
     const handleScroll = () => {
       setScrolled(window.scrollY > 10)
     }
@@ -497,7 +499,8 @@ export default function Header() {
                       <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                     </Link>
                     <div className="hidden lg:block">
-                      <CampusLifeMegaMenu open={megaMenuOpen} anchorRef={campusLifeRef} />
+                      {/* Only open menu after mount to prevent SSR flash */}
+                      <CampusLifeMegaMenu open={mounted && megaMenuOpen} anchorRef={campusLifeRef} />
                     </div>
                   </div>
                 ) : label === "Cells" ? (
@@ -516,7 +519,8 @@ export default function Header() {
                       <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                     </Link>
                     <div className="hidden lg:block">
-                      <CellsMegaMenu open={cellsMenuOpen} anchorRef={cellsRef} />
+                      {/* Only open menu after mount to prevent SSR flash */}
+                      <CellsMegaMenu open={mounted && cellsMenuOpen} anchorRef={cellsRef} />
                     </div>
                   </div>
                 ) : (

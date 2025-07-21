@@ -1,10 +1,9 @@
-import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import ClientLoaderWrapper from "../components/ClientLoaderWrapper";
+import LoaderWrapper from "../components/LoaderWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" as="video" href="/0718.mp4" type="video/mp4" />
       </head>
       <body className={inter.className}>
-        <ClientLoaderWrapper>
+        <LoaderWrapper>
           <Header />
           <main>{children}</main>
           <Footer />
-        </ClientLoaderWrapper>
+        </LoaderWrapper>
       </body>
     </html>
   );
