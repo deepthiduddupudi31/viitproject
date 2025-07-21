@@ -52,7 +52,7 @@ export default function LoaderWrapper({ children }: { children: React.ReactNode 
       setShowLoader(true);
       // @ts-ignore
       return origPush.apply(router, args);
-    };
+  };
     router.replace = (...args: any[]) => {
       setShowLoader(true);
       // @ts-ignore
@@ -64,7 +64,7 @@ export default function LoaderWrapper({ children }: { children: React.ReactNode 
     };
   }, [router]);
 
-  return (
+    return (
     <>
       <Loader visible={showLoader} onFinish={() => setShowLoader(false)} />
       <div style={{ display: showLoader ? "none" : undefined }}>{children}</div>
