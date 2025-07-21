@@ -49,7 +49,7 @@ const externalCoordinators = [
 
 export default function IICCellPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 md:px-8">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 md:px-8" style={{ scrollBehavior: 'smooth' }}>
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
         <h1 className="text-3xl md:text-4xl font-bold text-[#0077B5] mb-4 text-center uppercase tracking-wide">Institute Innovation Cell - IIC</h1>
         <h2 className="text-2xl font-semibold text-[#0077B5] mb-2">Objective</h2>
