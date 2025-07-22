@@ -106,7 +106,7 @@ export default function APMC() {
       <h1 className="text-4xl font-bold text-blue-700 mb-4">Minutes of Meetings</h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         {minutes.map((mom, index) => (
-          <ul>
+          <ul key={index}>
   <li key={index}>
     <a
       href={mom.url}
