@@ -67,7 +67,7 @@ export default function ContactUs() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.95678422848!2d83.17567667490244!3d17.65830499598399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395bdbd191868b%3A0x2ff1e05a7b8d80f1!2sVignan&#39;s%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2sin!4v1706000000000!5m2!1sen!2sin"
             width="100%"
             height="100%"
-            style={{ border: 0 }}
+           
             allowFullScreen
             loading="lazy"
           ></iframe>
