@@ -6,32 +6,32 @@ import { useState, useEffect } from "react";
 
 const schools = [
   {
-    name: "School of Computer Science and Engineering",
+    name: "Department of Computer Science and Engineering",
     image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     link: "#",
   },
   {
-    name: "School of Mechanical Engineering",
+    name: "Department of Mechanical Engineering",
     image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     link: "#",
   },
   {
-    name: "School of Advanced Sciences",
+    name: "Department of Advanced Sciences",
     image: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     link: "#",
   },
   {
-    name: "School of Social Sciences and Humanities",
+    name: "Department of Social Sciences and Humanities",
     image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     link: "#",
   },
   {
-    name: "School of Law",
+    name: "Department of Law",
     image: "https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     link: "#",
   },
   {
-    name: "School of Business",
+    name: "Department of Business",
     image: "https://images.pexels.com/photos/3182834/pexels-photo-3182834.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     link: "#",
   },
@@ -94,9 +94,9 @@ export default function SchoolsSection() {
         <div className="relative bg-linkedin z-10 px-6 py-16">
           {/* Header section */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6">Schools</h2>
+            <h2 className="text-5xl font-bold text-white mb-6">Departments</h2>
             <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              At VIIT the entire teaching-learning process is concentrated around seven schools for preparing
+              At VIIT the entire teaching-learning process is concentrated around seven departments for preparing
               students to make meaningful contributions to society as engaged citizens and leaders in a complex world.
             </p>
           </div>

@@ -33,10 +33,21 @@ const TopRecruiters = () => {
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
+                  <span className="text-2xl font-bold text-purple-600 transition duration-300 group-hover:scale-110 group-hover:text-dark-800 cursor-pointer">
+                    Meesho
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-16 min-w-[150px] group">
                   <span className="text-2xl font-bold text-blue-600 transition duration-300 group-hover:scale-110 group-hover:text-blue-800 cursor-pointer">
                     BAJAJ FINSERV
                   </span>
                 </div>
+                <div className="flex items-center justify-center h-16 min-w-[150px] group">
+                  <span className="text-2xl font-bold text-secondary-600 transition duration-300 group-hover:scale-110 group-hover:text-dark-800 cursor-pointer">
+                    InnCircles
+                  </span>
+                </div>
+                
               </React.Fragment>
             ))}
           </div>
@@ -44,9 +55,9 @@ const TopRecruiters = () => {
 
         <div className="bg-linkedin text-white py-12 px-8 mt-16 rounded-lg text-center">
           <blockquote className="text-2xl font-light italic mb-4">
-            "INDIA should lead the world. VIT should lead India"
+            " India envisions tomorrow — VIIT shapes it today. "
           </blockquote>
-          <cite className="text-lg">- Dr. G. Viswanathan, Founder & Chancellor, VIT</cite>
+          <cite className="text-lg">- Dr. Lavu. Rathaiah , Chancellor & Chairman , VIIT</cite>
         </div>
       </div>
     </section>

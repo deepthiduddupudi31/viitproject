@@ -32,7 +32,7 @@ const objectives = [
 
 export default function EdCellPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 md:px-8">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 md:px-8" style={{ scrollBehavior: 'smooth' }}>
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
         <h1 className="text-3xl md:text-4xl font-bold text-[#0077B5] mb-4 text-center uppercase tracking-wide">Entrepreneurship Development Cell (ED CELL)</h1>
         <p className="text-lg text-gray-700 mb-6 text-center">

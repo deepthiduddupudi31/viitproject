@@ -238,7 +238,7 @@ export default function VITAPHomePage() {
                       </p>
                     </div>
                     <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-linkedin transition-colors duration-300">
-                      <span className="text-white text-xs font-bold">VIT</span>
+                      <span className="text-white text-xs font-bold">VIIT</span>
                     </div>
                   </div>
                 </div>

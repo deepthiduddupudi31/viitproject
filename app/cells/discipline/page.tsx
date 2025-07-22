@@ -2,7 +2,7 @@
 
 export default function DisciplineCellPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 text-gray-800 mt-24">
+    <div className="max-w-4xl mx-auto px-4 py-12 text-gray-800 mt-24" style={{ scrollBehavior: 'smooth' }}>
       <h1 className="text-4xl font-bold text-linkedin mb-6 text-center">Discipline Cell</h1>
       <p className="mb-6">
         The Discipline Cell has been established to promote discipline and adherence to the rules in the college. The Committee will ensure that students maintain a peaceful atmosphere conducive to attaining their educational goals. It will also serve to create awareness against and help prevent any disturbances or ill incidents on campus.

@@ -12,7 +12,7 @@ export default function StrategicPlanPage() {
         fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
       }}
     >
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{
