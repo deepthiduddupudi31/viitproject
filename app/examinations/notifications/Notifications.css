@@ -1,0 +1,10 @@
+/* ExamNotifications.css */
+tbody tr:nth-child(4n-3),
+tbody tr:nth-child(4n-2) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(4n-1),
+tbody tr:nth-child(4n) {
+  background-color: #ffffff;
+}
