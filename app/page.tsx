@@ -44,6 +44,7 @@ export default function HomePage() {
       
       {/* Placement Highlights Section */}
       {/* <SocialMediaWall/> */}
+      {/* <SocialMediaWall/> */}
 
       {/* Top Recruiters Section */}
       <PlacementHighlights/>
