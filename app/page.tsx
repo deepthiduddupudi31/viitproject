@@ -43,7 +43,7 @@ export default function HomePage() {
       <News/>
       
       {/* Placement Highlights Section */}
-      {/* <SocialMediaWall/> */}
+      <SocialMediaWall/>
 
       {/* Top Recruiters Section */}
       <PlacementHighlights/>
