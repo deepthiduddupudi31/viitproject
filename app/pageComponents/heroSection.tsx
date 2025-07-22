@@ -12,7 +12,6 @@ const slides = [
   {
     type: "image",
     src: "/image5.jpg",
-
     link: "#",
   },
   {
@@ -21,9 +20,9 @@ const slides = [
     link: "#",
   },
   {
-    type: 'image',
-    src: 'image1.jpg',
-    link: '#',
+    type: "image",
+    src: "image1.jpg",
+    link: "#",
   },
 ]
 
@@ -64,17 +63,20 @@ export default function Section1() {
       <div className="w-full h-full overflow-hidden relative">
         <div
           className="bg-black flex h-full transition-transform duration-1000 ease-in-out"
-          style={{ width: `${slides.length * 100}%`, transform: `translateX(-${index * (100 / slides.length)}%)` }}
+          style={{
+            width: `${slides.length * 100}%`,
+            transform: `translateX(-${index * (100 / slides.length)}%)`,
+          }}
         >
           {slides.map((s, i) => (
             <div
               key={i}
-              className="relative w-full h-full "
+              className="relative w-full h-full"
               style={{ width: `${100 / slides.length}%` }}
             >
               <a href={s.link} target="_blank" rel="noopener noreferrer">
                 <div className="relative w-full h-full">
-                  {s.type === 'image' ? (
+                  {s.type === "image" ? (
                     <Image
                       src={s.src}
                       alt={`Slide ${i}`}
@@ -89,7 +91,6 @@ export default function Section1() {
                   )}
                 </div>
               </a>
-
             </div>
           ))}
         </div>
@@ -98,14 +99,12 @@ export default function Section1() {
       <button
         onClick={prev}
         className="absolute left-4 top-1/2 z-30 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full"
-        aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6 text-white" />
       </button>
       <button
         onClick={next}
         className="absolute right-4 top-1/2 z-30 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full"
-        aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6 text-white" />
       </button>
@@ -121,7 +120,6 @@ export default function Section1() {
             className={`h-1.5 rounded-full transition-all ${
               i === index ? "w-8 bg-white" : "w-4 bg-white/50"
             }`}
-            aria-label={`Go to slide ${i + 1}`}
           />
         ))}
       </div>

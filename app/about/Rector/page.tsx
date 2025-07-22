@@ -12,7 +12,7 @@ export default function RectorPage() {
         color: '#333',
       }}
     >
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{

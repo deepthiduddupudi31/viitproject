@@ -12,7 +12,7 @@ export default function CEOPage() {
         color: '#333',
       }}
     >
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{

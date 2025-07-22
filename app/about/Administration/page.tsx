@@ -23,7 +23,7 @@ export default function AdministrationPage() {
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#f9f9f7', color: '#333' }}>
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{

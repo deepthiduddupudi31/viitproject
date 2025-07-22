@@ -7,7 +7,7 @@ const heroCards = [
   {
     href: "/campus-life",
     title: "Life @ VIIT",
-    text: "Experience the vibrant heart of our campus life at VIT AP University.",
+    text: "Experience the vibrant heart of our campus life at VIIT Vizag.",
     image: "/image1.jpg",
     buttonText: "EXPLORE",
     large: true,
