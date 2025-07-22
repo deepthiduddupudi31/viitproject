@@ -98,12 +98,14 @@ export default function Section1() {
       <button
         onClick={prev}
         className="absolute left-4 top-1/2 z-30 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full"
+        aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6 text-white" />
       </button>
       <button
         onClick={next}
         className="absolute right-4 top-1/2 z-30 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full"
+        aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6 text-white" />
       </button>
@@ -119,6 +121,7 @@ export default function Section1() {
             className={`h-1.5 rounded-full transition-all ${
               i === index ? "w-8 bg-white" : "w-4 bg-white/50"
             }`}
+            aria-label={`Go to slide ${i + 1}`}
           />
         ))}
       </div>
