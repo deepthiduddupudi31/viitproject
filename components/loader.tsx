@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-export default function Loader({ visible = true }: { visible?: boolean }) {
+export default function Loader({ visible = true, onFinish }: { visible?: boolean; onFinish?: () => void }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  // Remove videoKey logic for simplicity and reliability
+
+  useEffect(() => {
+    if (visible && videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch((err) => {
+        console.warn('Loader video failed to play:', err);
+      });
+    }
+  }, [visible]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (!onFinish) return;
+    const handleEnded = () => onFinish();
+    video.addEventListener("ended", handleEnded);
+    return () => video.removeEventListener("ended", handleEnded);
+  }, [onFinish]);
+
   return (
     <div
       className={`
@@ -9,18 +30,16 @@ export default function Loader({ visible = true }: { visible?: boolean }) {
       `}
       role="status"
       aria-label="Loading"
-      style={{ transition: visible ? "none" : undefined }} // No fade-in, only fade-out
+      style={{ transition: visible ? "none" : undefined }}
     >
       <video
-        key={visible ? "show" : "hide"}
+        ref={videoRef}
         src="/0718.mp4"
         autoPlay
-        loop
         muted
         playsInline
-        poster="/loader-poster.jpg" // Add a suitable poster image to public/
+        preload="auto"
         className="w-full h-full object-cover"
-        style={{ display: "block" }}
       />
     </div>
   );
