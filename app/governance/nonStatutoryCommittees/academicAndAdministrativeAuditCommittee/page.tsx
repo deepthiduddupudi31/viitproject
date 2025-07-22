@@ -3,13 +3,14 @@
 import React from "react";
 
 export default function AAAC() {
-  const minutes: string[] = [
-    "AAAC MoM 2018-19",
-    "AAAC MoM 2019-20",
-    "AAAC MoM 2020-21",
-    "AAAC MoM 2021-22",
-    "AAAC MoM 2022-23",
-  ];
+  const minutes = [
+  { name: "MoM_22-23", url: "https://vignaniit.edu.in/nonstatutory/AAA/2022-23_AAA1.pdf" },
+  { name: "MoM_21-22", url: "https://vignaniit.edu.in/nonstatutory/AAA/2021-22_AAA1.pdf" },
+  { name: "MoM_20-21", url: "https://vignaniit.edu.in/nonstatutory/AAA/2020-21_AAA1.pdf" },
+  { name: "MoM_19-20", url: "https://vignaniit.edu.in/nonstatutory/AAA/2019-20_AAA1.pdf" },
+];
+
+
 
   const members: string[][] = [
     ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
@@ -99,17 +100,18 @@ export default function AAAC() {
       </h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
+          {minutes.map((m, index) => (
+  <li key={index}>
+    <a
+      href={m.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+    >
+      {m.name}
+    </a>
+  </li>
+))}
         </ul>
       </section>
     </div>

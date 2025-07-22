@@ -3,12 +3,27 @@
 import React from "react";
 
 export default function PlanningMonitoringCommittee() {
-  const minutes: string[] = [
-    "PMC_18-19_MoM",
-    "PMC_19-20_MoM",
-    "PMC_20-21_MoM",
-    "PMC_21-22_MoM",
-    "PMC_22-23_MoM",
+   const minutes = [
+    {
+      name: "PMC_18-19_MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/pmc/PMC%2018-19.pdf",
+    },
+    {
+      name: "PMC_19-20_MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/pmc/PMC%2019-20.pdf",
+    },
+    {
+      name: "PMC_20-21_MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/pmc/PMC%2020-21.pdf",
+    },
+    {
+      name: "PMC_21-22_MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/pmc/PMC%2021-22.pdf",
+    },
+    {
+      name: "PMC_22-23_MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/pmc/PMC%2022-23.pdf",
+    },
   ];
 
   const members: string[][] = [
@@ -94,19 +109,20 @@ export default function PlanningMonitoringCommittee() {
       </section>
 
       {/* Minutes of Meetings - Second Heading */}
-      <h1 className="text-4xl font-bold text-blue-700 mb-4">
+       <h1 className="text-4xl font-bold text-blue-700 mb-4">
         Minutes of Meetings
       </h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
+          {minutes.map((m, index) => (
             <li key={index}>
               <a
-                href={`/documents/${mom}.pdf`}
+                href={m.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
               >
-                {mom}
+                {m.name}
               </a>
             </li>
           ))}

@@ -14,12 +14,27 @@ export default function FinanceCommittee() {
   ];
 
   // Minutes of Meetings
-  const minutes: string[] = [
-    "FC_MoM_2022-23",
-    "FC_MoM_2021-22",
-    "FC_MoM_2020-21",
-    "FC_MoM_2019-20",
-    "FC_MoM_2018-19",
+  const minutes = [
+    {
+      name: "Finance_Committee_MoM_2022-23",
+      url: "https://vignaniit.edu.in/naac/criteria6/6.1.1%20Attachments/FC%20MoM/FC_MoM_2022-23.pdf",
+    },
+    {
+      name: "Finance_Committee_MoM_2021-22",
+      url: "https://vignaniit.edu.in/naac/criteria6/6.1.1%20Attachments/FC%20MoM/FC_MoM_2021-22.pdf",
+    },
+    {
+      name: "Finance_Committee_MoM_2020-21",
+      url: "https://vignaniit.edu.in/naac/criteria6/6.1.1%20Attachments/FC%20MoM/FC_MoM_2020-21.pdf",
+    },
+    {
+      name: "Finance_Committee_MoM_2019-20",
+      url: "https://vignaniit.edu.in/naac/criteria6/6.1.1%20Attachments/FC%20MoM/FC_MoM_2019-20.pdf",
+    },
+    {
+      name: "Finance_Committee_MoM_2018-19",
+      url: "https://vignaniit.edu.in/naac/criteria6/6.1.1%20Attachments/FC%20MoM/FC_MoM_2018-19.pdf",
+    },
   ];
 
   return (
@@ -97,19 +112,20 @@ export default function FinanceCommittee() {
       </section>
 
       {/* Minutes of Meetings */}
-      <section className="bg-white shadow-md rounded-xl p-6 mb-6">
+      <section className="bg-white shadow-md rounded-xl p-6">
         <h2 className="text-3xl font-semibold text-blue-700 mb-4">
           Minutes of Meetings
         </h2>
         <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
+          {minutes.map((m, index) => (
             <li key={index}>
               <a
-                href={`/documents/${mom}.pdf`}
+                href={m.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
               >
-                {mom}
+                {m.name}
               </a>
             </li>
           ))}

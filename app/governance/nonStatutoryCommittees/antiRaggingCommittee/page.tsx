@@ -3,13 +3,14 @@
 import React from "react";
 
 export default function ARC() {
-  const minutes: string[] = [
-    "AntiRagging_18-19_MoM",
-    "AntiRagging_19-20_MoM",
-    "AntiRagging_20-21_MoM",
-    "AntiRagging_21-22_MoM",
-    "AntiRagging_22-23_MoM",
-  ];
+  const minutes = [
+  { name: "AntiRagging 18-19 MoM", url: "https://vignaniit.edu.in/nonstatutory/arc/Anti%20Ragging%20Committee_18-19_MOM.pdf" },
+  { name: "AntiRagging 19-20 MoM", url: "https://vignaniit.edu.in/nonstatutory/arc/Anti-Ragging%20Committee_19-20_MOM.pdf" },
+  { name: "AntiRagging 20-21 MoM", url: "https://vignaniit.edu.in/nonstatutory/arc/Anti-Ragging%20Committee_20-21_MOM.pdf" },
+  { name: "AntiRagging 21-22 MoM", url: "https://vignaniit.edu.in/nonstatutory/arc/Anti-Ragging%20Committee_21-22-MOM.pdf" },
+  { name: "AntiRagging 22-23 MoM", url: "https://vignaniit.edu.in/nonstatutory/arc/Anti-Ragging%20Committee_22-23-MOM.pdf" },
+];
+
 
   const members: string[][] = [
     ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
@@ -111,19 +112,20 @@ export default function ARC() {
         Anti Ragging Committee - Minutes of Meeting
       </h1>
       <section className="bg-white shadow-md rounded-xl p-6">
-        <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {minutes.map((mom, index) => (
+            <ul>
+  <li key={index}>
+    <a
+      href={mom.url}
+      target="_blank"
+      className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+    >
+      {mom.name}
+    </a>
+  </li>
+  </ul>
+))}
+
       </section>
     </div>
   );

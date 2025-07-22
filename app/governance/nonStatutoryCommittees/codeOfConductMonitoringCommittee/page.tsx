@@ -3,13 +3,14 @@
 import React from "react";
 
 export default function CCMC() {
-  const minutes: string[] = [
-    "CCMC - MoM 2022-23",
-    "CCMC - MoM 2021-22",
-    "CCMC - MoM 2020-21",
-    "CCMC - MoM 2019-20",
-    "CCMC - MoM 2018-19",
-  ];
+  const minutes = [
+  { name: "CCMC - MoM 2022-23", url: "https://vignaniit.edu.in/nonstatutory/ccmc/CCMC_2022-23.pdf" },
+  { name: "CCMC - MoM 2021-22", url: "https://vignaniit.edu.in/nonstatutory/ccmc/CCMC_2021-22.pdf" },
+  { name: "CCMC - MoM 2020-21", url: "https://vignaniit.edu.in/nonstatutory/ccmc/CCMC_2020-21.pdf" },
+  { name: "CCMC - MoM 2019-20", url: "https://vignaniit.edu.in/nonstatutory/ccmc/CCMC_2019-20.pdf" },
+  { name: "CCMC - MoM 2018-19", url: "https://vignaniit.edu.in/nonstatutory/ccmc/CCMC_2018-19.pdf" },
+];
+
 
   const members: string[][] = [
     ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
@@ -104,17 +105,19 @@ export default function CCMC() {
       <h1 className="text-4xl font-bold text-blue-700 mb-4">Minutes of Meetings</h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
+          {minutes.map((m, index) => (
+  <li key={index}>
+    <a
+      href={m.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+    >
+      {m.name}
+    </a>
+  </li>
+))}
+
         </ul>
       </section>
     </div>

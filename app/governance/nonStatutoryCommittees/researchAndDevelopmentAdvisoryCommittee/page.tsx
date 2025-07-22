@@ -3,12 +3,27 @@
 import React from "react";
 
 export default function RDAC() {
-  const minutes: string[] = [
-    "RAC_18-19_MoMs",
-    "RAC_19-20_MoMs",
-    "RAC_20-21_MoMs",
-    "RAC_21-22_MoMs",
-    "RAC_22-23_MoMs",
+  const minutes: { name: string; url: string }[] = [
+    {
+      name: "RAC 2018-19 MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/rac/Research%20Advisory%20Committee_18-19_MOM.pdf",
+    },
+    {
+      name: "RAC 2019-20 MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/rac/Research%20Advisory%20Committee_19-20_MOM.pdf",
+    },
+    {
+      name: "RAC 2020-21 MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/rac/Research%20Advisory%20Committee_20-21_MOM.pdf",
+    },
+    {
+      name: "RAC 2021-22 MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/rac/Research%20Advisory%20Committee_21-22_MOM.pdf",
+    },
+    {
+      name: "RAC 2022-23 MoM",
+      url: "https://vignaniit.edu.in/nonstatutory/rac/Research%20Advisory%20Committee_22-23_MOM.pdf",
+    },
   ];
 
   const members: string[][] = [
@@ -33,7 +48,6 @@ export default function RDAC() {
 
   return (
     <div className="mt-40 min-h-screen bg-gray-100 p-8">
-      {/* Main Heading */}
       <h1 className="text-5xl font-bold text-center text-blue-700 mb-8">
         Research and Development Advisory Committee (R&D AC)
       </h1>
@@ -73,28 +87,17 @@ export default function RDAC() {
           <table className="min-w-full border border-gray-300 rounded-lg overflow-hidden text-base">
             <thead className="bg-blue-100">
               <tr>
-                <th className="border border-gray-300 px-4 py-3 text-blue-700">
-                  S.No
-                </th>
-                <th className="border border-gray-300 px-4 py-3 text-blue-700">
-                  Name of Faculty
-                </th>
-                <th className="border border-gray-300 px-4 py-3 text-blue-700">
-                  Designation
-                </th>
-                <th className="border border-gray-300 px-4 py-3 text-blue-700">
-                  Position
-                </th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">S.No</th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">Name of Faculty</th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">Designation</th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">Position</th>
               </tr>
             </thead>
             <tbody>
               {members.map((m, i) => (
                 <tr key={i} className="hover:bg-gray-50">
                   {m.map((val, idx) => (
-                    <td
-                      key={idx}
-                      className="border border-gray-300 px-4 py-3 text-gray-700"
-                    >
+                    <td key={idx} className="border border-gray-300 px-4 py-3 text-gray-700">
                       {val}
                     </td>
                   ))}
@@ -106,19 +109,17 @@ export default function RDAC() {
       </section>
 
       {/* Minutes of Meeting */}
-      <h1 className="text-4xl font-bold text-blue-700 mb-4">
-        Minutes of Meetings
-      </h1>
+      <h1 className="text-4xl font-bold text-blue-700 mb-4">Minutes of Meetings</h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         <ul className="list-disc list-inside text-lg space-y-2">
           {minutes.map((mom, index) => (
             <li key={index}>
               <a
-                href={`/documents/${mom}.pdf`}
+                href={mom.url}
                 target="_blank"
                 className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
               >
-                {mom}
+                {mom.name}
               </a>
             </li>
           ))}

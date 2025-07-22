@@ -33,14 +33,14 @@ export default function AcademicCouncil() {
   ];
 
   // Minutes of Meetings
-  const minutes: string[] = [
-    "Academic_Council_MoM_2022-23",
-    "Academic_Council_MoM_2021-22",
-    "Academic_Council_MoM_2020-21",
-    "Academic_Council_MoM_2019-20",
-    "Academic_Council_MoM_2018-19",
-    "Academic_Council_MoM_2017-18",
-  ];
+  const minutes = [
+  { name: "Academic_Council_MoM_2022-23", url: "https://vignaniit.edu.in/academicCouncil/AC_MoM_2022-23.pdf" },
+  { name: "Academic_Council_MoM_2021-22", url: "https://vignaniit.edu.in/academicCouncil/AC_MoM_2021-22.pdf" },
+  { name: "Academic_Council_MoM_2020-21", url: "https://vignaniit.edu.in/academicCouncil/AC_MoM_2020-21.pdf" },
+  { name: "Academic_Council_MoM_2019-20", url: "https://vignaniit.edu.in/academicCouncil/AC_MoM_2019-20.pdf" },
+  { name: "Academic_Council_MoM_2018-19", url: "https://vignaniit.edu.in/academicCouncil/AC_MoM_2018-19.pdf" },
+  { name: "Academic_Council_MoM_2017-18", url: "https://vignaniit.edu.in/academicCouncil/AC_MoM_2017-18.pdf" },
+];
 
   return (
     <div className="mt-40 min-h-screen bg-gray-100 p-8">
@@ -114,14 +114,15 @@ export default function AcademicCouncil() {
     Minutes of Meetings
   </h2>
   <ul className="list-disc list-inside text-lg space-y-2">
-    {minutes.map((mom, index) => (
+    {minutes.map((m, index) => (
       <li key={index}>
         <a
-          href={`/documents/${mom}.pdf`}
+          href={m.url}
           target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
         >
-          {mom}
+          {m.name}
         </a>
       </li>
     ))}

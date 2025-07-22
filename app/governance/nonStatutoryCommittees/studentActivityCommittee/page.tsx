@@ -3,13 +3,14 @@
 import React from "react";
 
 export default function SAC() {
-  const minutes: string[] = [
-    "SAC_MoM 22-23",
-    "SAC_MoM 21-22",
-    "SAC_MoM 20-21",
-    "SAC_MoM 19-20",
-    "SAC_MoM 18-19",
-  ];
+  const minutes = [
+  { name: "SAC_MoM 22-23", url: "https://vignaniit.edu.in/nonstatutory/sac/SAC%20Committee%20Body_2022-23.pdf" },
+  { name: "SAC_MoM 21-22", url: "https://vignaniit.edu.in/nonstatutory/sac/SAC%20Committee%20Body_2021-22.pdf" },
+  { name: "SAC_MoM 20-21", url: "https://vignaniit.edu.in/nonstatutory/sac/SAC%20Committee%20Body_2020-21.pdf" },
+  { name: "SAC_MoM 19-20", url: "https://vignaniit.edu.in/nonstatutory/sac/SAC%20Committee%20Body_2019-20.pdf" },
+  { name: "SAC_MoM 18-19", url: "https://vignaniit.edu.in/nonstatutory/sac/SAC%20Committee%20Body_2018-19.pdf" },
+];
+
 
   const members: string[][] = [
     ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
@@ -106,18 +107,19 @@ export default function SAC() {
       <h1 className="text-4xl font-bold text-blue-700 mb-4">Minutes of Meetings</h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
-        </ul>
+  {minutes.map((mom, index) => (
+    <li key={index}>
+      <a
+        href={mom.url}
+        target="_blank"
+        className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+      >
+        {mom.name}
+      </a>
+    </li>
+  ))}
+</ul>
+
       </section>
     </div>
   );

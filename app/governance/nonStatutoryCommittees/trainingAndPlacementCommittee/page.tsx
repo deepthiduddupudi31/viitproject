@@ -3,13 +3,14 @@
 import React from "react";
 
 export default function TPC() {
-  const minutes: string[] = [
-    "T&PC_18-19_MoM",
-    "T&PC_19-20_MoM",
-    "T&PC_20-21_MoM",
-    "T&PC_21-22_MoM",
-    "T&PC_22-23_MoM",
-  ];
+  const minutes = [
+  { name: "T&PC_18-19_MoM", url: "https://vignaniit.edu.in/nonstatutory/tnp/TnP%202018-19.pdf" },
+  { name: "T&PC_19-20_MoM", url: "https://vignaniit.edu.in/nonstatutory/tnp/TnP%202019-20.pdf" },
+  { name: "T&PC_20-21_MoM", url: "https://vignaniit.edu.in/nonstatutory/tnp/TnP%202020-21.pdf" },
+  { name: "T&PC_21-22_MoM", url: "https://vignaniit.edu.in/nonstatutory/tnp/TnP%202021-22.pdf" },
+  { name: "T&PC_22-23_MoM", url: "https://vignaniit.edu.in/nonstatutory/tnp/TnP%202022-23.pdf" },
+];
+
 
   const members: string[][] = [
     ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
@@ -129,17 +130,19 @@ export default function TPC() {
       </h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
+          {minutes.map((m, index) => (
+  <li key={index}>
+    <a
+      href={m.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+    >
+      {m.name}
+    </a>
+  </li>
+))}
+
         </ul>
       </section>
     </div>

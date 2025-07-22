@@ -22,15 +22,15 @@ export default function GoverningBody() {
     ["16", "Dr.J.Sudhakar", "Member Secretary", "Institute Representative", "Principal, VIIT, Visakhapatnam"],
   ];
 
-  const minutes: string[] = [
-    "GBM_MoM_2022-23",
-    "GBM_MoM_2021-22",
-    "GBM_MoM_2020-21",
-    "GBM_MoM_2019-20",
-    "GBM_MoM_2018-19",
-    "GBM_MoM_2017-18",
-    "GBM_MoM_2016-17",
-  ];
+  const minutes = [
+  { name: "GBM_MoM_2022-23", url: "https://vignaniit.edu.in/governingbody/GBM_MoM_2022-23.pdf" },
+  { name: "GBM_MoM_2021-22", url: "https://vignaniit.edu.in/governingbody/GBM_MoM_2021-22.pdf" },
+  { name: "GBM_MoM_2020-21", url: "https://vignaniit.edu.in/governingbody/GBM_MoM_2020-21.pdf" },
+  { name: "GBM_MoM_2019-20", url: "https://vignaniit.edu.in/governingbody/GBM_MoM_2019-20.pdf" },
+  { name: "GBM_MoM_2018-19", url: "https://vignaniit.edu.in/governingbody/GBM_MoM_2018-19.pdf" },
+  { name: "GBM_MoM_2017-18", url: "https://vignaniit.edu.in/governingbody/GBM_MoM_2017-18.pdf" },
+  { name: "GBM_MoM_2016-17", url: "https://vignaniit.edu.in/governingbody/GBM_MoM_2016-17.pdf" },
+];
 
   return (
     <div className="mt-40 min-h-screen bg-gray-100 p-8">
@@ -126,24 +126,24 @@ export default function GoverningBody() {
       </section>
 
       {/* Minutes of Meetings */}
-      <section className="bg-white shadow-md rounded-xl p-6 mb-6">
-        <h2 className="text-3xl font-semibold text-blue-700 mb-4">
-          Minutes of Meetings
-        </h2>
-        <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+          <section className="bg-white shadow-md rounded-xl p-6 mb-6">
+      <h2 className="text-3xl font-semibold text-blue-700 mb-4">
+        Minutes of Meetings
+      </h2>
+      <ul className="list-disc list-inside text-lg space-y-2">
+        {minutes.map((m, index) => (
+          <li key={index}>
+            <a
+              href={m.url}
+              target="_blank"
+              className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+            >
+              {m.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
 
       {/* Governing Body Profiles */}
       <section className="text-center">

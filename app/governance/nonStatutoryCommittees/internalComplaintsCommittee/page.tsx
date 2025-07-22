@@ -3,13 +3,14 @@
 import React from "react";
 
 export default function ICC() {
-  const minutes: string[] = [
-    "ICC_18-19_MOM",
-    "ICC_19-20_MOM",
-    "ICC_20-21_MOM",
-    "ICC_21-22_MOM",
-    "ICC_22-23_MOM",
-  ];
+  const minutes = [
+  { name: "ICC 2018-19 MoM", url: "https://vignaniit.edu.in/nonstatutory/icc/ICC%2018-19.pdf" },
+  { name: "ICC 2019-20 MoM", url: "https://vignaniit.edu.in/nonstatutory/icc/ICC%2019-20.pdf" },
+  { name: "ICC 2020-21 MoM", url: "https://vignaniit.edu.in/nonstatutory/icc/ICC%2020-21.pdf" },
+  { name: "ICC 2021-22 MoM", url: "https://vignaniit.edu.in/nonstatutory/icc/ICC%2021-22.pdf" },
+  { name: "ICC 2022-23 MoM", url: "https://vignaniit.edu.in/nonstatutory/icc/ICC%2022-23.pdf" },
+];
+
 
   const members: string[][] = [
     ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
@@ -117,19 +118,23 @@ export default function ICC() {
       {/* Minutes of Meeting */}
       <h1 className="text-4xl font-bold text-blue-700 mb-4">Minutes of Meetings</h1>
       <section className="bg-white shadow-md rounded-xl p-6">
-        <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
-        </ul>
+       
+          <ul className="list-disc list-inside text-lg space-y-2">
+  {minutes.map((m, index) => (
+    <li key={index}>
+      <a
+        href={m.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+      >
+        {m.name}
+      </a>
+    </li>
+  ))}
+</ul>
+
+      
       </section>
     </div>
   );

@@ -3,12 +3,12 @@
 import React from "react";
 
 export default function PC() {
-  const minutes: string[] = [
-    "PC_18-19_MOM",
-    "PC_19-20_MOM",
-    "PC_20-21_MOM",
-    "PC_21-22_MOM",
-    "PC_22-23_MOM",
+  const minutes = [
+    { name: "PC 2018-19 - MoM", url: "https://vignaniit.edu.in/nonstatutory/pc/PC%202018-19.pdf" },
+    { name: "PC 2019-20 - MoM", url: "https://vignaniit.edu.in/nonstatutory/pc/PC%202019-20.pdf" },
+    { name: "PC 2020-21 - MoM", url: "https://vignaniit.edu.in/nonstatutory/pc/PC%202020-21.pdf" },
+    { name: "PC 2021-22 - MoM", url: "https://vignaniit.edu.in/nonstatutory/pc/PC%202021-22.pdf" },
+    { name: "PC 2022-23 - MoM", url: "https://vignaniit.edu.in/nonstatutory/pc/PC%202022-23.pdf" },
   ];
 
   const members: string[][] = [
@@ -34,7 +34,6 @@ export default function PC() {
 
   return (
     <div className="mt-40 min-h-screen bg-gray-100 p-8">
-      {/* Main Heading */}
       <h1 className="text-5xl font-bold text-center text-blue-700 mb-8">
         Purchase Committee (PC)
       </h1>
@@ -45,34 +44,20 @@ export default function PC() {
           A committee consisting of the following members is hereby reconstituted as
           “Purchase Committee (PC)” for the Academic Year 2024-25.
         </p>
-
         <p className="text-gray-700 text-lg leading-relaxed mt-4">
           <strong>The Purchase Committee is responsible to:</strong>
         </p>
-
         <ul className="list-disc list-inside text-gray-700 text-lg mt-3 space-y-1">
-          <li>
-            Accept and review the purchase proposals/quotations received from different
-            departments.
-          </li>
-          <li>
-            Observe the market condition and explore possibilities of identifying new
-            sources of supply at competitive rates.
-          </li>
-          <li>
-            Ensure that items/equipment/accessories are procured through standard
-            procedure of the institution.
-          </li>
-          <li>To provide suggestions for further improvement of the purchasing process.</li>
+          <li>Accept and review the purchase proposals/quotations received from different departments.</li>
+          <li>Observe the market condition and explore possibilities of identifying new sources of supply at competitive rates.</li>
+          <li>Ensure that items/equipment/accessories are procured through standard procedure of the institution.</li>
+          <li>Provide suggestions for further improvement of the purchasing process.</li>
         </ul>
-
         <p className="text-gray-700 text-lg leading-relaxed mt-4">
-          <strong>Term:</strong> Two years and shall continue to be in force until
-          reconstruction.
+          <strong>Term:</strong> Two years and shall continue to be in force until reconstruction.
         </p>
         <p className="text-gray-700 text-lg leading-relaxed mt-1">
-          <strong>Meetings:</strong> Twice in a year, the meeting may be scheduled as and
-          when necessary.
+          <strong>Meetings:</strong> Twice in a year, the meeting may be scheduled as and when necessary.
         </p>
       </section>
 
@@ -83,12 +68,8 @@ export default function PC() {
             <thead className="bg-blue-100">
               <tr>
                 <th className="border border-gray-300 px-4 py-3 text-blue-700">S.No</th>
-                <th className="border border-gray-300 px-4 py-3 text-blue-700">
-                  Name of Faculty
-                </th>
-                <th className="border border-gray-300 px-4 py-3 text-blue-700">
-                  Designation
-                </th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">Name of Faculty</th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">Designation</th>
                 <th className="border border-gray-300 px-4 py-3 text-blue-700">Position</th>
               </tr>
             </thead>
@@ -96,10 +77,7 @@ export default function PC() {
               {members.map((m, i) => (
                 <tr key={i} className="hover:bg-gray-50">
                   {m.map((val, idx) => (
-                    <td
-                      key={idx}
-                      className="border border-gray-300 px-4 py-3 text-gray-700"
-                    >
+                    <td key={idx} className="border border-gray-300 px-4 py-3 text-gray-700">
                       {val}
                     </td>
                   ))}
@@ -117,11 +95,12 @@ export default function PC() {
           {minutes.map((mom, index) => (
             <li key={index}>
               <a
-                href={`/documents/${mom}.pdf`}
+                href={mom.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
               >
-                {mom}
+                {mom.name}
               </a>
             </li>
           ))}

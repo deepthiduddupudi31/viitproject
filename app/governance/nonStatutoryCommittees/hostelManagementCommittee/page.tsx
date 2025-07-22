@@ -3,12 +3,12 @@
 import React from "react";
 
 export default function HMC() {
-  const minutes: string[] = [
-    "MoM 22-23",
-    "MoM 21-22",
-    "MoM 20-21",
-    "MoM 19-20",
-    "MoM 18-19",
+  const minutes = [
+    { name: "HMC 2022-23 - MoM", url: "https://vignaniit.edu.in/nonstatutory/hcm/HCM%2022-23.pdf" },
+    { name: "HMC 2021-22 - MoM", url: "https://vignaniit.edu.in/nonstatutory/hcm/HCM%2021-22.pdf" },
+    { name: "HMC 2020-21 - MoM", url: "https://vignaniit.edu.in/nonstatutory/hcm/HCM%2020-21.pdf" },
+    { name: "HMC 2019-20 - MoM", url: "https://vignaniit.edu.in/nonstatutory/hcm/HCM%2019-20.pdf" },
+    { name: "HMC 2018-19 - MoM", url: "https://vignaniit.edu.in/nonstatutory/hcm/HCM%2018-19.pdf" },
   ];
 
   const members: string[][] = [
@@ -18,25 +18,14 @@ export default function HMC() {
     ["4", "Mr. Ch. Ram Babu", "Physical Director", "Member"],
     ["5", "Dr. K. Madhusudhan Rao", "Dean Admissions", "Member"],
     ["6", "Dr. P. Sanyasi Rao", "Management Nominee", "Member"],
-    [
-      "7",
-      "Mr. B. Teja (III ME 21L31A0321)",
-      "Student Representative - Boys Hostel",
-      "Member",
-    ],
-    [
-      "8",
-      "Ms. V. N. G. M. Poojitha (III ECE 21L31A04H7)",
-      "Student Representative - Girls Hostel",
-      "Member",
-    ],
+    ["7", "Mr. B. Teja (III ME 21L31A0321)", "Student Representative - Boys Hostel", "Member"],
+    ["8", "Ms. V. N. G. M. Poojitha (III ECE 21L31A04H7)", "Student Representative - Girls Hostel", "Member"],
     ["9", "Mr. V. Sivaji", "In Charge Boys Hostel", "Member Secretary"],
     ["10", "Ms. Ch. R. S. Valli", "Warden Girls Hostel", "Member Secretary"],
   ];
 
   return (
     <div className="mt-40 min-h-screen bg-gray-100 p-8">
-      {/* Main Heading */}
       <h1 className="text-5xl font-bold text-center text-blue-700 mb-8">
         Hostel Management Committee (HMC)
       </h1>
@@ -51,15 +40,11 @@ export default function HMC() {
         <p className="text-gray-700 text-lg leading-relaxed mt-4">
           <strong>The Hostel Management Committee (HMC) is responsible:</strong>
         </p>
-
         <ul className="list-disc list-inside text-gray-700 text-lg mt-3 space-y-1">
-          <li>
-            Review the security system at Hostel and recommend strategies to strengthen
-            security measures.
-          </li>
+          <li>Review the security system at Hostel and recommend strategies to strengthen security measures.</li>
           <li>To create awareness about Anti Ragging and Code of conduct at Hostel.</li>
           <li>To review quality food and suggest plans for improvement.</li>
-          <li>To ensure identify any other issues in the hostels.</li>
+          <li>To identify and address any other issues in the hostels.</li>
         </ul>
       </section>
 
@@ -70,12 +55,8 @@ export default function HMC() {
             <thead className="bg-blue-100">
               <tr>
                 <th className="border border-gray-300 px-4 py-3 text-blue-700">S.No</th>
-                <th className="border border-gray-300 px-4 py-3 text-blue-700">
-                  Name of Faculty
-                </th>
-                <th className="border border-gray-300 px-4 py-3 text-blue-700">
-                  Designation
-                </th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">Name of Faculty</th>
+                <th className="border border-gray-300 px-4 py-3 text-blue-700">Designation</th>
                 <th className="border border-gray-300 px-4 py-3 text-blue-700">Position</th>
               </tr>
             </thead>
@@ -83,10 +64,7 @@ export default function HMC() {
               {members.map((m, i) => (
                 <tr key={i} className="hover:bg-gray-50">
                   {m.map((val, idx) => (
-                    <td
-                      key={idx}
-                      className="border border-gray-300 px-4 py-3 text-gray-700"
-                    >
+                    <td key={idx} className="border border-gray-300 px-4 py-3 text-gray-700">
                       {val}
                     </td>
                   ))}
@@ -104,11 +82,12 @@ export default function HMC() {
           {minutes.map((mom, index) => (
             <li key={index}>
               <a
-                href={`/documents/${mom}.pdf`}
+                href={mom.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
               >
-                {mom}
+                {mom.name}
               </a>
             </li>
           ))}

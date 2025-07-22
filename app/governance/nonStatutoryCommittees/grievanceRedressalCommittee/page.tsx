@@ -3,13 +3,14 @@
 import React from "react";
 
 export default function GRC() {
-  const minutes: string[] = [
-    "GRC - 2018-19 - MoM",
-    "GRC - 2019-20 - MoM",
-    "GRC - 2020-21 - MoM",
-    "GRC - 2021-22 - MoM",
-    "GRC - 2022-23 - MoM",
-  ];
+  const minutes = [
+  { name: "GRC - 2018-19 - MoM", url: "https://vignaniit.edu.in/nonstatutory/grc/GRC_MOM_18-19.pdf" },
+  { name: "GRC - 2019-20 - MoM", url: "https://vignaniit.edu.in/nonstatutory/grc/GRC_MOM_19-20.pdf" },
+  { name: "GRC - 2020-21 - MoM", url: "https://vignaniit.edu.in/nonstatutory/grc/GRC_MOM_20-21.pdf" },
+  { name: "GRC - 2021-22 - MoM", url: "https://vignaniit.edu.in/nonstatutory/grc/GRC_MOM_21-22.pdf" },
+  { name: "GRC - 2022-23 - MoM", url: "https://vignaniit.edu.in/nonstatutory/grc/GRC_MOM_22-23.pdf" },
+];
+
 
   const members: string[][] = [
     ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
@@ -106,17 +107,19 @@ export default function GRC() {
       </h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
+          {minutes.map((m, index) => (
+  <li key={index}>
+    <a
+      href={m.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+    >
+      {m.name}
+    </a>
+  </li>
+))}
+
         </ul>
       </section>
     </div>

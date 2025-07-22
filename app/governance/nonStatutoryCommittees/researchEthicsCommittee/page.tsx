@@ -3,13 +3,30 @@
 import React from "react";
 
 export default function REC() {
-  const minutes: string[] = [
-    "Research Ethics - 18-19_MoM",
-    "Research Ethics - 19-20_MoM",
-    "Research Ethics - 20-21_MoM",
-    "Research Ethics - 21-22_MoM",
-    "Research Ethics - 22-23_MoM",
-  ];
+  const minutes = [
+  {
+    name: "Research Ethics - 18-19_MoM",
+    url: "https://vignaniit.edu.in/nonstatutory/rec/Institutional%20Ethics%20Committee_18-19_MOM.pdf",
+  },
+  {
+    name: "Research Ethics - 19-20_MoM",
+    url: "https://vignaniit.edu.in/nonstatutory/rec/Institutional%20Ethics%20Committee_19-20_MOM.pdf",
+  },
+  {
+    name: "Research Ethics - 20-21_MoM",
+    url: "https://vignaniit.edu.in/nonstatutory/rec/Institutional%20Ethics%20Committee_20-21_MOM.pdf",
+  },
+  {
+    name: "Research Ethics - 21-22_MoM",
+    url: "https://vignaniit.edu.in/nonstatutory/rec/Institutional%20Ethics%20Committee_21-22_MOM.pdf",
+  },
+  {
+    name: "Research Ethics - 22-23_MoM",
+    url: "https://vignaniit.edu.in/nonstatutory/rec/Institutional%20Ethics%20Committee_22-23_MOM.pdf",
+  },
+];
+
+
 
   const members: string[][] = [
     ["1", "Dr. J. Sudhakar", "Principal", "Chairperson"],
@@ -101,17 +118,19 @@ export default function REC() {
       <h1 className="text-4xl font-bold text-blue-700 mb-4">Research - MOMs</h1>
       <section className="bg-white shadow-md rounded-xl p-6">
         <ul className="list-disc list-inside text-lg space-y-2">
-          {minutes.map((mom, index) => (
-            <li key={index}>
-              <a
-                href={`/documents/${mom}.pdf`}
-                target="_blank"
-                className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
-              >
-                {mom}
-              </a>
-            </li>
-          ))}
+          {minutes.map((m, index) => (
+  <li key={index}>
+    <a
+      href={m.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-800 hover:text-blue-700 hover:underline underline-offset-4"
+    >
+      {m.name}
+    </a>
+  </li>
+))}
+
         </ul>
       </section>
     </div>
