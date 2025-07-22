@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import type React from "react";
+>>>>>>> 64e2da18118fcbfa5f9045783253d47e7e36146f
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -16,6 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <head>
         <link rel="preload" as="video" href="/0718.mp4" type="video/mp4" />
       </head>
@@ -24,6 +29,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main>{children}</main>
           <Footer />
+=======
+      <body className={inter.className}>
+        <LoaderWrapper>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+>>>>>>> 64e2da18118fcbfa5f9045783253d47e7e36146f
         </LoaderWrapper>
       </body>
     </html>
