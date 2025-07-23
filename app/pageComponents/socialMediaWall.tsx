@@ -2,9 +2,11 @@ import Image from "next/image";
 import { ThumbsUp, MessageSquare, Youtube, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
 
+
 export default function NonParallelSocialWall() {
   const primaryColor = "#005f9e";
   const collegeLogoUrl = "/viit-logo.jpeg";
+
 
   // Posts definition (your data, unchanged)
   const posts = [
@@ -63,11 +65,13 @@ export default function NonParallelSocialWall() {
     },
   ];
 
+
   const platformIcons = {
     youtube: <Youtube className="w-5 h-5 text-white" />,
     linkedin: <Linkedin className="w-5 h-5 text-white" />,
     twitter: <Twitter className="w-5 h-5 text-white" />,
   };
+
 
   // Responsive check (simple)
   const [isMobile, setIsMobile] = useState(false);
@@ -78,10 +82,11 @@ export default function NonParallelSocialWall() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+
   // For mobile view: all cards side by side in a horizontal scroll
   return (
-    <div className="min-h-screen bg-gray-100 font-sans overflow-hidden">
-      <div className="container mx-auto py-16 px-4">
+    <div className=" bg-gray-100 font-sans overflow-hidden">
+      <div className="container mx-auto px-4 lg:px-8 py-10">
         {/* Header */}
         <div className="text-center mb-12 relative z-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-3">
@@ -91,9 +96,9 @@ export default function NonParallelSocialWall() {
           <div className="w-20 h-1.5 mx-auto mt-4" style={{ backgroundColor: primaryColor }}></div>
         </div>
 
+
         {/* Wall */}
         {!isMobile ? (
-          // Desktop: original absolute positions
           <div className="relative w-full h-[100vh]">
             {posts.map((post, index) => (
               <div
@@ -155,16 +160,15 @@ export default function NonParallelSocialWall() {
             ))}
           </div>
         ) : (
-          // Mobile: horizontal slider
-          <div className="w-full pb-4">
-            <div className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
+          <div className="w-full">
+            <div className="flex items-start gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
               {posts.map((post, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden group min-w-[240px] max-w-[250px] flex-shrink-0 transition-all duration-300 hover:shadow-2xl hover:z-20"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden group min-w-[240px] max-w-[250px] transition-all duration-300 hover:shadow-2xl hover:z-20"
                 >
                   {(post.image || post.videoThumbnail) && (
-                    <div className="relative">
+                    <div className="relative ">
                       <Image
                         src={post.image || post.videoThumbnail}
                         alt="Post media"
