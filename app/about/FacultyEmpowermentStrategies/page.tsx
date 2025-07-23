@@ -4,16 +4,16 @@ import AboutMenuBar from '../../../components/AboutMenubar';
 
 export default function FacultyEmpowermentStrategiesPage() {
   const policies = [
-    { name: 'Staff Awards', href: '/6.3.1.a. Staff Awards.pdf' },
-    { name: 'Staff Health Insurance', href: '/6.3.1.b.Staff Health Insurence.pdf' },
-    { name: 'Staff Performance Appraisal', href: '/6.3.1.a. Staff Apprisal Policy.pdf' },
-    { name: 'Staff Transport Facility', href: '/6.3.1.d. Staff Transport Facility..pdf' },
-    { name: 'Staff Welfares', href: '/6.3.1.b. Staff Welfare Policy.pdf' },
-    { name: 'Staff Leave Policy', href: '/6.3.1.c. Staff Leave Policy.pdf' },
-    { name: 'Financial Aid Policy', href: '/6.3.2 Policy Document.pdf' },
-    { name: 'Faculty Career Development', href: '/6.3.1.c Career doucment.pdf' },
-    { name: 'Faculty Career Development Events', href: '/6.3.1.c. Staff Leave Policy (1).pdf' },
-    { name: 'Faculty Development Programmes (FDPs)/Management Development Programmes (MDPs)', href: '/6.3.3 Brochers and reports final.pdf' },
+    { name: 'Staff Awards', href: 'https://vignaniit.edu.in/naac/criteria6/6.3.1/6.3.1.a.%20Staff%20Awards.pdf' },
+    { name: 'Staff Health Insurance', href: 'https://vignaniit.edu.in/naac/criteria6/6.3.1/6.3.1.b.Staff%20Health%20Insurence.pdf' },
+    { name: 'Staff Performance Appraisal', href: 'https://vignaniit.edu.in/ssr/criteria6/6.3.1/6.3.1.a.%20Staff%20Apprisal%20Policy.pdf' },
+    { name: 'Staff Transport Facility', href: 'https://vignaniit.edu.in/naac/criteria6/6.3.1/6.3.1.d.%20Staff%20Transport%20Facility..pdf' },
+    { name: 'Staff Welfares', href: 'https://vignaniit.edu.in/ssr/criteria6/6.3.1/6.3.1.b.%20Staff%20Welfare%20Policy.pdf' },
+    { name: 'Staff Leave Policy', href: 'https://vignaniit.edu.in/ssr/criteria6/6.3.1/6.3.1.c.%20Staff%20Leave%20Policy.pdf' },
+    { name: 'Financial Aid Policy', href: 'https://vignaniit.edu.in/ssr/criteria6/6.3.2/6.3.2%20Policy%20Document.pdf' },
+    { name: 'Faculty Career Development', href: 'https://vignaniit.edu.in/ssr/criteria6/6.3.1/6.3.1.c%20Career%20doucment.pdf' },
+    { name: 'Faculty Career Development Events', href: 'https://vignaniit.edu.in/ssr/criteria6/6.3.1/6.3.1.c.%20Staff%20Leave%20Policy.pdf' },
+    { name: 'Faculty Development Programmes (FDPs)/Management Development Programmes (MDPs)', href: 'https://vignaniit.edu.in/ssr/criteria6/6.3.3/6.3.3%20Brochers%20and%20reports%20final.pdf' },
   ];
 
   return (

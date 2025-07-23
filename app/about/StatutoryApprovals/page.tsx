@@ -7,50 +7,52 @@ export default function StatutoryApprovalsPage() {
     {
       logo: '/AICTE Logo.png',
       pdfs: [
-        { name: 'AICTE Approval 2024-25', href: '/AICTE 2024-25.pdf' },
-        { name: 'AICTE Approval 2023-24', href: '/AICTE 2023-24.pdf' },
-        { name: 'AICTE Approval 2022-23', href: '/AICTE 2022-23.pdf' },
-        { name: 'AICTE Approval 2021-22', href: '/AICTE 2021-22.pdf' },
-        { name: 'AICTE Approval 2020-21', href: '/AICTE 2020-21.pdf' },
-        { name: 'AICTE Approval 2019-20', href: '/AICTE 2019-20.pdf' },
-        { name: 'AICTE Approval 2018-19', href: '/AICTE 2018-19.pdf' },
+        
+        { name: 'AICTE Approval 2025-26', href: 'https://vignaniit.edu.in/aicte/EOA%20Report%202025-2026%20(1).pdf' },
+        { name: 'AICTE Approval 2024-25', href: 'https://vignaniit.edu.in/aicte/EOA%20Report%202024-2025.PDF' },
+        { name: 'AICTE Approval 2023-24', href: 'https://vignaniit.edu.in/aicte/EOA-Report--2023-24.PDF' },
+        { name: 'AICTE Approval 2022-23', href: 'https://vignaniit.edu.in/aicte/AICTE%20Final%20EOA%20Report_22-23.pdf' },
+        { name: 'AICTE Approval 2021-22', href: 'https://vignaniit.edu.in/aicte/AICTE%20EoA_Report%20_2021-22.PDF' },
+        { name: 'AICTE Approval 2020-21', href: 'https://vignaniit.edu.in/aicte/AICTE%20EOA_Report_2020-21.PDF' },
+        { name: 'AICTE Approval 2019-20', href: 'https://vignaniit.edu.in/aicte/AICTE%20EOA_Report_2019-20.PDF' },
+        { name: 'AICTE Approval 2018-19', href: 'https://vignaniit.edu.in/aicte/AICTE%20Extended_EOA_Autonomy_18-19.pdf' },
       ],
     },
     {
       logo: '/JNTUK Logo.png',
       pdfs: [
-        { name: 'JNTUK Permanent Affiliation 2019-20', href: '/JNTUK 1 2019-20.pdf' },
-        { name: 'JNTUK Permanent Affiliation 2022-23', href: '/JNTUK 1 2022-23.pdf' },
+        { name: 'JNTUK Permanent Affiliation 2019-20', href: 'https://vignaniit.edu.in/iqac/JNTU%20Parminant%20affiliation%202022-23%20(1).pdf' },
+        { name: 'JNTUK Permanent Affiliation 2022-23', href: 'https://vignaniit.edu.in/iqac/JNTU%20Perminant%20Affiliation%202019-20%20(1).pdf' },
       ],
     },
     {
       logo: '/UGC Logo.png',
       pdfs: [
-        { name: 'UGC Autonomous Status 2017', href: '/UGC 1.pdf' },
-        { name: 'UGC Autonomous Status 2024', href: '/UGC 2.pdf' }
+        { name: 'UGC Autonomous Status 2017', href: 'https://vignaniit.edu.in/iqac/UGC%20Autonomous%20status.pdf' },
+        { name: 'UGC Autonomous Status 2024', href: 'https://vignaniit.edu.in/ugc/Autonomous_Extension.pdf' }
       ],
     },
     {
       logo: '/JNTUGV Logo.jpg',
       pdfs: [
-        { name: 'JNTUGV Research Center CE 2023-25', href: '/JNTU-GV Research Centre-CE-2023-2025.pdf' },
-        { name: 'JNTUGV Research Center CSE 2023-25', href: '/JNTU-GV Research Centre-CSE-2023-2025.pdf' },
-        { name: 'JNTUGV Research Center ECE 2023-25', href: '/JNTU-GV Research Centre-ECE-2023-2025.pdf' },
-        { name: 'JNTUGV Research Center EEE 2023-25', href: '/JNTU-GV Research Centre-EEE-2023-2025.pdf' },
-        { name: 'JNTUGV Research Center Mech 2023-25', href: '/JNTU-GV Research Centre-Mech-2023-2025.pdf' },
-        { name: 'JNTUGV Research Center MBA 2023-25', href: '/JNTU-GV Research Centre-MBA-2023-2025.pdf' },
+        { name: 'JNTUGV Research Center CE 2023-25', href: 'https://vignaniit.edu.in/iqac/COE/JNTU-GV%20Research%20Centre-CE-2023-2025.pdf' },
+        { name: 'JNTUGV Research Center CSE 2023-25', href: 'https://vignaniit.edu.in/iqac/COE/JNTU-GV%20Research%20Centre-CSE-2023-2025.pdf' },
+        { name: 'JNTUGV Research Center ECE 2023-25', href: 'https://vignaniit.edu.in/iqac/COE/JNTU-GV%20Research%20Centre-ECE-2023-2025.pdf' },
+        { name: 'JNTUGV Research Center EEE 2023-25', href: 'https://vignaniit.edu.in/iqac/COE/JNTU-GV%20Research%20Centre-EEE-2023-2025.pdf' },
+        { name: 'JNTUGV Research Center Mech 2023-25', href: 'https://vignaniit.edu.in/iqac/COE/JNTU-GV%20Research%20Centre-Mech-2023-2025.pdf' },
+        { name: 'JNTUGV Research Center MBA 2023-25', href: 'https://vignaniit.edu.in/iqac/COE/JNTU-GV%20Research%20Centre-MBA-2023-2025.pdf' },
       ],
     },
     {
       logo: '/JNTUK Logo.png',
       pdfs: [
-        { name: 'JNTUK Research Center CSE 2016-17', href: '/JNTUK-CSE Research Center 2016-17.pdf' },
-        { name: 'JNTUK Research Center MECH 2016-17', href: '/JNTUK-ME Research Center 2016-17.pdf' },
-        { name: 'JNTUK Research Center ECE 2017-18', href: '/JNTUK-ECE Research Center 2017-18.pdf' },
-        { name: 'JNTUK Research Center CSE 2018-19', href: '/JNTUK-CSE Research Center 2018-19.pdf' },
-        { name: 'JNTUK Research Center EEE 2018-19', href: '/JNTUK-EEE Research Center 2018-19.pdf' },
-        { name: 'JNTUK Research Center MBA 2018-19', href: '/JNTUK-MBA Research Center 2018-19.pdf' },
-        { name: 'JNTUK Research Center ECE 2019-20', href: '/JNTUK-ECE Research Center 2019-20.pdf' },
+        { name: 'JNTUK Research Center CSE 2016-17', href: 'https://vignaniit.edu.in/iqac/COE/JNTUK-CSE%20Research%20Center%202016-17.pdf' },
+        { name: 'JNTUK Research Center MECH 2016-17', href: 'https://vignaniit.edu.in/iqac/COE/JNTUK-ME%20Research%20Center%202016-17.pdf' },
+        { name: 'JNTUK Research Center ECE 2017-18', href: 'https://vignaniit.edu.in/iqac/COE/JNTUK-ECE%20Research%20Center%202017-18.pdf' },
+        { name: 'JNTUK Research Center CSE 2018-19', href: 'https://vignaniit.edu.in/iqac/COE/JNTUK-CSE%20Research%20Center%202018-19.pdf' },
+        { name: 'JNTUK Research Center EEE 2018-19', href: 'https://vignaniit.edu.in/iqac/COE/JNTUK-EEE%20Research%20Center%202018-19.pdf' },
+        { name: 'JNTUK Research Center MBA 2018-19', href: 'https://vignaniit.edu.in/iqac/COE/JNTUK-MBA%20Research%20Center%202018-19.pdf' },
+        { name: 'JNTUK Research Center ECE 2019-20', href: 'https://vignaniit.edu.in/iqac/COE/JNTUK-ECE%20Research%20Center%202019-20.pdf' },
       ],
     },
   ];

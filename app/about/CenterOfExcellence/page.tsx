@@ -4,22 +4,22 @@ import AboutMenuBar from '../../../components/AboutMenubar';
 
 export default function CenterOfExcellencePage() {
   const data = [
-    { name: 'AICTE Idea Lab', logo: '/IdeaLab Logo.png', href: '/AICTE Idea Lab approved letter.pdf' },
-    { name: 'DST-FIST', logo: '/DST Logo.png', href: '/DST-FIST Approval Letter.pdf' },
-    { name: 'UGC STRIDE', logo: '/UGC Logo.png', href: '/UGC Stride Approval letter.pdf' },
-    { name: 'UGC Paramarsh', logo: '/UGC Logo.png', href: '/UGC Paramarsh approval.pdf' },
-    { name: 'MSME Incubation', logo: '/MSME Logo.png', href: '/MSME Incubation Center.pdf' },
-    { name: 'Unnat Bharat Abhiyan', logo: '/UBA Logo.png', href: '/UBA scheme.pdf' },
-    { name: 'IIC 2018-19', logo: '/IIC Logo.png', href: '/1. IIC Establisment Certificate 2018-19.pdf' },
-    { name: 'IIC 2020-21', logo: '/IIC Logo.png', href: '/4. IIC_Rating_Certificate_2020-21.pdf' },
-    { name: 'IIC 2021-22', logo: '/IIC Logo.png', href: '/2. IIC_Appreciation_Letter_AY_2021_22 (1).pdf' },
-    { name: 'IIC 2022-23', logo: '/IIC Logo.png', href: '/3. IIC_Appreciation_Letter_AY_2022_23.pdf' },
-    { name: 'IIC 2023-24', logo: '/IIC Logo.png', href: '/RatingCertificate_2023-24.pdf' },
-    { name: 'IIC NIPAM 2022', logo: '/IIC Logo.png', href: '/NIPAM_Certificate_of_appreciation 2022.pdf' },
-    { name: 'VFSTR Research Center', logo: '/VFSTR Logo.png', href: '/supervisors recognized in VIIT, Vizag research centre.pdf' },
-    { name: 'APSCHE QAC Mentor', logo: '/APSCHE Logo.png', href: 'APSCHE Mentor.pdf' },
-    { name: 'CISCO', logo: '/CISCO Logo.png', href: '/CISCO Industry Center of Excellence Award.jpg' },
-    { name: 'IUCUEE', logo: '/IUCUEE Logo.png', href: '/IUCEE_Consortium 2015-16.pdf' },
+    { name: 'AICTE Idea Lab', logo: '/IdeaLab Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/AICTE%20Idea%20Lab%20approved%20letter.pdf' },
+    { name: 'DST-FIST', logo: '/DST Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/DST-FIST%20Approval%20letter.pdf' },
+    { name: 'UGC STRIDE', logo: '/UGC Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/UGC%20Stride%20Approval%20letter.pdf' },
+    { name: 'UGC Paramarsh', logo: '/UGC Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/UGC%20Paramarsh%20approval.pdf' },
+    { name: 'MSME Incubation', logo: '/MSME Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/MSME%20Incubation%20Center.pdf' },
+    { name: 'Unnat Bharat Abhiyan', logo: '/UBA Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/UBA%20scheme.pdf' },
+    { name: 'IIC 2018-19', logo: '/IIC Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/1.%20IIC%20Establisment%20Certificate%202018-19.pdf' },
+    { name: 'IIC 2020-21', logo: '/IIC Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/4.%20IIC_Rating_Certificate_2020-21.pdf' },
+    { name: 'IIC 2021-22', logo: '/IIC Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/2.%20IIC_Appreciation_Letter_AY_2021_22%20(1).pdf' },
+    { name: 'IIC 2022-23', logo: '/IIC Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/3.%20IIC_Appreciation_Letter_AY_2022_23.pdf' },
+    { name: 'IIC 2023-24', logo: '/IIC Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/RatingCertificate_2023-24.pdf' },
+    { name: 'IIC NIPAM 2022', logo: '/IIC Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/NIPAM_Certificate_of_appreciation%202022.pdf' },
+    { name: 'VFSTR Research Center', logo: '/VFSTR Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/supervisors%20recognized%20in%20VIIT,%20Vizag%20research%20centre.pdf' },
+    { name: 'APSCHE QAC Mentor', logo: '/APSCHE Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/APSCHE%20Mentor.pdf' },
+    { name: 'CISCO', logo: '/CISCO Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/CISCO%20Industry%20Center%20of%20Excellence%20Award.jpg' },
+    { name: 'IUCUEE', logo: '/IUCUEE Logo.png', href: 'https://vignaniit.edu.in/iqac/COE/IUCEE_Consortium%202015-16.pdf' },
   ];
 
   return (

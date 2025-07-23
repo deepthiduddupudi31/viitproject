@@ -54,7 +54,7 @@ export default function ChairmanPage() {
 
           {/* Photo floated in text */}
           <img
-            src="/chairman.jpg"
+            src="https://vignaniit.edu.in/images/CHAIRMAN%20SIR.jpg"
             alt="Chairman"
             style={{
               width: '220px',

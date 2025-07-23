@@ -8,26 +8,26 @@ export default function AccreditationsPage() {
       body: 'NAAC',
       logo: '/NAAC Logo.jpeg',
       certificates: [
-        { name: 'NAAC 2012 (Cycle-I)', href: '/NAAC 2012.pdf' },
-        { name: 'NAAC 2017 (Cycle-II)', href: '/NAAC 2017.pdf' },
-        { name: 'NAAC 2024 (Cycle-III)', href: '/NAAC Accredititation Certificate.pdf' },
+        { name: 'NAAC 2012 (Cycle-I)', href: 'https://vignaniit.edu.in/iqac/NAAC%202012.pdf' },
+        { name: 'NAAC 2017 (Cycle-II)', href: 'https://vignaniit.edu.in/iqac/NAAC%202017.pdf' },
+        { name: 'NAAC 2024 (Cycle-III)', href: 'https://vignaniit.edu.in/naac/NAAC%20Accredititation%20Certificate.pdf' },
       ],
     },
     {
       body: 'NBA',
       logo: '/NBA Logo.png',
       certificates: [
-        { name: 'NBA 2009-12', href: '/NBA 2009.pdf' },
-        { name: 'NBA 2017-20', href: '/NBA 2017.pdf' },
-        { name: 'NBA 2020-23', href: '/NBA 2020.pdf' },
-        { name: 'NBA 2024-26', href: '/NBA 2024-2026.pdf' },
+        { name: 'NBA 2009-12', href: 'https://vignaniit.edu.in/iqac/NBA%202009.pdf' },
+        { name: 'NBA 2017-20', href: 'https://vignaniit.edu.in/iqac/NBA%202017.pdf' },
+        { name: 'NBA 2020-23', href: 'https://vignaniit.edu.in/iqac/NBA%202020.pdf' },
+        { name: 'NBA 2024-26', href: 'https://vignaniit.edu.in/NBA%202024-2026.pdf' },
       ],
     },
     {
       body: 'UGC',
       logo: '/UGC Logo.png',
       certificates: [
-        { name: 'UGC 2f&12B Certification', href: '/UGC Certificate 2f and 12B.jpg' },
+        { name: 'UGC 2f&12B Certification', href: 'https://vignaniit.edu.in/iqac/UGC%20Certificate%202f%20and%2012B.jpg' },
       ],
     },
   ];

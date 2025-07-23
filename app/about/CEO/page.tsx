@@ -52,7 +52,7 @@ export default function CEOPage() {
 
           {/* 📸 ADD CEO PHOTO HERE */}
           <img
-            src="/CEO.jpg" // 👈 replace with the actual filename you put in `/public`
+            src="https://vignaniit.edu.in/images/CEO%20SIR%20copy.jpg" // 👈 replace with the actual filename you put in `/public`
             alt="CEO"
             style={{
               width: '220px',

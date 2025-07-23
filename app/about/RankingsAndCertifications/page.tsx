@@ -29,137 +29,137 @@ export default function RankingsAndCertificationsPage() {
     {
       title: 'International Standard Organisation',
       links: [
-        { name: 'ISO 45001:2018(2022-25)', href: '/ISO45001.jpeg' },
-        { name: 'ISO 9001:2015(2022-25)', href: '/ISO9001.jpeg' },
-        { name: 'ISO 14001:2015(2022-25)', href: '/ISO2015.jpeg' },
-        { name: 'ISO 9001:2015(2017-18)', href: '/ISO.pdf' },
-        { name: 'OHSAS 18001:2007(2017-18)', href: '/OHSAS.pdf' },
+        { name: 'ISO 45001:2018(2022-25)', href: 'https://vignaniit.edu.in/iqac/rankings/ISO45001.JPG' },
+        { name: 'ISO 9001:2015(2022-25)', href: 'https://vignaniit.edu.in/iqac/rankings/ISO9001.JPG' },
+        { name: 'ISO 14001:2015(2022-25)', href: 'https://vignaniit.edu.in/iqac/rankings/ISO2015.JPG' },
+        { name: 'ISO 9001:2015(2017-18)', href: 'https://vignaniit.edu.in/iqac/rankings/ISO.pdf' },
+        { name: 'OHSAS 18001:2007(2017-18)', href: 'https://vignaniit.edu.in/iqac/rankings/OHSAS.pdf' },
       ],
     },
     {
       title: 'Safety Certificates',
       links: [
-        { name: 'Fire Safety Certificate', href: '/FIRE SAFETY.pdf' },
-        { name: 'Food Safety Certificate', href: '/FOOD SAFETY.pdf' },
-        { name: 'UV RO Plant certificate', href: '/WATER UV RO PLANT.pdf' },
+        { name: 'Fire Safety Certificate', href: 'https://vignaniit.edu.in/iqac/rankings/FIRE%20SAFETY.pdf' },
+        { name: 'Food Safety Certificate', href: 'https://vignaniit.edu.in/iqac/rankings/FOOD%20SAFETY.pdf' },
+        { name: 'UV RO Plant certificate', href: 'https://vignaniit.edu.in/iqac/rankings/WATER%20UV%20RO%20PLANT.pdf' },
       ],
     },
     {
       title: 'All India Survey on Higher Education',
       links: [
-        { name: 'AISHE 2024-25', href: '/C-17965_certificateold_-DCF (13).pdf' },
-        { name: 'AISHE 2023-24', href: '/C-17965_certificateold_-DCF-2024.pdf' },
-        { name: 'AISHE 2022-23', href: '/AISHE.pdf' },
+        { name: 'AISHE 2024-25', href: 'https://vignaniit.edu.in/iqac/rankings/C-17965_certificateold_-DCF%20(13).pdf' },
+        { name: 'AISHE 2023-24', href: 'https://vignaniit.edu.in/iqac/rankings/C-17965_certificateold_-DCF-2024.pdf' },
+        { name: 'AISHE 2022-23', href: 'https://vignaniit.edu.in/iqac/rankings/AISHE.pdf' },
       ],
     },
     {
       title: 'Atal Ranking of Institutions on Innovation Achievements',
       links: [
-        { name: 'ARIIA-2022', href: '/ARIIA Certificate 2022.pdf' },
+        { name: 'ARIIA-2022', href: 'https://vignaniit.edu.in/iqac/rankings/ARIIA%20Certificate%202022.pdf' },
       ],
     },
     {
       title: 'Andhra Pradesh Information Technology Academy',
       links: [
-        { name: 'APITA 2019-2020', href: '/APITA.pdf' },
+        { name: 'APITA 2019-2020', href: 'https://vignaniit.edu.in/iqac/rankings/APITA.pdf' },
       ],
     },
     {
       title: 'CISCO',
       links: [
-        { name: 'Women Rock IT', href: '/2017-18.jpg' },
+        { name: 'Women Rock IT', href: 'https://vignaniit.edu.in/iqac/rankings/2017-18.jpg' },
       ],
     },
     {
       title: 'NATIONAL WOMEN\'s PARLIAMENT',
       links: [
-        { name: 'National Womens Parliament', href: '/25 (1).pdf' },
+        { name: 'National Womens Parliament', href: 'https://vignaniit.edu.in/iqac/rankings/25.pdf' },
       ],
     },
     {
       title: 'NPTEL',
       links: [
-        { name: 'NPTEL - 2019', href: '/2019.jpg' },
-        { name: 'NPTEL - 2022', href: '/2022.jpg' },
+        { name: 'NPTEL - 2019', href: 'https://vignaniit.edu.in/iqac/rankings/2019.jpg' },
+        { name: 'NPTEL - 2022', href: 'https://vignaniit.edu.in/iqac/rankings/2022.jpg' },
       ],
     },
     {
       title: 'CAMBRIDGE',
       links: [
-        { name: 'Cambridge Assessment English', href: '/46.jpg' },
+        { name: 'Cambridge Assessment English', href: 'https://vignaniit.edu.in/iqac/rankings/46.jpg' },
       ],
     },
     {
       title: 'GREEN AWARDS',
       links: [
-        { name: 'Green Waves Environmental Solutions', href: '/G1.pdf' },
-        { name: 'State Energy Conservation Mission', href: '/G2.pdf' },
-        { name: 'Green institute', href: '/Platinum ranking.jpeg' },
-        { name: 'Others', href: '/Remaining.pdf' },
+        { name: 'Green Waves Environmental Solutions', href: 'https://vignaniit.edu.in/iqac/rankings/G1.pdf' },
+        { name: 'State Energy Conservation Mission', href: 'https://vignaniit.edu.in/iqac/rankings/G2.pdf' },
+        { name: 'Green institute', href: 'https://vignaniit.edu.in/iqac/rankings/Platinum%20ranking.JPG' },
+        { name: 'Others', href: 'https://vignaniit.edu.in/iqac/rankings/Remaining.pdf' },
       ],
     },
     {
       title: 'CII',
       links: [
-        { name: 'Young Indians - CII', href: '/19.jpeg' },
-        { name: 'AICTE - CII', href: '/AICTE CII.pdf' },
+        { name: 'Young Indians - CII', href: 'https://vignaniit.edu.in/iqac/rankings/19.jpeg' },
+        { name: 'AICTE - CII', href: 'https://vignaniit.edu.in/iqac/rankings/AICTE%20CII.pdf' },
       ],
     },
     {
       title: 'Center for Education Growth and Research',
       links: [
-        { name: 'CEGR', href: '/11.pdf' },
+        { name: 'CEGR', href: 'https://vignaniit.edu.in/iqac/rankings/11.pdf' },
       ],
     },
     {
       title: 'TIMES',
       links: [
-        { name: 'TIMES Ranking 2017', href: '/22 2.pdf' },
-        { name: 'TIMES Magazine - VIIT', href: '/22 (1).pdf' },
-        { name: 'All India Times Ranking-2023', href: '/2023 rankings.pdf' },
-        { name: 'Times Engineering Institute Ranking 2023', href: '/Times Engineering Institutes Ranking_2023_Final (2).pdf' },
-        { name: 'Times Engineering Survey Institutes-2025', href: '/time_2025.jpeg' },
+        { name: 'TIMES Ranking 2017', href: 'https://vignaniit.edu.in/iqac/rankings/22%202.pdf' },
+        { name: 'TIMES Magazine - VIIT', href: 'https://vignaniit.edu.in/iqac/rankings/22.pdf' },
+        { name: 'All India Times Ranking-2023', href: 'https://vignaniit.edu.in/iqac/rankings/2023%20rankings.pdf' },
+        { name: 'Times Engineering Institute Ranking 2023', href: 'https://vignaniit.edu.in/iqac/rankings/Times%20Engineering%20Institutes%20Ranking_2023_Final%20(2).pdf' },
+        { name: 'Times Engineering Survey Institutes-2025', href: 'https://vignaniit.edu.in/iqac/time_2025.jpeg' },
       ],
     },
     {
       title: 'ACADEMIC INSIGHTS',
       links: [
-        { name: 'INDIA\'S TOP 50 ENGINEERING COLLEGES SURVEY - 2025', href: '/Academic Insights.pdf' },
+        { name: 'INDIA\'S TOP 50 ENGINEERING COLLEGES SURVEY - 2025', href: 'https://vignaniit.edu.in/iqac/rankings/Academic%20Insights.pdf' },
       ],
     },
     {
       title: 'R World Institutional Ranking',
       links: [
-        { name: 'R World - 2023', href: '/RW.png' },
-        { name: 'OBE-2023', href: '/2.pdf' },
+        { name: 'R World - 2023', href: 'https://vignaniit.edu.in/iqac/rankings/RW.png' },
+        { name: 'OBE-2023', href: 'https://vignaniit.edu.in/iqac/rankings/2.pdf' },
       ],
     },
     {
       title: 'AMBITIOUS AWARD',
       links: [
-        { name: 'Education Excellence 20-21', href: '/51.jpg' },
+        { name: 'Education Excellence 20-21', href: 'https://vignaniit.edu.in/iqac/rankings/51.jpg' },
       ],
     },
     {
       title: 'PRIME TIME',
       links: [
-        { name: 'Global Education Excellence 2017', href: '/21.jpg' },
+        { name: 'Global Education Excellence 2017', href: 'https://vignaniit.edu.in/iqac/rankings/21.jpg' },
       ],
     },
     {
       title: 'SERVICE AWARDS',
       links: [
-        { name: 'Helping Hearts', href: '/1.pdf' },
-        { name: 'Vijaya Sri Blood Bank', href: '/2 (1).pdf' },
-        { name: 'Amma Teresa Foundation', href: '/3.pdf' },
-        { name: 'For the People Charitable Trust', href: '/4.pdf' },
-        { name: 'NTR Memorial Trust', href: '/5.pdf' },
+        { name: 'Helping Hearts', href: 'https://vignaniit.edu.in/iqac/rankings/1.pdf' },
+        { name: 'Vijaya Sri Blood Bank', href: 'https://vignaniit.edu.in/iqac/rankings/2.pdf' },
+        { name: 'Amma Teresa Foundation', href: 'https://vignaniit.edu.in/iqac/rankings/3.pdf' },
+        { name: 'For the People Charitable Trust', href: 'https://vignaniit.edu.in/iqac/rankings/4.pdf' },
+        { name: 'NTR Memorial Trust', href: 'https://vignaniit.edu.in/iqac/rankings/5.pdf' },
       ],
     },
     {
       title: 'OTHERS',
       links: [
-        { name: 'Dewang Mehta National Education Awards', href: '/34.jpg' },
+        { name: 'Dewang Mehta National Education Awards', href: 'https://vignaniit.edu.in/iqac/rankings/34.jpg' },
       ],
     },
   ];

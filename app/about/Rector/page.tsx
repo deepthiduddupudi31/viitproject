@@ -50,7 +50,7 @@ export default function RectorPage() {
 
           {/* 📸 Rector photo here */}
           <img
-            src="/rector.jpg" // 👈 Replace with correct filename if needed
+            src="https://vignaniit.edu.in/images/RECTOR%20SIR.jpg" // 👈 Replace with correct filename if needed
             alt="Rector"
             style={{
               width: '220px',

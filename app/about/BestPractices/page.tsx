@@ -16,7 +16,7 @@ export default function BestPracticesPage() {
           {/* Best Practice I */}
           <div className="space-y-6">
             <a
-              href="/7.2.1.Best Practice-1.pdf"
+              href="https://vignaniit.edu.in/aqar2324uploads/Criteria7/7.2.1/7.2.1.Best%20Practice-1.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl font-semibold text-blue-700 hover:underline flex items-center gap-2"
@@ -47,7 +47,7 @@ export default function BestPracticesPage() {
           {/* Best Practice II */}
           <div className="space-y-6">
             <a
-              href="/7.2.1.Best Practice-2.pdf"
+              href="https://vignaniit.edu.in/aqar2324uploads/Criteria7/7.2.1/7.2.1.Best%20Practice-2.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl font-semibold text-blue-700 hover:underline flex items-center gap-2"
