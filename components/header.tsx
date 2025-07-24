@@ -8,33 +8,47 @@ import Image from "next/image";
 import { ChevronDown, ChevronRight, Menu, X, Search } from "lucide-react";
 import { navItems, type NavItem } from "../lib/navItems."; // Ensure this path is correct
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { useLoader } from "./LoaderContext";
 
 // --- Reusable Dropdown Components for Desktop ---
 
-const NestedDropdown = ({ items }: { items: NavItem[] }) => (
-  <motion.div
-    initial={{ opacity: 0, x: -10 }}
-    animate={{ opacity: 1, x: 0 }}
-    exit={{ opacity: 0, x: -10 }}
-    className="absolute left-full -top-px w-72 bg-white rounded-r-lg shadow-lg border-l-0 border"
-  >
-    <ul className="py-2">
-      {items.map((item) => (
-        <li key={item.label}>
-          <Link
-            href={item.path}
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-white/100"
-          >
-            {item.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </motion.div>
-);
+const NestedDropdown = ({ items }: { items: NavItem[] }) => {
+  const router = useRouter();
+  const { showLoader } = useLoader();
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -10 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -10 }}
+      className="absolute left-full -top-px w-72 bg-white rounded-r-lg shadow-lg border-l-0 border"
+    >
+      <ul className="py-2">
+        {items.map((item) => (
+          <li key={item.label}>
+            <Link
+              href={item.path}
+              onClick={(e) => {
+                e.preventDefault();
+                showLoader();
+                router.push(item.path);
+              }}
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-white/100"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+};
 
 const DropdownMenu = ({ items }: { items: NavItem[] }) => {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+  const router = useRouter();
+  const { showLoader } = useLoader();
 
   return (
     <motion.div
@@ -53,6 +67,11 @@ const DropdownMenu = ({ items }: { items: NavItem[] }) => {
           >
             <Link
               href={item.path}
+              onClick={(e) => {
+                e.preventDefault();
+                showLoader();
+                router.push(item.path);
+              }}
               className={`flex items-center justify-between w-full px-4 py-2 text-sm text-left transition-colors ${
                 activeSubMenu === item.label
                   ? "bg-linkedin text-white"
@@ -78,7 +97,9 @@ const DropdownMenu = ({ items }: { items: NavItem[] }) => {
 
 const DesktopNav = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  
+  const router = useRouter();
+  const { showLoader } = useLoader();
+
   return (
     <nav className="hidden lg:flex items-center h-full">
       <ul className="flex items-center h-full text-sm">
@@ -91,6 +112,11 @@ const DesktopNav = () => {
           >
             <Link
               href={item.path}
+              onClick={(e) => {
+                e.preventDefault();
+                showLoader();
+                router.push(item.path);
+              }}
               className="px-4 py-2 flex items-center gap-1.5 h-full transition-colors duration-200 hover:bg-white/10"
             >
               <span>{item.label}</span>
@@ -114,11 +140,22 @@ const DesktopNav = () => {
 
 const MobileNavItem = ({ item, closeMenu }: { item: NavItem, closeMenu: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const { showLoader } = useLoader();
 
   if (!item.children) {
     return (
       <li>
-        <Link href={item.path} onClick={closeMenu} className="block px-4 py-3 text-base text-gray-700 hover:bg-gray-100">
+        <Link
+          href={item.path}
+          onClick={(e) => {
+            e.preventDefault();
+            showLoader();
+            closeMenu();
+            router.push(item.path);
+          }}
+          className="block px-4 py-3 text-base text-gray-700 hover:bg-gray-100"
+        >
           {item.label}
         </Link>
       </li>
@@ -188,17 +225,15 @@ const MobileNav = ({ isOpen, closeMenu }: { isOpen: boolean, closeMenu: () => vo
 // --- Main Header Component ---
 
 export default function Header() {
-  // CHANGED: 1. Add state for stickiness and a ref for the top bar
   const [isSticky, setSticky] = useState(false);
   const topBarRef = React.useRef<HTMLDivElement>(null);
-  
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const { showLoader } = useLoader();
 
-  // CHANGED: 2. Add a useEffect to listen for scroll events
   useEffect(() => {
     const handleScroll = () => {
       if (topBarRef.current) {
-        // Set sticky to true if scroll position is past the top bar's height
         setSticky(window.scrollY > topBarRef.current.offsetHeight);
       }
     };
@@ -207,7 +242,7 @@ export default function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array means this runs once on mount
+  }, []);
 
   const utilityLinks = [
     { label: "Careers", path: "/careers" },
@@ -217,9 +252,7 @@ export default function Header() {
 
   return (
     <>
-      {/* CHANGED: 3. The main header tag is no longer 'fixed'. It's now relative. */}
       <header className="relative w-full z-50 bg-white shadow-sm">
-        {/* Top Bar with Logo and Utility Links */}
         <div ref={topBarRef} className="border-b border-gray-200">
           <div className="max-w-screen-xl mx-auto px-4 py-2 flex items-center justify-between">
             <Link href="/" className="flex items-center">
@@ -234,7 +267,16 @@ export default function Header() {
             </Link>
             <div className="hidden md:flex items-center space-x-6 text-sm">
               {utilityLinks.map(({label, path}) => (
-                <Link key={label} href={path} className="text-gray-600 hover:text-blue-700 hover:underline underline-offset-4 transition-colors">
+                <Link
+                  key={label}
+                  href={path}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    showLoader();
+                    router.push(path);
+                  }}
+                  className="text-gray-600 hover:text-blue-700 hover:underline underline-offset-4 transition-colors"
+                >
                   {label}
                 </Link>
               ))}
@@ -243,8 +285,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Main Navigation Bar */}
-        {/* CHANGED: 4. This container now has conditional classes for stickiness */}
         <div 
           className={`bg-linkedin text-white transition-all duration-300 ${
             isSticky ? 'fixed top-0 left-0 right-0 shadow-lg' : 'relative'
@@ -262,10 +302,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-
-      {/* CHANGED: 5. Add a placeholder to prevent content from jumping up when the nav becomes sticky */}
       {isSticky && <div className="h-14" />}
-      
       <MobileNav isOpen={isMobileMenuOpen} closeMenu={() => setMobileMenuOpen(false)} />
     </>
   );
