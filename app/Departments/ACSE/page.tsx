@@ -31,7 +31,7 @@ export default function CivilPage() {
 
         {/* Main Content */}
         <main className="p-6 flex-1 bg-white">
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">ABOUT DEPT</h2>
+          <h2 className="text-2xl font-bold text-blue-800 mb-4 ">ABOUT DEPT</h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
             The Department of Advanced Computer Science and Engineering at the Vignan’s Institute of Information Technology, Visakhapatnam...
           </p>
