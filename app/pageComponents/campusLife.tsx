@@ -11,10 +11,11 @@ export default function CampusLifeSection() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-
+  video.currentTime = 4; 
     const handleTimeUpdate = () => {
+        
       if (video.currentTime >= 29) {
-        video.currentTime = 3; 
+        video.currentTime = 6; 
       }
     };
 
