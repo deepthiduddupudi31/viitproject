@@ -1,39 +1,34 @@
 'use client';
 
-import { Button } from "../components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import SchoolsSection from "./pageComponents/schools"
-import Programs from "./pageComponents/programs"
-import HeroSlider from "./pageComponents/heroSection"
-import AboutSection from "./pageComponents/aboutSection"
-import News from "./pageComponents/news"
+import { useState, useEffect } from "react";
+import Loader from "../components/loader";
+
+// Import your page sections
+import HeroSlider from "./pageComponents/heroSection";
+import AboutSection from "./pageComponents/aboutSection";
+import SchoolsSection from "./pageComponents/schools";
+import Programs from "./pageComponents/programs";
+import CampusLifeSection from "./pageComponents/campusLife";
+import News from "./pageComponents/news";
+import PlacementHighlights from "./pageComponents/placementHighlights";
+import TopRecruiters from "./pageComponents/topRecruiters";
 import SocialMediaWall from "./pageComponents/socialMediaWall";
-import TopRecruiters from "./pageComponents/topRecruiters"
-import CampusLifeSection from "./pageComponents/campusLife"
-import { useEffect, useRef, useState } from "react";
-import  PlacementHighlights from "./pageComponents/placementHighlights";
-import gsap from 'gsap';
 
+export default function HomePage(): JSX.Element {
+  const [loading, setLoading] = useState<boolean>(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
-export default function HomePage() {
+  if (loading) return <Loader />;
 
   return (
     <div className="min-h-screen">
-      {/* Hero Slider */}
-      <HeroSlider/>
-
-      {/* About Section */}
-      {/* About + Announcement Section */}
-      <AboutSection/>
-
-
-      {/* Schools Section */}
-      <SchoolsSection/>
-
-      {/* Programs Section */}
+      <HeroSlider />
+      <AboutSection />
+      <SchoolsSection />
       <Programs />
       
       {/* Campus Life Section */}
@@ -52,5 +47,5 @@ export default function HomePage() {
     
       
     </div>
-  )
+  );
 }

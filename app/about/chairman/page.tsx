@@ -18,7 +18,7 @@ export default function ChairmanPage() {
         color: '#333',
       }}
     >
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{

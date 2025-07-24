@@ -1,6 +1,8 @@
+'use client';
+
 import React from "react";
 
-export default function Loader() {
+const Loader: React.FC = () => {
   return (
     <div
       className="fixed inset-0 z-50 w-screen h-screen"
@@ -14,10 +16,8 @@ export default function Loader() {
         muted
         className="w-full h-full object-cover"
       />
-      {/* Optional: Overlay for dimming or branding */}
-      {/* <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-        <img src="/logo.png" alt="Logo" className="w-32 h-32" />
-      </div> */}
     </div>
   );
-}
+};
+
+export default Loader;

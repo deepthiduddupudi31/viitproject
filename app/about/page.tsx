@@ -46,7 +46,7 @@ export default function AboutPage() {
         fontFamily: 'sans-serif',
       }}
     >
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{

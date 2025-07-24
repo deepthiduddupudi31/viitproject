@@ -12,7 +12,7 @@ export default function PrincipalPage() {
         color: '#333',
       }}
     >
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{
