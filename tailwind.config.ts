@@ -64,6 +64,12 @@ const config: Config = {
           ring: "hsl(var(--sidebar-ring))"
         },
         linkedin: '#0077B5',
+        "vignan-blue": '#005f9e',   
+        "navy-text": '#1d2c4b',     
+        "slate-text": '#5a6479',   
+        "light-bg": '#f9fafb', 
+        'brand-primary': '#0A66C2', 
+        'brand-secondary': '#004182',
       },
       borderRadius: {
         lg: "var(--radius)",

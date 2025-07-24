@@ -6,12 +6,11 @@ import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
 import { ChevronDown, ChevronRight, Menu, X, Search } from "lucide-react";
-import { navItems, type NavItem } from "../lib/navItems."; // Ensure this path is correct
+import { navItems, type NavItem } from "../lib/navItems."; 
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useLoader } from "./LoaderContext";
 
-// --- Reusable Dropdown Components for Desktop ---
 
 const NestedDropdown = ({ items }: { items: NavItem[] }) => {
   const router = useRouter();
@@ -22,7 +21,7 @@ const NestedDropdown = ({ items }: { items: NavItem[] }) => {
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -10 }}
-      className="absolute left-full -top-px w-72 bg-white rounded-r-lg shadow-lg border-l-0 border"
+      className="absolute left-full -top-px w-72 bg-white rounded-r-lg shadow-lg  border"
     >
       <ul className="py-2">
         {items.map((item) => (
@@ -55,7 +54,7 @@ const DropdownMenu = ({ items }: { items: NavItem[] }) => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 10 }}
-      className="absolute top-full left-0 mt-0 w-64 bg-white rounded-b-lg shadow-xl border-t-0 border"
+      className="absolute top-full left-0 mt-0 w-64 bg-white rounded-b-lg shadow-xl  border"
     >
       <ul className="py-2">
         {items.map((item) => (
@@ -93,7 +92,6 @@ const DropdownMenu = ({ items }: { items: NavItem[] }) => {
   );
 };
 
-// --- Desktop Navigation Component ---
 
 const DesktopNav = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -123,6 +121,7 @@ const DesktopNav = () => {
               {item.children && (
                 <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
               )}
+              <span className="absolute left-0 bottom-1 w-full h-0.5 bg-white scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
             </Link>
             <AnimatePresence>
               {item.children && activeMenu === item.label && (

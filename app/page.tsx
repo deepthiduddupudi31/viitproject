@@ -12,7 +12,7 @@ import CampusLifeSection from "./pageComponents/campusLife";
 import News from "./pageComponents/news";
 import PlacementHighlights from "./pageComponents/placementHighlights";
 import TopRecruiters from "./pageComponents/topRecruiters";
-// import SocialMediaWall from "./pageComponents/socialMediaWall";
+import SocialMediaWall from "./pageComponents/socialMediaWall";
 
 export default function HomePage(): JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
@@ -32,9 +32,10 @@ export default function HomePage(): JSX.Element {
       <Programs />
       <CampusLifeSection />
       <News />
+      <SocialMediaWall />
       <PlacementHighlights />
       <TopRecruiters />
-      {/* <SocialMediaWall /> */}
+      
     </div>
   );
 }
