@@ -50,48 +50,12 @@ export default function HeroSection() {
   }, [index])
 
   return (
-    <section className="relative w-full bg-light-bg min-h-screen flex items-center lg:mt-[-100px] overflow-hidden">
+    <section className="relative w-full bg-light-bg flex items-center">
       
       <div className="absolute inset-0 w-full bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:36px_36px] opacity-50"></div>
 
-      <div className="relative container mx-auto h-full flex items-center px-6 pt-28 pb-16 lg:py-0">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-x-12 gap-y-16">
-          
-          <motion.div
-            className="flex flex-col lg:order-1"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <h1 className="text-4xl lg:text-5xl font-extrabold tracking-tighter text-navy-text">
-              Engineer the Future.
-              <br />
-              <span className="text-vignan-blue">Innovate with Purpose.</span>
-            </h1>
-            <p className="mt-5 text-base lg:text-lg max-w-lg text-slate-text leading-relaxed">
-              At VIIT, we cultivate the next generation of pioneers who will lead, create, and solve the challenges of tomorrow.
-            </p>
-
-            <div className="mt-8 grid grid-cols-3 gap-6 text-left max-w-md">
-              {stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col">
-                  {stat.icon}
-                  <p className="text-lg font-bold text-navy-text mt-2">{stat.value}</p>
-                  <p className="text-xs text-slate-text uppercase tracking-wider">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <motion.a href="/about" className="bg-vignan-blue text-white font-semibold py-3 px-6 rounded-lg text-center shadow-lg shadow-vignan-blue/30 hover:bg-opacity-90 transition-all" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-                About Us
-              </motion.a>
-              <motion.a href="/departments" className="bg-white text-navy-text font-semibold py-3 px-6 rounded-lg text-center border border-slate-200 hover:border-slate-300 transition-colors" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-                Explore Programs
-              </motion.a>
-            </div>
-          </motion.div>
-
+      <div className="relative container mx-auto h-full flex items-center px-6 pt-10 pb-10 lg:py-2">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-1 items-center gap-x-12 gap-y-16">
           <motion.div
             className="relative w-full aspect-[33/15] rounded-xl shadow-2xl shadow-slate-30/5 overflow-hidden lg:order-2"
             initial={{ opacity: 0, scale: 0.9 }}

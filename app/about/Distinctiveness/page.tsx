@@ -12,7 +12,7 @@ export default function InstitutionalDistinctivenessPage() {
         fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
       }}
     >
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{
@@ -56,7 +56,7 @@ export default function InstitutionalDistinctivenessPage() {
             }}
           >
             <a
-              href="/7.3.1.Institute Distinctiveness.pdf"
+              href="https://vignaniit.edu.in/aqar2324uploads/Criteria7/7.3.1/7.3.1.Institute%20Distinctiveness.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={{

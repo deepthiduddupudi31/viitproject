@@ -12,7 +12,7 @@ export default function PrincipalPage() {
         color: '#333',
       }}
     >
-      <AboutMenuBar />
+      {/* <AboutMenuBar /> */}
 
       <main
         style={{
@@ -50,7 +50,7 @@ export default function PrincipalPage() {
 
           {/* 📸 Principal photo here */}
           <img
-            src="/Principal.jpg" // 👈 Replace with correct file name in `/public`
+            src="https://vignaniit.edu.in/images/PRINCIPAL%20SIR.jpg" // 👈 Replace with correct file name in `/public`
             alt="Principal"
             style={{
               width: '220px',

@@ -50,7 +50,7 @@ export default function Programs() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <section className="w-full bg-light-bg py-24 px-4 sm:px-6">
+    <section className="w-full bg-light-bg py-10 px-4 sm:px-6">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-12"

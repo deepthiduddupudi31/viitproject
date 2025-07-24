@@ -68,6 +68,8 @@ const config: Config = {
         "navy-text": '#1d2c4b',     
         "slate-text": '#5a6479',   
         "light-bg": '#f9fafb', 
+        'brand-primary': '#0A66C2', 
+        'brand-secondary': '#004182',
       },
       borderRadius: {
         lg: "var(--radius)",
