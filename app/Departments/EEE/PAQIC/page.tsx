@@ -2,14 +2,14 @@
 import Sidebar from '.././Sidebar'
 
 const pmcMoMs = [
-  { year: '2022-23', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf' },
-  { year: '2021-22', url:  'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf'},
-  { year: '2020-21', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC01996520240421133321.pdf' },
+  { year: '2022-23', label: 'PMC_22-23_MoM', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf' },
+  { year: '2021-22', label: 'PMC_21-22_MoM', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf' },
+  { year: '2020-21', label: 'PMC_20-21_MoM', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC01996520240421133321.pdf' },
 ];
 
-const responsibilitiesByFrequency = [
+const responsibilities = [
   {
-    frequency: 'Twice in a Semester',
+    frequency: 'Twice in a semester',
     items: [
       'Review result analysis of students in internal & external examinations.',
       'Identification of slow and advanced learners.',
@@ -17,15 +17,15 @@ const responsibilitiesByFrequency = [
       'Laboratory stock and maintenance register verification.',
       'Checking the lab equipment condition.',
       'Updating the lab software status.',
-      'Verification of quality of mid-examination question papers.',
-      'Verification of quality of mid-examination answer sheet evaluations.',
+      'Verification of quality of mid-examination question paper.',
+      'Verification of quality of mid-examination answers sheets evaluation.',
       'Course file verification.',
       'Adherence to the academic calendar.',
       'CRC meetings to verify syllabus status before mid-1 and mid-2.',
     ],
   },
   {
-    frequency: 'Once in a Semester',
+    frequency: 'Once a semester',
     items: [
       'Analysis of course feedback, graduate exit survey, alumni survey, and course exit survey from the students.',
       'Analysis of CO attainment, PO, and PSO attainments. Propose strategies for continuous improvement.',
@@ -34,11 +34,11 @@ const responsibilitiesByFrequency = [
     ],
   },
   {
-    frequency: 'Once in a Year',
+    frequency: 'Once in a year',
     items: [
       'Review admission analysis and recommend strategies to improve the quality of admissions.',
       'Verification of alumni reports.',
-      'Suggestions for Students – Industry interaction.',
+      'Suggestions for Students –Industry interaction.',
       'Assessing the student’s projects (Mini & Major).',
       'Checking the quality improvement of student publications.',
       'Examining the quality of project reports through plagiarism check.',
@@ -52,7 +52,7 @@ export default function PAQIC() {
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/eee.jpg"
           alt="PAQIC Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -69,9 +69,11 @@ export default function PAQIC() {
           {/* Responsibilities */}
           <section className="mb-8">
             <h3 className="text-xl font-semibold text-blue-800 mb-3">Responsibilities</h3>
-            {responsibilitiesByFrequency.map((group) => (
-              <div key={group.frequency} className="mb-4">
-                <h4 className="text-md font-semibold text-blue-700 mb-1">{group.frequency}</h4>
+            {responsibilities.map((group, index) => (
+              <div key={index} className="mb-4">
+                <h4 className="text-md font-semibold text-blue-700 mb-1">
+                  Audit / Meeting Frequency: {group.frequency}
+                </h4>
                 <ul className="list-disc list-inside space-y-1 text-gray-700 pl-4">
                   {group.items.map((item, idx) => (
                     <li key={idx}>{item}</li>
@@ -87,8 +89,13 @@ export default function PAQIC() {
             <ul className="list-disc list-inside space-y-1 text-blue-700">
               {pmcMoMs.map((mom) => (
                 <li key={mom.year}>
-                  <a href={mom.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    PMC MoM {mom.year}
+                  <a
+                    href={mom.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {mom.label}
                   </a>
                 </li>
               ))}

@@ -2,19 +2,19 @@
 import Sidebar from '../Sidebar'
 
 const facilities = [
-  { sno: 1, name: 'Number of Class rooms', details: '06' },
-  { sno: 2, name: 'Number of tutorial rooms', details: '01' },
-  { sno: 3, name: 'Classrooms with ICT facility', details: '06' },
-  { sno: 4, name: 'Academic Laboratories', details: '10' },
-  { sno: 5, name: 'Research Laboratories', details: '01' },
-  { sno: 6, name: 'Other Laboratories', details: 'Nil' },
+  { sno: 1, name: 'Number of Class rooms', details: '11' },
+  { sno: 2, name: 'Number of tutorial rooms', details: '1' },
+  { sno: 3, name: 'Classrooms with ICT facility', details: '11' },
+  { sno: 4, name: 'Academic Laboratories', details: '4' },
+  { sno: 5, name: 'Research Laboratories', details: '1' },
+  { sno: 6, name: 'Other Laboratories', details: '-' },
   {
     sno: 7,
     name: 'Library - Department',
-    details: 'No. of Titles: 445, No. of Volumes: 3379',
+    details: 'Department Library Available',
   },
-  { sno: 8, name: 'Seminar Halls', details: '01' },
-  { sno: 9, name: 'Staff rooms', details: '02' },
+  { sno: 8, name: 'Seminar Halls', details: '1' },
+  { sno: 9, name: 'Staff rooms', details: '3' },
 ]
 
 export default function Facilities() {
@@ -22,7 +22,7 @@ export default function Facilities() {
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/WEB_01.jpg"
           alt="Facilities Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />

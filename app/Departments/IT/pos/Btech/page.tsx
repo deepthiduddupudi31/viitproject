@@ -1,8 +1,6 @@
 'use client'
 import Sidebar from '../../Sidebar';
 
-
-
 const programmeOutcomes = [
   {
     id: 'PO1',
@@ -78,14 +76,14 @@ const programmeOutcomes = [
   },
 ];
 
-export default function CivilPage() {
+export default function ITOutcomesPage() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
-          alt="Banner"
+          src="https://vignaniit.edu.in/images/IT.jpg"
+          alt="IT Department Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
       </div>
@@ -95,7 +93,7 @@ export default function CivilPage() {
         <Sidebar />
         <main className="p-6 flex-1 bg-white">
           <h2 className="text-2xl font-bold text-blue-900 mb-6">Programme Outcomes (POs)</h2>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {programmeOutcomes.map((po) => (
               <div key={po.id}>
                 <h3 className="font-semibold text-gray-800">{po.id}: {po.title}</h3>
