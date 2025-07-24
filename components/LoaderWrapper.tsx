@@ -1,73 +1,36 @@
+// components/LoaderWrapper.tsx
 "use client";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import Loader from "./loader";
 
-function isFullReload() {
-  if (typeof window === "undefined") return false;
-  // For modern browsers
-  if (window.performance && window.performance.getEntriesByType) {
-    const navEntries = window.performance.getEntriesByType("navigation");
-    if (navEntries.length > 0) {
-      const nav = navEntries[0] as PerformanceNavigationTiming;
-      if (nav.type === "reload") {
-        return true;
-      }
-    }
-  }
-  // Fallback for older browsers
-  if (window.performance && window.performance.navigation) {
-    return window.performance.navigation.type === 1;
-  }
-  return false;
-}
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import Loader from "./loader";
+import VideoLoader from "./VideoLoader";
 
 export default function LoaderWrapper({ children }: { children: React.ReactNode }) {
-  const [showLoader, setShowLoader] = useState(() => isFullReload());
-  const router = useRouter();
+  const pathname = usePathname();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const handleStart = () => setShowLoader(true);
-    // Hide loader after video ends (handled by onFinish)
-    // Fallback: hide loader after 12s if something goes wrong
-    let timeout: NodeJS.Timeout | null = null;
-    if (showLoader) {
-      timeout = setTimeout(() => setShowLoader(false), 12000);
+    if (pathname === "/") {
+      // Let video duration control loading
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 3000); // adjust to match your video duration in ms
+
+      return () => clearTimeout(timer);
+    } else {
+      setLoading(true);
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 1000); // standard page loader timeout
+
+      return () => clearTimeout(timer);
     }
-    // Next.js router events (for client-side navigation)
-    // router.events is not available in app directory, so use router.on directly if available
-    // For next/navigation, listen to popstate
-    window.addEventListener("popstate", handleStart);
-    return () => {
-      window.removeEventListener("popstate", handleStart);
-      if (timeout) clearTimeout(timeout);
-    };
-  }, [showLoader]);
+  }, [pathname]);
 
-  // Listen for push/replace navigation (client-side)
-  useEffect(() => {
-    const origPush = router.push;
-    const origReplace = router.replace;
-    router.push = (...args: any[]) => {
-      setShowLoader(true);
-      // @ts-ignore
-      return origPush.apply(router, args);
-  };
-    router.replace = (...args: any[]) => {
-      setShowLoader(true);
-      // @ts-ignore
-      return origReplace.apply(router, args);
-    };
-    return () => {
-      router.push = origPush;
-      router.replace = origReplace;
-    };
-  }, [router]);
+  if (loading) {
+    return pathname === "/" ? <VideoLoader/> : <Loader />;
+  }
 
-    return (
-    <>
-      <Loader visible={showLoader} onFinish={() => setShowLoader(false)} />
-      <div style={{ display: showLoader ? "none" : undefined }}>{children}</div>
-    </>
-  );
+  return <>{children}</>;
 }

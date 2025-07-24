@@ -75,12 +75,12 @@ export const navItems: NavItem[] = [
       { label: "Academic Calendars", path: "/academics/Admissions/academiccalender" },
       {
         label: "Teaching Learning Process",
-        path: "/academics/teachinglearning",
+        path: "/academics/teacherlearning",
         children: [
-          { label: "Teaching Methodologies", path: "/academics/teachinglearning/teachingmethod" },
-          { label: "OBE Practices", path: "/academics/teachinglearning/obepractice" },
-          { label: "Special Programs - Student Diversity", path: "/academics/teachinglearning/specialprogram" },
-          { label: "Mentor-Mentee System", path: "/academics/teachinglearning/mentor-mentee" },
+          { label: "Teaching Methodologies", path: "/academics/teacherlearning/teachingmethod" },
+          { label: "OBE Practices", path: "/academics/teacherlearning/obepractice" },
+          { label: "Special Programs - Student Diversity", path: "/academics/teacherlearning/specialprogram" },
+          { label: "Mentor-Mentee System", path: "/academics/teacherlearning/mentor-mentee" },
         ],
       },
       { label: "Internship Manual", path: "https://vignaniit.edu.in/Internship%20manual%20and%20student%20diary.pdf" },
