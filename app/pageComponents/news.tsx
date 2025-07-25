@@ -62,12 +62,12 @@ const newsArticles = [
 
 export default function NewsSection() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 ">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-8">
+      <div className="bg-gray-50 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-4xl font-bold text-linkedin">News</h1>
+            <h1 className="text-4xl font-bold text-navy-text">News</h1>
 
             <Link href="/news" className="text-linkedin hover:text-linkedin font-medium border border-linkedin px-4 py-2 rounded hover:bg-linkedin transition-colors">
               View More
@@ -77,7 +77,7 @@ export default function NewsSection() {
       </div>
 
       {/* All News in Slider */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-8">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={30}

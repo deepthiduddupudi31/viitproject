@@ -227,7 +227,7 @@ export default function Header() {
                 <div className={`transition-all duration-300 
                     ${isSticky 
                         ? 'fixed top-0 left-0 right-0 py-2' 
-                        : 'relative bg-gradient-to-r from-[#005f9e] to-[#0077c2] rounded-b-2xl'
+                        : 'relative bg-gradient-to-r from-[#005f9e] to-[#0077c2] '
                     }`
                 }>
                     <div className="max-w-screen-xl mx-auto px-4">
