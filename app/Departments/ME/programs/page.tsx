@@ -1,13 +1,26 @@
 'use client'
 import Sidebar from '.././Sidebar';
 
-export default function CivilPage() {
+const programsOffered = [
+  {
+    sno: 1,
+    name: 'B.Tech. in Mechanical Engineering',
+    intake: 180,
+  },
+  {
+    sno: 2,
+    name: 'M.Tech. in Machine Design',
+    intake: 18,
+  },
+];
+
+export default function MechPage() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mech.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -25,20 +38,17 @@ export default function CivilPage() {
                 <tr>
                   <th className="px-4 py-2 border">S. No.</th>
                   <th className="px-4 py-2 border">Name of the Program</th>
-                  <th className="px-4 py-2 border">Current intake</th>
+                  <th className="px-4 py-2 border">Current Intake</th>
                 </tr>
               </thead>
               <tbody className="text-gray-800">
-                <tr className="bg-gray-100">
-                  <td className="px-4 py-2 border">1</td>
-                  <td className="px-4 py-2 border">B. Tech. in Civil Engineering</td>
-                  <td className="px-4 py-2 border">120</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-2 border">2</td>
-                  <td className="px-4 py-2 border">M. Tech. in Transportation Engineering</td>
-                  <td className="px-4 py-2 border">18</td>
-                </tr>
+                {programsOffered.map((program, index) => (
+                  <tr key={program.sno} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
+                    <td className="px-4 py-2 border">{program.sno}</td>
+                    <td className="px-4 py-2 border">{program.name}</td>
+                    <td className="px-4 py-2 border">{program.intake}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -47,4 +57,3 @@ export default function CivilPage() {
     </div>
   );
 }
-  

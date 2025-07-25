@@ -2,8 +2,13 @@
 import Sidebar from '../Sidebar'
 
 const extensionData = [
-  ['Technical extension activities', 1, 3, 2, 2, 2],
+  {
+    activity: 'Technical Extension Activities',
+    data: [2, 2, 2, 2, 2, 2], // From 2023-24 to 2018-19
+  },
 ]
+
+const years = ['2023-24', '2022-23', '2021-22', '2020-21', '2019-20', '2018-19']
 
 export default function ExtensionActivities() {
   return (
@@ -11,7 +16,7 @@ export default function ExtensionActivities() {
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mech.jpg"
           alt="Extension Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -27,24 +32,21 @@ export default function ExtensionActivities() {
 
           <section className="mb-8">
             <div className="overflow-x-auto">
-              <table className="w-full text-sm border rounded-md shadow-md">
+              <table className="w-full text-sm border border-gray-300 rounded-md shadow-md text-center">
                 <thead className="bg-blue-100 text-gray-700">
                   <tr>
-                    <th className="px-4 py-2 border">A.Y.</th>
-                    <th className="px-4 py-2 border">2022-23</th>
-                    <th className="px-4 py-2 border">2021-22</th>
-                    <th className="px-4 py-2 border">2020-21</th>
-                    <th className="px-4 py-2 border">2019-20</th>
-                    <th className="px-4 py-2 border">2018-19</th>
+                    <th className="px-4 py-2 border">Activity Type</th>
+                    {years.map((year) => (
+                      <th key={year} className="px-4 py-2 border">{year}</th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody>
                   {extensionData.map((row, idx) => (
-                    <tr key={idx} className="odd:bg-white even:bg-gray-50 text-center">
-                      {row.map((cell, cIdx) => (
-                        <td key={cIdx} className="px-4 py-2 border">
-                          {cell}
-                        </td>
+                    <tr key={idx} className="odd:bg-white even:bg-gray-50">
+                      <td className="px-4 py-2 border font-medium text-left">{row.activity}</td>
+                      {row.data.map((val, i) => (
+                        <td key={i} className="px-4 py-2 border">{val}</td>
                       ))}
                     </tr>
                   ))}

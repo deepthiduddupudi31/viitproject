@@ -3,46 +3,34 @@ import Sidebar from '.././Sidebar'
 
 const cdmcMembers = [
   {
-    name: 'Dr. Sudhir Vummadisetti',
-    designation: 'Associate Professor',
-    category: 'Education',
+    name: 'Dr. Mohan Mahanty',
+    designation: 'Professor',
     status: 'Chairperson (HOD)',
-    affiliation: 'VIIT, Visakhapatnam.',
   },
   {
-    name: 'Mr. M. Padmakar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    name: 'Mr. K. Srinivas',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    name: 'Mr. B. Brahmaiah',
+    name: 'Dr. T.V. Madhusudan Rao',
     designation: 'Associate Professor',
-    category: 'Education',
     status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
   },
   {
-    name: 'Mr. P. Shiva Kumar',
-    designation: 'Assistant Professor',
-    category: 'Education',
+    name: 'Dr. N. Tirupathi Rao',
+    designation: 'Associate Professor',
     status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
   },
   {
-    name: 'Mr. Babu Rao',
+    name: 'B. Dinesh Reddy',
     designation: 'Assistant Professor',
-    category: 'Education',
     status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+  },
+  {
+    name: 'Mrs. K. Swathi',
+    designation: 'Assistant Professor',
+    status: 'Member – Faculty',
+  },
+  {
+    name: 'Mrs. P. Sandhya',
+    designation: 'Assistant Professor',
+    status: 'Member – Faculty',
   },
 ];
 
@@ -51,7 +39,7 @@ const cdmcRoles = [
   "The committee ensures that the curriculum aligns with the regulations and guidelines set forth by the Institute. It also stays updated with any changes or updates in these regulations and makes necessary adjustments to the curriculum.",
   "The CDMC may consult with various stakeholders, including faculty members, students, industry experts, and alumni, to gather feedback and insights on the curriculum design. This ensures that the curriculum meets the needs and expectations of all stakeholders.",
   "The CDMC encourages innovation in teaching and learning methods and promotes the integration of new technologies and pedagogical approaches into the curriculum. It also ensures that the curriculum is flexible enough to adapt to changing educational trends and industry requirements.",
-  "Finally, the committee is committed to continuous improvement of the curriculum based on feedback, evaluation data, and emerging trends in education. It regularly reviews and revises the curriculum to enhance its effectiveness and relevance",
+  "Finally, the committee is committed to continuous improvement of the curriculum based on feedback, evaluation data, and emerging trends in education. It regularly reviews and revises the curriculum to enhance its effectiveness and relevance.",
 ];
 
 export default function CDMC() {
@@ -59,7 +47,7 @@ export default function CDMC() {
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/cse.jpg"
           alt="CDMC Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -74,7 +62,7 @@ export default function CDMC() {
           </h2>
 
           <section className="mb-8">
-            <h3 className="text-xl font-semibold text-blue-800 mb-3">Internal & External Members</h3>
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">Internal Members</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border rounded-md shadow-md">
                 <thead className="bg-blue-100 text-gray-700">
@@ -82,9 +70,7 @@ export default function CDMC() {
                     <th className="px-4 py-2 border">S.No.</th>
                     <th className="px-4 py-2 border">Name of the person</th>
                     <th className="px-4 py-2 border">Designation</th>
-                    <th className="px-4 py-2 border">Category</th>
                     <th className="px-4 py-2 border">Status of the person</th>
-                    <th className="px-4 py-2 border">Affilation</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -93,9 +79,7 @@ export default function CDMC() {
                       <td className="px-4 py-2 border text-center">{index + 1}</td>
                       <td className="px-4 py-2 border">{member.name}</td>
                       <td className="px-4 py-2 border">{member.designation}</td>
-                      <td className="px-4 py-2 border">{member.category}</td>
                       <td className="px-4 py-2 border">{member.status}</td>
-                      <td className="px-4 py-2 border">{member.affiliation}</td>
                     </tr>
                   ))}
                 </tbody>

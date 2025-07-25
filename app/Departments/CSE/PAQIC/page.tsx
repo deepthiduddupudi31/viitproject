@@ -1,24 +1,18 @@
 'use client'
-import Sidebar from '.././Sidebar'
+import Sidebar from '../Sidebar'
 
-const pmcMoMs = [
-  { year: '2022-23', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf' },
-  { year: '2021-22', url:  'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf'},
-  { year: '2020-21', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC01996520240421133321.pdf' },
-];
-
-const responsibilitiesByFrequency = [
+const responsibilities = [
   {
     frequency: 'Twice in a Semester',
-    items: [
+    tasks: [
       'Review result analysis of students in internal & external examinations.',
       'Identification of slow and advanced learners.',
       'Verification of lab manuals according to the academic regulations.',
       'Laboratory stock and maintenance register verification.',
       'Checking the lab equipment condition.',
       'Updating the lab software status.',
-      'Verification of quality of mid-examination question papers.',
-      'Verification of quality of mid-examination answer sheet evaluations.',
+      'Verification of quality of mid-examination question paper.',
+      'Verification of quality of mid-examination answers sheets evaluation.',
       'Course file verification.',
       'Adherence to the academic calendar.',
       'CRC meetings to verify syllabus status before mid-1 and mid-2.',
@@ -26,7 +20,7 @@ const responsibilitiesByFrequency = [
   },
   {
     frequency: 'Once in a Semester',
-    items: [
+    tasks: [
       'Analysis of course feedback, graduate exit survey, alumni survey, and course exit survey from the students.',
       'Analysis of CO attainment, PO, and PSO attainments. Propose strategies for continuous improvement.',
       'Creating OBE awareness through guest lectures and seminars.',
@@ -35,16 +29,34 @@ const responsibilitiesByFrequency = [
   },
   {
     frequency: 'Once in a Year',
-    items: [
+    tasks: [
       'Review admission analysis and recommend strategies to improve the quality of admissions.',
       'Verification of alumni reports.',
-      'Suggestions for Students – Industry interaction.',
+      'Suggestions for Students –Industry interaction.',
       'Assessing the student’s projects (Mini & Major).',
       'Checking the quality improvement of student publications.',
       'Examining the quality of project reports through plagiarism check.',
     ],
   },
-];
+]
+
+const pmcMoMs = [
+  {
+    year: '2020-21',
+    label: 'PMC_20-21_MoM',
+    url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC01996520240421133321.pdf',
+  },
+  {
+    year: '2021-22',
+    label: 'PMC_21-22_MoM',
+    url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf',
+  },
+  {
+    year: '2022-23',
+    label: 'PMC_22-23_MoM',
+    url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC01996520240421133321.pdf',
+  },
+]
 
 export default function PAQIC() {
   return (
@@ -52,7 +64,7 @@ export default function PAQIC() {
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/cse.jpg"
           alt="PAQIC Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -66,29 +78,46 @@ export default function PAQIC() {
             Program Assessment and Quality Improvement Committee (PAQIC)
           </h2>
 
-          {/* Responsibilities */}
-          <section className="mb-8">
-            <h3 className="text-xl font-semibold text-blue-800 mb-3">Responsibilities</h3>
-            {responsibilitiesByFrequency.map((group) => (
-              <div key={group.frequency} className="mb-4">
-                <h4 className="text-md font-semibold text-blue-700 mb-1">{group.frequency}</h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-700 pl-4">
-                  {group.items.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          {/* Responsibilities Table */}
+          <section className="mb-10">
+            <h3 className="text-xl font-semibold text-blue-800 mb-4">
+              Responsibilities and Frequency of Audit
+            </h3>
+            <div className="overflow-x-auto">
+              <table className="w-full border border-gray-300 rounded shadow-sm">
+                <thead className="bg-blue-100 text-gray-800">
+                  <tr>
+                    <th className="px-4 py-2 border text-left">Responsibility</th>
+                    <th className="px-4 py-2 border text-left">Audit / Meeting Frequency</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white text-gray-700">
+                  {responsibilities.map((group, idx) =>
+                    group.tasks.map((task, i) => (
+                      <tr key={`${idx}-${i}`} className="odd:bg-white even:bg-gray-50">
+                        <td className="px-4 py-2 border">{task}</td>
+                        <td className="px-4 py-2 border">{group.frequency}</td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+            </div>
           </section>
 
-          {/* MoMs */}
+          {/* MoMs Section */}
           <section>
-            <h3 className="text-xl font-semibold mb-2 text-blue-800">PAQIC Minutes of Meetings (MoM)</h3>
-            <ul className="list-disc list-inside space-y-1 text-blue-700">
-              {pmcMoMs.map((mom) => (
-                <li key={mom.year}>
-                  <a href={mom.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    PMC MoM {mom.year}
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">Minutes of Meetings</h3>
+            <ul className="list-disc pl-5 space-y-1 text-blue-700">
+              {pmcMoMs.map((doc) => (
+                <li key={doc.year}>
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {doc.label}
                   </a>
                 </li>
               ))}
@@ -97,5 +126,5 @@ export default function PAQIC() {
         </main>
       </div>
     </div>
-  );
+  )
 }

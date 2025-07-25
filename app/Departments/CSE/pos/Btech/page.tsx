@@ -1,7 +1,5 @@
 'use client'
-import Sidebar from '../../Sidebar';
-
-
+import Sidebar from '../../Sidebar'
 
 const programmeOutcomes = [
   {
@@ -14,7 +12,7 @@ const programmeOutcomes = [
     id: 'PO2',
     title: 'Problem Analysis',
     description:
-      'Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.',
+      'Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, and natural sciences, and engineering sciences.',
   },
   {
     id: 'PO3',
@@ -76,35 +74,41 @@ const programmeOutcomes = [
     description:
       'Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.',
   },
-];
+]
 
 export default function CivilPage() {
   return (
     <div>
       {/* Header Banner */}
-      <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
+      <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/cse.jpg"
           alt="Banner"
-          className="w-full h-32 object-cover rounded-lg shadow-lg"
+          className="w-full h-32 object-cover rounded-lg shadow"
         />
       </div>
 
       {/* Content layout */}
-      <div className="flex max-w-screen-xl mx-auto relative">
+      <div className="flex max-w-screen-xl mx-auto">
         <Sidebar />
+
         <main className="p-6 flex-1 bg-white">
-          <h2 className="text-2xl font-bold text-blue-900 mb-6">Programme Outcomes (POs)</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl font-bold text-blue-900 mb-6">
+            Programme Outcomes (POs)
+          </h2>
+
+          <div className="space-y-5">
             {programmeOutcomes.map((po) => (
               <div key={po.id}>
-                <h3 className="font-semibold text-gray-800">{po.id}: {po.title}</h3>
-                <p className="text-gray-700 text-justify">{po.description}</p>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {po.id}: {po.title}
+                </h3>
+                <p className="text-gray-800 text-justify">{po.description}</p>
               </div>
             ))}
           </div>
         </main>
       </div>
     </div>
-  );
+  )
 }

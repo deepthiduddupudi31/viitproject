@@ -1,14 +1,14 @@
 'use client'
-import Sidebar from '.././Sidebar';
+import Sidebar from '../Sidebar';
 
-export default function CivilPage() {
+export default function EceVisionMission() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
-          alt="Banner"
+          src="https://vignaniit.edu.in/images/cse.jpg"
+          alt="ECE Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
       </div>
@@ -23,7 +23,9 @@ export default function CivilPage() {
           <div className="mb-10">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">VISION OF THE DEPARTMENT</h3>
             <p className="text-gray-700 text-justify">
-              To create high quality Civil Engineering with Global perspective and inculcate among them Social Consciousness, Work Ethics, and make them psychologically strong.
+              To be a Centre of Excellence in the field of Electronics and Communication Engineering
+              through high quality education, research and consultancy producing professionals having
+              global standards with ethical and human values and commitment of service to the society.
             </p>
           </div>
 
@@ -32,16 +34,16 @@ export default function CivilPage() {
             <h3 className="text-xl font-semibold text-gray-900 mb-4">MISSION OF THE DEPARTMENT</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-6">
               <li>
-                <strong>M1:</strong> To impart high quality education with innovative practices in teaching - learning process to empower students to fit competitively into the present and future industrial requirements.
+                <strong>M1:</strong> Impart high quality education with innovative practices in teaching-learning process to empower students to take up professional/career challenges.
               </li>
               <li>
-                <strong>M2:</strong> To transform students into effective professionals by providing communication skills, leadership qualities, managerial ability, team spirit, social responsibility to serve the nation, physical fitness with ethical and human values.
+                <strong>M2:</strong> Foster research activities for faculty and students by providing the state-of-the-art facilities and conducive environment.
               </li>
               <li>
-                <strong>M3:</strong> To promote research activities amongst faculty and students by providing necessary facilities and conducive environment.
+                <strong>M3:</strong> Promote consultancy works among faculty and students by enhancing Industry–Institute interaction.
               </li>
               <li>
-                <strong>M4:</strong> To promote consultancy work amongst faculty and students by enhancing industry institution interactions.
+                <strong>M4:</strong> Transform students into effective professionals with communication skills, leadership qualities, managerial skills, integrity, team spirit, social & environmental responsibility, lifelong learning ability with professional ethics & human values.
               </li>
             </ul>
           </div>

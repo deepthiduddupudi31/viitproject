@@ -1,13 +1,13 @@
 'use client'
 import Sidebar from '.././Sidebar';
 
-export default function CivilPage() {
+export default function EceProgramsOffered() {
   return (
     <div>
       {/* Header Banner */}
-      <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
+      <div className="max-w-screen-xl mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/cse.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -31,12 +31,17 @@ export default function CivilPage() {
               <tbody className="text-gray-800">
                 <tr className="bg-gray-100">
                   <td className="px-4 py-2 border">1</td>
-                  <td className="px-4 py-2 border">B. Tech. in Civil Engineering</td>
-                  <td className="px-4 py-2 border">120</td>
+                  <td className="px-4 py-2 border">B.Tech. in Electronics and Communication Engineering</td>
+                  <td className="px-4 py-2 border">180</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 border">2</td>
-                  <td className="px-4 py-2 border">M. Tech. in Transportation Engineering</td>
+                  <td className="px-4 py-2 border">M.Tech. in VLSI & ES</td>
+                  <td className="px-4 py-2 border">18</td>
+                </tr>
+                <tr className="bg-gray-100">
+                  <td className="px-4 py-2 border">3</td>
+                  <td className="px-4 py-2 border">M.Tech. in ECE</td>
                   <td className="px-4 py-2 border">18</td>
                 </tr>
               </tbody>
@@ -47,4 +52,3 @@ export default function CivilPage() {
     </div>
   );
 }
-  

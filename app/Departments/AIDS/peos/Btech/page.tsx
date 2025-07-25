@@ -5,27 +5,22 @@ const programmeEducationalObjectives = [
   {
     id: 'PEO1',
     description:
-      'To provide commendable preparation for a career in mechanical engineering and prepare students for a career at the core/allied industries.',
+      'To enable the students as globally competent professionals with strong basics in the field of Artificial Intelligence and Data Science to solve multidisciplinary problems.',
   },
   {
     id: 'PEO2',
     description:
-      'To provide students with a sound foundation in the mathematical, scientific and engineering fundamentals necessary to formulate, solve and analyze engineering problems in mechanical engineering and to prepare them for higher studies.',
-  },
-  {
-    id: 'PEO3',
-    description:
-      'To exhibit communication skills, team spirit, leadership qualities, life-long managerial skills, integrity and social and environmental responsibility, life-long learning ability, professional ethics and human values.',
+      'To emphasize the students to take up higher studies, research & development by acquiring in-depth knowledge in Artificial Intelligence & Data Science.',
   },
 ];
 
-export default function MtechPage() {
+export default function ProgrammeEducationalObjectives() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/aids.png"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />

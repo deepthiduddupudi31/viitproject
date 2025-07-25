@@ -4,131 +4,106 @@ import Sidebar from '.././Sidebar';
 const boardOfStudiesMembers = [
   {
     sno: 1,
-    name: 'Dr. Sudhir Vummadisetti',
-    designation: 'Associate Professor',
+    name: 'Dr. T V Madhusudhana Rao',
+    designation: 'Professor',
     category: 'Education',
-    status: 'Chairperson (HoD)',
+    status: 'Member – Faculty',
     affiliation: 'VIIT, Visakhapatnam.',
   },
   {
     sno: 2,
-    name: 'Prof. Brijesh Kumar Dubey',
-    designation: 'Member',
+    name: 'Mr. Ch V Sharma',
+    designation: 'Assistant Professor',
     category: 'Education',
-    status: 'External Chair person',
-    affiliation: 'Professor, Dept of CIVIL, IIT Kharagpur',
+    status: 'Member – Faculty',
+    affiliation: 'VIIT, Visakhapatnam.',
   },
   {
     sno: 3,
-    name: 'Prof. B Krishna Rao',
+    name: 'Dr. Chandra Mouli PVSSR',
     designation: 'Member',
     category: 'Education',
-    status: 'External Member',
-    affiliation: 'Professor, Dept of CIVIL, JNTUK Kakinada',
+    status: 'Member – Faculty',
+    affiliation: 'Associate Professor & HoD CSE, Central University of Tamil Nadu',
   },
   {
     sno: 4,
-    name: 'Prof. Adi Seshu Siragam',
+    name: 'Mr. Md Nizamuddin',
     designation: 'Member',
-    category: 'Education',
-    status: 'Education Member',
-    affiliation: 'Andhra University, Visakhapatnam',
+    category: 'Industry (Towards Placements)',
+    status: 'Representative from Industry/Corporate sector/allied areas relating to placements',
+    affiliation: 'Lead Decisioning Architect Verizon',
   },
   {
     sno: 5,
-    name: 'Mrs. V Suchitra',
+    name: 'Mr. A Ravi Kumar',
     designation: 'Member',
-    category: 'Industry, Verizon',
-    status: 'External Member',
-    affiliation: 'Deputy Engineer, Irrigation Department, Visakhapatnam',
+    category: 'Alumni',
+    status: 'Graduate student nominated by the Principal (co-optional)',
+    affiliation: 'CDK Global, Hyderabad',
+  },
+];
+
+const externalInternalMembers = [
+  {
+    sno: 1,
+    name: 'Dr. T.V.Madhusudhan Rao',
+    designation: 'Head, Department of AI&DS, VIIT',
+    type: 'BoS Chairman',
+  },
+  {
+    sno: 2,
+    name: 'Dr. D.Rajya Laxmi',
+    designation: 'Professor, Dept of CSE, JNTU – Vizianagaram',
+    type: 'External Member',
+  },
+  {
+    sno: 3,
+    name: 'Dr. Korra Sathya Babu',
+    designation: 'Associate Professor, Department of CSE, IIITDM Kurnool',
+    type: 'External Member',
+  },
+  {
+    sno: 4,
+    name: 'Mr. Nizam Mohammed',
+    designation: 'Lead Decisioning Architect Verizon',
+    type: 'External Member',
+  },
+  {
+    sno: 5,
+    name: 'Mr.B.Sampath',
+    designation: 'SDE, Paypal India',
+    type: 'External Member',
   },
   {
     sno: 6,
-    name: 'Mr. M. Pavani',
-    designation: 'Member',
-    category: 'Alumni',
-    status: 'External Member',
-    affiliation: 'Design Engineer (Civil), GVPR Engineer Limited, Hyderabad',
+    name: 'Dr. Anima Nayak',
+    designation: 'Assoc. Professor, Department of AI&DS, VIIT',
+    type: 'Internal Member',
   },
   {
     sno: 7,
-    name: 'Mr. M. Padmakar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Mr.Ch.Viswanadh Sarma',
+    designation: 'Assistant Professor, Department of AI&DS, VIIT',
+    type: 'Internal Member',
   },
   {
     sno: 8,
-    name: 'Dr. Ratna Tej Reddy',
-    designation: 'Assoc. Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Mr. R.V.L.S.N.Sastry',
+    designation: 'Assistant Professor, Department of AI&DS, VIIT',
+    type: 'Internal Member',
   },
   {
     sno: 9,
-    name: 'Dr. K. Bhaskara Rao',
-    designation: 'Assoc. Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Mrs. G.Hima Bindu',
+    designation: 'Assistant Professor, Department of AI&DS, VIIT',
+    type: 'Internal Member',
   },
   {
     sno: 10,
-    name: 'Dr. L. Govinda',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 11,
-    name: 'Mr. B. Brahmaiah',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 12,
-    name: 'Mr. K. Srinivas',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 13,
-    name: 'Mr. G. Sudheer Kumar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 14,
-    name: 'Mrs. M. Leela Priyanka',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 15,
-    name: 'Mr. P. Shiva Kumar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 16,
-    name: 'Mr. Babu Rao',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Mrs. I Mani Kumari',
+    designation: 'Assistant Professor, Department of AI&DS, VIIT',
+    type: 'Internal Member',
   },
 ];
 
@@ -138,7 +113,7 @@ export default function BoardOfStudiesPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/aids.png"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -149,15 +124,17 @@ export default function BoardOfStudiesPage() {
         <Sidebar />
         <main className="p-6 flex-1 bg-white overflow-x-auto">
           <h2 className="text-2xl font-bold text-blue-900 mb-6">Board of Studies</h2>
-          <h2 className="text-2xl font-bold text-blue-800 mb-6">Internal And External Membars</h2>
-          <table className="w-full table-auto border border-gray-300 text-sm text-left">
+
+          {/* First Table */}
+          <h3 className="text-xl font-semibold text-blue-800 mb-4">General Members</h3>
+          <table className="w-full table-auto border border-gray-300 text-sm text-left mb-10">
             <thead className="bg-blue-100">
               <tr>
                 <th className="border px-2 py-2">S.No</th>
-                <th className="border px-2 py-2">Name</th>
+                <th className="border px-2 py-2">Name of the Person</th>
                 <th className="border px-2 py-2">Designation</th>
                 <th className="border px-2 py-2">Category</th>
-                <th className="border px-2 py-2">Status</th>
+                <th className="border px-2 py-2">Status of the Person</th>
                 <th className="border px-2 py-2">Affiliation</th>
               </tr>
             </thead>
@@ -170,6 +147,29 @@ export default function BoardOfStudiesPage() {
                   <td className="border px-2 py-1">{member.category}</td>
                   <td className="border px-2 py-1">{member.status}</td>
                   <td className="border px-2 py-1">{member.affiliation}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          {/* Second Table */}
+          <h3 className="text-xl font-semibold text-blue-800 mb-4">Internal & External Members</h3>
+          <table className="w-full table-auto border border-gray-300 text-sm text-left">
+            <thead className="bg-blue-100">
+              <tr>
+                <th className="border px-2 py-2">S.No</th>
+                <th className="border px-2 py-2">Name of the Person</th>
+                <th className="border px-2 py-2">Designation</th>
+                <th className="border px-2 py-2">External / Internal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {externalInternalMembers.map((member) => (
+                <tr key={member.sno}>
+                  <td className="border px-2 py-1">{member.sno}</td>
+                  <td className="border px-2 py-1">{member.name}</td>
+                  <td className="border px-2 py-1">{member.designation}</td>
+                  <td className="border px-2 py-1">{member.type}</td>
                 </tr>
               ))}
             </tbody>

@@ -5,17 +5,12 @@ const programSpecificOutcomes = [
   {
     id: 'PSO1',
     description:
-      'Apply knowledge of Transportation Engineering and management in real time.',
+      'Analyze and design the machine components with the knowledge of stress analysis, theories of failures and vibrations.',
   },
   {
     id: 'PSO2',
     description:
-      'Design a transportation system and analyse a system, component, or process in the knowledge areas of transportation engineering in real time problems.',
-  },
-  {
-    id: 'PSO3',
-    description:
-      'Conduct investigations and address complex Transportation engineering problems; Utilize and develop innovative tools and techniques that are appropriate in Transportation Engineering discipline.',
+      'Develop advanced analysis tools for evaluating performance of mechanical systems to enhance the capability of designer.',
   },
 ];
 
@@ -25,7 +20,7 @@ export default function CivilPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mech.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />

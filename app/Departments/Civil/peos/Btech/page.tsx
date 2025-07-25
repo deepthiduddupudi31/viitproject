@@ -5,17 +5,17 @@ const programmeEducationalObjectives = [
   {
     id: 'PEO1',
     description:
-      'To provide commendable preparation for a career in mechanical engineering and prepare students for a career at the core/allied industries.',
+      ' To work in core/allied industries of Civil Engineering, educational institutions, research organizations or to be entrepreneurs.',
   },
   {
     id: 'PEO2',
     description:
-      'To provide students with a sound foundation in the mathematical, scientific and engineering fundamentals necessary to formulate, solve and analyze engineering problems in mechanical engineering and to prepare them for higher studies.',
+      ' To pursue higher education and/or research in the field of Civil Engineering.',
   },
   {
     id: 'PEO3',
     description:
-      'To exhibit communication skills, team spirit, leadership qualities, life-long managerial skills, integrity and social and environmental responsibility, life-long learning ability, professional ethics and human values.',
+      'To demonstrate communication skills, team spirit, leadership qualities, integrity, social andenvironmental responsibility, life-long learning ability, ethical and human values in profession/career.',
   },
 ];
 

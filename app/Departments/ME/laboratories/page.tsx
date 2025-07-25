@@ -2,20 +2,28 @@
 import Sidebar from '../Sidebar'
 
 const departmentLabs = [
-  { sno: 1, name: 'Environmental Engineering Lab', room: 'A02', area: '70' },
-  { sno: 2, name: 'Surveying Lab', room: 'F01', area: '40' },
-  { sno: 3, name: 'Engineering Geology Lab', room: 'F01 (A)', area: '40' },
-  { sno: 4, name: 'Concrete Technology Lab', room: 'F02', area: '60' },
-  { sno: 5, name: 'Transportation Engineering Lab', room: 'F03', area: '80' },
-  { sno: 6, name: 'Geotechnical Engineering Lab', room: 'F03 (A)', area: '80' },
-  { sno: 7, name: 'FM & HM Lab', room: 'F11 (A)', area: '115' },
-  { sno: 8, name: 'Strength Of Materials Lab', room: 'ML-07', area: '115' },
-  { sno: 9, name: 'CAD Lab', room: 'A01', area: '110' },
-  { sno: 10, name: 'STAAD & GIS Lab', room: 'A01 (A)', area: '110' },
+  { sno: 1, name: 'Simulation Laboratory', room: 'A01', area: '140' },
+  { sno: 2, name: 'Fluid Mechanics and Hydraulic Machines Laboratory', room: 'F11', area: '150' },
+  { sno: 3, name: 'Instrumentation & Metrology Laboratory', room: 'F12', area: '140' },
+  { sno: 4, name: 'Engineering Mechanics Laboratory', room: 'F12', area: '140' },
+  { sno: 5, name: 'Heat Transfer Laboratory', room: 'F13', area: '140' },
+  { sno: 6, name: 'Theory of Machines Laboratory', room: 'ML 01', area: '100' },
+  { sno: 7, name: 'Production Technology Laboratory', room: 'ML 02', area: '100' },
+  { sno: 8, name: 'Engineering Workshop', room: 'ML 03', area: '160' },
+  { sno: 9, name: 'Machine Tools Laboratory', room: 'ML 04', area: '185' },
+  { sno: 10, name: 'Metallurgy Laboratory', room: 'ML 05', area: '110' },
+  { sno: 11, name: 'Thermal Engineering Laboratory', room: 'ML 06', area: '110' },
+  { sno: 12, name: 'Mechanics of Solids Laboratory', room: 'ML 07', area: '110' },
 ]
 
 const researchLabs = [
-  { sno: 1, name: '3D Printing Laboratory (IDEA Lab)', room: 'E01', area: '195' },
+  { sno: 1, name: 'Vibrations & Acoustics', room: 'A04', area: '250' },
+  { sno: 2, name: 'Advanced Metal Forming', room: 'A04', area: '250' },
+  { sno: 3, name: '3D Printing', room: 'E12', area: '195' },
+]
+
+const skillLabs = [
+  { sno: 1, name: 'APSSDC-DASSAULT SYSTEMS LAB', room: 'A22', area: '140' },
 ]
 
 export default function Laboratories() {
@@ -23,7 +31,7 @@ export default function Laboratories() {
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mech.jpg"
           alt="Labs Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -80,6 +88,35 @@ export default function Laboratories() {
                 </thead>
                 <tbody>
                   {researchLabs.map((lab) => (
+                    <tr key={lab.sno} className="odd:bg-white even:bg-gray-50">
+                      <td className="px-4 py-2 border text-center">{lab.sno}</td>
+                      <td className="px-4 py-2 border">{lab.name}</td>
+                      <td className="px-4 py-2 border text-center">{lab.room}</td>
+                      <td className="px-4 py-2 border text-center">{lab.area}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Skill Labs */}
+          <h3 className="text-xl font-semibold text-blue-800 mb-3">
+            List of Skill Development Laboratories
+          </h3>
+          <section>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border rounded-md shadow-md">
+                <thead className="bg-blue-100 text-gray-700">
+                  <tr>
+                    <th className="px-4 py-2 border">S.No.</th>
+                    <th className="px-4 py-2 border">Name of the Laboratory</th>
+                    <th className="px-4 py-2 border">Room No.</th>
+                    <th className="px-4 py-2 border">Area (Sq.mts)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {skillLabs.map((lab) => (
                     <tr key={lab.sno} className="odd:bg-white even:bg-gray-50">
                       <td className="px-4 py-2 border text-center">{lab.sno}</td>
                       <td className="px-4 py-2 border">{lab.name}</td>

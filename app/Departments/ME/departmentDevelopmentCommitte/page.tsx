@@ -1,21 +1,21 @@
 'use client'
-import Sidebar from '.././Sidebar'
+import Sidebar from '../Sidebar'
 
 const ddcMembers = [
-  { sno: 1, name: 'Dr. Sudhir Vummadisetti', role: 'Chairperson', designation: 'Head of the Department-CE' },
-  { sno: 2, name: 'Mr. M. Padmakar', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 3, name: 'Mr. K. Srinivas', role: 'Member Secretary', designation: 'Asst. HoD, CE' },
-  { sno: 4, name: 'Mr. B. Brahmaiah', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 5, name: 'Dr. RatnaTej Reddy', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 6, name: 'Mrs. Jami Lakshmi Sudha', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 7, name: 'Mrs. Reshma Chandran T', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
+  { sno: 1, name: 'Dr. S. Rambabu', role: 'Chairperson', designation: 'Head of the Department-ME' },
+  { sno: 2, name: 'Dr. C. Neelima Devi', role: 'Member', designation: 'Academic Expert, HoD, JNTU-GV' },
+  { sno: 3, name: 'Mrs. Y. Usha', role: 'Member', designation: 'Industry Expert, Scientist, CSIR National Metallurgical Laboratory' },
+  { sno: 4, name: 'Mr. A. Rudra Kumar', role: 'Member', designation: 'Alumni Representative, Research Engineer, Hyundai Motor India Engineering' },
+  { sno: 5, name: 'Dr. B. Sateesh', role: 'Member', designation: 'Professor, VIIT (A)' },
+  { sno: 6, name: 'Dr. L.V.V. Gopala Rao', role: 'Member', designation: 'Professor, VIIT (A)' },
+  { sno: 7, name: 'Mr. Ch. Siva Rama Krishna', role: 'Member', designation: 'Assoc. Professor, VIIT (A)' },
+  { sno: 8, name: 'Mr. B.N. Dhanunjaya Rao', role: 'Member Secretary', designation: 'Asst. HoD, ECE' },
 ];
 
 const ddcmoms = [
-  { year: '2023-24', url: 'https://vignaniit.edu.in/DDC/DDC_23-24.pdf' },
-  { year: '2022-23', url: 'https://vignaniit.edu.in/DDC/DDC_ECE.pdf' },
-  { year: '2021-22', url: 'https://vignaniit.edu.in/ddc/ece/ECE_DDC_2021_22.pdf' },
-  { year: '2020-21', url: 'https://vignaniit.edu.in/ddc/ece/ECE_DDC_2020_21.pdf' },
+  { year: '2022-23', url: 'https://vignaniit.edu.in/ddc/mech/ME_DDC_2022_23.pdf' },
+  { year: '2021-22', url: 'https://vignaniit.edu.in/ddc/mech/ME_DDC_2021_22.pdf' },
+  { year: '2020-21', url: 'https://vignaniit.edu.in/ddc/mech/ME_DDC_2020_21.pdf' },
 ];
 
 export default function DepartmentDevelopmentCommittee() {
@@ -24,7 +24,7 @@ export default function DepartmentDevelopmentCommittee() {
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mech.jpg"
           alt="DDC Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -40,16 +40,16 @@ export default function DepartmentDevelopmentCommittee() {
           <section className="mb-8">
             <h3 className="text-xl font-semibold mb-2 text-blue-800">Roles and Responsibilities</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Review the existing curriculum and suggest improvements for industry alignment and relevance.</li>
-              <li>Monitor industry trends and recommend guest lectures from experts.</li>
-              <li>Propose new specializations and value-added courses.</li>
-              <li>Suggest innovative teaching methodologies for better student engagement.</li>
-              <li>Advise strategies for placements, higher education, and entrepreneurship opportunities.</li>
-              <li>Identify research focus areas and funding opportunities.</li>
-              <li>Promote faculty collaboration and research innovation.</li>
-              <li>Support development of labs, libraries, and IT infrastructure.</li>
-              <li>Provide inputs on budget allocation for academic and research activities.</li>
-              <li><strong>Meeting Frequency:</strong> Once a year</li>
+              <li>Review the existing curriculum and suggest improvements to enhance relevance, effectiveness, and alignment with industry standards.</li>
+              <li>Stay updated on industry trends and skill requirements; suggest expert lectures to bridge curriculum-industry gaps.</li>
+              <li>Recommend new specializations and add-on/value-added courses based on trends and student needs.</li>
+              <li>Encourage innovative teaching methods to enhance student engagement and conceptual clarity.</li>
+              <li>Advise on strategies for improving placements, higher education, and entrepreneurial opportunities.</li>
+              <li>Identify areas for research focus and recommend funding opportunities for faculty and students.</li>
+              <li>Promote interfaculty collaboration and innovation in research and entrepreneurship.</li>
+              <li>Support development of departmental labs, libraries, and IT infrastructure.</li>
+              <li>Provide recommendations for budget allocation in academic and research domains.</li>
+              <li><strong>Meeting Frequency:</strong> Once in a year</li>
             </ul>
           </section>
 

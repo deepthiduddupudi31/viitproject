@@ -2,7 +2,7 @@
 import Sidebar from '../Sidebar'
 
 const extensionData = [
-  ['Technical extension activities', 1, 3, 2, 2, 2],
+  ['Technical extension activities', 2, 3, '-', 2, 2],
 ]
 
 export default function ExtensionActivities() {
@@ -11,7 +11,7 @@ export default function ExtensionActivities() {
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/cse.jpg"
           alt="Extension Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />

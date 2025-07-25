@@ -38,7 +38,7 @@ export default function InnovativePractices() {
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/aids.png"
           alt="Innovative Practices"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />

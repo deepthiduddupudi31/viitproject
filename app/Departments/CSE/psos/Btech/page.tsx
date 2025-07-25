@@ -5,27 +5,22 @@ const programSpecificOutcomes = [
   {
     id: 'PSO1',
     description:
-      'Analyze and design the machine components with the knowledge of stress analysis, theories of failures and material science.',
+      'Apply advance algorithms in communication systems, signals processing and image processing to solve complex problems.',
   },
   {
     id: 'PSO2',
     description:
-      'Apply the principles of thermal engineering in analysing, designing and validating various thermal energy systems.',
-  },
-  {
-    id: 'PSO3',
-    description:
-      'Develop and organize the manufacturing process effectively and efficiently for the production of various products with the required functionality to high quality standards.',
+      'Exploit the concepts of VLSI and Embedded systems for the implementations of Real time applications.',
   },
 ];
 
-export default function CivilPage() {
+export default function EcePsoPage() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/cse.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -50,5 +45,3 @@ export default function CivilPage() {
     </div>
   );
 }
-
-

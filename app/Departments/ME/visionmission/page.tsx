@@ -1,13 +1,13 @@
 'use client'
 import Sidebar from '.././Sidebar';
 
-export default function CivilPage() {
+export default function MechVisionMissionPage() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mech.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -23,7 +23,8 @@ export default function CivilPage() {
           <div className="mb-10">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">VISION OF THE DEPARTMENT</h3>
             <p className="text-gray-700 text-justify">
-              To create high quality Civil Engineering with Global perspective and inculcate among them Social Consciousness, Work Ethics, and make them psychologically strong.
+              To be a center of excellence in academics, research, and consultancy in the field of Mechanical Engineering
+              producing globally competent professionals with ethical and human values for national/international development.
             </p>
           </div>
 
@@ -32,16 +33,19 @@ export default function CivilPage() {
             <h3 className="text-xl font-semibold text-gray-900 mb-4">MISSION OF THE DEPARTMENT</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-6">
               <li>
-                <strong>M1:</strong> To impart high quality education with innovative practices in teaching - learning process to empower students to fit competitively into the present and future industrial requirements.
+                To impart high-quality education through innovative teaching & learning methods to enable students to be
+                globally competent to face the challenges of profession/career.
               </li>
               <li>
-                <strong>M2:</strong> To transform students into effective professionals by providing communication skills, leadership qualities, managerial ability, team spirit, social responsibility to serve the nation, physical fitness with ethical and human values.
+                To promote research activities amongst faculty and students by providing necessary facilities and environment.
               </li>
               <li>
-                <strong>M3:</strong> To promote research activities amongst faculty and students by providing necessary facilities and conducive environment.
+                To mould the students into effective professionals with necessary communication skills, team spirit, leadership
+                qualities, industry-managerial skills, integrity, social & environmental responsibility, and lifelong learning
+                ability with professional ethics & human values.
               </li>
               <li>
-                <strong>M4:</strong> To promote consultancy work amongst faculty and students by enhancing industry institution interactions.
+                To promote consultancy work amongst faculty and students by enhancing industry-institution interactions.
               </li>
             </ul>
           </div>
