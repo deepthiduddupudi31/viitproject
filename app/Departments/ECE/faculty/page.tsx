@@ -2,35 +2,51 @@
 import Sidebar from '../Sidebar'
 
 const facultyList = [
-  { sno: 1, name: 'Dr.L.Govinda', designation: 'HOD-Assoc. Prof.' },
-  { sno: 2, name: 'Dr.G.Tejaswi Laxmi Priyanka', designation: 'Assoc. Prof.' },
-  { sno: 3, name: 'Dr.K.Ramesh Babu', designation: 'Assoc.Prof' },
-  { sno: 4, name: 'Dr.G.Amulya', designation: 'Assoc. Prof.' },
-  { sno: 5, name: 'Dr.S.Gayathri', designation: 'Assoc. Prof.' },
-  { sno: 6, name: 'Dr.D.Sreeman', designation: 'Assoc. Prof.' },
-  { sno: 7, name: 'Dr.A.Srija', designation: 'Assoc. Prof.' },
-  { sno: 8, name: 'Dr.K.Dharithri', designation: 'Assoc. Prof.' },
-  { sno: 9, name: 'Dr.P.SruthiSekhar', designation: 'Assoc. Prof.' },
-  { sno: 10, name: 'Dr.G.Aravind Goud', designation: 'Assoc. Prof.' },
-  { sno: 11, name: 'Mr.B.Brahmaiah', designation: 'Sr.Asst.Prof' },
-  { sno: 12, name: 'Mr.K.Srinivas', designation: 'Sr.Asst. Prof.' },
-  { sno: 13, name: 'Ms.S.Kranthi Vijaya', designation: 'Sr.Asst. Prof.' },
-  { sno: 14, name: 'Ms.A.V.S.L.Ramya', designation: 'Asst. Prof.' },
-  { sno: 15, name: 'Mr.R.Rohit Babu', designation: 'Asst. Prof.' },
-  { sno: 16, name: 'Ms.M.Yogaswarna', designation: 'Asst.Prof' },
-  { sno: 17, name: 'Mr.M.Baburao', designation: 'Asst.Prof' },
-  { sno: 18, name: 'Mr.A.Teja', designation: 'Asst.Prof' },
-  { sno: 19, name: 'Ms.T.Reshma Chandran', designation: 'Asst.Prof' },
-  { sno: 20, name: 'Ms.K.Sree Sandhya', designation: 'Asst.Prof' },
-  { sno: 21, name: 'Mr.B.Ashok Kumar', designation: 'Asst.Prof' },
+  { sno: 1, name: 'Dr.J.Sudhakar', designation: 'Principal' },
+  { sno: 2, name: 'Dr.R.Uma Maheswari', designation: 'HOD, Assoc. Prof.(Selection Grade)' },
+  { sno: 3, name: 'Dr.Ch.Ramesh Babu', designation: 'Dean IQAC, Assoc. Prof.(Selection Grade)' },
+  { sno: 4, name: 'Dr.A.Naga Jyothi', designation: 'Professor' },
+  { sno: 5, name: 'Dr.K.Srinivasa Naik', designation: 'Professor' },
+  { sno: 6, name: 'Dr.M.Karuna', designation: 'Assoc. Prof.(Senior Scale)' },
+  { sno: 7, name: 'Dr.A.Sampath Dakshina Murthy', designation: 'Assoc. Prof.(Senior Scale)' },
+  { sno: 8, name: 'Dr.V.Sateesh', designation: 'Assoc. Prof.' },
+  { sno: 9, name: 'Dr.A.Vyasa Bharadwaja', designation: 'Assoc. Prof.' },
+  { sno: 10, name: 'Dr.D.Pratap Kumar', designation: 'Assoc. Prof.(Senior Scale)' },
+  { sno: 11, name: 'Dr..P.Nalini', designation: 'Assoc. Prof.(Senior Scale)' },
+  { sno: 12, name: 'Dr.P.Suneetha', designation: 'Assoc. Prof.' },
+  { sno: 13, name: 'Dr.P.V.Sai Charishma', designation: 'Assoc. Prof.' },
+  { sno: 14, name: 'Ms.Y.Sukanya', designation: 'Sr. Asst. Prof.' },
+  { sno: 15, name: 'Mr.P.Tirumala Rao', designation: 'Asst. Prof.' },
+  { sno: 16, name: 'Mrs.B.Bharani', designation: 'Asst. Prof.' },
+  { sno: 17, name: 'Mr.S.Ravi Kumar', designation: 'Sr. Asst. Prof.' },
+  { sno: 18, name: 'Mrs.K.Lakshmi', designation: 'Sr. Asst. Prof.' },
+  { sno: 19, name: 'Mrs.J.Vijayasree', designation: 'Asst. Prof.' },
+  { sno: 20, name: 'Mr.K.Chaitanya', designation: 'Sr. Asst. Prof.' },
+  { sno: 21, name: 'Mr.Srinivash Roula', designation: 'Asst. Prof.' },
+  { sno: 22, name: 'Mr.J.Siddartha Varma', designation: 'Sr. Asst. Prof.' },
+  { sno: 23, name: 'Ms.P.Mamathadevi', designation: 'Asst. Prof.' },
+  { sno: 24, name: 'Mr.P.Gopi Krishna', designation: 'Asst. Prof.' },
+  { sno: 25, name: 'Mr.Allam Venkatesh', designation: 'Asst. Prof.' },
+  { sno: 26, name: 'Mr.A.Satyanarayana Varma', designation: 'Asst. Prof.' },
+  { sno: 27, name: 'Mrs.Ch.Eswari Sai Sindhu Priya', designation: 'Asst. Prof.' },
+  { sno: 28, name: 'Mrs.G.Laxmi Priyanka', designation: 'Asst. Prof.' },
+  { sno: 29, name: 'Mr.S.Venkata Anand', designation: 'Asst. Prof.' },
+  { sno: 30, name: 'Ms.K.Kalyani', designation: 'Asst. Prof.' },
+  { sno: 31, name: 'Ms.K.Saujanya', designation: 'Asst. Prof.' },
+  { sno: 32, name: 'Ms.G.S.Charitha', designation: 'Asst. Prof.' },
+  { sno: 33, name: 'Ms.A.Usha Rani', designation: 'Asst. Prof.' },
+  { sno: 34, name: 'Mr.P.Vijaya Bhaskar', designation: 'Asst. Prof.' },
+  { sno: 35, name: 'Mr.J.Sumadeep', designation: 'Asst. Prof.' },
+  { sno: 36, name: 'Mr. G Sudheer', designation: 'Asst. Prof.' },
 ]
+
 
 export default function Faculty() {
   return (
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/ece.jpg"
           alt="Faculty Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />

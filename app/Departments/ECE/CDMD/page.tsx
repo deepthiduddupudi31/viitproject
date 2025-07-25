@@ -2,64 +2,24 @@
 import Sidebar from '.././Sidebar'
 
 const cdmcMembers = [
-  {
-    name: 'Dr. Sudhir Vummadisetti',
-    designation: 'Associate Professor',
-    category: 'Education',
-    status: 'Chairperson (HOD)',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    name: 'Mr. M. Padmakar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    name: 'Mr. K. Srinivas',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    name: 'Mr. B. Brahmaiah',
-    designation: 'Associate Professor',
-    category: 'Education',
-    status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    name: 'Mr. P. Shiva Kumar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    name: 'Mr. Babu Rao',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-];
-
-const cdmcRoles = [
-  "The CDMC is responsible for designing and developing the curriculum for various academic programs offered by the department. This includes determining the structure of courses, defining learning objectives, selecting appropriate teaching methodologies, and designing assessment methods.",
-  "The committee ensures that the curriculum aligns with the regulations and guidelines set forth by the Institute. It also stays updated with any changes or updates in these regulations and makes necessary adjustments to the curriculum.",
-  "The CDMC may consult with various stakeholders, including faculty members, students, industry experts, and alumni, to gather feedback and insights on the curriculum design. This ensures that the curriculum meets the needs and expectations of all stakeholders.",
-  "The CDMC encourages innovation in teaching and learning methods and promotes the integration of new technologies and pedagogical approaches into the curriculum. It also ensures that the curriculum is flexible enough to adapt to changing educational trends and industry requirements.",
-  "Finally, the committee is committed to continuous improvement of the curriculum based on feedback, evaluation data, and emerging trends in education. It regularly reviews and revises the curriculum to enhance its effectiveness and relevance",
+  { name: 'Dr. Ch. Ramesh Babu', designation: 'Chairperson (Head of the Department)' },
+  { name: 'Dr. A. Naga Jyothi', designation: 'Professor, Department of ECE' },
+  { name: 'Dr. K. Srinivasa Naik', designation: 'Associate Professor, Department of ECE' },
+  { name: 'Dr. H. Devanna', designation: 'Associate Professor, Department of ECE' },
+  { name: 'Mrs. A. Usha Rani', designation: 'Assistant Professor, Department of ECE' },
+  { name: 'Mr. S. Ravi Kumar', designation: 'Assistant Professor, Department of ECE' },
+  { name: 'Mr. S. Bhaskar', designation: 'Assistant Professor, Department of ECE' },
+  { name: 'Mr. B. Pavan Kumar', designation: 'Assistant Professor, Department of ECE' },
+  { name: 'Mr. B. Sai Kiran', designation: 'Assistant Professor, Department of ECE' },
 ];
 
 export default function CDMC() {
   return (
     <div>
+      {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/ece.jpg"
           alt="CDMC Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -70,56 +30,54 @@ export default function CDMC() {
 
         <main className="flex-1 p-6 overflow-x-auto">
           <h2 className="text-2xl font-bold text-blue-900 mb-4">
-            CURRICULUM DESIGN & MONITORING COMMITTEE (CDMC)
+            Curriculum Design & Monitoring Committee (CDMC)
           </h2>
 
+          {/* Roles & Responsibilities */}
           <section className="mb-8">
-            <h3 className="text-xl font-semibold text-blue-800 mb-3">Internal & External Members</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm border rounded-md shadow-md">
-                <thead className="bg-blue-100 text-gray-700">
-                  <tr>
-                    <th className="px-4 py-2 border">S.No.</th>
-                    <th className="px-4 py-2 border">Name of the person</th>
-                    <th className="px-4 py-2 border">Designation</th>
-                    <th className="px-4 py-2 border">Category</th>
-                    <th className="px-4 py-2 border">Status of the person</th>
-                    <th className="px-4 py-2 border">Affilation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cdmcMembers.map((member, index) => (
-                    <tr key={index} className="odd:bg-white even:bg-gray-50">
-                      <td className="px-4 py-2 border text-center">{index + 1}</td>
-                      <td className="px-4 py-2 border">{member.name}</td>
-                      <td className="px-4 py-2 border">{member.designation}</td>
-                      <td className="px-4 py-2 border">{member.category}</td>
-                      <td className="px-4 py-2 border">{member.status}</td>
-                      <td className="px-4 py-2 border">{member.affiliation}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section className="mb-8">
-            <h3 className="text-xl font-semibold text-blue-800 mb-2">Roles & Responsibilities</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-700 pl-2">
-              {cdmcRoles.map((role, idx) => (
-                <li key={idx}>{role}</li>
-              ))}
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">Roles & Responsibilities</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-800 pl-4">
+              <li>Design of curriculum for B.Tech Program in Electronics and Communication Engineering as per AICTE and affiliating university guidelines.</li>
+              <li>Mapping of curriculum to Program Outcomes (POs), Program Specific Outcomes (PSOs), and Program Educational Objectives (PEOs).</li>
+              <li>Recommending modifications in the curriculum considering feedback from stakeholders including students, alumni, faculty, industry, and academia.</li>
+              <li>Monitoring the implementation of the curriculum and recommending improvements based on evaluation and feedback.</li>
+              <li>Conducting curriculum review meetings periodically.</li>
             </ul>
           </section>
 
+          {/* Term */}
+          <section className="mb-8">
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">Term</h3>
+            <p className="text-gray-700 pl-4">2 Years</p>
+          </section>
+
+          {/* Meeting Frequency */}
+          <section className="mb-8">
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">Meeting Frequency</h3>
+            <p className="text-gray-700 pl-4">Once per Semester</p>
+          </section>
+
+          {/* Members */}
           <section>
-            <h3 className="text-xl font-semibold text-blue-800 mb-2">Term and Meeting</h3>
-            <p className="text-gray-700 mb-1">
-              <strong>Term:</strong> Shall continue to be in force until reconstitution
-            </p>
-            <p className="text-gray-700">
-              <strong>Meeting:</strong> Twice in a year the meeting may be scheduled as and when necessary
-            </p>
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">Committee Members</h3>
+            <table className="w-full table-auto border border-gray-300 text-left text-gray-800">
+              <thead className="bg-blue-100 text-blue-900">
+                <tr>
+                  <th className="border border-gray-300 px-4 py-2">S. No</th>
+                  <th className="border border-gray-300 px-4 py-2">Name</th>
+                  <th className="border border-gray-300 px-4 py-2">Designation</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cdmcMembers.map((member, index) => (
+                  <tr key={index} className="hover:bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-2">{index + 1}</td>
+                    <td className="border border-gray-300 px-4 py-2">{member.name}</td>
+                    <td className="border border-gray-300 px-4 py-2">{member.designation}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </section>
         </main>
       </div>
