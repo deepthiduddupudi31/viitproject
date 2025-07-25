@@ -6,6 +6,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
 import { ChevronDown, ChevronRight, Menu, X, Search } from "lucide-react";
+<<<<<<< HEAD
 import { navItems, type NavItem } from "../lib/navItems."; 
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -48,13 +49,48 @@ const DropdownMenu = ({ items }: { items: NavItem[] }) => {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const router = useRouter();
   const { showLoader } = useLoader();
+=======
+import { navItems, type NavItem } from "../lib/navItems."; // Ensure this path is correct
+import { motion, AnimatePresence } from "framer-motion";
+
+// --- Reusable Dropdown Components for Desktop ---
+
+const NestedDropdown = ({ items }: { items: NavItem[] }) => (
+  <motion.div
+    initial={{ opacity: 0, x: -10 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -10 }}
+    className="absolute left-full -top-px w-72 bg-white rounded-r-lg shadow-lg border-l-0 border"
+  >
+    <ul className="py-2">
+      {items.map((item) => (
+        <li key={item.label}>
+          <Link
+            href={item.path}
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-white/100"
+          >
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+);
+
+const DropdownMenu = ({ items }: { items: NavItem[] }) => {
+  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 10 }}
+<<<<<<< HEAD
       className="absolute top-full left-0 mt-0 w-64 bg-white rounded-b-lg shadow-xl  border"
+=======
+      className="absolute top-full left-0 mt-0 w-64 bg-white rounded-b-lg shadow-xl border-t-0 border"
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
     >
       <ul className="py-2">
         {items.map((item) => (
@@ -66,11 +102,14 @@ const DropdownMenu = ({ items }: { items: NavItem[] }) => {
           >
             <Link
               href={item.path}
+<<<<<<< HEAD
               onClick={(e) => {
                 e.preventDefault();
                 showLoader();
                 router.push(item.path);
               }}
+=======
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
               className={`flex items-center justify-between w-full px-4 py-2 text-sm text-left transition-colors ${
                 activeSubMenu === item.label
                   ? "bg-linkedin text-white"
@@ -92,12 +131,20 @@ const DropdownMenu = ({ items }: { items: NavItem[] }) => {
   );
 };
 
+<<<<<<< HEAD
 
 const DesktopNav = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const router = useRouter();
   const { showLoader } = useLoader();
 
+=======
+// --- Desktop Navigation Component ---
+
+const DesktopNav = () => {
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
   return (
     <nav className="hidden lg:flex items-center h-full">
       <ul className="flex items-center h-full text-sm">
@@ -110,18 +157,24 @@ const DesktopNav = () => {
           >
             <Link
               href={item.path}
+<<<<<<< HEAD
               onClick={(e) => {
                 e.preventDefault();
                 showLoader();
                 router.push(item.path);
               }}
+=======
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
               className="px-4 py-2 flex items-center gap-1.5 h-full transition-colors duration-200 hover:bg-white/10"
             >
               <span>{item.label}</span>
               {item.children && (
                 <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
               )}
+<<<<<<< HEAD
               <span className="absolute left-0 bottom-1 w-full h-0.5 bg-white scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
+=======
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
             </Link>
             <AnimatePresence>
               {item.children && activeMenu === item.label && (
@@ -139,12 +192,16 @@ const DesktopNav = () => {
 
 const MobileNavItem = ({ item, closeMenu }: { item: NavItem, closeMenu: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
+<<<<<<< HEAD
   const router = useRouter();
   const { showLoader } = useLoader();
+=======
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
 
   if (!item.children) {
     return (
       <li>
+<<<<<<< HEAD
         <Link
           href={item.path}
           onClick={(e) => {
@@ -155,6 +212,9 @@ const MobileNavItem = ({ item, closeMenu }: { item: NavItem, closeMenu: () => vo
           }}
           className="block px-4 py-3 text-base text-gray-700 hover:bg-gray-100"
         >
+=======
+        <Link href={item.path} onClick={closeMenu} className="block px-4 py-3 text-base text-gray-700 hover:bg-gray-100">
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
           {item.label}
         </Link>
       </li>
@@ -224,6 +284,7 @@ const MobileNav = ({ isOpen, closeMenu }: { isOpen: boolean, closeMenu: () => vo
 // --- Main Header Component ---
 
 export default function Header() {
+<<<<<<< HEAD
   const [isSticky, setSticky] = useState(false);
   const topBarRef = React.useRef<HTMLDivElement>(null);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -233,6 +294,19 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       if (topBarRef.current) {
+=======
+  // CHANGED: 1. Add state for stickiness and a ref for the top bar
+  const [isSticky, setSticky] = useState(false);
+  const topBarRef = React.useRef<HTMLDivElement>(null);
+  
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // CHANGED: 2. Add a useEffect to listen for scroll events
+  useEffect(() => {
+    const handleScroll = () => {
+      if (topBarRef.current) {
+        // Set sticky to true if scroll position is past the top bar's height
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
         setSticky(window.scrollY > topBarRef.current.offsetHeight);
       }
     };
@@ -241,7 +315,11 @@ export default function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+<<<<<<< HEAD
   }, []);
+=======
+  }, []); // Empty dependency array means this runs once on mount
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
 
   const utilityLinks = [
     { label: "Careers", path: "/careers" },
@@ -251,7 +329,13 @@ export default function Header() {
 
   return (
     <>
+<<<<<<< HEAD
       <header className="relative w-full z-50 bg-white shadow-sm">
+=======
+      {/* CHANGED: 3. The main header tag is no longer 'fixed'. It's now relative. */}
+      <header className="relative w-full z-50 bg-white shadow-sm">
+        {/* Top Bar with Logo and Utility Links */}
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
         <div ref={topBarRef} className="border-b border-gray-200">
           <div className="max-w-screen-xl mx-auto px-4 py-2 flex items-center justify-between">
             <Link href="/" className="flex items-center">
@@ -266,6 +350,7 @@ export default function Header() {
             </Link>
             <div className="hidden md:flex items-center space-x-6 text-sm">
               {utilityLinks.map(({label, path}) => (
+<<<<<<< HEAD
                 <Link
                   key={label}
                   href={path}
@@ -276,6 +361,9 @@ export default function Header() {
                   }}
                   className="text-gray-600 hover:text-blue-700 hover:underline underline-offset-4 transition-colors"
                 >
+=======
+                <Link key={label} href={path} className="text-gray-600 hover:text-blue-700 hover:underline underline-offset-4 transition-colors">
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
                   {label}
                 </Link>
               ))}
@@ -284,6 +372,11 @@ export default function Header() {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        {/* Main Navigation Bar */}
+        {/* CHANGED: 4. This container now has conditional classes for stickiness */}
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
         <div 
           className={`bg-linkedin text-white transition-all duration-300 ${
             isSticky ? 'fixed top-0 left-0 right-0 shadow-lg' : 'relative'
@@ -301,7 +394,14 @@ export default function Header() {
           </div>
         </div>
       </header>
+<<<<<<< HEAD
       {isSticky && <div className="h-14" />}
+=======
+
+      {/* CHANGED: 5. Add a placeholder to prevent content from jumping up when the nav becomes sticky */}
+      {isSticky && <div className="h-14" />}
+      
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
       <MobileNav isOpen={isMobileMenuOpen} closeMenu={() => setMobileMenuOpen(false)} />
     </>
   );

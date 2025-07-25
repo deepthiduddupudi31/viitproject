@@ -68,8 +68,12 @@ export default function NewsSection() {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex justify-between items-center">
             <h1 className="text-4xl font-bold text-linkedin">News</h1>
+<<<<<<< HEAD
 
             <Link href="/news" className="text-linkedin hover:text-linkedin font-medium border border-linkedin px-4 py-2 rounded hover:bg-linkedin transition-colors">
+=======
+            <Link href="/news" className="text-linkedin hover:text-blue-600 font-medium border border-linkedin px-4 py-2 rounded hover:bg-blue-50 transition-colors">
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
               View More
             </Link>
           </div>
@@ -101,21 +105,36 @@ export default function NewsSection() {
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
+<<<<<<< HEAD
                     <span className="bg-linkedin text-white px-3 py-1 rounded-full text-xs font-medium">
+=======
+                    <span className="bg-blue-700 text-white px-3 py-1 rounded-full text-xs font-medium">
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
                       {article.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
+<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-linkedin-700 transition-colors">
+=======
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-blue-700 transition-colors">
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
                     <Link href={`/news/${article.id}`}>{article.title}</Link>
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
                   <div className="flex justify-between items-center">
+<<<<<<< HEAD
                     <span className="bg-linkedin-700 text-white px-3 py-1 rounded text-sm font-medium">
                       Date: {new Date(article.date).toLocaleDateString('en-US')}
                     </span>
                     <Link href={`/news/${article.id}`} className="text-linkedin hover:text-linkedin-800 font-medium text-sm flex items-center">
+=======
+                    <span className="bg-blue-700 text-white px-3 py-1 rounded text-sm font-medium">
+                      Date: {new Date(article.date).toLocaleDateString('en-US')}
+                    </span>
+                    <Link href={`/news/${article.id}`} className="text-blue-700 hover:text-blue-800 font-medium text-sm flex items-center">
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
                       Read More
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -130,4 +149,8 @@ export default function NewsSection() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ac280e33f23497fb7e8dcf863a41d493a2fd3460
