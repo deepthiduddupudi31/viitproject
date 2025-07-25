@@ -94,7 +94,7 @@ export default function StrategicPlanPage() {
               }}
             >
               <a
-                href="/Strategic Plan 1.pdf"
+                href="https://vignaniit.edu.in/naac/criteria6/6.2.1.Attachments/Strategic%20Plan%20of%20the%20Institute%202017-22.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -118,7 +118,7 @@ export default function StrategicPlanPage() {
               </a>
 
               <a
-                href="/Strategic Plan 2.pdf"
+                href="https://vignaniit.edu.in/naac/criteria6/6.2.1.Attachments/VIIT%20Strategic%20plan%202023-28.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
