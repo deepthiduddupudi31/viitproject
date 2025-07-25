@@ -37,13 +37,16 @@ export default function Sidebar() {
   { title: 'PAQIC', href: '/paqic' },
   { title: 'CDMC', href: '/cdmc' },
   {
-    title: 'Program Structure & Syllabus',
-    children: [
-      { title: 'B.Tech', href: '/syllabus/btech' },
-      { title: 'M.Tech', href: '/syllabus/mtech' },
-    ],
-  },
-  { title: 'Faculty', href: '/faculty' },
+  title: 'Syllabus',
+  children: [
+    { title: 'VR 17', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2017/VR17%20Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 19', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2019/VR%2019%20Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 20', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2020/MCA_VR20_Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 22', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2022/VR22%20MCA%20syllabus.pdf' },
+  ],
+}
+
+, { title: 'Faculty', href: '/faculty' },
   { title: 'Infrastructure', href: '/infrastructure' },
   { title: 'Laboratories', href: '/laboratories' },
   { title: 'Innovative Teaching Practices', href: '/teaching-practices' },
