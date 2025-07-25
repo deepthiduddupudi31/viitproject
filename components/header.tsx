@@ -151,8 +151,8 @@ const MobileNavItem = ({ item, closeMenu }: { item: NavItem, closeMenu: () => vo
     }
     return (
         <li className="border-b border-gray-200">
-            <button onClick={() => setIsOpen(!isOpen)} className="w-full flex justify-between items-center px-4 py-3 text-base text-gray-700 hover:bg-gray-100">
-                <span>{item.label}</span><ChevronRight className={`h-5 w-5 transition-transform ${isOpen ? 'rotate-90' : ''}`} />
+            <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center px-4 py-3 text-base text-gray-700 hover:bg-gray-100">
+                <span>{item.label}</span><ChevronRight className={`h-5 transition-transform ${isOpen ? 'rotate-90' : ''}`} />
             </button>
             <AnimatePresence>
                 {isOpen && (
@@ -209,7 +209,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="relative w-full z-50 bg-white shadow-sm">
+            <header className="relative w-full z-10 bg-white shadow-sm">
                 <div ref={topBarRef} className="border-b border-gray-200">
                     <div className="max-w-screen-xl mx-auto px-4 py-2 flex items-center justify-between">
                         <Link href="/" className="flex items-center">
@@ -226,20 +226,20 @@ export default function Header() {
 
                 <div className={`transition-all duration-300 
                     ${isSticky 
-                        ? 'fixed top-0 left-0 right-0 py-2' 
-                        : 'relative bg-gradient-to-r from-[#005f9e] to-[#0077c2] rounded-b-2xl'
+                        ? 'fixed top-0 left-0 right-0 py-2 lg:w-[85%] md:w-auto sm:w-auto w-0' 
+                        : 'relative bg-gradient-to-r from-[#005f9e] to-[#0077c2]'
                     }`
                 }>
-                    <div className="max-w-screen-xl mx-auto px-4">
+                    <div className="mx-auto px-4">
                         <div className={`flex items-center justify-between transition-all duration-300 
                             ${isSticky 
-                                ? 'h-16 bg-gradient-to-r from-[#005f9e]/90 to-[#0077c2]/90 backdrop-blur-lg rounded-xl shadow-lg' 
+                                ? 'lg:h-14 bg-gradient-to-r from-[#005f9e]/90 to-[#0077c2]/90 backdrop-blur-lg rounded-xl shadow-lg' 
                                 : 'h-14'
                             }`
                         }>
                             <DesktopNav />
                             <div className="lg:hidden">
-                                <button onClick={() => setMobileMenuOpen(true)} className="p-2 rounded-md text-white hover:bg-white/20" aria-label="Open menu">
+                                <button onClick={() => setMobileMenuOpen(true)} className="p-2 text-blue bg-blue-800 rounded" aria-label="Open menu">
                                     <Menu className="h-6 w-6" />
                                 </button>
                             </div>
@@ -249,8 +249,9 @@ export default function Header() {
             </header>
 
             {isSticky && <div style={{ height: placeholderHeight }} />}
-            
+
             <MobileNav isOpen={isMobileMenuOpen} closeMenu={() => setMobileMenuOpen(false)} />
+            
         </>
     );
 }
