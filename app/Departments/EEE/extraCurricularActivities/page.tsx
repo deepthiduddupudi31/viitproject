@@ -2,8 +2,9 @@
 import Sidebar from '../Sidebar'
 
 const extraCurricularData = [
-  ['Sports & Games', 2, 1, 1, 1, 4],
-  ['Cultural activities', 2, 1, 4, 1, 1],
+  ['Sports & Games', 2, 2, 1, 1, 1],
+  ['Cultural activities', 2, 1, 2, 1, 2],
+  ['Club', '-', 1, '-', '-', '-'],
 ]
 
 export default function ExtraCurricular() {
@@ -12,7 +13,7 @@ export default function ExtraCurricular() {
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/eee.jpg"
           alt="Activities Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />

@@ -2,11 +2,11 @@
 import Sidebar from '../Sidebar'
 
 const placementData = [
-  ['2022-23', '144', '115', '79.86', '6.6', '2.4'],
-  ['2021-22', '143', '114', '79.72', '4.58', '2.1'],
-  ['2020-21', '139', '112', '80.58', '4.01', '2.16'],
-  ['2019-20', '170', '157', '92.35', '3', '1.57'],
-  ['2018-19', '176', '157', '89.20', '2.6', '1.57'],
+  ['2022-23', '173', '142', '82.08', '6', '2.16'],
+  ['2021-22', '161', '136', '85.09', '6.58', '3.00'],
+  ['2020-21', '202', '163', '82.67', '6', '2.16'],
+  ['2019-20', '166', '136', '82.53', '2.22', '1.57'],
+  ['2018-19', '201', '168', '85.07', '4.2', '2.5'],
 ]
 
 export default function Placements() {
@@ -15,7 +15,7 @@ export default function Placements() {
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/eee.jpg"
           alt="Placements Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />

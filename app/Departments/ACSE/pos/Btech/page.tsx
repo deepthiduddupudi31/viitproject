@@ -1,7 +1,5 @@
-'use client'
+'use client';
 import Sidebar from '../../Sidebar';
-
-
 
 const programmeOutcomes = [
   {
@@ -81,24 +79,26 @@ const programmeOutcomes = [
 export default function CivilPage() {
   return (
     <div>
-      {/* Header Banner */}
-      <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
+      {/* Banner Image */}
+      <div className="max-w-screen-xl mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/WEB_01.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
       </div>
 
-      {/* Content layout */}
-      <div className="flex max-w-screen-xl mx-auto relative">
-        <Sidebar />
+      {/* Main Content with Sidebar */}
+      <div className="flex max-w-screen-xl mx-auto">
+        <Sidebar/>
         <main className="p-6 flex-1 bg-white">
           <h2 className="text-2xl font-bold text-blue-900 mb-6">Programme Outcomes (POs)</h2>
           <div className="space-y-4">
             {programmeOutcomes.map((po) => (
               <div key={po.id}>
-                <h3 className="font-semibold text-gray-800">{po.id}: {po.title}</h3>
+                <h3 className="font-semibold text-gray-800">
+                  {po.id}: {po.title}
+                </h3>
                 <p className="text-gray-700 text-justify">{po.description}</p>
               </div>
             ))}
