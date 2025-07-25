@@ -24,7 +24,7 @@ const announcements = [
 
 const AboutSection = () => {
   return (
-    <section className="w-full bg-light-bg py-10 px-6">
+    <section className="w-full bg-light-bg py-5 px-6">
       <div className="container mx-auto">
         
         {/* --- Section 1: Latest Announcements --- */}
