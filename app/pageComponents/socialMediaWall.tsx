@@ -86,7 +86,7 @@ export default function NonParallelSocialWall() {
   // For mobile view: all cards side by side in a horizontal scroll
   return (
     <div className=" bg-gray-100 font-sans overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-8 py-10">
+      <div className="container mx-auto px-4 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-12 relative z-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-3">

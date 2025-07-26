@@ -14,6 +14,7 @@ import PlacementHighlights from "./pageComponents/placementHighlights";
 import TopRecruiters from "./pageComponents/topRecruiters";
 import SocialMediaWall from "./pageComponents/socialMediaWall";
 
+
 export default function HomePage(): JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -30,21 +31,11 @@ export default function HomePage(): JSX.Element {
       <AboutSection />
       <SchoolsSection />
       <Programs />
-      
-      {/* Campus Life Section */}
-      <CampusLifeSection/>
-
-      {/* News Section */}
-      <News/>
-      
-      {/* Placement Highlights Section */}
-      <SocialMediaWall/>
-
-      {/* Top Recruiters Section */}
-      <PlacementHighlights/>
-      <TopRecruiters/>
-      {/* Social Media Wall Section */}
-    
+      <CampusLifeSection />
+      <News />
+      <SocialMediaWall />
+      <PlacementHighlights />
+      <TopRecruiters />
       
     </div>
   );
