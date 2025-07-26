@@ -23,7 +23,7 @@ export default function Laboratories() {
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mba.jpg"
           alt="Labs Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
