@@ -1,21 +1,21 @@
-'use client'
+'use client';
 import Sidebar from '../../Sidebar';
 
 const programmeEducationalObjectives = [
   {
-    id: 'PEO1',
+    id: 'PEO-1',
     description:
-      'To provide commendable preparation for a career in mechanical engineering and prepare students for a career at the core/allied industries.',
+      'To work in core IT companies/allied industries, educational institutions, research organizations and/or be entrepreneurs.',
   },
   {
-    id: 'PEO2',
+    id: 'PEO-2',
     description:
-      'To provide students with a sound foundation in the mathematical, scientific and engineering fundamentals necessary to formulate, solve and analyze engineering problems in mechanical engineering and to prepare them for higher studies.',
+      'To pursue higher education/research in the field of Information Technology.',
   },
   {
-    id: 'PEO3',
+    id: 'PEO-3',
     description:
-      'To exhibit communication skills, team spirit, leadership qualities, life-long managerial skills, integrity and social and environmental responsibility, life-long learning ability, professional ethics and human values.',
+      'To demonstrate communication skills, team spirit, leadership qualities, managerial skills, integrity, social & environmental responsibility and lifelong learning ability, professional ethics and human values in profession/career.',
   },
 ];
 
@@ -35,7 +35,9 @@ export default function MtechPage() {
       <div className="flex max-w-screen-xl mx-auto relative">
         <Sidebar />
         <main className="p-6 flex-1 bg-white">
-          <h2 className="text-2xl font-bold text-blue-900 mb-6">Programme Educational Objectives (PEOs)</h2>
+          <h2 className="text-2xl font-bold text-blue-900 mb-6">
+            Programme Educational Objectives (PEOs)
+          </h2>
           <div className="space-y-4">
             {programmeEducationalObjectives.map((peo) => (
               <div key={peo.id}>

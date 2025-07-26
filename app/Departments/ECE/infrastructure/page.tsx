@@ -2,19 +2,19 @@
 import Sidebar from '../Sidebar'
 
 const facilities = [
-  { sno: 1, name: 'Number of Class rooms', details: '06' },
-  { sno: 2, name: 'Number of tutorial rooms', details: '01' },
-  { sno: 3, name: 'Classrooms with ICT facility', details: '06' },
-  { sno: 4, name: 'Academic Laboratories', details: '10' },
-  { sno: 5, name: 'Research Laboratories', details: '01' },
-  { sno: 6, name: 'Other Laboratories', details: 'Nil' },
+  { sno: 1, name: 'Number of Class rooms', details: '07' },
+  { sno: 2, name: 'Number of tutorial rooms', details: 'Nil' },
+  { sno: 3, name: 'Classrooms with ICT facility', details: '07' },
+  { sno: 4, name: 'Academic Laboratories', details: '06' },
+  { sno: 5, name: 'Research Laboratories', details: '1' },
+  { sno: 6, name: 'Other Laboratories', details: '1' },
   {
     sno: 7,
     name: 'Library - Department',
-    details: 'No. of Titles: 445, No. of Volumes: 3379',
+    details: 'No. of Titles : 150, No. of Volumes : 500',
   },
-  { sno: 8, name: 'Seminar Halls', details: '01' },
-  { sno: 9, name: 'Staff rooms', details: '02' },
+  { sno: 8, name: 'Seminar Halls', details: 'Nil' },
+  { sno: 9, name: 'Staff rooms', details: '2' },
 ]
 
 export default function Facilities() {

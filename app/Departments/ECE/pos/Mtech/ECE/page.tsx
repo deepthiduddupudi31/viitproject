@@ -1,5 +1,6 @@
 'use client'
-import Sidebar from '../../Sidebar';
+import Sidebar from '../../../Sidebar';
+
 
 const programmeOutcomes = [
   {
@@ -18,27 +19,28 @@ const programmeOutcomes = [
     id: 'PO3',
     title: 'Model Tool Usage',
     description:
-      'To apply Modern Engineering tools to solve the problems pertaining to meet global and national needs.',
+      'To apply modern engineering tools to solve the problems pertaining to meet global and national needs.',
   },
   {
     id: 'PO4',
     title: 'Engineering & Society',
     description:
-      'Work on multi disciplinary projects on Emerging areas to solve the societal problems.',
+      'Work on multidisciplinary projects on emerging areas to solve the societal problems.',
   },
   {
     id: 'PO5',
     title: 'Ethics',
     description:
-      'Develop professional and ethical attitude and become socially responsible citizen.',
+      'Develop professional and ethical attitude and become a socially responsible citizen.',
   },
   {
     id: 'PO6',
-    title: 'Life Long Learning',
+    title: 'Life-Long Learning',
     description:
       'Engage in lifelong learning to enhance knowledge and competence.',
   },
 ];
+
 
 export default function CivilPage() {
   return (
@@ -46,7 +48,7 @@ export default function CivilPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/ece.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />

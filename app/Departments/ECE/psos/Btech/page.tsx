@@ -1,23 +1,19 @@
 'use client'
 import Sidebar from '../../Sidebar';
 
-const programSpecificOutcomes = [
+const programmeSpecificOutcomes = [
   {
     id: 'PSO1',
     description:
-      'Analyze and design the machine components with the knowledge of stress analysis, theories of failures and material science.',
+      'Apply advanced algorithms in communication systems, signal processing, and image processing to solve complex problems.',
   },
   {
     id: 'PSO2',
     description:
-      'Apply the principles of thermal engineering in analysing, designing and validating various thermal energy systems.',
-  },
-  {
-    id: 'PSO3',
-    description:
-      'Develop and organize the manufacturing process effectively and efficiently for the production of various products with the required functionality to high quality standards.',
+      'Exploit the concepts of VLSI and Embedded Systems for the implementation of real-time applications.',
   },
 ];
+
 
 export default function CivilPage() {
   return (
@@ -25,7 +21,7 @@ export default function CivilPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/ece.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -38,7 +34,7 @@ export default function CivilPage() {
           {/* Program Specific Outcomes */}
           <h2 className="text-2xl font-bold text-blue-900 mb-6">Program Specific Outcomes (PSOs)</h2>
           <div className="space-y-4">
-            {programSpecificOutcomes.map((pso) => (
+            {programmeSpecificOutcomes.map((pso) => (
               <div key={pso.id}>
                 <h3 className="font-semibold text-gray-800">{pso.id}</h3>
                 <p className="text-gray-700 text-justify">{pso.description}</p>

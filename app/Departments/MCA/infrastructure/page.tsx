@@ -2,19 +2,18 @@
 import Sidebar from '../Sidebar'
 
 const facilities = [
-  { sno: 1, name: 'Number of Class rooms', details: '06' },
-  { sno: 2, name: 'Number of tutorial rooms', details: '01' },
-  { sno: 3, name: 'Classrooms with ICT facility', details: '06' },
-  { sno: 4, name: 'Academic Laboratories', details: '10' },
-  { sno: 5, name: 'Research Laboratories', details: '01' },
-  { sno: 6, name: 'Other Laboratories', details: 'Nil' },
+  { sno: 1, name: 'Number of Class rooms', details: '05' },
+  { sno: 2, name: 'Classrooms with ICT facility', details: '05' },
+  { sno: 3, name: 'Academic Laboratories', details: '04' },
+  { sno: 4, name: 'Research Laboratories', details: '01' },
+  { sno: 5, name: 'Other Laboratories', details: '01' },
   {
-    sno: 7,
+    sno: 6,
     name: 'Library - Department',
-    details: 'No. of Titles: 445, No. of Volumes: 3379',
+    details: 'No. of Titles: 150, No. of Volumes: 500',
   },
-  { sno: 8, name: 'Seminar Halls', details: '01' },
-  { sno: 9, name: 'Staff rooms', details: '02' },
+  { sno: 7, name: 'Seminar Halls', details: 'Nil' },
+  { sno: 8, name: 'Staff rooms', details: '04' },
 ]
 
 export default function Facilities() {
@@ -22,7 +21,7 @@ export default function Facilities() {
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mca.jpg"
           alt="Facilities Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -41,9 +40,9 @@ export default function Facilities() {
               <table className="w-full text-sm border rounded-md shadow-md">
                 <thead className="bg-blue-100 text-gray-700">
                   <tr>
-                    <th className="px-4 py-2 border">S.No.</th>
+                    <th className="px-4 py-2 border text-center">S.No.</th>
                     <th className="px-4 py-2 border">Name of the Infrastructural Facility</th>
-                    <th className="px-4 py-2 border">Quantity/Details</th>
+                    <th className="px-4 py-2 border text-center">Quantity/Details</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -51,7 +50,7 @@ export default function Facilities() {
                     <tr key={item.sno} className="odd:bg-white even:bg-gray-50">
                       <td className="px-4 py-2 border text-center">{item.sno}</td>
                       <td className="px-4 py-2 border">{item.name}</td>
-                      <td className="px-4 py-2 border">{item.details}</td>
+                      <td className="px-4 py-2 border text-center">{item.details}</td>
                     </tr>
                   ))}
                 </tbody>

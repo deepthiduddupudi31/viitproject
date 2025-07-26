@@ -1,21 +1,21 @@
-'use client'
+'use client';
 import Sidebar from '../../Sidebar';
 
 const programmeEducationalObjectives = [
   {
-    id: 'PEO1',
+    id: 'PEO-1',
     description:
-      'To acquire knowledge of the advanced concepts of machine components and systems in order to evaluate, design, develop and implement complex Machine Design problems.',
+      'To work in core IT companies/allied industries, educational institutions, research organizations and/or be entrepreneurs.',
   },
   {
-    id: 'PEO2',
+    id: 'PEO-2',
     description:
-      'To prepare the students for successful career in industry, academia and research with proficiency in Machine Design by communicating effectively either leading a team or as a team member.',
+      'To pursue higher education/research in the field of Information Technology.',
   },
   {
-    id: 'PEO3',
+    id: 'PEO-3',
     description:
-      'To attain professional leadership qualities which include effective communication, teamwork, multidisciplinary approach and ability to relate engineering issues to broader social challenges.',
+      'To demonstrate communication skills, team spirit, leadership qualities, managerial skills, integrity, social & environmental responsibility and lifelong learning ability, professional ethics and human values in profession/career.',
   },
 ];
 
@@ -35,7 +35,12 @@ export default function MtechPage() {
       <div className="flex max-w-screen-xl mx-auto relative">
         <Sidebar />
         <main className="p-6 flex-1 bg-white">
-          <h2 className="text-2xl font-bold text-blue-900 mb-6">Programme Educational Objectives (PEOs)</h2>
+          <h2 className="text-2xl font-bold text-blue-900 mb-2">
+            Programme Educational Objectives (PEOs)
+          </h2>
+          <p className="mb-6 text-gray-700 text-justify">
+            The Graduates of B.Tech in Information Technology will be able:
+          </p>
           <div className="space-y-4">
             {programmeEducationalObjectives.map((peo) => (
               <div key={peo.id}>

@@ -5,27 +5,22 @@ const programSpecificOutcomes = [
   {
     id: 'PSO1',
     description:
-      'Apply knowledge of Transportation Engineering and management in real time.',
+      'Apply technical knowledge, skills and analytical ability to design, develop and test power electronic converters and drives using modern tools and technologies.',
   },
   {
     id: 'PSO2',
     description:
-      'Design a transportation system and analyse a system, component, or process in the knowledge areas of transportation engineering in real time problems.',
-  },
-  {
-    id: 'PSO3',
-    description:
-      'Conduct investigations and address complex Transportation engineering problems; Utilize and develop innovative tools and techniques that are appropriate in Transportation Engineering discipline.',
+      'Solve the real world problems in the emerging fields like smart grid, renewable energy interfaces, and electric vehicles and to develop innovative technologies relevant to social, ethical, economic and environmental issues.',
   },
 ];
 
-export default function CivilPage() {
+export default function EEEPage() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/eee.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />

@@ -3,29 +3,29 @@ import Sidebar from '../../Sidebar';
 
 const programSpecificOutcomes = [
   {
-    id: 'PSO1',
+    id: 'PSO-1',
     description:
-      'Analyze and design the machine components with the knowledge of stress analysis, theories of failures and material science.',
+      'Design, analyze, operate and test various Electrical Machines.',
   },
   {
-    id: 'PSO2',
+    id: 'PSO-2',
     description:
-      'Apply the principles of thermal engineering in analysing, designing and validating various thermal energy systems.',
+      'Describe and analyze the operation and control of power systems and also along with simulation, conduct load flow studies on given power systems.',
   },
   {
-    id: 'PSO3',
+    id: 'PSO-3',
     description:
-      'Develop and organize the manufacturing process effectively and efficiently for the production of various products with the required functionality to high quality standards.',
+      'Explain and operate various electronics/power electronic devices/systems along with conducting simulation studies on them.',
   },
 ];
 
-export default function CivilPage() {
+export default function EEEPSOPage() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/eee.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -50,5 +50,3 @@ export default function CivilPage() {
     </div>
   );
 }
-
-

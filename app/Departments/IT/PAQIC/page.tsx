@@ -1,10 +1,19 @@
-'use client'
-import Sidebar from '.././Sidebar'
+'use client';
+import Sidebar from '.././Sidebar';
 
 const pmcMoMs = [
-  { year: '2022-23', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf' },
-  { year: '2021-22', url:  'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf'},
-  { year: '2020-21', url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC01996520240421133321.pdf' },
+  {
+    year: '2022-23',
+    url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf',
+  },
+  {
+    year: '2021-22',
+    url: 'https://vignaniit.edu.in/PAQIC/ECE~PAQIC@01996520240421133321.pdf',
+  },
+  {
+    year: '2020-21',
+    url: 'https://vignaniit.edu.in/PAQIC/IT~PAQIC01995620240421125053.pdf',
+  },
 ];
 
 const responsibilitiesByFrequency = [
@@ -46,27 +55,28 @@ const responsibilitiesByFrequency = [
   },
 ];
 
-export default function PAQIC() {
+export default function PAQICPage() {
   return (
     <div>
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/IT.jpg"
           alt="PAQIC Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
       </div>
 
+      {/* Layout */}
       <div className="flex max-w-screen-xl mx-auto">
         <Sidebar />
 
-        <main className="flex-1 p-6 overflow-x-auto">
+        <main className="flex-1 p-6 overflow-x-auto bg-white">
           <h2 className="text-2xl font-bold text-blue-900 mb-4">
             Program Assessment and Quality Improvement Committee (PAQIC)
           </h2>
 
-          {/* Responsibilities */}
+          {/* Responsibilities Section */}
           <section className="mb-8">
             <h3 className="text-xl font-semibold text-blue-800 mb-3">Responsibilities</h3>
             {responsibilitiesByFrequency.map((group) => (
@@ -81,7 +91,7 @@ export default function PAQIC() {
             ))}
           </section>
 
-          {/* MoMs */}
+          {/* Minutes of Meetings */}
           <section>
             <h3 className="text-xl font-semibold mb-2 text-blue-800">PAQIC Minutes of Meetings (MoM)</h3>
             <ul className="list-disc list-inside space-y-1 text-blue-700">

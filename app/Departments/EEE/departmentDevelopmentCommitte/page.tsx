@@ -1,30 +1,30 @@
 'use client'
-import Sidebar from '.././Sidebar'
+import Sidebar from '../Sidebar'
 
 const ddcMembers = [
-  { sno: 1, name: 'Dr. Sudhir Vummadisetti', role: 'Chairperson', designation: 'Head of the Department-CE' },
-  { sno: 2, name: 'Mr. M. Padmakar', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 3, name: 'Mr. K. Srinivas', role: 'Member Secretary', designation: 'Asst. HoD, CE' },
-  { sno: 4, name: 'Mr. B. Brahmaiah', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 5, name: 'Dr. RatnaTej Reddy', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 6, name: 'Mrs. Jami Lakshmi Sudha', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 7, name: 'Mrs. Reshma Chandran T', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-];
+  { sno: 1, name: 'Dr.Ch. Ramesh Babu', role: 'Chairperson', designation: 'Head of the Department-ECE' },
+  { sno: 2, name: 'Prof.K. Babulu', role: 'Member', designation: 'Academic Expert, Director R&D, JNTU-GV' },
+  { sno: 3, name: 'Mr. Sitarama Penumetsa', role: 'Member', designation: 'Industry Expert, CEO - Tech Team Solutions, Visakhapatnam' },
+  { sno: 4, name: 'Mr.Venkatesh Sappagaddi', role: 'Member', designation: 'Alumni Representative, Founder & CEO - Electro Pro. Pvt. Ltd' },
+  { sno: 5, name: 'Dr. A. Naga Jyothi', role: 'Member', designation: 'Professor, VIIT (A)' },
+  { sno: 6, name: 'Dr.K.Srinivasa Naik', role: 'Member', designation: 'Professor, VIIT (A)' },
+  { sno: 7, name: 'Dr. B. Prasad Rao', role: 'Member', designation: 'Professor, VIIT (A)' },
+  { sno: 8, name: 'Mr. S. Ravi Kumar', role: 'Member Secretary', designation: 'Asst. HoD, ECE' },
+]
 
 const ddcmoms = [
-  { year: '2023-24', url: 'https://vignaniit.edu.in/DDC/DDC_23-24.pdf' },
   { year: '2022-23', url: 'https://vignaniit.edu.in/DDC/DDC_ECE.pdf' },
   { year: '2021-22', url: 'https://vignaniit.edu.in/ddc/ece/ECE_DDC_2021_22.pdf' },
   { year: '2020-21', url: 'https://vignaniit.edu.in/ddc/ece/ECE_DDC_2020_21.pdf' },
-];
+]
 
 export default function DepartmentDevelopmentCommittee() {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100">
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/eee.jpg"
           alt="DDC Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -40,16 +40,16 @@ export default function DepartmentDevelopmentCommittee() {
           <section className="mb-8">
             <h3 className="text-xl font-semibold mb-2 text-blue-800">Roles and Responsibilities</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Review the existing curriculum and suggest improvements for industry alignment and relevance.</li>
-              <li>Monitor industry trends and recommend guest lectures from experts.</li>
-              <li>Propose new specializations and value-added courses.</li>
-              <li>Suggest innovative teaching methodologies for better student engagement.</li>
-              <li>Advise strategies for placements, higher education, and entrepreneurship opportunities.</li>
-              <li>Identify research focus areas and funding opportunities.</li>
-              <li>Promote faculty collaboration and research innovation.</li>
-              <li>Support development of labs, libraries, and IT infrastructure.</li>
-              <li>Provide inputs on budget allocation for academic and research activities.</li>
-              <li><strong>Meeting Frequency:</strong> Once a year</li>
+              <li>Review the existing curriculum and suggest improvements to enhance its relevance, effectiveness, and alignment with industry standards.</li>
+              <li>Stay updated on current industry trends and skill requirements. Suggest industry expert lectures or guest lectures.</li>
+              <li>Recommend new specializations and value-added/add-on courses based on industry and student needs.</li>
+              <li>Suggest innovative teaching methods that enhance engagement, critical thinking, and deeper understanding.</li>
+              <li>Advise strategies to improve student placements, higher education, and entrepreneurship opportunities.</li>
+              <li>Recommend research focus areas and help identify funding sources for research projects.</li>
+              <li>Encourage faculty collaboration on research and promote innovation and entrepreneurship.</li>
+              <li>Advise on the development and upkeep of labs, libraries, and IT infrastructure.</li>
+              <li>Provide input on budget allocation for curriculum development, faculty training, and research.</li>
+              <li><strong>Meeting Frequency:</strong> Once in a year</li>
             </ul>
           </section>
 
@@ -60,7 +60,7 @@ export default function DepartmentDevelopmentCommittee() {
               <thead className="bg-blue-100">
                 <tr>
                   <th className="border px-2 py-2">S.No</th>
-                  <th className="border px-2 py-2">Name</th>
+                  <th className="border px-2 py-2">Name of the Member</th>
                   <th className="border px-2 py-2">Role</th>
                   <th className="border px-2 py-2">Designation</th>
                 </tr>
@@ -94,5 +94,5 @@ export default function DepartmentDevelopmentCommittee() {
         </main>
       </div>
     </div>
-  );
+  )
 }

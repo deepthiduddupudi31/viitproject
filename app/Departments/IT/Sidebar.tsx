@@ -19,6 +19,13 @@ export default function Sidebar() {
     ],
   },
   {
+    title: 'Department Development Committee',
+    children: [
+      { title: '2020-21', href: 'https://vignaniit.edu.in/ddc/it/IT_DDC_2020_21.pdf' },
+      { title: '2022-23', href: 'https://vignaniit.edu.in/PAQIC/IT~PAQIC01995620240421125053.pdf' },
+    ],
+  },
+  {
     title: 'PEOs',
     children: [
       { title: 'B.Tech', href: '/peos/btech' },

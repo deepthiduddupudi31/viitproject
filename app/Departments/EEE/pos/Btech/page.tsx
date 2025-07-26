@@ -1,26 +1,24 @@
 'use client'
 import Sidebar from '../../Sidebar';
 
-
-
 const programmeOutcomes = [
   {
     id: 'PO1',
     title: 'Engineering Knowledge',
     description:
-      'Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.',
+      'Apply the knowledge of mathematics science engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.',
   },
   {
     id: 'PO2',
     title: 'Problem Analysis',
     description:
-      'Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.',
+      'Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, and natural sciences, and engineering sciences.',
   },
   {
     id: 'PO3',
     title: 'Design/Development of Solutions',
     description:
-      'Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.',
+      'Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural societal, and environmental considerations.',
   },
   {
     id: 'PO4',
@@ -30,7 +28,7 @@ const programmeOutcomes = [
   },
   {
     id: 'PO5',
-    title: 'Modern Tools Usage',
+    title: 'Modern tools usage',
     description:
       'Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.',
   },
@@ -38,13 +36,13 @@ const programmeOutcomes = [
     id: 'PO6',
     title: 'The Engineer and Society',
     description:
-      'Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.',
+      'Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.',
   },
   {
     id: 'PO7',
     title: 'Environment and Sustainability',
     description:
-      'Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.',
+      'Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development and need for sustainable development.',
   },
   {
     id: 'PO8',
@@ -62,7 +60,7 @@ const programmeOutcomes = [
     id: 'PO10',
     title: 'Communication',
     description:
-      'Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.',
+      'Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.',
   },
   {
     id: 'PO11',
@@ -84,7 +82,7 @@ export default function CivilPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/eee.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -94,7 +92,7 @@ export default function CivilPage() {
       <div className="flex max-w-screen-xl mx-auto relative">
         <Sidebar />
         <main className="p-6 flex-1 bg-white">
-          <h2 className="text-2xl font-bold text-blue-900 mb-6">Programme Outcomes (POs)</h2>
+          <h2 className="text-2xl font-bold text-blue-900 mb-6">Program Outcomes (POs)</h2>
           <div className="space-y-4">
             {programmeOutcomes.map((po) => (
               <div key={po.id}>

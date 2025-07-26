@@ -12,26 +12,50 @@ export default function Sidebar() {
   { title: 'Vision and Mission', href: '/vision' },
   { title: 'Programs Offered', href: '/programs' },
   {
-    title: 'POs',
-    children: [
-      { title: 'B.Tech', href: '/pos/btech' },
-      { title: 'M.Tech', href: '/pos/mtech' },
-    ],
-  },
+  title: 'POs',
+  children: [
+    { title: 'B.Tech', href: '/pos/btech' },
+    {
+      title: 'M.Tech',
+      href: '/pos/mtech',
+      children: [
+        { title: 'DECS', href: '/pos/mtech/decs' },
+        { title: 'ECE', href: '/pos/mtech/ece' },
+      ],
+    },
+  ],
+}
+
+,  {
+  title: 'PEOs',
+  children: [
+    { title: 'B.Tech', href: '/pos/btech' },
+    {
+      title: 'M.Tech',
+      href: '/pos/mtech',
+      children: [
+        { title: 'DECS', href: '/pos/mtech/decs' },
+        { title: 'ECE', href: '/pos/mtech/ece' },
+      ],
+    },
+  ],
+}
+,
   {
-    title: 'PEOs',
-    children: [
-      { title: 'B.Tech', href: '/peos/btech' },
-      { title: 'M.Tech', href: '/peos/mtech' },
-    ],
-  },
-  {
-    title: 'PSOs',
-    children: [
-      { title: 'B.Tech', href: '/psos/btech' },
-      { title: 'M.Tech', href: '/psos/mtech' },
-    ],
-  },
+  title: 'PSOs',
+  children: [
+    { title: 'B.Tech', href: '/pos/btech' },
+    {
+      title: 'M.Tech',
+      href: '/pos/mtech',
+      children: [
+        { title: 'DECS', href: '/pos/mtech/decs' },
+        { title: 'ECE', href: '/pos/mtech/ece' },
+      ],
+    },
+  ],
+}
+,
   { title: 'Board of Studies', href: '/board-of-studies' },
   { title: 'Department Development Committee', href: '/ddc' },
   { title: 'PAQIC', href: '/paqic' },
