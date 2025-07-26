@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Award, TrendingUp, Users, ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "../../components/ui/button"
 import Image from "next/image"
 
 const slides = [
@@ -81,12 +82,12 @@ export default function HeroSection() {
             </AnimatePresence>
             
             <div className="absolute bottom-4 right-4 flex gap-3 z-10">
-              <button onClick={prevSlide} className="w-11 h-11 flex items-center justify-center bg-white/70 hover:bg-white backdrop-blur-sm text-navy-text rounded-full transition-all">
+              <Button onClick={prevSlide} className="w-11 h-11 flex items-center justify-center bg-white/70 hover:bg-white backdrop-blur-sm text-navy-text rounded-full transition-all">
                 <ChevronLeft size={22} />
-              </button>
-              <button onClick={nextSlide} className="w-11 h-11 flex items-center justify-center bg-white/70 hover:bg-white backdrop-blur-sm text-navy-text rounded-full transition-all">
+              </Button>
+              <Button onClick={nextSlide} className="w-11 h-11 flex items-center justify-center bg-white/70 hover:bg-white backdrop-blur-sm text-navy-text rounded-full transition-all">
                 <ChevronRight size={22} />
-              </button>
+              </Button>
             </div>
           </motion.div>
         </div>

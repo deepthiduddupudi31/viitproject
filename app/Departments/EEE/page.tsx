@@ -7,7 +7,7 @@ export default function CivilPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
       <img
-        src='https://vignaniit.edu.in/images/ece.jpg'
+        src='https://vignaniit.edu.in/images/eee.jpg'
         alt="Banner"
         className="w-full h-32 object-cover rounded-lg shadow-lg"
       />

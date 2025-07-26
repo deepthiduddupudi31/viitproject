@@ -14,6 +14,7 @@ import PlacementHighlights from "./pageComponents/placementHighlights";
 import TopRecruiters from "./pageComponents/topRecruiters";
 import SocialMediaWall from "./pageComponents/socialMediaWall";
 
+
 export default function HomePage(): JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
 

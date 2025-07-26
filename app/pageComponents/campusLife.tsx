@@ -8,30 +8,12 @@ import { ChevronDown } from "lucide-react";
 export default function CampusLifeSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-  video.currentTime = 4; 
-    const handleTimeUpdate = () => {
-        
-      if (video.currentTime >= 29) {
-        video.currentTime = 6; 
-      }
-    };
-
-    video.addEventListener("timeupdate", handleTimeUpdate);
-
-    return () => {
-      video.removeEventListener("timeupdate", handleTimeUpdate);
-    };
-  }, []);
-
   return (
     <div className="w-full bg-light-bg">
       <div className="relative h-screen w-full flex items-end justify-start overflow-hidden">
         <video
           ref={videoRef}
-          src="/Glimpse of Events  SAC  Vignan Vizag - Vignan Vizag Studio (1080p, h264).mp4"
+          src="/viit.mp4"
           className="absolute z-0 w-full h-full object-cover"
           autoPlay
           loop

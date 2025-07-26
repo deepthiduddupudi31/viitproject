@@ -36,8 +36,12 @@ export default function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose:
     {
       title: 'Program Structure & Syllabus',
       children: [
-        { title: 'B.Tech', href: '/syllabus/btech' },
-        { title: 'M.Tech', href: '/syllabus/mtech' },
+        { title: 'VR-22 CSE-DS', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2022/CSE-DS.pdf' },
+        { title: 'VR-22 CSE-CS', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2022/CSE-CS.pdf' },
+        { title: 'VR-22 CSE-AI', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2022/CSE-AI.pdf' },
+        { title: 'VR-22 CSE-DS', href: 'https://vignaniit.edu.in/syllabus/Syllabus/vr23_new/VR23%20CSE-DS.pdf' },
+        { title: 'VR-22 CSE-CS', href: 'https://vignaniit.edu.in/syllabus/Syllabus/vr23_new/VR23%20CSE-CS.pdf' },
+        { title: 'VR-22 CSE-AI', href: 'https://vignaniit.edu.in/syllabus/Syllabus/vr23_new/VR23%20CSE-AI.pdf' },
       ],
     },
     { title: 'Faculty', href: '/faculty' },
