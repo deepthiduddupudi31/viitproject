@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import LoaderWrapper from "../components/LoaderWrapper";
+import { LoaderProvider } from "../components/LoaderContext";
 
 // 2. Configure the Nunito Sans font with the necessary weights
 const nunitoSans = Poppins ({
@@ -24,13 +25,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/* 3. Apply the Nunito Sans font class to the entire application */}
+      
       <body className={nunitoSans.className}>
-        <LoaderWrapper>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </LoaderWrapper>
+        <LoaderProvider>
+          <LoaderWrapper>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </LoaderWrapper>
+        </LoaderProvider>
       </body>
     </html>
   );

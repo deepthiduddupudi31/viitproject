@@ -113,7 +113,7 @@ const DesktopNav = () => {
     };
 
     return (
-        <nav className="hidden lg:flex items-center h-full">
+<nav className="hidden lg:flex items-center justify-evenly h-full">
             <ul className="flex items-center h-full text-sm font-medium">
                 {navItems.map((item) => (
                     <li
@@ -200,9 +200,10 @@ export default function Header() {
     }, []);
 
     const utilityLinks = [
-        { label: "Careers", path: "/careers" },
-        { label: "Alumni", path: "/alumni" },
-        { label: "VIIT Advantages", path: "/advantages" },
+        { label: "LMS", path: "https://elearning.vignaniit.edu.in/" },
+        { label: "ECAP", path: "https://webprosindia.com/vignanit/" },
+        { label: "V-TP", path: "https://taskplanner.vignaniit.edu.in/login" },
+        { label: "NBA", path: "https://vignaniit.edu.in/NBA%202024-2026.pdf" },
     ];
 
     const placeholderHeight = (topBarRef.current?.offsetHeight ?? 0) + 56;
@@ -226,12 +227,12 @@ export default function Header() {
 
                 <div className={`transition-all duration-300 
                     ${isSticky 
-                        ? 'fixed top-0 left-0 right-0 py-2 lg:w-[85%] md:w-auto sm:w-auto w-0' 
+                        ? 'fixed top-0 left-0 right-0 py-2 lg:w-[85%] lg:left-[8%] w-0' 
                         : 'relative bg-gradient-to-r from-[#005f9e] to-[#0077c2]'
                     }`
                 }>
-                    <div className="mx-auto px-4">
-                        <div className={`flex items-center justify-between transition-all duration-300 
+                    <div className="mx-auto px-4 ">
+                        <div className={`flex items-center lg:justify-evenly transition-all duration-300 
                             ${isSticky 
                                 ? 'lg:h-14 bg-gradient-to-r from-[#005f9e]/90 to-[#0077c2]/90 backdrop-blur-lg rounded-xl shadow-lg' 
                                 : 'h-14'
