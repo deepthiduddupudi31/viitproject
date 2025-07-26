@@ -1,1 +1,0 @@
-declare module 'locomotive-scroll/dist/locomotive-scroll.css'; 
