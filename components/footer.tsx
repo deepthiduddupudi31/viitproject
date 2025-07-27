@@ -135,12 +135,18 @@ export default function Footer() {
               How to Reach ↗
             </Link>
 
-            <div className="mt-6 bg-green-100 rounded-lg h-32 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-8 h-8 bg-linkedin rounded-full mx-auto mb-2"></div>
-                <p className="text-xs text-gray-600">View larger map</p>
-              </div>
-            </div>
+              <div className="mt-6 rounded-lg overflow-hidden w-full h-48">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.095670486325!2d83.1633426!3d17.7104743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3968cb428b8087%3A0xaa3e198c43836a65!2sVignan's%20Institute%20Of%20Information%20Technology!5e0!3m2!1sen!2sin!4v1722050754825!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
+
           </div>
         </div>
       </div>
