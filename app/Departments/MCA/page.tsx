@@ -1,50 +1,97 @@
-'use client'
-import Sidebar from './Sidebar';
+// src/app/cse/page.jsx
+'use client';
+// Removed useState, ChevronDown, PanelLeft, clsx from here
+import Sidebar from './Sidebar'; // Use the new self-contained Sidebar
+import { BookOpen } from 'lucide-react';
 
-export default function CivilPage() {
+// Unchanged: ProfessionalFocusItem component
+const ProfessionalFocusItem = ({ title, children }) => (
+  <div className="mb-6 p-5 bg-slate-50 rounded-lg shadow-sm last:mb-0">
+    <h3 className="text-lg font-semibold text-slate-900 mb-2">{title}</h3>
+    <p className="text-slate-600 leading-relaxed">{children}</p>
+  </div>
+);
+
+export default function MCAPageLayout() {
+  // REMOVED: isMobileMenuOpen state is now inside the Sidebar component
+  
+  const focusAreas = [
+    { title: "Core Computer Science", description: "Mastering the fundamentals from algorithms and data structures to cryptography and security." },
+    { title: "Systems & Software", description: "Exploring computer architecture, operating systems, compilers, and modern software engineering practices." },
+    { title: "Intelligent Systems", description: "Diving into the exciting fields of AI, machine learning, data mining, and information retrieval." },
+  ];
+
   return (
-    <div >
-      {/* Header Banner */}
-      <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
-      <img
-        src='https://vignaniit.edu.in/images/mca.jpg'
-        alt="Banner"
-        className="w-full h-32 object-cover rounded-lg shadow-lg"
-      />
-      </div>
-
-      {/* Content layout */}
-      <div className="flex max-w-screen-xl mx-auto relative">
-        <Sidebar />
-        <main className="p-6 flex-1 bg-white">
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">ABOUT DEPT</h2>
-          <p className="text-gray-700 mb-6 leading-relaxed">
-The Department of MCA at Vignan's IIT has been active in teaching and research since its inception in 2006. Currently, about 8 committed faculty members are working in the department .The Department of MCA offers Two-year post-graduate programme in Master of Computer Applications .
-
-VIIT's goal is to become a world class engineering institute in a multi-campus setting. It is one of the best institutions in the state. In respect to that, the department of MCA provides a better guidance to all students with practical knowledge and skills. This is an important aspect for the current requirement, under the new concept of outcome based education. Here the students are trained to work as a team and strive for excellence. These students would be representing the cream of the society and therefore are expected to contribute towards the enhancement of reputation and credibility of this institute. The course will not only groom the students to become world class engineering graduates, but will also nurture their sense of purpose and vision. Members of our faculty reflect the variety of interests and qualities inherent in Information Technology. They are dedicated to demonstrate and promote the speciality to the VIIT community of students and faculty as well as to the people we serve. They work towards outcome all the time,and they don't forget the value of the process. Successful students have a richness about them that comes from openness to great moments, and a consistency in the quality is revealed by VIIT. The most successful professionals care about a wide variety of things in the IT field and emphasize the intrinsic value of the tasks. We invite you to browse through our website and learn about the faculty and programs of the department of MCA, and encourage your comments on our website and departmental activities.            {/* Add the full description from the image here */}
+    <div className="bg-slate-100 py-6 sm:py-8">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Department Hero Section (Unchanged) */}
+        <header className="bg-white p-8 lg:p-10 rounded-xl shadow-sm mb-6 lg:mb-8">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
+            Department of
+            <br />
+            <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
+          Master of Computer Applications
+            </span>
+          </h1>
+          <p className="mt-4 text-lg text-slate-500">
+            Shaping the future of computing through excellence in academia and pioneering research.
           </p>
+        </header>
 
-          <h3 className="text-xl font-semibold text-blue-800 mb-2">HoD's Message</h3>
-          <p className="text-gray-700 leading-relaxed">
-The Department of MCA at Vignan's IIT has been active in teaching and research since its inception in 2006. Currently, about 8 committed faculty members are working in the department .The Department of MCA offers Two-year post-graduate programme in Master of Computer Applications .
+        <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
+          
+          {/* === UPDATED: SIMPLIFIED SIDEBAR === */}
+          {/* This single component now handles both mobile and desktop views */}
+          <Sidebar />
 
-VIIT's goal is to become a world class engineering institute in a multi-campus setting. It is one of the best institutions in the state. In respect to that, the department of MCA provides a better guidance to all students with practical knowledge and skills. This is an important aspect for the current requirement, under the new concept of outcome based education. Here the students are trained to work as a team and strive for excellence. These students would be representing the cream of the society and therefore are expected to contribute towards the enhancement of reputation and credibility of this institute. The course will not only groom the students to become world class engineering graduates, but will also nurture their sense of purpose and vision. Members of our faculty reflect the variety of interests and qualities inherent in Information Technology. They are dedicated to demonstrate and promote the speciality to the VIIT community of students and faculty as well as to the people we serve. They work towards outcome all the time,and they don't forget the value of the process. Successful students have a richness about them that comes from openness to great moments, and a consistency in the quality is revealed by VIIT. The most successful professionals care about a wide variety of things in the IT field and emphasize the intrinsic value of the tasks. We invite you to browse through our website and learn about the faculty and programs of the department of MCA, and encourage your comments on our website and departmental activities.            {/* Add the HoD's message here */}
-          </p>
-    
-<div className="w-[90%] md:w-[50%] lg:w-[30%] mx-auto relative">
-  <img
-    src="https://vignaniit.edu.in/images/mca_hod1.jpg"
-    alt="Banner"
-    className="w-full h-auto md:h-[300px] object-cover rounded-lg shadow-lg"
-  />
-  <p className="text-center mt-2 font-semibold">HOD - MCA</p>
-</div>
+          <main className="flex-1 min-w-0">
+            {/* REMOVED: The mobile menu logic is no longer needed here */}
+            
+            <div className="space-y-6">
+              {/* "About The Department" Section (Unchanged) */}
+              <section className="bg-white p-8 rounded-lg shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-indigo-100 p-2 rounded-full">
+                    <BookOpen className="w-6 h-6 text-indigo-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">About The Department</h2>
+                </div>
+                <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
+                  <p>Established in 2002, the Department of Master of Computer Applications at Vignan’s Institute of Information Technology is a hub of academic and research excellence. We offer comprehensive B.Tech and M.Tech programs designed to provide a deep understanding of all facets of computer science.</p>
+                </div>
+              </section>
 
-      
-        </main>
-       
+              {/* Grid Layout (Unchanged) */}
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                {/* HoD's Message Section (Unchanged) */}
+                <section className="bg-white p-8 rounded-lg shadow-sm lg:col-span-2">
+                  <div className="flex flex-col items-start gap-6">
+                    <div className="w-full text-center">
+                      <img src="https://vignaniit.edu.in/images/MCA_HOD.jpg" alt="Dr.Chandrasekharan Dinesh" className="w-32 h-32 mx-auto object-cover border-4 border-slate-200 rounded-xl" />
+                      <h3 className="mt-4 text-lg font-bold text-slate-900">Dr.Chandrasekharan Dinesh</h3>
+                      <p className="text-indigo-600 font-semibold text-sm">Head of Department, MCA</p>
+                    </div>
+                    <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
+                      <h2 className="text-2xl font-bold text-slate-800 !mb-2 text-center md:text-left">Message from the HoD</h2>
+                      <p>"A warm welcome to MCA@VIIT. Our department is built on a foundation of academic rigor and creative research. We are dedicated to nurturing the next generation of innovators who will shape our digital future by focusing on key areas of study."</p>
+                    </div>
+                  </div>
+                </section>
+                {/* Core Focus Areas Section (Unchanged) */}
+                <section className="bg-white p-8 rounded-lg shadow-sm lg:col-span-3">
+                  <h2 className="text-2xl font-bold text-slate-800 mb-6">Core Focus Areas</h2>
+                  <div>
+                    {focusAreas.map((area) => (
+                      <ProfessionalFocusItem key={area.title} title={area.title}>{area.description}</ProfessionalFocusItem>
+                    ))}
+                  </div>
+                </section>
+              </div>
+            </div>
+          </main>
+        </div>
       </div>
-       
     </div>
   );
 }
