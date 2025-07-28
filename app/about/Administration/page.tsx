@@ -63,9 +63,9 @@ export default function Administration() {
               className={clsx(
                 'absolute w-80 h-[420px] transition-all duration-700 ease-in-out rounded-xl shadow-xl bg-white border',
                 {
-                  'z-30 scale-100 left-1/2 -translate-x-1/2': pos === 'center',
-                  'z-20 scale-90 -translate-x-[160%] opacity-40': pos === 'left',
-                  'z-20 scale-90 translate-x-[160%] opacity-40': pos === 'right',
+                  'z-4 scale-100 left-1/2 -translate-x-1/2': pos === 'center',
+                  'z-1 scale-90 -translate-x-[160%] opacity-40': pos === 'left',
+                  'z-1 scale-90 translate-x-[160%] opacity-40': pos === 'right',
                   'opacity-0 scale-75 pointer-events-none': pos === 'hidden',
                 }
               )}
