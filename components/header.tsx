@@ -114,7 +114,9 @@ const DesktopNav = () => {
 
     return (
 <nav className="hidden lg:flex items-center justify-evenly h-full">
-            <ul className="flex items-center h-full text-sm font-medium">
+<ul
+  className="flex flex-wrap justify-center items-center h-full text-sm font-medium w-full mx-auto gap-x-[clamp(0.5rem, 2vw, 2.5rem)] px-4"
+>
                 {navItems.map((item) => (
                     <li
                         key={item.label}

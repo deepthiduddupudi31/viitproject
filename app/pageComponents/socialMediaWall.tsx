@@ -2,13 +2,10 @@ import Image from "next/image";
 import { ThumbsUp, MessageSquare, Youtube, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
 
-
 export default function NonParallelSocialWall() {
   const primaryColor = "#005f9e";
   const collegeLogoUrl = "/viit-logo.jpeg";
 
-
-  // Posts definition (your data, unchanged)
   const posts = [
     {
       platform: "twitter",
@@ -41,6 +38,7 @@ export default function NonParallelSocialWall() {
       author: "VIIT Official",
       content: "Relive the moments from Yuvatarang 2025! Our official aftermovie is now live.",
       videoThumbnail: "/yuvatarang.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=YUVATARANG_VIDEO_ID",
       likes: 350,
       comments: 45,
       position: { top: '-5%', left: '55%' }
@@ -59,12 +57,12 @@ export default function NonParallelSocialWall() {
       author: "VISTA Tech Fest",
       content: "Keynote highlights from VISTA 2025 are now available. Don't miss out!",
       videoThumbnail: "/vista.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=VISTA_VIDEO_ID",
       likes: 400,
       comments: 60,
       position: { top: '55%', left: '55%' }
     },
   ];
-
 
   const platformIcons = {
     youtube: <Youtube className="w-5 h-5 text-white" />,
@@ -72,8 +70,6 @@ export default function NonParallelSocialWall() {
     twitter: <Twitter className="w-5 h-5 text-white" />,
   };
 
-
-  // Responsive check (simple)
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < 768);
@@ -82,10 +78,8 @@ export default function NonParallelSocialWall() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-
-  // For mobile view: all cards side by side in a horizontal scroll
   return (
-    <div className=" bg-gray-100 font-sans overflow-hidden">
+    <div className="bg-gray-100 font-sans overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-12 relative z-10">
@@ -96,7 +90,6 @@ export default function NonParallelSocialWall() {
           <div className="w-20 h-1.5 mx-auto mt-4" style={{ backgroundColor: primaryColor }}></div>
         </div>
 
-
         {/* Wall */}
         {!isMobile ? (
           <div className="relative w-full h-[100vh]">
@@ -104,28 +97,39 @@ export default function NonParallelSocialWall() {
               <div
                 key={index}
                 className="absolute bg-white rounded-xl shadow-lg overflow-hidden group w-72 md:w-80 transition-all duration-300 ease-in-out hover:shadow-2xl hover:z-20 hover:scale-105"
-                style={{
-                  top: post.position.top,
-                  left: post.position.left,
-                }}
+                style={{ top: post.position.top, left: post.position.left }}
               >
                 {(post.image || post.videoThumbnail) && (
-                  <div className="relative">
-                    <Image
-                      src={post.image || post.videoThumbnail}
-                      alt="Post media"
-                      width={500}
-                      height={300}
-                      layout="responsive"
-                      objectFit="cover"
-                    />
-                    {post.platform === 'youtube' && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                        <Youtube className="w-12 h-12 text-white/80" />
+                  post.platform === 'youtube' && post.videoUrl ? (
+                    <a href={post.videoUrl} target="_blank" rel="noopener noreferrer">
+                      <div className="relative">
+                        <Image
+                          src={post.videoThumbnail}
+                          alt="YouTube Thumbnail"
+                          width={500}
+                          height={300}
+                          layout="responsive"
+                          objectFit="cover"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                          <Youtube className="w-12 h-12 text-white/80" />
+                        </div>
                       </div>
-                    )}
-                  </div>
+                    </a>
+                  ) : (
+                    <div className="relative">
+                      <Image
+                        src={post.image}
+                        alt="Post media"
+                        width={500}
+                        height={300}
+                        layout="responsive"
+                        objectFit="cover"
+                      />
+                    </div>
+                  )
                 )}
+
                 <div className="p-4">
                   <div className="flex items-start mb-3">
                     <Image
@@ -152,9 +156,7 @@ export default function NonParallelSocialWall() {
                       <span className="text-xs font-medium">{post.comments}</span>
                     </div>
                   </div>
-                  <div className="text-white">
-                    {platformIcons[post.platform]}
-                  </div>
+                  <div className="text-white">{platformIcons[post.platform]}</div>
                 </div>
               </div>
             ))}
@@ -168,22 +170,36 @@ export default function NonParallelSocialWall() {
                   className="bg-white rounded-xl shadow-lg overflow-hidden group min-w-[240px] max-w-[250px] transition-all duration-300 hover:shadow-2xl hover:z-20"
                 >
                   {(post.image || post.videoThumbnail) && (
-                    <div className="relative ">
-                      <Image
-                        src={post.image || post.videoThumbnail}
-                        alt="Post media"
-                        width={400}
-                        height={240}
-                        layout="responsive"
-                        objectFit="cover"
-                      />
-                      {post.platform === 'youtube' && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                          <Youtube className="w-10 h-10 text-white/80" />
+                    post.platform === 'youtube' && post.videoUrl ? (
+                      <a href={post.videoUrl} target="_blank" rel="noopener noreferrer">
+                        <div className="relative">
+                          <Image
+                            src={post.videoThumbnail}
+                            alt="YouTube Thumbnail"
+                            width={500}
+                            height={300}
+                            layout="responsive"
+                            objectFit="cover"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                            <Youtube className="w-10 h-10 text-white/80" />
+                          </div>
                         </div>
-                      )}
-                    </div>
+                      </a>
+                    ) : (
+                      <div className="relative">
+                        <Image
+                          src={post.image}
+                          alt="Post media"
+                          width={500}
+                          height={300}
+                          layout="responsive"
+                          objectFit="cover"
+                        />
+                      </div>
+                    )
                   )}
+
                   <div className="p-3">
                     <div className="flex items-start mb-2">
                       <Image
@@ -210,9 +226,7 @@ export default function NonParallelSocialWall() {
                         <span className="text-xs font-medium">{post.comments}</span>
                       </div>
                     </div>
-                    <div className="text-white">
-                      {platformIcons[post.platform]}
-                    </div>
+                    <div className="text-white">{platformIcons[post.platform]}</div>
                   </div>
                 </div>
               ))}
@@ -223,4 +237,3 @@ export default function NonParallelSocialWall() {
     </div>
   );
 }
-

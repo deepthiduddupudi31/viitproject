@@ -121,6 +121,7 @@ export const navItems: NavItem[] = [
       { label: "Contact", path: "/placements/contact" },
     ],
   },
+  
   {
     label: "Examinations",
     path: "#",
