@@ -48,7 +48,7 @@
     "input-otp": "1.4.1",
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.454.0",
-    "next": "15.2.4",
+    "next": "^15.2.4",
     "next-themes": "^0.4.4",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
@@ -60,7 +60,7 @@
     "recharts": "2.15.0",
     "sonner": "^1.7.1",
     "swiper": "^11.2.10",
-    "tailwind-merge": "^2.5.5",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.6",
     "zod": "^3.24.1"

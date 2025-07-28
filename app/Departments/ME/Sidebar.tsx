@@ -1,118 +1,97 @@
 'use client';
-//Sidebar
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import {
+  ChevronDown, Menu, X, Info, Book, GraduationCap, Building,
+  Users, FlaskConical, Handshake, Star,
+} from 'lucide-react';
+import { clsx } from 'clsx';
 
-export default function Sidebar() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  // Sidebar menu data inside component
-  const sidebarItems = [
-  { title: 'About Us', href: '/about' },
-  { title: 'Vision and Mission', href: '/vision' },
-  { title: 'Programs Offered', href: '/programs' },
+const sidebarItems = [
+  { type: 'header', title: 'Department' },
+  { title: 'About Us', href: '/about', icon: Info },
+  { title: 'Vision & Mission', href: '/vision', icon: Book },
+  { type: 'header', title: 'Academics' },
+  { title: 'Programs Offered', href: '/programs', icon: GraduationCap },
   {
-    title: 'POs',
+    title: 'Curriculum', icon: Book,
     children: [
-      { title: 'B.Tech', href: '/pos/btech' },
-      { title: 'M.Tech', href: '/pos/mtech' },
+      { title: 'POs - B.Tech', href: '/pos/btech' },
+      { title: 'PEOs - B.Tech', href: '/peos/btech' },
+      { title: 'PSOs - B.Tech', href: '/psos/btech' },
     ],
   },
-  {
-    title: 'PEOs',
-    children: [
-      { title: 'B.Tech', href: '/peos/btech' },
-      { title: 'M.Tech', href: '/peos/mtech' },
-    ],
-  },
-  {
-    title: 'PSOs',
-    children: [
-      { title: 'B.Tech', href: '/psos/btech' },
-      { title: 'M.Tech', href: '/psos/mtech' },
-    ],
-  },
-  { title: 'Board of Studies', href: '/board-of-studies' },
-  { title: 'Department Development Committee', href: '/ddc' },
-  { title: 'PAQIC', href: '/paqic' },
-  { title: 'CDMC', href: '/cdmc' },
-  {
-    title: 'Program Structure & Syllabus',
-    children: [
-      { title: 'B.Tech', href: '/syllabus/btech' },
-      { title: 'M.Tech', href: '/syllabus/mtech' },
-    ],
-  },
-  { title: 'Faculty', href: '/faculty' },
-  { title: 'Infrastructure', href: '/infrastructure' },
-  { title: 'Laboratories', href: '/laboratories' },
-  { title: 'Innovative Teaching Practices', href: '/teaching-practices' },
-  { title: 'Collaborations', href: '/collaborations' },
-  { title: 'Co-Curricular Activities', href: '/co-curricular' },
-  { title: 'Extra', href: '/extra' },
+  { type: 'header', title: 'People & Places' },
+  { title: 'Faculty', href: '/faculty', icon: Users },
+  { title: 'Infrastructure', href: '/infrastructure', icon: Building },
+  { title: 'Laboratories', href: '/laboratories', icon: FlaskConical },
+  { type: 'header', title: 'Engagement' },
+  { title: 'Collaborations', href: '/collaborations', icon: Handshake },
+  { title: 'Achievements', href: '/extra', icon: Star },
 ];
 
+const NavLink = ({ item, isActive, onNavigate }) => (
+  <li>
+    <Link
+      href={item.href || '#'}
+      onClick={onNavigate}
+      className={clsx(
+        'flex items-center gap-3 px-3 py-2.5 rounded-md',
+        isActive
+          ? 'bg-indigo-50 text-indigo-700 font-semibold'
+          : 'text-slate-600 hover:bg-slate-100'
+      )}
+    >
+      <item.icon className="w-5 h-5" />
+      <span className="text-sm">{item.title}</span>
+    </Link>
+  </li>
+);
 
-  return (
-    <>
-      {/* Mobile Menu Button (hidden on md and up) */}
-      <button
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-        className="md:hidden p-3 absolute  left-2   bg-blue-900 text-white  rounded"
-      >
-        ☰
-      </button>
+const DropdownItem = ({ item, currentPath, onNavigate }) => {
+  const isParentActive = item.children.some(child => child.href === currentPath);
+  const [isOpen, setIsOpen] = useState(isParentActive);
 
-      {/* Sidebar */}
-     <div
-  className={`bg-blue-900 text-white min-h-screen p-4 z-40 transition-transform 
-  fixed top-0 left-0 h-full w-64 md:relative md:translate-x-0 
-  ${sidebarOpen ? 'translate-x-0  float absolute' : '-translate-x-full'} md:block`}
->
-
-        <h2 className="text-xl font-bold mb-4">Menu</h2>
-        <ul className="space-y-2">
-          {sidebarItems.map((item, idx) =>
-            item.children ? (
-              <DropdownItem key={idx} item={item} />
-            ) : (
-              <li key={idx}>
-                <Link href={item.href} className="block px-2 py-1 hover:bg-blue-700 rounded">
-                  {item.title}
-                </Link>
-              </li>
-            )
-          )}
-        </ul>
-
-        {/* Mobile only close button */}
-        <button
-          className="md:hidden mt-4 text-sm underline"
-          onClick={() => setSidebarOpen(false)}
-        >
-          Close
-        </button>
-      </div>
-    </>
-  );
-}
-
-function DropdownItem({ item }) {
-  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (isParentActive) setIsOpen(true);
+  }, [isParentActive]);
 
   return (
     <li>
-      <div
-        onClick={() => setOpen(!open)}
-        className="cursor-pointer px-2 py-1 hover:bg-blue-700 rounded flex justify-between items-center"
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={clsx(
+          'w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-md',
+          isParentActive ? 'bg-slate-100' : 'hover:bg-slate-100'
+        )}
       >
-        {item.title} <span>{open ? '-' : '+'}</span>
-      </div>
-      {open && (
-        <ul className="ml-4 mt-1 space-y-1">
-          {item.children.map((child, idx) => (
-            <li key={idx}>
-              <Link href={child.href} className="block px-2 py-1 hover:bg-blue-600 rounded">
+        <div className="flex items-center gap-3">
+          <item.icon className="w-5 h-5" />
+          <span className="text-sm font-medium text-slate-800">{item.title}</span>
+        </div>
+        <ChevronDown
+          className={clsx(
+            'w-5 h-5 text-slate-400 transition-transform',
+            { 'rotate-180': isOpen }
+          )}
+        />
+      </button>
+      {isOpen && (
+        <ul className="pl-8 py-1 space-y-1">
+          {item.children.map((child) => (
+            <li key={child.title}>
+              <Link
+                href={child.href}
+                onClick={onNavigate}
+                className={clsx(
+                  'block py-1.5 px-3 text-sm rounded',
+                  currentPath === child.href
+                    ? 'text-indigo-600 font-semibold'
+                    : 'text-slate-500 hover:text-indigo-600'
+                )}
+              >
                 {child.title}
               </Link>
             </li>
@@ -120,5 +99,92 @@ function DropdownItem({ item }) {
         </ul>
       )}
     </li>
+  );
+};
+
+export default function Sidebar() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const handleClose = () => setSidebarOpen(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 100);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <>
+      <button
+        onClick={() => setSidebarOpen(true)}
+        className={clsx(
+          'md:hidden fixed right-5 z-30 p-2 bg-blue-500 backdrop-blur-sm text-slate-800 rounded-full shadow-lg',
+          'transition-all duration-300 ease-in-out',
+          isScrolled ? 'top-[10px]' : 'top-[75px]'
+        )}
+        aria-label="Open menu"
+      >
+        <Menu className="h-6 w-6" />
+      </button>
+
+      <div
+        onClick={handleClose}
+        className={clsx(
+          'md:hidden fixed inset-0 bg-black/60 z-40 transition-opacity',
+          sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        )}
+        aria-hidden="true"
+      />
+
+      <aside
+        className={clsx(
+          'bg-white w-72 p-4 z-50 lg:z-0 transition-transform duration-300 ease-in-out',
+          'fixed top-0 left-0 h-full flex flex-col',
+          sidebarOpen ? 'translate-x-0' : '-translate-x-full',
+          'md:translate-x-0 md:h-fit md:max-h-[calc(100vh-5rem)] md:rounded-xl md:shadow-sm',
+          'md:relative md:w-64 lg:w-72 md:left-auto md:top-auto',
+          'md:sticky md:top-24'
+        )}
+      >
+        <div className="flex justify-between items-center mb-4 p-2">
+          <h2 className="text-lg font-bold text-slate-800">CSE Department</h2>
+          <button onClick={handleClose} className="md:hidden p-1">
+            <X className="h-6 w-6 text-slate-500" />
+            <span className="sr-only">Close menu</span>
+          </button>
+        </div>
+
+        <nav className="flex-1 overflow-y-auto">
+          <ul className="space-y-1">
+            {sidebarItems.map((item, index) =>
+              item.type === 'header' ? (
+                <li
+                  key={index}
+                  className="px-3 pt-4 pb-1 text-xs font-bold uppercase text-indigo-700 tracking-wider"
+                >
+                  {item.title}
+                </li>
+              ) : item.children ? (
+                <DropdownItem
+                  key={item.title}
+                  item={item}
+                  currentPath={pathname}
+                  onNavigate={handleClose}
+                />
+              ) : (
+                <NavLink
+                  key={item.title}
+                  item={item}
+                  isActive={pathname === item.href}
+                  onNavigate={handleClose}
+                />
+              )
+            )}
+          </ul>
+        </nav>
+      </aside>
+    </>
   );
 }
