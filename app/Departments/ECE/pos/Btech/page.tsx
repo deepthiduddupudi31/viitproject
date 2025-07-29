@@ -20,13 +20,13 @@ const programmeOutcomes = [
     id: 'PO3',
     title: 'Design/Development of Solutions',
     description:
-      'Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.',
+      'Design solutions for complex engineering problems and design system components or processes that meet specified needs with appropriate consideration for public health and safety, and the cultural, societal, and environmental considerations.',
   },
   {
     id: 'PO4',
     title: 'Conduct Investigations of Complex Problems',
     description:
-      'Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.',
+      'Use research-based knowledge and research methods including the design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.',
   },
   {
     id: 'PO5',
@@ -38,37 +38,37 @@ const programmeOutcomes = [
     id: 'PO6',
     title: 'The Engineer and Society',
     description:
-      'Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.',
+      'Apply reasoning informed by contextual knowledge to assess societal, health, safety, legal, and cultural issues and the consequent responsibilities relevant to professional engineering practice.',
   },
   {
     id: 'PO7',
     title: 'Environment and Sustainability',
     description:
-      'Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.',
+      'Understand the impact of professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for, sustainable development.',
   },
   {
     id: 'PO8',
     title: 'Ethics',
     description:
-      'Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.',
+      'Apply ethical principles and commit to professional ethics and responsibilities and norms of engineering practice.',
   },
   {
     id: 'PO9',
     title: 'Individual and Team Work',
     description:
-      'Function effectively as an individual and as a member or leader in diverse teams, and in multidisciplinary settings.',
+      'Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.',
   },
   {
     id: 'PO10',
     title: 'Communication',
     description:
-      'Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.',
+      'Communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.',
   },
   {
     id: 'PO11',
     title: 'Project Management and Finance',
     description:
-      'Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.',
+      'Demonstrate knowledge and understanding of engineering and management principles and apply them to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.',
   },
   {
     id: 'PO12',
@@ -84,7 +84,7 @@ export default function CivilPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/ece.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />

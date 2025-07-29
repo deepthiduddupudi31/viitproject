@@ -1,9 +1,9 @@
-'use client'
-import Sidebar from '../Sidebar'
+'use client';
+import Sidebar from '../Sidebar';
 
 const extensionData = [
-  ['Technical extension activities', 1, 3, 2, 2, 2],
-]
+  ['Technical Extension Activities', '07', '04', '-', '02', '02'],
+];
 
 export default function ExtensionActivities() {
   return (
@@ -11,8 +11,8 @@ export default function ExtensionActivities() {
       {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
-          alt="Extension Banner"
+          src="https://vignaniit.edu.in/images/ecm.jpg"
+          alt="Extension Activities Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
       </div>
@@ -30,7 +30,7 @@ export default function ExtensionActivities() {
               <table className="w-full text-sm border rounded-md shadow-md">
                 <thead className="bg-blue-100 text-gray-700">
                   <tr>
-                    <th className="px-4 py-2 border">A.Y.</th>
+                    <th className="px-4 py-2 border text-left">Academic Year</th>
                     <th className="px-4 py-2 border">2022-23</th>
                     <th className="px-4 py-2 border">2021-22</th>
                     <th className="px-4 py-2 border">2020-21</th>
@@ -42,9 +42,7 @@ export default function ExtensionActivities() {
                   {extensionData.map((row, idx) => (
                     <tr key={idx} className="odd:bg-white even:bg-gray-50 text-center">
                       {row.map((cell, cIdx) => (
-                        <td key={cIdx} className="px-4 py-2 border">
-                          {cell}
-                        </td>
+                        <td key={cIdx} className="px-4 py-2 border">{cell}</td>
                       ))}
                     </tr>
                   ))}
@@ -55,5 +53,5 @@ export default function ExtensionActivities() {
         </main>
       </div>
     </div>
-  )
+  );
 }

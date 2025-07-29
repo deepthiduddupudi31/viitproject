@@ -16,20 +16,68 @@ const sidebarItems = [
   { type: 'header', title: 'Academics' },
   { title: 'Programs Offered', href: '/programs', icon: GraduationCap },
   {
-    title: 'Curriculum', icon: Book,
+  title: 'POs',
+  children: [
+    { title: 'B.Tech', href: '/pos/btech' },
+    {
+      title: 'M.Tech',
+      href: '/pos/mtech',
+      children: [
+        { title: 'DECS', href: '/pos/mtech/decs' },
+        { title: 'ECE', href: '/pos/mtech/ece' },
+      ],
+    },
+  ],
+}
+
+,  {
+  title: 'PEOs',
+  children: [
+    { title: 'B.Tech', href: '/pos/btech' },
+    {
+      title: 'M.Tech',
+      href: '/pos/mtech',
+      children: [
+        { title: 'DECS', href: '/pos/mtech/decs' },
+        { title: 'ECE', href: '/pos/mtech/ece' },
+      ],
+    },
+  ],
+}
+,
+  {
+  title: 'PSOs',
+  children: [
+    { title: 'B.Tech', href: '/pos/btech' },
+    {
+      title: 'M.Tech',
+      href: '/pos/mtech',
+      children: [
+        { title: 'DECS', href: '/pos/mtech/decs' },
+        { title: 'ECE', href: '/pos/mtech/ece' },
+      ],
+    },
+  ],
+}
+,
+  { title: 'Board of Studies', href: '/board-of-studies' },
+  { title: 'Department Development Committee', href: '/ddc' },
+  { title: 'PAQIC', href: '/paqic' },
+  { title: 'CDMC', href: '/cdmc' },
+  {
+    title: 'Program Structure & Syllabus',
     children: [
-      { title: 'POs - B.Tech', href: '/pos/btech' },
-      { title: 'PEOs - B.Tech', href: '/peos/btech' },
-      { title: 'PSOs - B.Tech', href: '/psos/btech' },
+      { title: 'B.Tech', href: '/syllabus/btech' },
+      { title: 'M.Tech', href: '/syllabus/mtech' },
     ],
   },
-  { type: 'header', title: 'People & Places' },
-  { title: 'Faculty', href: '/faculty', icon: Users },
-  { title: 'Infrastructure', href: '/infrastructure', icon: Building },
-  { title: 'Laboratories', href: '/laboratories', icon: FlaskConical },
-  { type: 'header', title: 'Engagement' },
-  { title: 'Collaborations', href: '/collaborations', icon: Handshake },
-  { title: 'Achievements', href: '/extra', icon: Star },
+  { title: 'Faculty', href: '/faculty' },
+  { title: 'Infrastructure', href: '/infrastructure' },
+  { title: 'Laboratories', href: '/laboratories' },
+  { title: 'Innovative Teaching Practices', href: '/teaching-practices' },
+  { title: 'Collaborations', href: '/collaborations' },
+  { title: 'Co-Curricular Activities', href: '/co-curricular' },
+  { title: 'Extra', href: '/extra' },
 ];
 
 const NavLink = ({ item, isActive, onNavigate }) => (

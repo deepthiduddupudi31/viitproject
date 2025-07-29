@@ -5,19 +5,20 @@ const programmeEducationalObjectives = [
   {
     id: 'PEO1',
     description:
-      'To provide commendable preparation for a career in mechanical engineering and prepare students for a career at the core/allied industries.',
+      'Utilize their updated knowledge and skills to adapt themselves in core and software companies to pursue their career successfully.',
   },
   {
     id: 'PEO2',
     description:
-      'To provide students with a sound foundation in the mathematical, scientific and engineering fundamentals necessary to formulate, solve and analyze engineering problems in mechanical engineering and to prepare them for higher studies.',
+      'Augment their proficiency towards higher education and research.',
   },
   {
     id: 'PEO3',
     description:
-      'To exhibit communication skills, team spirit, leadership qualities, life-long managerial skills, integrity and social and environmental responsibility, life-long learning ability, professional ethics and human values.',
+      'Solve contemporary issues related to society, ethical and human values with lifelong learning.',
   },
 ];
+
 
 export default function MtechPage() {
   return (
@@ -25,7 +26,7 @@ export default function MtechPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/ece.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />

@@ -3,26 +3,27 @@ import Sidebar from '../Sidebar'
 
 const innovationData = [
   {
-    ay: '2022-23', stad: 6, jigsaw: 6, tps: 7, fscr: 6, arcs: 6, seminar: 7,
-    flipped: 6, caseStudy: 5, tel: 4, openBook: 4, gameBased: 5, total: 62,
+    ay: '2022-23', stad: 4, jigsaw: 6, tps: 5, fscr: 9, arcs: 6, seminar: 5,
+    flipped: 4, caseStudy: 2, tel: 3, openBook: 3, gameBased: 5, total: 52,
   },
   {
-    ay: '2021-22', stad: 3, jigsaw: 2, tps: 2, fscr: 4, arcs: 3, seminar: 20,
-    flipped: 2, caseStudy: 5, tel: 3, openBook: 3, gameBased: 2, total: 47,
+    ay: '2021-22', stad: 5, jigsaw: 6, tps: 4, fscr: 5, arcs: 5, seminar: 4,
+    flipped: 4, caseStudy: 5, tel: 6, openBook: 4, gameBased: 4, total: 52,
   },
   {
-    ay: '2020-21', stad: 3, jigsaw: 3, tps: 3, fscr: 3, arcs: 3, seminar: 17,
-    flipped: 5, caseStudy: 5, tel: 7, openBook: 1, gameBased: 2, total: 52,
+    ay: '2020-21', stad: 11, jigsaw: 3, tps: 0, fscr: 1, arcs: 1, seminar: 9,
+    flipped: 2, caseStudy: 16, tel: 11, openBook: 1, gameBased: 1, total: 56,
   },
   {
-    ay: '2019-20', stad: 6, jigsaw: 3, tps: 4, fscr: 3, arcs: 4, seminar: 16,
-    flipped: 4, caseStudy: 5, tel: 9, openBook: 2, gameBased: 4, total: 60,
+    ay: '2019-20', stad: 5, jigsaw: 6, tps: 4, fscr: 5, arcs: 5, seminar: 4,
+    flipped: 4, caseStudy: 5, tel: 6, openBook: 4, gameBased: 4, total: 52,
   },
   {
-    ay: '2018-19', stad: 5, jigsaw: 5, tps: 5, fscr: 3, arcs: 5, seminar: 9,
-    flipped: 2, caseStudy: 6, tel: 11, openBook: 6, gameBased: 1, total: 58,
+    ay: '2018-19', stad: 4, jigsaw: 6, tps: 5, fscr: 9, arcs: 6, seminar: 5,
+    flipped: 4, caseStudy: 2, tel: 3, openBook: 3, gameBased: 5, total: 52,
   },
 ]
+
 
 const innovationPoints = [
   "Innovations in Content development",
@@ -38,7 +39,7 @@ export default function InnovativePractices() {
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/ece.jpg"
           alt="Innovative Practices"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />

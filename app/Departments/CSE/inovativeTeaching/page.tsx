@@ -3,24 +3,24 @@ import Sidebar from '../Sidebar'
 
 const innovationData = [
   {
-    ay: '2022-23', stad: 4, jigsaw: 6, tps: 5, fscr: 9, arcs: 6, seminar: 5,
-    flipped: 4, caseStudy: 2, tel: 3, openBook: 3, gameBased: 5, total: 52,
+    ay: '2022-23', stad: 6, jigsaw: 6, tps: 7, fscr: 4, arcs: 4, seminar: 8,
+    flipped: 5, caseStudy: 4, tel: 3, openBook: 5, gameBased: 2, total: 54,
   },
   {
-    ay: '2021-22', stad: 5, jigsaw: 6, tps: 4, fscr: 5, arcs: 5, seminar: 4,
-    flipped: 4, caseStudy: 5, tel: 6, openBook: 4, gameBased: 4, total: 52,
+    ay: '2021-22', stad: 4, jigsaw: 5, tps: 5, fscr: 4, arcs: 5, seminar: 6,
+    flipped: 5, caseStudy: 3, tel: 5, openBook: 5, gameBased: 3, total: 50,
   },
   {
-    ay: '2020-21', stad: 11, jigsaw: 3, tps: 0, fscr: 1, arcs: 1, seminar: 9,
-    flipped: 2, caseStudy: 16, tel: 11, openBook: 1, gameBased: 1, total: 56,
+    ay: '2020-21', stad: 10, jigsaw: 0, tps: 0, fscr: 9, arcs: 9, seminar: 10,
+    flipped: 6, caseStudy: 5, tel: 1, openBook: 5, gameBased: 1, total: 56,
   },
   {
-    ay: '2019-20', stad: 5, jigsaw: 6, tps: 4, fscr: 5, arcs: 5, seminar: 4,
-    flipped: 4, caseStudy: 5, tel: 6, openBook: 4, gameBased: 4, total: 52,
+    ay: '2019-20', stad: 6, jigsaw: 3, tps: 7, fscr: 8, arcs: 8, seminar: 10,
+    flipped: 6, caseStudy: 5, tel: 1, openBook: 5, gameBased: 1, total: 60,
   },
   {
-    ay: '2018-19', stad: 4, jigsaw: 6, tps: 5, fscr: 9, arcs: 6, seminar: 5,
-    flipped: 4, caseStudy: 2, tel: 3, openBook: 3, gameBased: 5, total: 52,
+    ay: '2018-19', stad: 7, jigsaw: 2, tps: 6, fscr: 7, arcs: 8, seminar: 9,
+    flipped: 7, caseStudy: 6, tel: 1, openBook: 5, gameBased: 2, total: 60,
   },
 ]
 
@@ -29,7 +29,6 @@ const innovationLinks = [
   { label: "ICT enabled T & L Methods", href: "#" },
   { label: "Instructional delivery methods", href: "#" },
   { label: "Instructional methods", href: "#" },
-  { label: "Continuous assessment & evaluation methodologies", href: "#" },
   {
     label: "Feedback on Innovative Teaching Learning Practices",
     href: "https://vignaniit.edu.in/feedback/viit_feedback.php",
@@ -41,7 +40,7 @@ export default function InnovativePractices() {
     <div>
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/cse.jpg"
+          src="https://vignaniit.edu.in/images/ecm.jpg"
           alt="Innovative Practices"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />
@@ -76,20 +75,20 @@ export default function InnovativePractices() {
               </thead>
               <tbody>
                 {innovationData.map((item, idx) => (
-                  <tr key={idx} className="even:bg-gray-50 odd:bg-white">
+                  <tr key={idx} className="even:bg-gray-50 odd:bg-white text-center">
                     <td className="border px-4 py-2">{item.ay}</td>
-                    <td className="border px-4 py-2 text-center">{item.stad}</td>
-                    <td className="border px-4 py-2 text-center">{item.jigsaw}</td>
-                    <td className="border px-4 py-2 text-center">{item.tps}</td>
-                    <td className="border px-4 py-2 text-center">{item.fscr}</td>
-                    <td className="border px-4 py-2 text-center">{item.arcs}</td>
-                    <td className="border px-4 py-2 text-center">{item.seminar}</td>
-                    <td className="border px-4 py-2 text-center">{item.flipped}</td>
-                    <td className="border px-4 py-2 text-center">{item.caseStudy}</td>
-                    <td className="border px-4 py-2 text-center">{item.tel}</td>
-                    <td className="border px-4 py-2 text-center">{item.openBook}</td>
-                    <td className="border px-4 py-2 text-center">{item.gameBased}</td>
-                    <td className="border px-4 py-2 text-center">{item.total}</td>
+                    <td className="border px-4 py-2">{item.stad}</td>
+                    <td className="border px-4 py-2">{item.jigsaw}</td>
+                    <td className="border px-4 py-2">{item.tps}</td>
+                    <td className="border px-4 py-2">{item.fscr}</td>
+                    <td className="border px-4 py-2">{item.arcs}</td>
+                    <td className="border px-4 py-2">{item.seminar}</td>
+                    <td className="border px-4 py-2">{item.flipped}</td>
+                    <td className="border px-4 py-2">{item.caseStudy}</td>
+                    <td className="border px-4 py-2">{item.tel}</td>
+                    <td className="border px-4 py-2">{item.openBook}</td>
+                    <td className="border px-4 py-2">{item.gameBased}</td>
+                    <td className="border px-4 py-2 font-bold">{item.total}</td>
                   </tr>
                 ))}
               </tbody>
@@ -115,7 +114,6 @@ export default function InnovativePractices() {
             ))}
           </ul>
 
-          {/* Centered Feedback Link */}
           <div className="flex justify-center mt-10">
             <a
               href={innovationLinks[innovationLinks.length - 1].href}

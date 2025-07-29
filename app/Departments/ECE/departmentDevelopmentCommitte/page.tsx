@@ -2,17 +2,17 @@
 import Sidebar from '.././Sidebar'
 
 const ddcMembers = [
-  { sno: 1, name: 'Dr. Sudhir Vummadisetti', role: 'Chairperson', designation: 'Head of the Department-CE' },
-  { sno: 2, name: 'Mr. M. Padmakar', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 3, name: 'Mr. K. Srinivas', role: 'Member Secretary', designation: 'Asst. HoD, CE' },
-  { sno: 4, name: 'Mr. B. Brahmaiah', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 5, name: 'Dr. RatnaTej Reddy', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 6, name: 'Mrs. Jami Lakshmi Sudha', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
-  { sno: 7, name: 'Mrs. Reshma Chandran T', role: 'Member', designation: 'Assistant Professor, VIIT (A)' },
+  { sno: 1, name: 'Dr.Ch. Ramesh Babu', role: 'Chairperson', designation: 'Head of the Department-ECE' },
+  { sno: 2, name: 'Prof.K. Babulu', role: 'Member', designation: 'Academic Expert, Director R&D, JNTU-GV.' },
+  { sno: 3, name: 'Mr. Sitarama Penumetsa', role: 'Member', designation: 'Industry Expert, CEO-Tech Team Solutions, Visakhapatnam' },
+  { sno: 4, name: 'Mr.Venkatesh Sappagaddi', role: 'Member', designation: 'Alumni Representative, Founder & CEO, Electro Pro. Pvt. Ltd' },
+  { sno: 5, name: 'Dr. A. Naga Jyothi', role: 'Member', designation: 'Professor, VIIT (A)' },
+  { sno: 6, name: 'Dr.K.Srinivasa Naik', role: 'Member', designation: 'Professor, VIIT(A)' },
+  { sno: 7, name: 'Dr. B. Prasad Rao', role: 'Member', designation: 'Professor, VIIT(A)' },
+  { sno: 8, name: 'Mr. S. Ravi Kumar', role: 'Member Secretary', designation: 'Asst. HoD, ECE' },
 ];
 
 const ddcmoms = [
-  { year: '2023-24', url: 'https://vignaniit.edu.in/DDC/DDC_23-24.pdf' },
   { year: '2022-23', url: 'https://vignaniit.edu.in/DDC/DDC_ECE.pdf' },
   { year: '2021-22', url: 'https://vignaniit.edu.in/ddc/ece/ECE_DDC_2021_22.pdf' },
   { year: '2020-21', url: 'https://vignaniit.edu.in/ddc/ece/ECE_DDC_2020_21.pdf' },
@@ -40,16 +40,16 @@ export default function DepartmentDevelopmentCommittee() {
           <section className="mb-8">
             <h3 className="text-xl font-semibold mb-2 text-blue-800">Roles and Responsibilities</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Review the existing curriculum and suggest improvements for industry alignment and relevance.</li>
-              <li>Monitor industry trends and recommend guest lectures from experts.</li>
-              <li>Propose new specializations and value-added courses.</li>
-              <li>Suggest innovative teaching methodologies for better student engagement.</li>
-              <li>Advise strategies for placements, higher education, and entrepreneurship opportunities.</li>
-              <li>Identify research focus areas and funding opportunities.</li>
-              <li>Promote faculty collaboration and research innovation.</li>
-              <li>Support development of labs, libraries, and IT infrastructure.</li>
-              <li>Provide inputs on budget allocation for academic and research activities.</li>
-              <li><strong>Meeting Frequency:</strong> Once a year</li>
+              <li>Review the existing curriculum and suggest improvements to enhance its relevance, effectiveness, and alignment with industry standards.</li>
+              <li>Stay updated on current industry trends and skill requirements. Identify potential gaps between the department's curriculum and the industry's needs. Suggest industry expert lecture/guest lectures.</li>
+              <li>Based on industry trends and student needs, the DDC can recommend new specializations to be added to the department's curriculum. Suggest add-on/value added courses.</li>
+              <li>Suggest innovative teaching methods that promote student engagement, critical thinking, and deeper understanding of concepts.</li>
+              <li>Advise strategies to improve student placement, Higher education, Entrepreneurship opportunities.</li>
+              <li>Recommend areas of research focus for the department, considering emerging trends and faculty expertise. Advice faculty to identifying potential funding sources for research projects.</li>
+              <li>Encourage collaboration between faculty members on research projects. Promote innovation and entrepreneurship within the department.</li>
+              <li>Advise on the development and maintenance of departmental infrastructure and facilities like laboratories, libraries, and IT resources.</li>
+              <li>Provide recommendations on the allocation of departmental budget for various activities like curriculum development, faculty training, and research projects.</li>
+              <li><strong>Meeting Frequency:</strong> Once in a year</li>
             </ul>
           </section>
 

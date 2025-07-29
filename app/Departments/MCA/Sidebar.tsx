@@ -23,13 +23,27 @@ const sidebarItems = [
       { title: 'PSOs - B.Tech', href: '/psos/btech' },
     ],
   },
-  { type: 'header', title: 'People & Places' },
-  { title: 'Faculty', href: '/faculty', icon: Users },
-  { title: 'Infrastructure', href: '/infrastructure', icon: Building },
-  { title: 'Laboratories', href: '/laboratories', icon: FlaskConical },
-  { type: 'header', title: 'Engagement' },
-  { title: 'Collaborations', href: '/collaborations', icon: Handshake },
-  { title: 'Achievements', href: '/extra', icon: Star },
+  { title: 'Board of Studies', href: '/board-of-studies' },
+  { title: 'Department Development Committee', href: '/ddc' },
+  { title: 'PAQIC', href: '/paqic' },
+  { title: 'CDMC', href: '/cdmc' },
+  {
+  title: 'Syllabus',
+  children: [
+    { title: 'VR 17', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2017/VR17%20Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 19', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2019/VR%2019%20Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 20', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2020/MCA_VR20_Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 22', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2022/VR22%20MCA%20syllabus.pdf' },
+  ],
+}
+
+, { title: 'Faculty', href: '/faculty' },
+  { title: 'Infrastructure', href: '/infrastructure' },
+  { title: 'Laboratories', href: '/laboratories' },
+  { title: 'Innovative Teaching Practices', href: '/teaching-practices' },
+  { title: 'Collaborations', href: '/collaborations' },
+  { title: 'Co-Curricular Activities', href: '/co-curricular' },
+  { title: 'Extra', href: '/extra' },
 ];
 
 const NavLink = ({ item, isActive, onNavigate }) => (

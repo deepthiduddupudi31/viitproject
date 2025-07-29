@@ -2,16 +2,17 @@
 import Sidebar from '../Sidebar'
 
 const activityData = [
-  ['Internships', 111, 117, 33, '-', '-'],
-  ['Mini Project', 42, 74, 21, '-', '-'],
-  ['Major Project', 36, 37, 37, 43, 39],
-  ['MOOCS (NPTEL/Coursera etc)', 141, 64, 48, 41, 33],
+  ['Internships', 600, 304, 109, '-', '-'],
+  ['Mini Project', 42, 96, 76, '-', '-'],
+  ['Major Project', 57, 31, 49, 48, 51],
+  ['MOOCS (NPTEL/Coursera etc)', 137, '-', 151, 124, '-'],
   ['Add on Courses', 3, 3, 3, 3, 3],
-  ['Value added Courses', 7, 5, 5, 3, 2],
-  ['Workshops/ Seminars/ Conferences', 2, 2, 2, 1, 1],
-  ['Guest Lectures', 1, 3, 2, 1, 1],
-  ['Industrial Visits', 3, 3, '-', 4, 9],
+  ['Value added Courses', 6, 4, 4, 7, 5],
+  ['Workshops/ Seminars/ Conferences', 1, 0, 0, 1, 1],
+  ['Guest Lectures', 2, 4, 4, 3, 3],
+  ['Industrial Visits', 2, 2, '-', 2, '-'],
 ]
+
 
 export default function CoCurricular() {
   return (

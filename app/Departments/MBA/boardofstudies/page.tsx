@@ -4,131 +4,155 @@ import Sidebar from '.././Sidebar';
 const boardOfStudiesMembers = [
   {
     sno: 1,
-    name: 'Dr. Sudhir Vummadisetti',
-    designation: 'Associate Professor',
+    name: 'Dr.P.Ramesh',
+    designation: 'Assoc. Professor Cum HOD',
     category: 'Education',
-    status: 'Chairperson (HoD)',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Chairperson (HOD)',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 2,
-    name: 'Prof. Brijesh Kumar Dubey',
-    designation: 'Member',
+    name: 'Dr.S.M.Murali Krishna',
+    designation: 'Professor',
     category: 'Education',
-    status: 'External Chair person',
-    affiliation: 'Professor, Dept of CIVIL, IIT Kharagpur',
+    status: 'Member Faculty - HR',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 3,
-    name: 'Prof. B Krishna Rao',
-    designation: 'Member',
+    name: 'Dr.Ch.Hari Govinda Rao',
+    designation: 'Assoc. Professor',
     category: 'Education',
-    status: 'External Member',
-    affiliation: 'Professor, Dept of CIVIL, JNTUK Kakinada',
+    status: 'Member Faculty - FINANCE',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 4,
-    name: 'Prof. Adi Seshu Siragam',
-    designation: 'Member',
+    name: 'Dr.T.Archanna Acharya',
+    designation: 'Assoc. Professor',
     category: 'Education',
-    status: 'Education Member',
-    affiliation: 'Andhra University, Visakhapatnam',
+    status: 'Member Faculty - FINANCE',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 5,
-    name: 'Mrs. V Suchitra',
-    designation: 'Member',
-    category: 'Industry, Verizon',
-    status: 'External Member',
-    affiliation: 'Deputy Engineer, Irrigation Department, Visakhapatnam',
+    name: 'Dr.Pinninti Sanyasi Rao',
+    designation: 'Assoc. Professor',
+    category: 'Education',
+    status: 'Member Faculty - FINANCE',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 6,
-    name: 'Mr. M. Pavani',
-    designation: 'Member',
-    category: 'Alumni',
-    status: 'External Member',
-    affiliation: 'Design Engineer (Civil), GVPR Engineer Limited, Hyderabad',
+    name: 'Mrs.B.Chandra',
+    designation: 'Asst. Professor',
+    category: 'Education',
+    status: 'Member Faculty - FINANCE',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 7,
-    name: 'Mr. M. Padmakar',
-    designation: 'Assistant Professor',
+    name: 'Mr.M.Srinu',
+    designation: 'Asst. Professor',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member Faculty - FINANCE',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 8,
-    name: 'Dr. Ratna Tej Reddy',
-    designation: 'Assoc. Professor',
+    name: 'Mr.V.Sivaji',
+    designation: 'Asst. Professor',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member Faculty - HR',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 9,
-    name: 'Dr. K. Bhaskara Rao',
-    designation: 'Assoc. Professor',
+    name: 'Ms.Praveena .KVS',
+    designation: 'Asst. Professor',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member Faculty - MARKETING',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 10,
-    name: 'Dr. L. Govinda',
-    designation: 'Assistant Professor',
+    name: 'Ms.CH.Ramya',
+    designation: 'Asst. Professor',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member Faculty - HR',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 11,
-    name: 'Mr. B. Brahmaiah',
-    designation: 'Assistant Professor',
+    name: 'Ms.Auadhati Datta',
+    designation: 'Asst. Professor',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member Faculty - HR',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 12,
-    name: 'Mr. K. Srinivas',
-    designation: 'Assistant Professor',
+    name: 'Ms.N.N.Anusha',
+    designation: 'Asst. Professor',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member Faculty - HR',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 13,
-    name: 'Mr. G. Sudheer Kumar',
-    designation: 'Assistant Professor',
+    name: 'Mr.U.Rakesh',
+    designation: 'Asst. Professor',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member Faculty - HR',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 14,
-    name: 'Mrs. M. Leela Priyanka',
-    designation: 'Assistant Professor',
+    name: 'Ms.N.Kanaka Maha Lakshmi',
+    designation: 'Teaching Asst.',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member Faculty - FINANCE',
+    affiliation: 'VIIT, Visakhapatnam',
   },
   {
     sno: 15,
-    name: 'Mr. P. Shiva Kumar',
-    designation: 'Assistant Professor',
+    name: 'Dr. P Sridevi',
+    designation: 'Asst. Professor, JNTU Vizianagaram',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member',
+    affiliation: 'JNTUK',
   },
   {
     sno: 16,
-    name: 'Mr. Babu Rao',
-    designation: 'Assistant Professor',
+    name: 'Prof. Y Venkata Rao',
+    designation: 'Professor, School of Management Studies, Pondicherry University',
     category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    status: 'Member',
+    affiliation: 'Pondicherry University',
+  },
+  {
+    sno: 17,
+    name: 'Prof. D Suryachandra Rao',
+    designation: 'Professor, School of Management Studies, Krishna University',
+    category: 'Education',
+    status: 'Member',
+    affiliation: 'Krishna University',
+  },
+  {
+    sno: 18,
+    name: 'Mr. Durga Prasad Girijala',
+    designation: 'Corporate Investment Banking',
+    category: 'Industry',
+    status: 'Member',
+    affiliation: 'Wellsfargo Ltd., Bangalore',
+  },
+  {
+    sno: 19,
+    name: 'Mr. P Laxman Rao',
+    designation: 'Asst. Manager (HR)',
+    category: 'Alumni',
+    status: 'Member',
+    affiliation: 'Muthoot finance, Hyderabad',
   },
 ];
 
@@ -138,7 +162,7 @@ export default function BoardOfStudiesPage() {
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mba.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -149,7 +173,9 @@ export default function BoardOfStudiesPage() {
         <Sidebar />
         <main className="p-6 flex-1 bg-white overflow-x-auto">
           <h2 className="text-2xl font-bold text-blue-900 mb-6">Board of Studies</h2>
-          <h2 className="text-2xl font-bold text-blue-800 mb-6">Internal And External Membars</h2>
+          <h2 className="text-xl font-semibold text-blue-800 mb-6">
+            Internal & External Members
+          </h2>
           <table className="w-full table-auto border border-gray-300 text-sm text-left">
             <thead className="bg-blue-100">
               <tr>
@@ -163,7 +189,7 @@ export default function BoardOfStudiesPage() {
             </thead>
             <tbody>
               {boardOfStudiesMembers.map((member) => (
-                <tr key={member.sno}>
+                <tr key={member.sno} className="odd:bg-white even:bg-gray-50">
                   <td className="border px-2 py-1">{member.sno}</td>
                   <td className="border px-2 py-1">{member.name}</td>
                   <td className="border px-2 py-1">{member.designation}</td>

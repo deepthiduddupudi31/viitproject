@@ -2,35 +2,30 @@
 import Sidebar from '../Sidebar'
 
 const facultyList = [
-  { sno: 1, name: 'Dr.L.Govinda', designation: 'HOD-Assoc. Prof.' },
-  { sno: 2, name: 'Dr.G.Tejaswi Laxmi Priyanka', designation: 'Assoc. Prof.' },
-  { sno: 3, name: 'Dr.K.Ramesh Babu', designation: 'Assoc.Prof' },
-  { sno: 4, name: 'Dr.G.Amulya', designation: 'Assoc. Prof.' },
-  { sno: 5, name: 'Dr.S.Gayathri', designation: 'Assoc. Prof.' },
-  { sno: 6, name: 'Dr.D.Sreeman', designation: 'Assoc. Prof.' },
-  { sno: 7, name: 'Dr.A.Srija', designation: 'Assoc. Prof.' },
-  { sno: 8, name: 'Dr.K.Dharithri', designation: 'Assoc. Prof.' },
-  { sno: 9, name: 'Dr.P.SruthiSekhar', designation: 'Assoc. Prof.' },
-  { sno: 10, name: 'Dr.G.Aravind Goud', designation: 'Assoc. Prof.' },
-  { sno: 11, name: 'Mr.B.Brahmaiah', designation: 'Sr.Asst.Prof' },
-  { sno: 12, name: 'Mr.K.Srinivas', designation: 'Sr.Asst. Prof.' },
-  { sno: 13, name: 'Ms.S.Kranthi Vijaya', designation: 'Sr.Asst. Prof.' },
-  { sno: 14, name: 'Ms.A.V.S.L.Ramya', designation: 'Asst. Prof.' },
-  { sno: 15, name: 'Mr.R.Rohit Babu', designation: 'Asst. Prof.' },
-  { sno: 16, name: 'Ms.M.Yogaswarna', designation: 'Asst.Prof' },
-  { sno: 17, name: 'Mr.M.Baburao', designation: 'Asst.Prof' },
-  { sno: 18, name: 'Mr.A.Teja', designation: 'Asst.Prof' },
-  { sno: 19, name: 'Ms.T.Reshma Chandran', designation: 'Asst.Prof' },
-  { sno: 20, name: 'Ms.K.Sree Sandhya', designation: 'Asst.Prof' },
-  { sno: 21, name: 'Mr.B.Ashok Kumar', designation: 'Asst.Prof' },
+  { sno: 1, name: 'Dr. B. Chandra', designation: 'HOD, Assoc. Prof.' },
+  { sno: 2, name: 'Dr. P. S. Ravindra', designation: 'Professor' },
+  { sno: 3, name: 'Dr. S. M. Murali Krishna', designation: 'Professor' },
+  { sno: 4, name: 'Dr. Ch. Hari Govinda Rao', designation: 'Assoc. Prof.' },
+  { sno: 5, name: 'Dr. M. Srinu', designation: 'Assoc. Prof.' },
+  { sno: 6, name: 'Dr. Praveena KVS', designation: 'Assoc. Prof.' },
+  { sno: 7, name: 'Dr. Pinninti Sanyasi Rao', designation: 'Assoc. Prof.' },
+  { sno: 8, name: 'Dr. K. G. K. Patnaik', designation: 'Assoc. Prof.' },
+  { sno: 9, name: 'Dr. J. Manogna', designation: 'Assoc. Prof.' },
+  { sno: 10, name: 'Mr. V. Sivaji', designation: 'Sr. Asst. Prof.' },
+  { sno: 11, name: 'Ms. Auadhati Datta', designation: 'Asst. Prof.' },
+  { sno: 12, name: 'Mr. U. Rakesh', designation: 'Asst. Prof.' },
+  { sno: 13, name: 'Mr. B. Siva Kumar', designation: 'Asst. Prof.' },
+  { sno: 14, name: 'Ms. P. Lavanya', designation: 'Asst. Prof.' },
+  { sno: 15, name: 'Ms. N. Kanaka Maha Lakshmi', designation: 'Teaching Asst.' },
 ]
 
 export default function Faculty() {
   return (
     <div>
+      {/* Banner */}
       <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/mba.jpg"
           alt="Faculty Banner"
           className="w-full h-32 object-cover rounded-lg shadow-md"
         />

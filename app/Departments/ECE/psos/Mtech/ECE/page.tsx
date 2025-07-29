@@ -1,31 +1,26 @@
 'use client'
-import Sidebar from '../../Sidebar';
+import Sidebar from '../../../Sidebar';
 
 const programSpecificOutcomes = [
   {
     id: 'PSO1',
     description:
-      'Apply knowledge of Transportation Engineering and management in real time.',
+      'Apply appropriate methodology and modern engineering/IT tools to meet the international standards in the area of Communication Engineering.',
   },
   {
     id: 'PSO2',
     description:
-      'Design a transportation system and analyse a system, component, or process in the knowledge areas of transportation engineering in real time problems.',
-  },
-  {
-    id: 'PSO3',
-    description:
-      'Conduct investigations and address complex Transportation engineering problems; Utilize and develop innovative tools and techniques that are appropriate in Transportation Engineering discipline.',
+      'Apply appropriate methodology and modern engineering/IT tools to meet the international standards in the area of Communication Engineering.',
   },
 ];
 
-export default function CivilPage() {
+export default function MTechPSOPage() {
   return (
     <div>
       {/* Header Banner */}
       <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
+          src="https://vignaniit.edu.in/images/ece.jpg"
           alt="Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
@@ -35,8 +30,9 @@ export default function CivilPage() {
       <div className="flex max-w-screen-xl mx-auto relative">
         <Sidebar />
         <main className="p-6 flex-1 bg-white">
-          {/* Program Specific Outcomes */}
-          <h2 className="text-2xl font-bold text-blue-900 mb-6">Program Specific Outcomes (PSOs)</h2>
+          <h2 className="text-2xl font-bold text-blue-900 mb-6">
+            Program Specific Outcomes (PSOs)
+          </h2>
           <div className="space-y-4">
             {programSpecificOutcomes.map((pso) => (
               <div key={pso.id}>

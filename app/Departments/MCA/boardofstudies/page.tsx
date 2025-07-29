@@ -4,172 +4,132 @@ import Sidebar from '.././Sidebar';
 const boardOfStudiesMembers = [
   {
     sno: 1,
-    name: 'Dr. Sudhir Vummadisetti',
-    designation: 'Associate Professor',
-    category: 'Education',
-    status: 'Chairperson (HoD)',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Dr.B.Prasad',
+    designation: 'Dean Training, Professor & HOD, Department of IT&MCA, VIIT (A)',
+    category: 'BOS-Chairman',
+    status: '',
+    affiliation: '7093098775 / prasad_bode@yahoo.com',
   },
   {
     sno: 2,
-    name: 'Prof. Brijesh Kumar Dubey',
-    designation: 'Member',
-    category: 'Education',
-    status: 'External Chair person',
-    affiliation: 'Professor, Dept of CIVIL, IIT Kharagpur',
+    name: 'Dr.D.Haritha',
+    designation: 'HOD & Professor, Department of CSE, JNTUK, Kakinada',
+    category: 'JNTUK-Nominee',
+    status: '',
+    affiliation: '9440810901 / harithadasari9@yahoo.com',
   },
   {
     sno: 3,
-    name: 'Prof. B Krishna Rao',
-    designation: 'Member',
-    category: 'Education',
-    status: 'External Member',
-    affiliation: 'Professor, Dept of CIVIL, JNTUK Kakinada',
+    name: 'Mr.S.L.N.Ratna Giri',
+    designation: 'Scientist Grade “B”, NSTL, Visakhapatnam',
+    category: 'Industry-Nominee',
+    status: '',
+    affiliation: '9441321616 / sathishrgiri_s@yahoo.co.in',
   },
   {
     sno: 4,
-    name: 'Prof. Adi Seshu Siragam',
-    designation: 'Member',
-    category: 'Education',
-    status: 'Education Member',
-    affiliation: 'Andhra University, Visakhapatnam',
+    name: 'Mr.M.Santosh Kumar',
+    designation: 'Software Engineer, Mylas Info. Tech. Pvt., Visakhapatnam',
+    category: 'Alumni-Nominee',
+    status: '',
+    affiliation: '8978636475 / santoshkumarmaddu@gmail.com',
   },
   {
     sno: 5,
-    name: 'Mrs. V Suchitra',
-    designation: 'Member',
-    category: 'Industry, Verizon',
-    status: 'External Member',
-    affiliation: 'Deputy Engineer, Irrigation Department, Visakhapatnam',
+    name: 'Dr.K.Venkata Rao',
+    designation: 'Professor & Dean IPD, Dept. of IT, VIIT (A)',
+    category: 'Internal Member',
+    status: '',
+    affiliation: '9866386587 / vr_koduganti@gmail.com',
   },
   {
     sno: 6,
-    name: 'Mr. M. Pavani',
-    designation: 'Member',
-    category: 'Alumni',
-    status: 'External Member',
-    affiliation: 'Design Engineer (Civil), GVPR Engineer Limited, Hyderabad',
+    name: 'Mr.M.Somasundara Rao',
+    designation: 'Associate Professor, Dept. of IT, VIIT (A)',
+    category: 'Internal Member',
+    status: '',
+    affiliation: '9866586806 / muppidisomasundararao@gmail.com',
   },
   {
     sno: 7,
-    name: 'Mr. M. Padmakar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Mr.P.Praveen Kumar',
+    designation: 'Assistant Professor, Dept. IT, VIIT(A)',
+    category: 'Internal Member',
+    status: '',
+    affiliation: '9989769768 / pk.pinjala@gmail.com',
   },
   {
     sno: 8,
-    name: 'Dr. Ratna Tej Reddy',
-    designation: 'Assoc. Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Mrs.A.Sireesha',
+    designation: 'Assistant Professor, Dept. IT, VIIT(A)',
+    category: 'Internal Member',
+    status: '',
+    affiliation: '9059498693 / aswadhati.sirisha@gmail.com',
   },
   {
     sno: 9,
-    name: 'Dr. K. Bhaskara Rao',
-    designation: 'Assoc. Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Mrs.G.Hima Bindu',
+    designation: 'Assistant Professor, Dept. IT, VIIT(A)',
+    category: 'Internal Member',
+    status: '',
+    affiliation: '9000809254 / goginenibindu9@gmail.com',
   },
   {
     sno: 10,
-    name: 'Dr. L. Govinda',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
+    name: 'Mrs.K.Gowthami Prasanthi',
+    designation: 'Assistant Professor, Dept. IT, VIIT(A)',
+    category: 'Internal Member',
+    status: '',
+    affiliation: '8885011584 / prasanthikalavala@gmail.com',
   },
-  {
-    sno: 11,
-    name: 'Mr. B. Brahmaiah',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 12,
-    name: 'Mr. K. Srinivas',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 13,
-    name: 'Mr. G. Sudheer Kumar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 14,
-    name: 'Mrs. M. Leela Priyanka',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 15,
-    name: 'Mr. P. Shiva Kumar',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
-  {
-    sno: 16,
-    name: 'Mr. Babu Rao',
-    designation: 'Assistant Professor',
-    category: 'Education',
-    status: 'Internal Member – Faculty',
-    affiliation: 'VIIT, Visakhapatnam.',
-  },
+  { sno: 11, name: 'Mrs.G.Jyothi', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
+  { sno: 12, name: 'Mrs.G.Mani', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
+  { sno: 13, name: 'Mr.Ch.Srinivas Reddy', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
+  { sno: 14, name: 'Mr.K.Leela Prasad', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
+  { sno: 15, name: 'Mr.G.Ravi Kumar', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
+  { sno: 16, name: 'Mr.P.Prudhvi Kiran', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
+  { sno: 17, name: 'Ms.Ch.V.Bhargavi', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
+  { sno: 18, name: 'Ms.V.Vasantha', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
+  { sno: 19, name: 'Mrs.Sushma', designation: 'Assistant Professor, Dept. IT, VIIT(A)', category: 'Internal Member', status: '', affiliation: 'Member –Faculty (IT)' },
 ];
 
 export default function BoardOfStudiesPage() {
   return (
     <div>
-      {/* Header Banner */}
-      <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
+      {/* Banner */}
+      <div className="max-w-screen-xl mx-auto text-white p-4">
         <img
-          src="https://vignaniit.edu.in/images/civil.jpg"
-          alt="Banner"
+          src="https://vignaniit.edu.in/images/mca.jpg"
+          alt="BOS Banner"
           className="w-full h-32 object-cover rounded-lg shadow-lg"
         />
       </div>
 
-      {/* Content layout */}
-      <div className="flex max-w-screen-xl mx-auto relative">
+      {/* Content */}
+      <div className="flex max-w-screen-xl mx-auto">
         <Sidebar />
-        <main className="p-6 flex-1 bg-white overflow-x-auto">
+
+        <main className="flex-1 p-6 overflow-x-auto bg-white">
           <h2 className="text-2xl font-bold text-blue-900 mb-6">Board of Studies</h2>
-          <h2 className="text-2xl font-bold text-blue-800 mb-6">Internal And External Membars</h2>
-          <table className="w-full table-auto border border-gray-300 text-sm text-left">
-            <thead className="bg-blue-100">
+          <h3 className="text-xl font-semibold text-blue-800 mb-4">Internal & External Members</h3>
+          <table className="w-full table-auto border border-gray-300 text-sm text-left shadow-sm">
+            <thead className="bg-blue-100 text-gray-700">
               <tr>
-                <th className="border px-2 py-2">S.No</th>
-                <th className="border px-2 py-2">Name</th>
-                <th className="border px-2 py-2">Designation</th>
-                <th className="border px-2 py-2">Category</th>
-                <th className="border px-2 py-2">Status</th>
-                <th className="border px-2 py-2">Affiliation</th>
+                <th className="border px-3 py-2">S.No</th>
+                <th className="border px-3 py-2">Name</th>
+                <th className="border px-3 py-2">Designation</th>
+                <th className="border px-3 py-2">Category</th>
+                <th className="border px-3 py-2">Contact / Affiliation</th>
               </tr>
             </thead>
             <tbody>
               {boardOfStudiesMembers.map((member) => (
-                <tr key={member.sno}>
-                  <td className="border px-2 py-1">{member.sno}</td>
-                  <td className="border px-2 py-1">{member.name}</td>
-                  <td className="border px-2 py-1">{member.designation}</td>
-                  <td className="border px-2 py-1">{member.category}</td>
-                  <td className="border px-2 py-1">{member.status}</td>
-                  <td className="border px-2 py-1">{member.affiliation}</td>
+                <tr key={member.sno} className="odd:bg-white even:bg-gray-50">
+                  <td className="border px-3 py-2">{member.sno}</td>
+                  <td className="border px-3 py-2">{member.name}</td>
+                  <td className="border px-3 py-2">{member.designation}</td>
+                  <td className="border px-3 py-2">{member.category}</td>
+                  <td className="border px-3 py-2">{member.affiliation}</td>
                 </tr>
               ))}
             </tbody>
