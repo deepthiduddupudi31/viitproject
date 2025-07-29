@@ -15,11 +15,11 @@ const ProfessionalFocusItem = ({ title, children }) => (
 export default function CsePageLayout() {
   // REMOVED: isMobileMenuOpen state is now inside the Sidebar component
   
-  const focusAreas = [
-    { title: "Core Computer Science", description: "Mastering the fundamentals from algorithms and data structures to cryptography and security." },
-    { title: "Systems & Software", description: "Exploring computer architecture, operating systems, compilers, and modern software engineering practices." },
-    { title: "Intelligent Systems", description: "Diving into the exciting fields of AI, machine learning, data mining, and information retrieval." },
-  ];
+const focusAreas = [
+    { title: "Core Electrical Engineering", description: "Mastering the fundamentals of circuit theory, electromagnetics, electrical machines, and power systems to build a strong electrical engineering base." },
+    { title: "Systems & Control", description: "Exploring control systems, power electronics, embedded systems, and renewable energy technologies driving modern electrical applications." },
+    { title: "Smart & Intelligent Systems", description: "Diving into advanced fields like IoT, smart grids, automation, robotics, and the integration of AI in electrical and energy systems." },
+  ];
 
   return (
     <div className="bg-slate-100 py-6 sm:py-8">

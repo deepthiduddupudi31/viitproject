@@ -15,11 +15,11 @@ const ProfessionalFocusItem = ({ title, children }) => (
 export default function CsePageLayout() {
   // REMOVED: isMobileMenuOpen state is now inside the Sidebar component
   
-  const focusAreas = [
-    { title: "Core Mechanical", description: "Mastering the fundamentals from algorithms and data structures to cryptography and security." },
-    { title: "Systems & Mechanics", description: "Exploring computer architecture, operating systems, compilers, and modern software engineering practices." },
-    { title: "Intelligent Systems", description: "Diving into the exciting fields of AI, machine learning, data mining, and information retrieval." },
-  ];
+const focusAreas = [
+    { title: "Core Mechanical", description: "Mastering the fundamentals of engineering mechanics, thermodynamics, fluid dynamics, and materials science essential to mechanical engineering." },
+    { title: "Systems & Mechanics", description: "Exploring mechanical systems design, manufacturing processes, heat transfer, and advanced mechanics used in industrial and automotive applications." },
+    { title: "Intelligent Systems", description: "Diving into smart manufacturing, robotics, CAD/CAM, automation, and the application of AI and machine learning in mechanical system optimization." },
+  ];
 
   return (
     <div className="bg-slate-100 py-6 sm:py-8">

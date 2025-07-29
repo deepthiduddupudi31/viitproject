@@ -15,11 +15,11 @@ const ProfessionalFocusItem = ({ title, children }) => (
 export default function ECMPageLayout() {
   // REMOVED: isMobileMenuOpen state is now inside the Sidebar component
   
-  const focusAreas = [
-    { title: "Core Computer Science", description: "Mastering the fundamentals from algorithms and data structures to cryptography and security." },
-    { title: "Systems & Software", description: "Exploring computer architecture, operating systems, compilers, and modern software engineering practices." },
-    { title: "Intelligent Systems", description: "Diving into the exciting fields of AI, machine learning, data mining, and information retrieval." },
-  ];
+const focusAreas = [
+    { title: "Foundations of Electronics & Computing", description: "Mastering the core principles of electronic circuits, digital systems, data structures, and programming, forming a strong base in both hardware and software." },
+    { title: "Embedded Systems & Software Technologies", description: "Exploring microcontrollers, embedded C, real-time systems, computer architecture, operating systems, and modern software development practices." },
+    { title: "Smart & Intelligent Systems", description: "Diving into AI, machine learning, IoT, data analytics, and the integration of intelligent algorithms in embedded and computing platforms." },
+  ];
 
   return (
     <div className="bg-slate-100 py-6 sm:py-8">

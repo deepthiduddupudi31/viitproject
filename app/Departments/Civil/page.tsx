@@ -15,11 +15,11 @@ const ProfessionalFocusItem = ({ title, children }) => (
 export default function CsePageLayout() {
   // REMOVED: isMobileMenuOpen state is now inside the Sidebar component
   
-  const focusAreas = [
-    { title: "Core Civil Engineering", description: "Mastering the fundamentals from algorithms and data structures to cryptography and security." },
-    { title: "Roads and construction", description: "Exploring computer architecture, operating systems, compilers, and modern software engineering practices." },
-    { title: "Intelligent Engineering", description: "Diving into the exciting fields of AI, machine learning, data mining, and information retrieval." },
-  ];
+const focusAreas = [
+    { title: "Core Civil Engineering", description: "Mastering the fundamentals of structural analysis, fluid mechanics, surveying, and construction materials to build a strong foundation in civil engineering.." },
+    { title: "Roads and construction", description: "Exploring the design and development of highways, pavements, and modern construction practices including project management and sustainable building techniques" },
+    { title: "Intelligent Engineering", description: "Diving into the integration of smart technologies in civil infrastructure through building information modeling (BIM), GIS, remote sensing, and data-driven decision-making for efficient planning and maintenance." },
+  ];
 
   return (
     <div className="bg-slate-100 py-6 sm:py-8">

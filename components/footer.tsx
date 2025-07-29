@@ -3,40 +3,23 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="w-full text-black">
-      {/* Light Red Section (Main Footer) */}
+    <footer className="w-full text-black mt-0 mb-0">
+      {/* Main Footer Section */}
       <div className="bg-white-100 w-full">
         <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
-          {/* Quick Links */}
+          
+          {/* Column 1 - Quicklinks */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Quicklinks</h3>
             <ul className="space-y-2 text-sm text-black/90">
               {[
-                ["Careers", "/careers"],
-                ["Hostels", "/hostels"],
-                ["Transport", "/transport"],
-                ["Policies", "/policies"],
-                ["Gallery", "/gallery"],
-                ["Equal Opportunity Cell", "/equal-opportunity"],
-                ["Facilities for differently-abled", "/facilities"],
-              ].map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-linkedin transition">
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="text-lg font-semibold mt-6 mb-4">Research</h4>
-            <ul className="space-y-2 text-sm text-black/90">
-              {[
-                ["Centers", "/research/centers"],
-                ["Google Scholar", "/research/google-scholar"],
-                ["Scopus", "/research/scopus"],
-                ["Patents", "/research/patents"],
-                ["Projects", "/research/projects"],
-                ["Publications", "/research/publications"],
+                ["AICTE", "/aicte"],
+                ["JNTU", "/jntu"],
+                ["ARIIA", "/ariia"],
+                ["AISHE", "/aishe"],
+                ["INAAC", "/inaac"],
+                ["NBA", "/nba"],
+                ["NIRF", "/nirf"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link href={href} className="hover:underline hover:text-linkedin transition">
@@ -47,16 +30,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* VIT Connect & Academics */}
+          {/* Column 2 - Alumni + Complaint */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">VIIT Connect</h3>
-            <ul className="space-y-2 text-sm text-black/90">
+            <h3 className="text-lg font-semibold mb-4">Alumni</h3>
+            <ul className="space-y-2 text-sm text-black/90 mb-6">
               {[
-                ["V-TOP Login", "/vtop-login"],
-                ["Mail", "/mail"],
                 ["Alumni", "/alumni"],
-                ["Contact Us", "/contact"],
-                ["Vitie-Bot", "/vitie-bot"],
+                ["V-Alumni", "/v-alumni"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link href={href} className="hover:underline hover:text-linkedin transition">
@@ -66,17 +46,10 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h4 className="text-lg font-semibold mt-6 mb-4">Academics</h4>
+            <h4 className="text-lg font-semibold mb-4">Complaint</h4>
             <ul className="space-y-2 text-sm text-black/90">
               {[
-                ["All Schools", "/academics/schools"],
-                ["Programs Offered", "/academics/programs"],
-                ["Academic Calendar", "/academics/calendar"],
-                ["Academic Leadership", "/academics/leadership"],
-                ["Application Process", "/academics/application"],
-                ["Fee Structure", "/academics/fee-structure"],
-                ["Scholarship", "/academics/scholarship"],
-                ["IQAC", "/academics/iqac"],
+                ["V-Grievances", "/v-grievances"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link href={href} className="hover:underline hover:text-linkedin transition">
@@ -87,33 +60,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Rankings & Info */}
+          {/* Column 3 - Screen Reader Access */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Ranking & Accreditation</h3>
+            <h3 className="text-lg font-semibold mb-4">Screen Reader Access</h3>
             <ul className="space-y-2 text-sm text-black/90">
               {[
-                ["RAAC", "/ranking/raac"],
-                ["NAAC", "/ranking/naac"],
-              ].map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href} className="hover:underline hover:text-linkedin transition">
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="text-lg font-semibold mt-6 mb-4">Information</h4>
-            <ul className="space-y-2 text-sm text-black/90">
-              {[
-                ["Public Self Disclosure", "/info/public-disclosure"],
-                ["University Act", "/info/university-act"],
-                ["Forms", "/info/forms"],
-                ["Directory", "/info/directory"],
-                ["Feedback", "/info/feedback"],
-                ["Academic Bank of Credit (ABC)", "/info/abc"],
-                ["Website Credits", "/info/website-credits"],
-                ["e-Samadhan", "/info/e-samadhan"],
+                ["NAD", "/nad"],
+                ["RTI", "/rti"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link href={href} className="hover:underline hover:text-linkedin transition">
@@ -124,9 +77,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Location */}
+          {/* Column 4 - Contact Address + Map */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">VIIT University</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Address</h3>
             <p className="text-sm text-black/80 mb-2">
               Beside AP Secretariat<br />
               Amaravathi – 522241, Andhra Pradesh
@@ -135,43 +88,24 @@ export default function Footer() {
               How to Reach ↗
             </Link>
 
-            <div className="mt-6 bg-green-100 rounded-lg h-32 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-8 h-8 bg-linkedin rounded-full mx-auto mb-2"></div>
-                <p className="text-xs text-gray-600">View larger map</p>
-              </div>
+            <h4 className="text-lg font-semibold mt-6 mb-4">Map Location</h4>
+            <div className="mt-2 rounded-lg overflow-hidden w-full h-32">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.095670486325!2d83.1633426!3d17.7104743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3968cb428b8087%3A0xaa3e198c43836a65!2sVignan's%20Institute%20Of%20Information%20Technology!5e0!3m2!1sen!2sin!4v1722050754825!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Dark Red Section (Bottom Footer) */}
-      <div className="bg-linkedin w-full text-white text-sm">
-        <div className="border-t border-white/20 px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center space-x-4">
-            <div className="bg-white text-linkedin w-10 h-10 rounded-full flex items-center justify-center font-bold">
-              VIIT
-            </div>
-            <div>
-              <p className="font-bold">VIIT University</p>
-              <p className="text-xs italic">Apply Knowledge. Improve Life!™</p>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-4 justify-center text-white/80">
-            {[
-              ["VIIT Home", "/"],
-              ["Maps & Directions", "/maps"],
-              ["Search", "/search"],
-              ["Emergency Info", "/emergency"],
-            ].map(([label, href]) => (
-              <Link key={href} href={href} className="hover:text-white transition">
-                {label}
-              </Link>
-            ))}
-          </div>
-        </div>
-
+      {/* Bottom Footer Section */}
+      <div className="bg-linkedin w-full text-white text-sm mt-0 mb-0">
         <div className="border-t border-white/20 px-6 py-4 flex flex-col md:flex-row justify-between items-center text-xs">
           <div className="flex flex-wrap gap-4 text-white/70 mb-4 md:mb-0">
             {[
@@ -204,8 +138,8 @@ export default function Footer() {
         </div>
 
         <div className="text-center border-t border-white/20 py-4 text-white/60 text-xs">
-          <p>© {new Date().getFullYear()} VIIT University. All rights reserved.</p>
-          <p className="italic mt-1">Crafted with ❤️ by VIIT University</p>
+          <p>© {new Date().getFullYear()} VIIT . All rights reserved.</p>
+          <p className="italic mt-1">Crafted  VIIT </p>
         </div>
       </div>
     </footer>

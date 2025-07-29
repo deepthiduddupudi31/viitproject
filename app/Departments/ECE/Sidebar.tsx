@@ -11,39 +11,25 @@ import { clsx } from 'clsx';
 
 const sidebarItems = [
   { type: 'header', title: 'Department' },
-  { title: 'About Us', href: '/about', icon: Info },
-  { title: 'Vision & Mission', href: '/vision', icon: Book },
+  { title: 'About Us', href: '/Departments/ECE', icon: Info },
+  { title: 'Vision & Mission', href: '/Departments/ECE/visionmission', icon: Book },
   { type: 'header', title: 'Academics' },
-  { title: 'Programs Offered', href: '/programs', icon: GraduationCap },
+  { title: 'Programs Offered', href: '/Departments/ECE/programs', icon: GraduationCap },
   {
     title: 'Curriculum', icon: Book,
     children: [
-      { title: 'POs - B.Tech', href: '/pos/btech' },
-      { title: 'PEOs - B.Tech', href: '/peos/btech' },
-      { title: 'PSOs - B.Tech', href: '/psos/btech' },
+      { title: 'POs - B.Tech', href: '/Departments/ECE/peos/Btech' },
+      { title: 'PEOs - B.Tech', href: '/Departments/ECE/peos/Mtech' },
+      { title: 'PSOs - B.Tech', href: '/Departments/ECE/peos/Mtech' },
     ],
   },
-  { title: 'Board of Studies', href: '/board-of-studies',icon: Book, },
-  { title: 'Department Development Committee', href: '/ddc' , icon: Handshake },
-  { title: 'PAQIC', href: '/paqic', icon: Handshake  },
-  { title: 'CDMC', href: '/cdmc', icon: Star  },
-  {
-  title: 'Syllabus',icon: Book,
-  children: [
-    { title: 'VR 17', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2017/VR17%20Master%20of%20Computer%20Applications.pdf' },
-    { title: 'VR 19', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2019/VR%2019%20Master%20of%20Computer%20Applications.pdf' },
-    { title: 'VR 20', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2020/MCA_VR20_Master%20of%20Computer%20Applications.pdf' },
-    { title: 'VR 22', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2022/VR22%20MCA%20syllabus.pdf' },
-  ],
-}
-
-, { title: 'Faculty', href: '/faculty',icon: Users },
-  { title: 'Infrastructure', href: '/infrastructure' , icon: Building },
-  { title: 'Laboratories', href: '/laboratories', icon: FlaskConical },
-  { title: 'Innovative Teaching Practices', href: '/teaching-practices' ,icon: Book,},
-  { title: 'Collaborations', href: '/collaborations', icon: Star  },
-  { title: 'Co-Curricular Activities', href: '/co-curricular', icon: Handshake  },
-  { title: 'Extra', href: '/extra', icon: Handshake  },
+  { type: 'header', title: 'People & Places' },
+  { title: 'Faculty', href: '/Departments/ECE/faculty', icon: Users },
+  { title: 'Infrastructure', href: '/Departments/ECE/infrastructure', icon: Building },
+  { title: 'Laboratories', href: '/Departments/ECE/laboratories', icon: FlaskConical },
+  { type: 'header', title: 'Engagement' },
+  { title: 'Collaborations', href: '/Departments/ECE/CDMD', icon: Handshake },
+  { title: 'Achievements', href: '/Departments/ECE/extraCirricularActivities', icon: Star },
 ];
 
 const NavLink = ({ item, isActive, onNavigate }) => (

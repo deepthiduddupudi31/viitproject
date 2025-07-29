@@ -15,11 +15,11 @@ const ProfessionalFocusItem = ({ title, children }) => (
 export default function MBAPageLayout() {
   // REMOVED: isMobileMenuOpen state is now inside the Sidebar component
   
-  const focusAreas = [
-    { title: "Core Computer Science", description: "Mastering the fundamentals from algorithms and data structures to cryptography and security." },
-    { title: "Systems & Software", description: "Exploring computer architecture, operating systems, compilers, and modern software engineering practices." },
-    { title: "Intelligent Systems", description: "Diving into the exciting fields of AI, machine learning, data mining, and information retrieval." },
-  ];
+const focusAreas = [
+    { title: "Core Management Principles", description: "Mastering the fundamentals of management, organizational behavior, economics, and business communication essential for effective leadership and decision-making." },
+    { title: "Business Analytics & Operations", description: "Exploring operations management, financial systems, marketing strategies, and the use of analytics tools to drive efficient business processes." },
+    { title: "Strategic & Digital Leadership", description: "Diving into entrepreneurship, strategic management, digital transformation, data-driven decision-making, and the integration of AI in modern business environments." },
+  ];
 
   return (
     <div className="bg-slate-100 py-6 sm:py-8">

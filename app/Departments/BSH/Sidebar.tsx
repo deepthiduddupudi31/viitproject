@@ -11,25 +11,25 @@ import { clsx } from 'clsx';
 
 const sidebarItems = [
   { type: 'header', title: 'Department' },
-  { title: 'About Us', href: '/about', icon: Info },
-  { title: 'Vision & Mission', href: '/vision', icon: Book },
+  { title: 'About Us', href: '/Departments/BSH', icon: Info },
+  { title: 'Vision & Mission', href: '/Departments/BSH/visionmission', icon: Book },
   { type: 'header', title: 'Academics' },
-  { title: 'Programs Offered', href: '/programs', icon: GraduationCap },
+  { title: 'Programs Offered', href: '/Departments/BSH/programs', icon: GraduationCap },
   {
     title: 'Curriculum', icon: Book,
     children: [
-      { title: 'POs - B.Tech', href: '/pos/btech' },
-      { title: 'PEOs - B.Tech', href: '/peos/btech' },
-      { title: 'PSOs - B.Tech', href: '/psos/btech' },
+      { title: 'POs - B.Tech', href: '/Departments/BSH/peos/Btech' },
+      { title: 'PEOs - B.Tech', href: '/Departments/BSH/peos/Mtech' },
+      { title: 'PSOs - B.Tech', href: '/Departments/BSH/peos/Mtech' },
     ],
   },
   { type: 'header', title: 'People & Places' },
-  { title: 'Faculty', href: '/faculty', icon: Users },
-  { title: 'Infrastructure', href: '/infrastructure', icon: Building },
-  { title: 'Laboratories', href: '/laboratories', icon: FlaskConical },
+  { title: 'Faculty', href: '/Departments/BSH/faculty', icon: Users },
+  { title: 'Infrastructure', href: '/Departments/BSH/infrastructure', icon: Building },
+  { title: 'Laboratories', href: '/Departments/BSH/laboratories', icon: FlaskConical },
   { type: 'header', title: 'Engagement' },
-  { title: 'Collaborations', href: '/collaborations', icon: Handshake },
-  { title: 'Achievements', href: '/extra', icon: Star },
+  { title: 'Collaborations', href: '/Departments/BSH/CDMD', icon: Handshake },
+  { title: 'Achievements', href: '/Departments/BSH/extraCirricularActivities', icon: Star },
 ];
 
 const NavLink = ({ item, isActive, onNavigate }) => (

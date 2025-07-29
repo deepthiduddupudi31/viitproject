@@ -9,27 +9,27 @@ import {
 } from 'lucide-react';
 import { clsx } from 'clsx';
 
-const sidebarItems = [
+const sidebarItems =  [
   { type: 'header', title: 'Department' },
-  { title: 'About Us', href: '/about', icon: Info },
-  { title: 'Vision & Mission', href: '/vision', icon: Book },
+  { title: 'About Us', href: '/Departments/ECM', icon: Info },
+  { title: 'Vision & Mission', href: '/Departments/ECM/visionmission', icon: Book },
   { type: 'header', title: 'Academics' },
-  { title: 'Programs Offered', href: '/programs', icon: GraduationCap },
+  { title: 'Programs Offered', href: '/Departments/ECM/programs', icon: GraduationCap },
   {
     title: 'Curriculum', icon: Book,
     children: [
-      { title: 'POs - B.Tech', href: '/pos/btech' },
-      { title: 'PEOs - B.Tech', href: '/peos/btech' },
-      { title: 'PSOs - B.Tech', href: '/psos/btech' },
+      { title: 'POs - B.Tech', href: '/Departments/ECM/peos/Btech' },
+      { title: 'PEOs - B.Tech', href: '/Departments/ECM/peos/Mtech' },
+      { title: 'PSOs - B.Tech', href: '/Departments/ECM/peos/Mtech' },
     ],
   },
   { type: 'header', title: 'People & Places' },
-  { title: 'Faculty', href: '/faculty', icon: Users },
-  { title: 'Infrastructure', href: '/infrastructure', icon: Building },
-  { title: 'Laboratories', href: '/laboratories', icon: FlaskConical },
+  { title: 'Faculty', href: '/Departments/ECM/faculty', icon: Users },
+  { title: 'Infrastructure', href: '/Departments/ECM/infrastructure', icon: Building },
+  { title: 'Laboratories', href: '/Departments/ECM/laboratories', icon: FlaskConical },
   { type: 'header', title: 'Engagement' },
-  { title: 'Collaborations', href: '/collaborations', icon: Handshake },
-  { title: 'Achievements', href: '/extra', icon: Star },
+  { title: 'Collaborations', href: '/Departments/ECM/CDMD', icon: Handshake },
+  { title: 'Achievements', href: '/Departments/ECM/extraCirricularActivities', icon: Star },
 ];
 
 const NavLink = ({ item, isActive, onNavigate }) => (
