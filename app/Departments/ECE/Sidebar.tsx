@@ -16,68 +16,34 @@ const sidebarItems = [
   { type: 'header', title: 'Academics' },
   { title: 'Programs Offered', href: '/programs', icon: GraduationCap },
   {
-  title: 'POs',
+    title: 'Curriculum', icon: Book,
+    children: [
+      { title: 'POs - B.Tech', href: '/pos/btech' },
+      { title: 'PEOs - B.Tech', href: '/peos/btech' },
+      { title: 'PSOs - B.Tech', href: '/psos/btech' },
+    ],
+  },
+  { title: 'Board of Studies', href: '/board-of-studies',icon: Book, },
+  { title: 'Department Development Committee', href: '/ddc' , icon: Handshake },
+  { title: 'PAQIC', href: '/paqic', icon: Handshake  },
+  { title: 'CDMC', href: '/cdmc', icon: Star  },
+  {
+  title: 'Syllabus',icon: Book,
   children: [
-    { title: 'B.Tech', href: '/pos/btech' },
-    {
-      title: 'M.Tech',
-      href: '/pos/mtech',
-      children: [
-        { title: 'DECS', href: '/pos/mtech/decs' },
-        { title: 'ECE', href: '/pos/mtech/ece' },
-      ],
-    },
+    { title: 'VR 17', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2017/VR17%20Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 19', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2019/VR%2019%20Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 20', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2020/MCA_VR20_Master%20of%20Computer%20Applications.pdf' },
+    { title: 'VR 22', href: 'https://vignaniit.edu.in/syllabus/Syllabus/VR%2022/VR22%20MCA%20syllabus.pdf' },
   ],
 }
 
-,  {
-  title: 'PEOs',
-  children: [
-    { title: 'B.Tech', href: '/pos/btech' },
-    {
-      title: 'M.Tech',
-      href: '/pos/mtech',
-      children: [
-        { title: 'DECS', href: '/pos/mtech/decs' },
-        { title: 'ECE', href: '/pos/mtech/ece' },
-      ],
-    },
-  ],
-}
-,
-  {
-  title: 'PSOs',
-  children: [
-    { title: 'B.Tech', href: '/pos/btech' },
-    {
-      title: 'M.Tech',
-      href: '/pos/mtech',
-      children: [
-        { title: 'DECS', href: '/pos/mtech/decs' },
-        { title: 'ECE', href: '/pos/mtech/ece' },
-      ],
-    },
-  ],
-}
-,
-  { title: 'Board of Studies', href: '/board-of-studies' },
-  { title: 'Department Development Committee', href: '/ddc' },
-  { title: 'PAQIC', href: '/paqic' },
-  { title: 'CDMC', href: '/cdmc' },
-  {
-    title: 'Program Structure & Syllabus',
-    children: [
-      { title: 'B.Tech', href: '/syllabus/btech' },
-      { title: 'M.Tech', href: '/syllabus/mtech' },
-    ],
-  },
-  { title: 'Faculty', href: '/faculty' },
-  { title: 'Infrastructure', href: '/infrastructure' },
-  { title: 'Laboratories', href: '/laboratories' },
-  { title: 'Innovative Teaching Practices', href: '/teaching-practices' },
-  { title: 'Collaborations', href: '/collaborations' },
-  { title: 'Co-Curricular Activities', href: '/co-curricular' },
-  { title: 'Extra', href: '/extra' },
+, { title: 'Faculty', href: '/faculty',icon: Users },
+  { title: 'Infrastructure', href: '/infrastructure' , icon: Building },
+  { title: 'Laboratories', href: '/laboratories', icon: FlaskConical },
+  { title: 'Innovative Teaching Practices', href: '/teaching-practices' ,icon: Book,},
+  { title: 'Collaborations', href: '/collaborations', icon: Star  },
+  { title: 'Co-Curricular Activities', href: '/co-curricular', icon: Handshake  },
+  { title: 'Extra', href: '/extra', icon: Handshake  },
 ];
 
 const NavLink = ({ item, isActive, onNavigate }) => (

@@ -70,7 +70,7 @@ export default function VITAPHomePage() {
                 {/* Bottom Highlight */}
                 <div className="text-center relative z-10 bg-blue-800 bg-opacity-50 rounded-lg p-4 hover:bg-opacity-70 transition-all duration-300">
                   <div className="text-yellow-400 font-bold text-lg mb-1">
-                    {inView && <CountUp end={1} duration={1} prefix="Highest CTC ₹" suffix=" Crore" />}
+                    {inView && <CountUp end={50} duration={1} prefix="Highest CTC ₹" suffix=" Lakh" />}
                   </div>
                   <div className="text-blue-200 text-sm">
                     {inView && <CountUp end={295} duration={1} separator="," />} Super Dream Companies

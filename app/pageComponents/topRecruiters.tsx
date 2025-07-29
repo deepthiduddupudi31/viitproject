@@ -14,32 +14,32 @@ const TopRecruiters = () => {
               <React.Fragment key={idx}>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
                   <span className="text-2xl font-bold text-purple-600 transition duration-300 group-hover:scale-110 group-hover:text-purple-800 cursor-pointer">
-                    accenture
+                    Accenture
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
                   <span className="text-2xl font-bold text-blue-600 transition duration-300 group-hover:scale-110 group-hover:text-red-800 cursor-pointer">
-                    ALSTOM
+                    Infosys
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
                   <span className="text-2xl font-bold text-orange-500 transition duration-300 group-hover:scale-110 group-hover:text-orange-700 cursor-pointer">
-                    amazon
+                    Amazon
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
                   <span className="text-2xl font-bold text-blue-500 transition duration-300 group-hover:scale-110 group-hover:text-red-700 cursor-pointer">
-                    amdocs
+                   CISCO
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
                   <span className="text-2xl font-bold text-purple-600 transition duration-300 group-hover:scale-110 group-hover:text-dark-800 cursor-pointer">
-                    Meesho
+                TCS
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
-                  <span className="text-2xl font-bold text-blue-600 transition duration-300 group-hover:scale-110 group-hover:text-blue-800 cursor-pointer">
-                    BAJAJ FINSERV
+                  <span className="text-2xl font-bold text-orange-600 transition duration-300 group-hover:scale-110 group-hover:text-orange-800 cursor-pointer">
+                  Intellipath
                   </span>
                 </div>
                 <div className="flex items-center justify-center h-16 min-w-[150px] group">
