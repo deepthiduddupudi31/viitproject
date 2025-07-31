@@ -113,9 +113,9 @@ const DesktopNav = () => {
     };
 
     return (
-<nav className="hidden lg:flex items-center justify-evenly h-full">
+<nav className="hidden lg:flex justify-evenly h-full">
 <ul
-  className="flex flex-wrap justify-center items-center h-full text-sm font-medium w-full mx-auto gap-x-[clamp(0.5rem, 2vw, 2.5rem)] px-4"
+  className="flex  justify-evenly items-center h-full text-sm font-medium w- mx-auto gap-x-[clamp(0.5rem, 2vw, 2.5rem)] px-4"
 >
                 {navItems.map((item) => (
                     <li
@@ -229,12 +229,12 @@ export default function Header() {
 
                 <div className={`transition-all duration-300 
                     ${isSticky 
-                        ? 'fixed top-0 left-0 right-0 py-2 lg:w-[85%] lg:left-[8%] w-0' 
+                        ? 'fixed top-0 left-0 right-0 py-2 lg:w-[90%] lg:left-[8%] w-0' 
                         : 'relative bg-gradient-to-r from-[#005f9e] to-[#0077c2]'
                     }`
                 }>
                     <div className="mx-auto px-4 ">
-                        <div className={`flex items-center lg:justify-evenly transition-all duration-300 
+                        <div className={`flex items-center lg:justify-evenly mg:justify-evenly transition-all duration-300 
                             ${isSticky 
                                 ? 'lg:h-14 bg-gradient-to-r from-[#005f9e]/90 to-[#0077c2]/90 backdrop-blur-lg rounded-xl shadow-lg' 
                                 : 'h-14'
