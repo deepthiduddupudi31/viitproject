@@ -120,9 +120,9 @@ export default function Sidebar() {
       <button
         onClick={() => setSidebarOpen(true)}
         className={clsx(
-          'md:hidden fixed right-5 z-30 p-2 bg-blue-500 backdrop-blur-sm text-slate-800 rounded-full shadow-lg',
-          'transition-all duration-300 ease-in-out',
-          isScrolled ? 'top-[10px]' : 'top-[75px]'
+          'md:hidden fixed right-5 z-50 p-2 bg-blue-500 backdrop-blur-sm text-slate-800 shadow-lg',
+          'transition-all duration-300 ease-in-out z-50',
+          isScrolled ? 'top-[20px]' : 'top-[75px]'
         )}
         aria-label="Open menu"
       >
@@ -132,7 +132,7 @@ export default function Sidebar() {
       <div
         onClick={handleClose}
         className={clsx(
-          'md:hidden fixed inset-0 bg-black/60 z-40 transition-opacity',
+          'md:hidden fixed inset-0 bg-black/60 z-50 transition-opacity',
           sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
         aria-hidden="true"
