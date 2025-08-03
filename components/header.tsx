@@ -118,11 +118,11 @@ const DesktopNav = () => {
   className="flex  justify-evenly items-center h-full text-sm font-medium w- mx-auto gap-x-[clamp(0.5rem, 2vw, 2.5rem)] px-4"
 >
                 {navItems
-                .filter(item => !item.hidden)
+                // .filter(item => !item.hidden)
                 .map((item) => (
                     <li
                         key={item.label}
-                        className="relative h-full flex items-center group"
+                        className="relative h-full flex items-center group "
                         onMouseEnter={() => handleMouseEnter(item.label)}
                         onMouseLeave={handleMouseLeave}
                     >
