@@ -117,7 +117,9 @@ const DesktopNav = () => {
 <ul
   className="flex flex-wrap justify-center items-center h-full text-sm font-medium w-full mx-auto gap-x-[clamp(0.5rem, 2vw, 2.5rem)] px-4"
 >
-                {navItems.map((item) => (
+                {navItems
+                .filter(item => !item.hidden)
+                .map((item) => (
                     <li
                         key={item.label}
                         className="relative h-full flex items-center group"
@@ -126,7 +128,7 @@ const DesktopNav = () => {
                     >
                         <Link
                             href={item.path}
-                            className="relative px-4 py-2 flex items-center gap-1.5 h-full text-white/90 rounded-full transition-colors duration-200 group-hover:bg-white/20"
+                            className="relative px-2 py-2 flex items-center gap-1.5 h-full text-white/90 rounded-full transition-colors duration-200 group-hover:bg-white/20"
                         >
                             <span>{item.label}</span>
                             {item.children && (

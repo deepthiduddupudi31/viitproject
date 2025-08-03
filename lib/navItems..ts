@@ -95,6 +95,7 @@ export const navItems: NavItem[] = [
   {
     label: "Departments",
     path: "#",
+    
     children: [
       { label: "Civil Engineering", path: "/Departments/Civil" },
       { label: "Electrical & Electronics Engg.", path: "/Departments/EEE" },
@@ -139,6 +140,7 @@ export const navItems: NavItem[] = [
   {
     label: "Facilities",
     path: "#",
+    hidden:true,
     children: [
       { label: "Infrastructure", path: "/campus-life/infrastructure" },
       { label: "Library", path: "/campus-life/library" },
@@ -153,6 +155,7 @@ export const navItems: NavItem[] = [
   {
     label: "Cells",
     path: "#",
+    hidden:true,
     children: [
       { label: "Discipline Cell", path: "/cells/discipline" },
       { label: "ED Cell", path: "/cells/ed-cell" },
@@ -169,5 +172,7 @@ export const navItems: NavItem[] = [
       { label: "WEP Cell",path:"#" },
     ],
   },
-  { label: "Contact Us", path: "/contactus" },
+  { label: "Contact Us",
+    hidden:true,
+     path: "/contactus" },
 ];
