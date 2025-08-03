@@ -6,8 +6,8 @@ import clsx from 'clsx';
 
 const admins = [
   {
-    name: 'Dr. V. MADHUSUDHAN RAO , FRSC',
-    title: 'RECTOR',
+    name: 'Shri SRIKANTH NANDIGAMA',
+    title: 'CEO',
     image: '/CEO.jpg',
   },
   {
@@ -25,6 +25,11 @@ const admins = [
     title: 'Dean-IQAC',
     image: '/Dean.jpg',
   },
+  {
+    name: 'Dr.V Madhusudan Rao,FRSC',
+    title: 'Rector',
+    image: '/Rector.jpg',
+  }
   
 ];
 
@@ -49,8 +54,8 @@ export default function Administration() {
   };
 
   return (
-    <section className="w-full py-20 bg-white relative overflow-hidden">
-      <h2 className="text-center text-3xl font-bold text-[#0a66c2] uppercase mb-16">
+    <section className="w-full py-10 bg-white relative overflow-hidden">
+      <h2 className="text-center text-3xl font-bold text-[#0a66c2] uppercase mb-1">
         Administration Team
       </h2>
 
@@ -61,7 +66,7 @@ export default function Administration() {
             <div
               key={i}
               className={clsx(
-                'absolute w-80 h-[420px] transition-all duration-700 ease-in-out rounded-xl shadow-xl bg-white border',
+                'absolute w-80 h-[320px] transition-all duration-700 ease-in-out rounded-xl shadow-xl bg-white border',
                 {
                   'z-4 scale-100 left-1/2 -translate-x-1/2': pos === 'center',
                   'z-1 scale-90 -translate-x-[160%] opacity-40': pos === 'left',

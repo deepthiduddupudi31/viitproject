@@ -66,7 +66,7 @@ export default function StatutoryApprovalsPage() {
         fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
       }}
     >
-      <AboutMenuBar />
+    
 
       <main
         style={{

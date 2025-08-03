@@ -41,7 +41,7 @@ export default function AccreditationsPage() {
         fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
       }}
     >
-      <AboutMenuBar />
+    
 
       <main
         style={{

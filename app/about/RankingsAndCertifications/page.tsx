@@ -175,7 +175,7 @@ export default function RankingsAndCertificationsPage() {
 
   return (
     <div className="flex min-h-screen bg-gray-50 font-sans">
-      <AboutMenuBar />
+    
 
       <main className="flex-1 p-6 lg:p-10 flex justify-center items-start">
         <section className="bg-white max-w-6xl w-full p-6 lg:p-10 mt-24 shadow-xl rounded-lg space-y-12">

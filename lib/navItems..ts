@@ -64,7 +64,7 @@ export const navItems: NavItem[] = [
     children: [
       {
         label: "Admissions",
-        path: "/academics/Admissions",
+        path: "#",
         children: [
           { label: "Courses Offered", path: "/academics/Admissions/coursesoffered" },
           { label: "Admission Procedure", path: "/academics/Admissions/admissionproduce" },
@@ -72,13 +72,13 @@ export const navItems: NavItem[] = [
           { label: "Course Outcomes", path: "/academics/Admissions/courseoutcome" },
         ],
       },
-      { label: "Academic Calendars", path: "/academics/Admissions/academiccalender" },
+      // { label: "Academic Calendars", path: "/academics/Admissions/academiccalender" },
       {
         label: "Teaching Learning Process",
-        path: "/academics/teacherlearning",
+        path: "#",
         children: [
           { label: "Teaching Methodologies", path: "/academics/teacherlearning/teachingmethod" },
-          { label: "OBE Practices", path: "/academics/teacherlearning/obepractice" },
+          // { label: "OBE Practices", path: "/academics/teacherlearning/obepractice" },
           { label: "Special Programs - Student Diversity", path: "/academics/teacherlearning/specialprogram" },
           { label: "Mentor-Mentee System", path: "/academics/teacherlearning/mentor-mentee" },
         ],

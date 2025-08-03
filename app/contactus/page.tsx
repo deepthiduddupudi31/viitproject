@@ -62,15 +62,15 @@ export default function ContactUs() {
       <section className="bg-white shadow-md rounded-xl p-6 w-full max-w-4xl mb-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Location</h2>
         <div className="w-full h-96 rounded-lg overflow-hidden">
-          <iframe
-            title="VIIT Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.95678422848!2d83.17567667490244!3d17.65830499598399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395bdbd191868b%3A0x2ff1e05a7b8d80f1!2sVignan&#39;s%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2sin!4v1706000000000!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-           
-            allowFullScreen
-            loading="lazy"
-          ></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.095670486325!2d83.1633426!3d17.7104743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3968cb428b8087%3A0xaa3e198c43836a65!2sVignan's%20Institute%20Of%20Information%20Technology!5e0!3m2!1sen!2sin!4v1722050754825!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
         </div>
       </section>
 

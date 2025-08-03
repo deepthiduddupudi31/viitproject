@@ -47,7 +47,7 @@ export default function PoliciesAndPerspectivesPage() {
         fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
       }}
     >
-      <AboutMenuBar />
+    
 
       <main
         style={{

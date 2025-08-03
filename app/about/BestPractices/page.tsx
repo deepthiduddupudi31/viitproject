@@ -5,7 +5,7 @@ import AboutMenuBar from '../../../components/AboutMenubar';
 export default function BestPracticesPage() {
   return (
     <div className="flex min-h-screen bg-gray-50 font-sans">
-      <AboutMenuBar />
+    
 
       <main className="flex-1 px-4 lg:px-12 flex justify-center items-start pt-32">
         <section className="bg-white max-w-5xl w-full p-4 lg:p-8 shadow-xl rounded-lg space-y-16">

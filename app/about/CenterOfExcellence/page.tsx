@@ -31,7 +31,7 @@ export default function CenterOfExcellencePage() {
         fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
       }}
     >
-      <AboutMenuBar />
+    
 
       <main
         style={{

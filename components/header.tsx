@@ -113,10 +113,8 @@ const DesktopNav = () => {
     };
 
     return (
-<nav className="hidden lg:flex justify-evenly h-full">
-<ul
-  className="flex  justify-evenly items-center h-full text-sm font-medium w- mx-auto gap-x-[clamp(0.5rem, 2vw, 2.5rem)] px-4"
->
+<nav className="hidden lg:flex items-center justify-evenly h-full">
+            <ul className="flex items-center h-full text-sm font-medium">
                 {navItems.map((item) => (
                     <li
                         key={item.label}
@@ -148,6 +146,8 @@ const DesktopNav = () => {
 // --- Mobile Navigation Components (Unchanged) ---
 const MobileNavItem = ({ item, closeMenu }: { item: NavItem, closeMenu: () => void }) => {
     const [isOpen, setIsOpen] = useState(false);
+    
+    
     if (!item.children) {
         return <li><Link href={item.path} onClick={closeMenu} className="block px-4 py-3 text-base text-gray-700 hover:bg-gray-100">{item.label}</Link></li>;
     }
@@ -167,8 +167,17 @@ const MobileNavItem = ({ item, closeMenu }: { item: NavItem, closeMenu: () => vo
     );
 };
 
-const MobileNav = ({ isOpen, closeMenu }: { isOpen: boolean, closeMenu: () => void }) => (
-    <AnimatePresence>
+const MobileNav = ({ isOpen, closeMenu }: { isOpen: boolean, closeMenu: () => void }) => {
+    let newNav: NavItem[]=navItems 
+    const utilityLinks : NavItem[] = [
+        { label: "LMS", path: "https://elearning.vignaniit.edu.in/" },
+        { label: "ECAP", path: "https://webprosindia.com/vignanit/" },
+        { label: "V-TP", path: "https://taskplanner.vignaniit.edu.in/login" },
+        { label: "NBA", path: "https://vignaniit.edu.in/NBA%202024-2026.pdf" },
+    ];
+    newNav= [...newNav, ...utilityLinks];
+
+    return(<AnimatePresence>
         {isOpen && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="lg:hidden fixed inset-0 z-40 bg-black/40 backdrop-blur-sm" onClick={closeMenu}>
                 <motion.div initial={{ x: "-100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ type: 'spring', stiffness: 300, damping: 30 }} className="fixed top-0 left-0 h-full w-4/5 max-w-sm bg-white shadow-xl" onClick={(e) => e.stopPropagation()}>
@@ -177,13 +186,13 @@ const MobileNav = ({ isOpen, closeMenu }: { isOpen: boolean, closeMenu: () => vo
                         <button onClick={closeMenu} className="p-1"><X className="h-6 w-6 text-gray-600" /></button>
                     </div>
                     <ul className="py-2">
-                        {navItems.map(item => <MobileNavItem key={item.label} item={item} closeMenu={closeMenu} />)}
+                        {newNav.map(item => <MobileNavItem key={item.label} item={item} closeMenu={closeMenu} />)}
                     </ul>
                 </motion.div>
             </motion.div>
         )}
-    </AnimatePresence>
-);
+    </AnimatePresence>)
+};
 
 // --- Main Header Component with FINAL REFINEMENTS ---
 export default function Header() {
@@ -212,7 +221,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="relative w-full z-10 bg-white shadow-sm">
+            <header className="relative w-full z-50 bg-white shadow-sm">
                 <div ref={topBarRef} className="border-b border-gray-200">
                     <div className="max-w-screen-xl mx-auto px-4 py-2 flex items-center justify-between">
                         <Link href="/" className="flex items-center">
@@ -229,20 +238,20 @@ export default function Header() {
 
                 <div className={`transition-all duration-300 
                     ${isSticky 
-                        ? 'fixed top-0 left-0 right-0 py-2 lg:w-[90%] lg:left-[8%] w-0' 
+                        ? 'fixed top-0 left-0 right-0 py-2 lg:w-[75%] lg:left-[12%] w-0' 
                         : 'relative bg-gradient-to-r from-[#005f9e] to-[#0077c2]'
                     }`
                 }>
                     <div className="mx-auto px-4 ">
-                        <div className={`flex items-center lg:justify-evenly mg:justify-evenly transition-all duration-300 
+                        <div className={`flex items-center lg:justify-evenly transition-all duration-300 
                             ${isSticky 
-                                ? 'lg:h-14 bg-gradient-to-r from-[#005f9e]/90 to-[#0077c2]/90 backdrop-blur-lg rounded-xl shadow-lg' 
+                                ? 'lg:h-14 bg-gradient-to-r from-[#005f9e]/90 to-[#0077c2]/90 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden' 
                                 : 'h-14'
                             }`
                         }>
                             <DesktopNav />
                             <div className="lg:hidden">
-                                <button onClick={() => setMobileMenuOpen(true)} className="p-2 text-blue bg-blue-800 rounded" aria-label="Open menu">
+                                <button onClick={() => setMobileMenuOpen(true)} className="p-2 text-blue bg-vignan-blue rounded" aria-label="Open menu">
                                     <Menu className="h-6 w-6" />
                                 </button>
                             </div>
