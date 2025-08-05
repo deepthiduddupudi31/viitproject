@@ -1,6 +1,6 @@
 'use client';
 import Sidebar from './Sidebar'; 
-import { BookOpen } from 'lucide-react';
+import { BookOpen,Building2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -87,7 +87,7 @@ const AnimatedBranchName = ({ text }) => {
     <div className="bg-slate-100 py-2 sm:py-4">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <header className="bg-white p-4 lg:p-10 rounded-xl shadow-sm mb-6 lg:mb-8">
+        {/* <header className="bg-white p-4 lg:p-10 rounded-xl shadow-sm mb-6 lg:mb-8">
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
             Department of
             <br />
@@ -96,7 +96,54 @@ const AnimatedBranchName = ({ text }) => {
           <p className="mt-4 text-lg text-slate-500">
             Shaping the future of computing through excellence in academia and pioneering research.
           </p>
-        </header>
+        </header> */}
+<header className="bg-white px-6 py-16 rounded-xl shadow-sm mb-6 relative">
+  <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2">
+    <img
+      src="/civil-logo.png"
+      alt="Civil Engineering"
+      className="w-52 h-52 object-contain"
+    />
+  </div>
+
+  <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 lg:gap-16">
+    <div className="flex-1 text-center lg:text-left">
+      <div className="flex flex-wrap justify-center lg:justify-start">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight mb-2">
+          Department of
+        </h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight mb-2 ml-4">
+          <AnimatedBranchName text="Civil Engineering" />
+        </h1>
+      </div>
+
+      <p className="text-lg text-slate-500 mt-2">
+        Shaping the future of computing through excellence in academia and pioneering research.
+      </p>
+    </div>
+  </div>
+</header>
+
+
+{/* <header className="bg-white px-6 py-16 rounded-xl shadow-sm mb-6 relative">
+  <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2">
+    <Building2 className="text-indigo-500 w-24 h-24" />
+  </div>
+
+  <div className="flex flex-col items-center justify-center text-center">
+    <div>
+      <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight mb-4 leading-tight">
+        Department of <br />
+        <AnimatedBranchName text="Civil Engineering" />
+      </h1>
+      <p className="text-lg text-slate-500 max-w-xl mx-auto">
+        Shaping the future of computing through excellence in academia and pioneering research.
+      </p>
+    </div>
+  </div>
+</header> */}
+
+
 
         <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
           <Sidebar />
