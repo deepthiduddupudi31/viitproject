@@ -19,7 +19,6 @@ const focusAreas = [
     { title: "Intelligent Engineering", description: "Diving into the integration of smart technologies in civil infrastructure through building information modeling (BIM), GIS, remote sensing, and data-driven decision-making for efficient planning and maintenance." },
   ];
 
-
 const AnimatedBranchName = ({ text }) => {
   const [key, setKey] = useState(0);
 
@@ -73,12 +72,10 @@ const AnimatedBranchName = ({ text }) => {
           {letterChar}
         </motion.span>
       ))}
-      {/* Add non-breaking space between words */}
       <span>&nbsp;</span>
     </span>
   ))}
 </motion.div>
-
   );
 };
 
@@ -86,17 +83,6 @@ const AnimatedBranchName = ({ text }) => {
   return (
     <div className="bg-slate-100 py-2 sm:py-4">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* <header className="bg-white p-4 lg:p-10 rounded-xl shadow-sm mb-6 lg:mb-8">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
-            Department of
-            <br />
-            <AnimatedBranchName text="Civil Engineering" />
-          </h1>
-          <p className="mt-4 text-lg text-slate-500">
-            Shaping the future of computing through excellence in academia and pioneering research.
-          </p>
-        </header> */}
 <header className="bg-white px-6 py-16 rounded-xl shadow-sm mb-6 relative">
   <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2">
     <img
@@ -105,7 +91,6 @@ const AnimatedBranchName = ({ text }) => {
       className="w-52 h-52 object-contain"
     />
   </div>
-
   <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 lg:gap-16">
     <div className="flex-1 text-center lg:text-left">
       <div className="flex flex-wrap justify-center lg:justify-start">
@@ -123,49 +108,10 @@ const AnimatedBranchName = ({ text }) => {
     </div>
   </div>
 </header>
-
-
-{/* <header className="bg-white px-6 py-16 rounded-xl shadow-sm mb-6 relative">
-  <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2">
-    <Building2 className="text-indigo-500 w-24 h-24" />
-  </div>
-
-  <div className="flex flex-col items-center justify-center text-center">
-    <div>
-      <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight mb-4 leading-tight">
-        Department of <br />
-        <AnimatedBranchName text="Civil Engineering" />
-      </h1>
-      <p className="text-lg text-slate-500 max-w-xl mx-auto">
-        Shaping the future of computing through excellence in academia and pioneering research.
-      </p>
-    </div>
-  </div>
-</header> */}
-
-
-
         <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
           <Sidebar />
-
           <main className="flex-1 min-w-0">
             <div className="space-y-6">
-              {/* <section className="bg-white p-8 rounded-lg shadow-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-indigo-100 p-2 rounded-full">
-                    <BookOpen className="w-6 h-6 text-indigo-600" />
-                  </div>
-                  <h2 className="text-2xl font-bold text-slate-800">About The Department</h2>
-                </div>
-                <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
-                  <p>Established in 2002, the Department of Civil Engineering at Vignan’s Institute of Information Technology is a hub of academic and research excellence. We offer comprehensive B.Tech and M.Tech programs designed to provide a deep understanding of all facets of computer science.</p>
-                </div>
-              </section> */}
-
-              
-              
-              
-              
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
                 <section className="bg-white p-6 rounded-lg shadow-sm lg:col-span-2">
                   <div className="flex flex-col items-start gap-6">

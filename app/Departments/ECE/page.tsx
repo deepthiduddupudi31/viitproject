@@ -86,17 +86,34 @@ const AnimatedBranchName = ({ text }) => {
   return (
     <div className="bg-slate-100 py-2 sm:py-4">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <header className="bg-white p-4 lg:p-10 rounded-xl shadow-sm mb-6 lg:mb-8">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
-            Department of
-            <br />
-          <AnimatedBranchName text="Electronics and communication Engineering" />
-          </h1>
-          <p className="mt-4 text-lg text-slate-500">
-            Shaping the future of computing through excellence in academia and pioneering research.
-          </p>
-        </header>
+  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+    
+    {/* Text Section */}
+    <div className="flex-1">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
+        Department of
+      </h1>
+      <div className="mt-2 text-4xl md:text-5xl font-extrabold tracking-tight">
+        <AnimatedBranchName text="Electronics and Communication Engineering" />
+      </div>
+      <p className="mt-4 text-lg text-slate-500">
+        Shaping the future of computing through excellence in academia and pioneering research.
+      </p>
+    </div>
+
+    {/* Logo Section */}
+    <div className="hidden lg:block shrink-0">
+      <img
+        src="/ece-logo.png"
+        alt="Electronics and Communication Engineering"
+        className="w-52 h-52 object-contain"
+      />
+    </div>
+
+  </div>
+</header>
+
 
 
 

@@ -87,11 +87,18 @@ const AnimatedBranchName = ({ text }) => {
     <div className="bg-slate-100 py-2 sm:py-4">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <header className="bg-white p-4 lg:p-10 rounded-xl shadow-sm mb-6 lg:mb-8">
+        <header className="relative bg-white p-4 lg:p-10 rounded-xl shadow-sm mb-6 lg:mb-8">
+          <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2">
+            <img
+              src="/eee-logo.png"
+              alt="Civil Engineering"
+              className="w-52 h-52 object-contain"
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
             Department of
             <br />
-          <AnimatedBranchName text="Electrical and Electronics Engineering" />
+            <AnimatedBranchName text="Electrical and Electronics Engineering" />
           </h1>
           <p className="mt-4 text-lg text-slate-500">
             Shaping the future of computing through excellence in academia and pioneering research.
