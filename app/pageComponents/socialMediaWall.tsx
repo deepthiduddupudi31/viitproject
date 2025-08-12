@@ -2,9 +2,11 @@ import Image from "next/image";
 import { ThumbsUp, MessageSquare, Youtube, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
 
+
 export default function NonParallelSocialWall() {
   const primaryColor = "#005f9e";
   const collegeLogoUrl = "/viit-logo.jpeg";
+
 
   const posts = [
     {
@@ -14,7 +16,7 @@ export default function NonParallelSocialWall() {
       content: "The final pitches at SUS Hacks were mind-blowing! So much talent in one room.",
       likes: 88,
       comments: 12,
-      position: { top: '25%', left: '28%' }
+      position: { top: '10%', left: '10%' }
     },
     {
       platform: "linkedin",
@@ -23,7 +25,7 @@ export default function NonParallelSocialWall() {
       image: "/ieee.jpg",
       likes: 210,
       comments: 30,
-      position: { top: '55%', left: '0%' }
+      position: { top: '60%', left: '0%' }
     },
     {
       platform: "linkedin",
@@ -31,7 +33,7 @@ export default function NonParallelSocialWall() {
       content: "Top placements secured at our recent drive. Your hard work has paid off!",
       likes: 125,
       comments: 18,
-      position: { top: '0%', left: '10%' }
+      position: { top: '-10%', left: '0%' }
     },
     {
       platform: "youtube",
@@ -41,7 +43,7 @@ export default function NonParallelSocialWall() {
       videoUrl: "https://www.youtube.com/watch?v=YUVATARANG_VIDEO_ID",
       likes: 350,
       comments: 45,
-      position: { top: '-5%', left: '55%' }
+      position: { top: '-3%', left: '45%' }
     },
     {
       platform: "twitter",
@@ -50,7 +52,7 @@ export default function NonParallelSocialWall() {
       image: "/alumi.jpg",
       likes: 150,
       comments: 22,
-      position: { top: '10%', left: '83%' }
+      position: { top: '10%', left: '75%' }
     },
     {
       platform: "youtube",
@@ -60,9 +62,10 @@ export default function NonParallelSocialWall() {
       videoUrl: "https://www.youtube.com/watch?v=VISTA_VIDEO_ID",
       likes: 400,
       comments: 60,
-      position: { top: '55%', left: '55%' }
+      position: { top: '55%', left: '45%' }
     },
   ];
+
 
   const platformIcons = {
     youtube: <Youtube className="w-5 h-5 text-white" />,
@@ -70,13 +73,15 @@ export default function NonParallelSocialWall() {
     twitter: <Twitter className="w-5 h-5 text-white" />,
   };
 
+
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < 768);
+    const onResize = () => setIsMobile(window.innerWidth < 800);
     onResize();
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
+
 
   return (
     <div className="bg-gray-100 font-sans overflow-hidden">
@@ -89,6 +94,7 @@ export default function NonParallelSocialWall() {
           <p className="text-lg text-gray-500">Live updates from the VIIT community</p>
           <div className="w-20 h-1.5 mx-auto mt-4" style={{ backgroundColor: primaryColor }}></div>
         </div>
+
 
         {/* Wall */}
         {!isMobile ? (
@@ -129,6 +135,7 @@ export default function NonParallelSocialWall() {
                     </div>
                   )
                 )}
+
 
                 <div className="p-4">
                   <div className="flex items-start mb-3">
@@ -199,6 +206,7 @@ export default function NonParallelSocialWall() {
                       </div>
                     )
                   )}
+
 
                   <div className="p-3">
                     <div className="flex items-start mb-2">
