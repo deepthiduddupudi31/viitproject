@@ -5,13 +5,18 @@ export default function EceVisionMission() {
   return (
     <div>
       {/* Header Banner */}
-      <div className="max-w-screen-xl min-h-auto mx-auto text-white flex flex-row items-center p-4">
-        <img
-          src="https://vignaniit.edu.in/images/cse.jpg"
-          alt="ECE Banner"
-          className="w-full h-32 object-cover rounded-lg shadow-lg"
-        />
-      </div>
+        <header className="bg-white p-8 lg:p-10 rounded-xl shadow-sm mb-6 lg:mb-8">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
+            Department of
+            <br />
+            <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
+              Computer Science & Engineering
+            </span>
+          </h1>
+          <p className="mt-4 text-lg text-slate-500">
+            Shaping the future of computing through excellence in academia and pioneering research.
+          </p>
+        </header>
 
       {/* Content layout */}
       <div className="flex max-w-screen-xl mx-auto relative">

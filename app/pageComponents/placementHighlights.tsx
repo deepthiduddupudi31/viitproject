@@ -41,7 +41,7 @@ export default function VITAPHomePage() {
                   <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-yellow-400 group-hover:border-yellow-300 transition-colors duration-300">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-blue-900">
-                        {inView && <CountUp end={632} duration={2} separator="," />}
+                        {inView && <CountUp end={124} duration={2} separator="," />}
                       </div>
                       <div className="text-sm text-blue-700 font-medium">Companies</div>
                     </div>
@@ -51,12 +51,12 @@ export default function VITAPHomePage() {
                 {/* Statistics Grid */}
                 <div className="grid grid-cols-2 gap-4 relative z-10 mb-6">
                   {[
-                    { value: 2807, label: "Super Dream Offers", color: "text-yellow-400" },
-                    { value: 530, label: "Marquee Offers", color: "text-blue-300" },
-                    { value: 2862, label: "Dream Offers", color: "text-yellow-400" },
-                    { value: 12579, label: "Overall Offers", color: "text-blue-300" },
-                    { value: 6380, label: "Regular Offers", color: "text-yellow-400" },
-                    { value: 4051, label: "Industry Internships", color: "text-blue-300" },
+                    { value: 4, label: "Super Dream Offers", color: "text-yellow-400" },
+                    { value: 66, label: "Marquee Offers", color: "text-blue-300" },
+                    { value: 33, label: "Dream Offers", color: "text-yellow-400" },
+                    { value: 1803, label: "Overall Offers", color: "text-blue-300" },
+                    { value: 1563, label: "Regular Offers", color: "text-yellow-400" },
+                    // { value: 4051, label: "Industry Internships", color: "text-blue-300" },
                   ].map((stat, i) => (
                     <div key={i} className="text-center p-3 bg-blue-800 bg-opacity-50 rounded-lg hover:bg-opacity-70 transition-all duration-300">
                       <div className={`text-2xl font-bold ${stat.color} mb-1`}>
@@ -85,13 +85,39 @@ export default function VITAPHomePage() {
             {/* Right Side - Achievement Cards */}
             <div className="lg:col-span-1 space-y-4">
               {[
-                { title: "Career Development Centre", subtitle: "2025 BATCH PLACEMENTS", image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" },
-                { title: "Congratulations", subtitle: "Top Performers", image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" },
-                { title: "Industry Connect", subtitle: "Partnership Program", image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" },
-                { title: "LinkedIn Success", subtitle: "Professional Network", image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" },
-                { title: "ServiceNow", subtitle: "Partnership", image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" },
-                { title: "LinkedIn Certification", subtitle: "Professional Development", image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" }
-              ].map((card, index) => (
+  {
+    "title": "Career Guidance & Mentoring",
+    "subtitle": "2025 Batch Training Programs",
+    "image": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
+  },
+  {
+    "title": "Soft Skills Training",
+    "subtitle": "Communication | Teamwork | Adaptability",
+    "image": "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
+  },
+  {
+    "title": "Language & Communication",
+    "subtitle": "Speak with Clarity & Confidence",
+    "image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
+  },
+  {
+    "title": "Life Skills Development",
+    "subtitle": "Time Management | Decision Making | Stress Control",
+    "image": "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
+  },
+  {
+    "title": "Transforming Skills",
+    "subtitle": "Adapt to Emerging Technologies & Change",
+    "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
+  },
+  {
+    "title": "Technology Awareness",
+    "subtitle": "Stay Ahead with Latest IT Trends",
+    "image": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
+  }
+]
+
+.map((card, index) => (
                 <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 border border-gray-200">
                   <div className="flex items-center p-4">
                     <div className="w-16 h-16 rounded-lg overflow-hidden mr-4 flex-shrink-0">
